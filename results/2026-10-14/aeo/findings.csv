@@ -1,0 +1,304 @@
+url,rule,evidence
+https://www.singlegrain.com/blog-posts/analytics/server-side-tracking-when-its-worth-the-cost/,no_service_link,"6 internal links, none to /agency/, /services/ or the service sitemap"
+https://www.singlegrain.com/blog-posts/analytics/funnel-analysis-find-leaks-and-fix-bad-data-first/,no_service_link,"5 internal links, none to /agency/, /services/ or the service sitemap"
+https://www.singlegrain.com/blog-posts/analytics/funnel-analysis-find-leaks-and-fix-bad-data-first/,broken_internal_link,https://www.singlegrain.com/marketing-funnels/tools-to-optimize-your-funnels-raghav/ -> 200 (redirects to https://www.singlegrain.com/blog/how-to-create-marketing-funnel/)
+https://www.singlegrain.com/blog-posts/analytics/marketing-mix-modeling-for-mid-market-brands-a-skeptics-guide/,no_service_link,"4 internal links, none to /agency/, /services/ or the service sitemap"
+https://www.singlegrain.com/blog-posts/analytics/incrementality-testing-playbook-math-types-runbook/,no_service_link,"5 internal links, none to /agency/, /services/ or the service sitemap"
+https://www.singlegrain.com/blog-posts/analytics/multi-touch-attribution-is-overrated-heres-why-i-quit-it/,no_service_link,"5 internal links, none to /agency/, /services/ or the service sitemap"
+https://www.singlegrain.com/blog-posts/analytics/net-revenue-retention-calculation-rules-investors-test/,unsourced_claim,"Growth-stage ($5M–$50M ARR): Reported ranges tend to cluster roughly between 100% and 120%, with product-led expansion models sitting toward the higher end."
+https://www.singlegrain.com/blog-posts/analytics/net-revenue-retention-calculation-rules-investors-test/,unsourced_claim,Scale-stage ($50M+ ARR): Top-quartile companies in this range frequently report 110% to 130%+.
+https://www.singlegrain.com/blog-posts/analytics/net-revenue-retention-calculation-rules-investors-test/,no_service_link,"5 internal links, none to /agency/, /services/ or the service sitemap"
+https://www.singlegrain.com/blog-posts/analytics/revenue-attribution-ga4-crm-a-join-finance-will-sign-off/,no_service_link,"3 internal links, none to /agency/, /services/ or the service sitemap"
+https://www.singlegrain.com/blog-posts/agency-2x2-productize-vs-stop/,video_not_embedded,"4 video(s) linked, 0 players embedded"
+https://www.singlegrain.com/blog-posts/agency-2x2-productize-vs-stop/,video_no_timestamp,https://www.youtube.com/watch?v=x7uxtQMNjiE
+https://www.singlegrain.com/blog-posts/agency-2x2-productize-vs-stop/,video_no_timestamp,https://www.youtube.com/watch?v=SrTAYem7OEs
+https://www.singlegrain.com/blog-posts/agency-2x2-productize-vs-stop/,video_no_timestamp,https://www.youtube.com/watch?v=GkwhXu4ftM4
+https://www.singlegrain.com/blog-posts/agency-2x2-productize-vs-stop/,video_no_timestamp,https://www.youtube.com/watch?v=eKDOcfdcljU
+https://www.singlegrain.com/blog-posts/agency-2x2-productize-vs-stop/,no_service_link,"6 internal links, none to /agency/, /services/ or the service sitemap"
+https://www.singlegrain.com/blog-posts/agency-2x2-productize-vs-stop/,broken_internal_link,https://www.singlegrain.com/artificial-intelligence/how-many-agent-jobs-before-hire-human/ -> 404
+https://www.singlegrain.com/blog-posts/agency-2x2-productize-vs-stop/,broken_internal_link,https://www.singlegrain.com/artificial-intelligence/how-to-hire-or-build-ai-marketing-agents-that-own-pipeline-jobs-without-a-chatbot-demo/ -> 200 (redirects to https://www.singlegrain.com/blog-posts/how-to-hire-or-build-ai-marketing-agents-that-own-pipeline-jobs-without-a-chatbot-demo/)
+https://www.singlegrain.com/blog-posts/agency-2x2-productize-vs-stop/,broken_internal_link,https://www.singlegrain.com/artificial-intelligence/how-to-price-managed-marketing-agents-without-guessing-margin/ -> 404
+https://www.singlegrain.com/blog-posts/analytics/google-ads-conversion-tracking-troubleshooting-and-setup/,no_service_link,"7 internal links, none to /agency/, /services/ or the service sitemap"
+https://www.singlegrain.com/blog-posts/analytics/google-ads-conversion-tracking-troubleshooting-and-setup/,broken_internal_link,https://www.singlegrain.com/blog-posts/getting-more-out-of-google-analytics/ -> 200 (redirects to https://www.singlegrain.com/blog/google-ads-strategies/)
+https://www.singlegrain.com/blog-posts/forward-deployed-marketer/,stale_source,"2011: For supporting evidence, a 2011 Harvard Business Review article reported an audit of 2,241 U.S."
+https://www.singlegrain.com/blog-posts/forward-deployed-marketer/,stale_source,link https://hbr.org/2011/03/the-short-life-of-online-sales-leads
+https://www.singlegrain.com/blog-posts/forward-deployed-marketer/,video_not_embedded,"7 video(s) linked, 0 players embedded"
+https://www.singlegrain.com/blog-posts/forward-deployed-marketer/,video_no_timestamp,https://www.youtube.com/watch?v=Qzx1tA8seMw
+https://www.singlegrain.com/blog-posts/forward-deployed-marketer/,video_no_timestamp,https://www.youtube.com/watch?v=cx9UKy3LA9E
+https://www.singlegrain.com/blog-posts/forward-deployed-marketer/,video_no_timestamp,https://www.youtube.com/watch?v=FQ3v-rHyHuY
+https://www.singlegrain.com/blog-posts/forward-deployed-marketer/,video_no_timestamp,https://www.youtube.com/watch?v=wWxJBzEbEJA
+https://www.singlegrain.com/blog-posts/forward-deployed-marketer/,video_no_timestamp,https://www.youtube.com/watch?v=fiznz_2gApU
+https://www.singlegrain.com/blog-posts/forward-deployed-marketer/,video_no_timestamp,https://www.youtube.com/watch?v=4CkvQjFrvZw
+https://www.singlegrain.com/blog-posts/forward-deployed-marketer/,video_no_timestamp,https://www.youtube.com/watch?v=7E0HTog979s
+https://www.singlegrain.com/blog-posts/specialized-marketing-llms-pipeline-jobs/,stale_source,"2011: Harvard Business Review’s 2011 audit of 2,241 U.S."
+https://www.singlegrain.com/blog-posts/specialized-marketing-llms-pipeline-jobs/,stale_source,link https://hbr.org/2011/03/the-short-life-of-online-sales-leads
+https://www.singlegrain.com/blog-posts/specialized-marketing-llms-pipeline-jobs/,video_not_embedded,"6 video(s) linked, 0 players embedded"
+https://www.singlegrain.com/blog-posts/specialized-marketing-llms-pipeline-jobs/,video_no_timestamp,https://www.youtube.com/watch?v=_gKAMSeIMog
+https://www.singlegrain.com/blog-posts/specialized-marketing-llms-pipeline-jobs/,video_no_timestamp,https://www.youtube.com/watch?v=Qzx1tA8seMw
+https://www.singlegrain.com/blog-posts/specialized-marketing-llms-pipeline-jobs/,video_no_timestamp,https://www.youtube.com/watch?v=tcgfrAAgRK4
+https://www.singlegrain.com/blog-posts/specialized-marketing-llms-pipeline-jobs/,video_no_timestamp,https://www.youtube.com/watch?v=Q0eQlT-Sn-k
+https://www.singlegrain.com/blog-posts/specialized-marketing-llms-pipeline-jobs/,video_no_timestamp,https://www.youtube.com/watch?v=4CkvQjFrvZw
+https://www.singlegrain.com/blog-posts/specialized-marketing-llms-pipeline-jobs/,video_no_timestamp,https://www.youtube.com/watch?v=7E0HTog979s
+https://www.singlegrain.com/blog-posts/price-managed-marketing-agents/,video_not_embedded,"5 video(s) linked, 0 players embedded"
+https://www.singlegrain.com/blog-posts/price-managed-marketing-agents/,video_no_timestamp,https://www.youtube.com/watch?v=MjjxIPsQ6Yg
+https://www.singlegrain.com/blog-posts/price-managed-marketing-agents/,video_no_timestamp,https://www.youtube.com/watch?v=_gKAMSeIMog
+https://www.singlegrain.com/blog-posts/price-managed-marketing-agents/,video_no_timestamp,https://www.youtube.com/watch?v=Q0eQlT-Sn-k
+https://www.singlegrain.com/blog-posts/price-managed-marketing-agents/,video_no_timestamp,https://www.youtube.com/watch?v=4CkvQjFrvZw
+https://www.singlegrain.com/blog-posts/price-managed-marketing-agents/,video_no_timestamp,https://www.youtube.com/watch?v=7E0HTog979s
+https://www.singlegrain.com/blog-posts/marketing-agent-pipeline-raci/,stale_source,"2011: A 2011 Harvard Business Review report described an audit of 2,241 U.S."
+https://www.singlegrain.com/blog-posts/marketing-agent-pipeline-raci/,stale_source,link https://hbr.org/2011/03/the-short-life-of-online-sales-leads
+https://www.singlegrain.com/blog-posts/marketing-agent-pipeline-raci/,video_not_embedded,"7 video(s) linked, 0 players embedded"
+https://www.singlegrain.com/blog-posts/marketing-agent-pipeline-raci/,video_no_timestamp,https://www.youtube.com/watch?v=Qzx1tA8seMw
+https://www.singlegrain.com/blog-posts/marketing-agent-pipeline-raci/,video_no_timestamp,https://www.youtube.com/watch?v=_gKAMSeIMog
+https://www.singlegrain.com/blog-posts/marketing-agent-pipeline-raci/,video_no_timestamp,https://www.youtube.com/watch?v=fiznz_2gApU
+https://www.singlegrain.com/blog-posts/marketing-agent-pipeline-raci/,video_no_timestamp,https://www.youtube.com/watch?v=gyyMkg6KQI4
+https://www.singlegrain.com/blog-posts/marketing-agent-pipeline-raci/,video_no_timestamp,https://www.youtube.com/watch?v=Q0eQlT-Sn-k
+https://www.singlegrain.com/blog-posts/marketing-agent-pipeline-raci/,video_no_timestamp,https://www.youtube.com/watch?v=4CkvQjFrvZw
+https://www.singlegrain.com/blog-posts/marketing-agent-pipeline-raci/,video_no_timestamp,https://www.youtube.com/watch?v=7E0HTog979s
+https://www.singlegrain.com/blog-posts/five-step-reliable-marketing-bots/,stale_source,"2011: HBR’s 2011 audit of 2,241 U.S."
+https://www.singlegrain.com/blog-posts/five-step-reliable-marketing-bots/,stale_source,link https://hbr.org/2011/03/the-short-life-of-online-sales-leads
+https://www.singlegrain.com/blog-posts/five-step-reliable-marketing-bots/,video_not_embedded,"6 video(s) linked, 0 players embedded"
+https://www.singlegrain.com/blog-posts/five-step-reliable-marketing-bots/,video_no_timestamp,https://www.youtube.com/watch?v=OkOrxKoLHtw
+https://www.singlegrain.com/blog-posts/five-step-reliable-marketing-bots/,video_no_timestamp,https://www.youtube.com/watch?v=_gKAMSeIMog
+https://www.singlegrain.com/blog-posts/five-step-reliable-marketing-bots/,video_no_timestamp,https://www.youtube.com/watch?v=4CkvQjFrvZw
+https://www.singlegrain.com/blog-posts/five-step-reliable-marketing-bots/,video_no_timestamp,https://www.youtube.com/watch?v=fiznz_2gApU
+https://www.singlegrain.com/blog-posts/five-step-reliable-marketing-bots/,video_no_timestamp,https://www.youtube.com/watch?v=gyyMkg6KQI4
+https://www.singlegrain.com/blog-posts/five-step-reliable-marketing-bots/,video_no_timestamp,https://www.youtube.com/watch?v=7E0HTog979s
+https://www.singlegrain.com/blog-posts/digital-pr-chatgpt-citations/,video_not_embedded,"4 video(s) linked, 0 players embedded"
+https://www.singlegrain.com/blog-posts/digital-pr-chatgpt-citations/,video_no_timestamp,https://www.youtube.com/watch?v=YJw-lXr9d4M
+https://www.singlegrain.com/blog-posts/digital-pr-chatgpt-citations/,video_no_timestamp,https://www.youtube.com/watch?v=Qzx1tA8seMw
+https://www.singlegrain.com/blog-posts/digital-pr-chatgpt-citations/,video_no_timestamp,https://www.youtube.com/watch?v=1rArB_F7cj8
+https://www.singlegrain.com/blog-posts/digital-pr-chatgpt-citations/,video_no_timestamp,https://www.youtube.com/watch?v=gyyMkg6KQI4
+https://www.singlegrain.com/blog-posts/inbox-triage-agents-marketing-ops/,video_not_embedded,"2 video(s) linked, 0 players embedded"
+https://www.singlegrain.com/blog-posts/inbox-triage-agents-marketing-ops/,video_no_timestamp,https://www.youtube.com/watch?v=SrTAYem7OEs
+https://www.singlegrain.com/blog-posts/inbox-triage-agents-marketing-ops/,video_no_timestamp,https://www.youtube.com/watch?v=sGDWOMbKGHk
+https://www.singlegrain.com/blog-posts/inbox-triage-agents-marketing-ops/,no_service_link,"4 internal links, none to /agency/, /services/ or the service sitemap"
+https://www.singlegrain.com/blog-posts/inbox-triage-agents-marketing-ops/,broken_internal_link,https://www.singlegrain.com/artificial-intelligence/five-step-reliable-marketing-bots/ -> 200 (redirects to https://www.singlegrain.com/blog-posts/five-step-reliable-marketing-bots/)
+https://www.singlegrain.com/blog-posts/inbox-triage-agents-marketing-ops/,broken_internal_link,https://www.singlegrain.com/artificial-intelligence/marketing-agent-pipeline-raci/ -> 200 (redirects to https://www.singlegrain.com/blog-posts/marketing-agent-pipeline-raci/)
+https://www.singlegrain.com/blog-posts/agent-job-cards-definition-of-done/,video_not_embedded,"4 video(s) linked, 0 players embedded"
+https://www.singlegrain.com/blog-posts/agent-job-cards-definition-of-done/,video_no_timestamp,https://www.youtube.com/watch?v=SrTAYem7OEs
+https://www.singlegrain.com/blog-posts/agent-job-cards-definition-of-done/,video_no_timestamp,https://www.youtube.com/watch?v=B9QCiV9MN6A
+https://www.singlegrain.com/blog-posts/agent-job-cards-definition-of-done/,video_no_timestamp,https://www.youtube.com/watch?v=sGDWOMbKGHk
+https://www.singlegrain.com/blog-posts/agent-job-cards-definition-of-done/,video_no_timestamp,https://www.youtube.com/watch?v=L4mGmQRvRdg
+https://www.singlegrain.com/blog-posts/agent-job-cards-definition-of-done/,no_service_link,"4 internal links, none to /agency/, /services/ or the service sitemap"
+https://www.singlegrain.com/blog-posts/agent-job-cards-definition-of-done/,broken_internal_link,https://www.singlegrain.com/artificial-intelligence/five-step-reliable-marketing-bots/ -> 200 (redirects to https://www.singlegrain.com/blog-posts/five-step-reliable-marketing-bots/)
+https://www.singlegrain.com/blog-posts/agent-job-cards-definition-of-done/,broken_internal_link,https://www.singlegrain.com/artificial-intelligence/marketing-agent-pipeline-raci/ -> 200 (redirects to https://www.singlegrain.com/blog-posts/marketing-agent-pipeline-raci/)
+https://www.singlegrain.com/blog-posts/agent-job-cards-definition-of-done/,broken_internal_link,https://www.singlegrain.com/artificial-intelligence/slas-kill-switches-managed-marketing-agents/ -> 200 (redirects to https://www.singlegrain.com/blog-posts/slas-kill-switches-managed-marketing-agents/)
+https://www.singlegrain.com/blog-posts/lead-source-contracts-agent-booked-meetings/,video_not_embedded,"3 video(s) linked, 0 players embedded"
+https://www.singlegrain.com/blog-posts/lead-source-contracts-agent-booked-meetings/,video_no_timestamp,https://www.youtube.com/watch?v=l7DL-0NmDRU
+https://www.singlegrain.com/blog-posts/lead-source-contracts-agent-booked-meetings/,video_no_timestamp,https://www.youtube.com/watch?v=SrTAYem7OEs
+https://www.singlegrain.com/blog-posts/lead-source-contracts-agent-booked-meetings/,video_no_timestamp,https://www.youtube.com/watch?v=fdsJT0BCkvA
+https://www.singlegrain.com/blog-posts/lead-source-contracts-agent-booked-meetings/,no_service_link,"4 internal links, none to /agency/, /services/ or the service sitemap"
+https://www.singlegrain.com/blog-posts/lead-source-contracts-agent-booked-meetings/,broken_internal_link,https://www.singlegrain.com/artificial-intelligence/crm-field-contracts-marketing-agent-outputs/ -> 404
+https://www.singlegrain.com/blog-posts/lead-source-contracts-agent-booked-meetings/,broken_internal_link,https://www.singlegrain.com/artificial-intelligence/lead-qualify-handoff-contracts-before-human/ -> 404
+https://www.singlegrain.com/blog-posts/when-to-decommission-marketing-agent-job/,video_not_embedded,"5 video(s) linked, 0 players embedded"
+https://www.singlegrain.com/blog-posts/when-to-decommission-marketing-agent-job/,video_no_timestamp,https://www.youtube.com/watch?v=x7uxtQMNjiE
+https://www.singlegrain.com/blog-posts/when-to-decommission-marketing-agent-job/,video_no_timestamp,https://www.youtube.com/watch?v=L4mGmQRvRdg
+https://www.singlegrain.com/blog-posts/when-to-decommission-marketing-agent-job/,video_no_timestamp,https://www.youtube.com/watch?v=B9QCiV9MN6A
+https://www.singlegrain.com/blog-posts/when-to-decommission-marketing-agent-job/,video_no_timestamp,https://www.youtube.com/watch?v=fdsJT0BCkvA
+https://www.singlegrain.com/blog-posts/when-to-decommission-marketing-agent-job/,video_no_timestamp,https://www.youtube.com/watch?v=SrTAYem7OEs
+https://www.singlegrain.com/blog-posts/when-to-decommission-marketing-agent-job/,no_service_link,"7 internal links, none to /agency/, /services/ or the service sitemap"
+https://www.singlegrain.com/blog-posts/when-to-decommission-marketing-agent-job/,broken_internal_link,https://www.singlegrain.com/artificial-intelligence/company-brain-stop-agents-guessing-icp/ -> 404
+https://www.singlegrain.com/blog-posts/when-to-decommission-marketing-agent-job/,broken_internal_link,https://www.singlegrain.com/artificial-intelligence/how-many-agent-jobs-before-hire-human/ -> 404
+https://www.singlegrain.com/blog-posts/when-to-decommission-marketing-agent-job/,broken_internal_link,https://www.singlegrain.com/artificial-intelligence/incident-response-agent-ships-bad-copy/ -> 404
+https://www.singlegrain.com/blog-posts/when-to-decommission-marketing-agent-job/,broken_internal_link,https://www.singlegrain.com/artificial-intelligence/marketing-agent-pipeline-raci/ -> 200 (redirects to https://www.singlegrain.com/blog-posts/marketing-agent-pipeline-raci/)
+https://www.singlegrain.com/blog-posts/vendor-portability-checklist-managed-marketing-agents/,video_not_embedded,"5 video(s) linked, 0 players embedded"
+https://www.singlegrain.com/blog-posts/vendor-portability-checklist-managed-marketing-agents/,video_no_timestamp,https://www.youtube.com/watch?v=SrTAYem7OEs
+https://www.singlegrain.com/blog-posts/vendor-portability-checklist-managed-marketing-agents/,video_no_timestamp,https://www.youtube.com/watch?v=fdsJT0BCkvA
+https://www.singlegrain.com/blog-posts/vendor-portability-checklist-managed-marketing-agents/,video_no_timestamp,https://www.youtube.com/watch?v=x7uxtQMNjiE
+https://www.singlegrain.com/blog-posts/vendor-portability-checklist-managed-marketing-agents/,video_no_timestamp,https://www.youtube.com/watch?v=B9QCiV9MN6A
+https://www.singlegrain.com/blog-posts/vendor-portability-checklist-managed-marketing-agents/,video_no_timestamp,https://www.youtube.com/watch?v=L4mGmQRvRdg
+https://www.singlegrain.com/blog-posts/vendor-portability-checklist-managed-marketing-agents/,no_service_link,"6 internal links, none to /agency/, /services/ or the service sitemap"
+https://www.singlegrain.com/blog-posts/vendor-portability-checklist-managed-marketing-agents/,broken_internal_link,https://www.singlegrain.com/artificial-intelligence/how-to-hire-or-build-ai-marketing-agents-that-own-pipeline-jobs-without-a-chatbot-demo/ -> 200 (redirects to https://www.singlegrain.com/blog-posts/how-to-hire-or-build-ai-marketing-agents-that-own-pipeline-jobs-without-a-chatbot-demo/)
+https://www.singlegrain.com/blog-posts/vendor-portability-checklist-managed-marketing-agents/,broken_internal_link,https://www.singlegrain.com/artificial-intelligence/marketing-agent-pipeline-raci/ -> 200 (redirects to https://www.singlegrain.com/blog-posts/marketing-agent-pipeline-raci/)
+https://www.singlegrain.com/blog-posts/vendor-portability-checklist-managed-marketing-agents/,broken_internal_link,https://www.singlegrain.com/artificial-intelligence/specialized-marketing-llms-pipeline-jobs/ -> 200 (redirects to https://www.singlegrain.com/blog-posts/specialized-marketing-llms-pipeline-jobs/)
+https://www.singlegrain.com/blog-posts/rollback-drills-marketing-agents-production/,video_no_timestamp,https://www.youtube.com/watch?v=fdsJT0BCkvA
+https://www.singlegrain.com/blog-posts/rollback-drills-marketing-agents-production/,video_no_timestamp,https://www.youtube.com/watch?v=SrTAYem7OEs
+https://www.singlegrain.com/blog-posts/rollback-drills-marketing-agents-production/,video_no_timestamp,https://www.youtube.com/watch?v=B9QCiV9MN6A
+https://www.singlegrain.com/blog-posts/rollback-drills-marketing-agents-production/,video_no_timestamp,https://www.youtube.com/watch?v=L4mGmQRvRdg
+https://www.singlegrain.com/blog-posts/rollback-drills-marketing-agents-production/,video_no_timestamp,https://www.youtube.com/watch?v=x7uxtQMNjiE
+https://www.singlegrain.com/blog-posts/rollback-drills-marketing-agents-production/,no_service_link,"5 internal links, none to /agency/, /services/ or the service sitemap"
+https://www.singlegrain.com/blog-posts/rollback-drills-marketing-agents-production/,broken_internal_link,https://www.singlegrain.com/artificial-intelligence/incident-response-agent-ships-bad-copy/ -> 404
+https://www.singlegrain.com/blog-posts/rollback-drills-marketing-agents-production/,broken_internal_link,https://www.singlegrain.com/artificial-intelligence/marketing-agent-eval-harness-before-crm/ -> 404
+https://www.singlegrain.com/blog-posts/rollback-drills-marketing-agents-production/,broken_internal_link,https://www.singlegrain.com/artificial-intelligence/marketing-agent-pipeline-raci/ -> 200 (redirects to https://www.singlegrain.com/blog-posts/marketing-agent-pipeline-raci/)
+https://www.singlegrain.com/blog-posts/rollback-drills-marketing-agents-production/,broken_internal_link,https://www.singlegrain.com/artificial-intelligence/prompt-version-pinning-specialized-marketing-llms/ -> 404
+https://www.singlegrain.com/blog-posts/context-freshness-ttls-marketing-agents/,video_not_embedded,"5 video(s) linked, 0 players embedded"
+https://www.singlegrain.com/blog-posts/context-freshness-ttls-marketing-agents/,video_no_timestamp,https://www.youtube.com/watch?v=vBPdvwHH4Og
+https://www.singlegrain.com/blog-posts/context-freshness-ttls-marketing-agents/,video_no_timestamp,https://www.youtube.com/watch?v=B9QCiV9MN6A
+https://www.singlegrain.com/blog-posts/context-freshness-ttls-marketing-agents/,video_no_timestamp,https://www.youtube.com/watch?v=fdsJT0BCkvA
+https://www.singlegrain.com/blog-posts/context-freshness-ttls-marketing-agents/,video_no_timestamp,https://www.youtube.com/watch?v=SrTAYem7OEs
+https://www.singlegrain.com/blog-posts/context-freshness-ttls-marketing-agents/,video_no_timestamp,https://www.youtube.com/watch?v=X1fSp1MMozk
+https://www.singlegrain.com/blog-posts/context-freshness-ttls-marketing-agents/,no_service_link,"5 internal links, none to /agency/, /services/ or the service sitemap"
+https://www.singlegrain.com/blog-posts/context-freshness-ttls-marketing-agents/,broken_internal_link,https://www.singlegrain.com/artificial-intelligence/company-brain-stop-agents-guessing-icp/ -> 404
+https://www.singlegrain.com/blog-posts/context-freshness-ttls-marketing-agents/,broken_internal_link,https://www.singlegrain.com/artificial-intelligence/crm-field-contracts-marketing-agent-outputs/ -> 404
+https://www.singlegrain.com/blog-posts/context-freshness-ttls-marketing-agents/,broken_internal_link,https://www.singlegrain.com/artificial-intelligence/marketing-agent-eval-harness-before-crm/ -> 404
+https://www.singlegrain.com/blog-posts/context-freshness-ttls-marketing-agents/,broken_internal_link,https://www.singlegrain.com/artificial-intelligence/prompt-version-pinning-specialized-marketing-llms/ -> 404
+https://www.singlegrain.com/blog-posts/retrieval-source-allowlists-content-agents/,video_not_embedded,"5 video(s) linked, 0 players embedded"
+https://www.singlegrain.com/blog-posts/retrieval-source-allowlists-content-agents/,video_no_timestamp,https://www.youtube.com/watch?v=SrTAYem7OEs
+https://www.singlegrain.com/blog-posts/retrieval-source-allowlists-content-agents/,video_no_timestamp,https://www.youtube.com/watch?v=vBPdvwHH4Og
+https://www.singlegrain.com/blog-posts/retrieval-source-allowlists-content-agents/,video_no_timestamp,https://www.youtube.com/watch?v=fdsJT0BCkvA
+https://www.singlegrain.com/blog-posts/retrieval-source-allowlists-content-agents/,video_no_timestamp,https://www.youtube.com/watch?v=B9QCiV9MN6A
+https://www.singlegrain.com/blog-posts/retrieval-source-allowlists-content-agents/,video_no_timestamp,https://www.youtube.com/watch?v=L4mGmQRvRdg
+https://www.singlegrain.com/blog-posts/retrieval-source-allowlists-content-agents/,no_service_link,"7 internal links, none to /agency/, /services/ or the service sitemap"
+https://www.singlegrain.com/blog-posts/retrieval-source-allowlists-content-agents/,broken_internal_link,https://www.singlegrain.com/artificial-intelligence/company-brain-stop-agents-guessing-icp/ -> 404
+https://www.singlegrain.com/blog-posts/retrieval-source-allowlists-content-agents/,broken_internal_link,https://www.singlegrain.com/artificial-intelligence/landing-page-creative-claim-consistency/ -> 404
+https://www.singlegrain.com/blog-posts/retrieval-source-allowlists-content-agents/,broken_internal_link,https://www.singlegrain.com/artificial-intelligence/marketing-agent-eval-harness-before-crm/ -> 404
+https://www.singlegrain.com/blog-posts/ai-overview-query-capture-playbook/,process_leak,"Together with the embedded scene above, that is three on-angle Eric tape inputs for this job, not a link dump."
+https://www.singlegrain.com/blog-posts/ai-overview-query-capture-playbook/,video_not_embedded,"4 video(s) linked, 0 players embedded"
+https://www.singlegrain.com/blog-posts/ai-overview-query-capture-playbook/,video_no_timestamp,https://www.youtube.com/watch?v=vBPdvwHH4Og
+https://www.singlegrain.com/blog-posts/ai-overview-query-capture-playbook/,video_no_timestamp,https://www.youtube.com/watch?v=B9QCiV9MN6A
+https://www.singlegrain.com/blog-posts/ai-overview-query-capture-playbook/,video_no_timestamp,https://www.youtube.com/watch?v=l7DL-0NmDRU
+https://www.singlegrain.com/blog-posts/ai-overview-query-capture-playbook/,video_no_timestamp,https://www.youtube.com/watch?v=SrTAYem7OEs
+https://www.singlegrain.com/blog-posts/ai-overview-query-capture-playbook/,no_service_link,"5 internal links, none to /agency/, /services/ or the service sitemap"
+https://www.singlegrain.com/blog-posts/ai-overview-query-capture-playbook/,broken_internal_link,https://www.singlegrain.com/artificial-intelligence/five-step-reliable-marketing-bots/ -> 200 (redirects to https://www.singlegrain.com/blog-posts/five-step-reliable-marketing-bots/)
+https://www.singlegrain.com/blog-posts/brand-equity-citation-hygiene-llms/,process_leak,"Together with the embedded scene above, that is three on-angle Eric tape inputs for this job, not a link dump."
+https://www.singlegrain.com/blog-posts/brand-equity-citation-hygiene-llms/,video_not_embedded,"5 video(s) linked, 0 players embedded"
+https://www.singlegrain.com/blog-posts/brand-equity-citation-hygiene-llms/,video_no_timestamp,https://www.youtube.com/watch?v=fdsJT0BCkvA
+https://www.singlegrain.com/blog-posts/brand-equity-citation-hygiene-llms/,video_no_timestamp,https://www.youtube.com/watch?v=B9QCiV9MN6A
+https://www.singlegrain.com/blog-posts/brand-equity-citation-hygiene-llms/,video_no_timestamp,https://www.youtube.com/watch?v=x7uxtQMNjiE
+https://www.singlegrain.com/blog-posts/brand-equity-citation-hygiene-llms/,video_no_timestamp,https://www.youtube.com/watch?v=l7DL-0NmDRU
+https://www.singlegrain.com/blog-posts/brand-equity-citation-hygiene-llms/,video_no_timestamp,https://www.youtube.com/watch?v=SrTAYem7OEs
+https://www.singlegrain.com/blog-posts/brand-equity-citation-hygiene-llms/,no_service_link,"4 internal links, none to /agency/, /services/ or the service sitemap"
+https://www.singlegrain.com/blog-posts/technical-seo-for-llm-scrapers/,process_leak,"Together with the embedded scene above, that is three on-angle Eric tape inputs for this job, not a link dump."
+https://www.singlegrain.com/blog-posts/technical-seo-for-llm-scrapers/,video_not_embedded,"5 video(s) linked, 0 players embedded"
+https://www.singlegrain.com/blog-posts/technical-seo-for-llm-scrapers/,video_no_timestamp,https://www.youtube.com/watch?v=SrTAYem7OEs
+https://www.singlegrain.com/blog-posts/technical-seo-for-llm-scrapers/,video_no_timestamp,https://www.youtube.com/watch?v=l7DL-0NmDRU
+https://www.singlegrain.com/blog-posts/technical-seo-for-llm-scrapers/,video_no_timestamp,https://www.youtube.com/watch?v=x7uxtQMNjiE
+https://www.singlegrain.com/blog-posts/technical-seo-for-llm-scrapers/,video_no_timestamp,https://www.youtube.com/watch?v=B9QCiV9MN6A
+https://www.singlegrain.com/blog-posts/technical-seo-for-llm-scrapers/,video_no_timestamp,https://www.youtube.com/watch?v=fdsJT0BCkvA
+https://www.singlegrain.com/blog-posts/technical-seo-for-llm-scrapers/,no_service_link,"5 internal links, none to /agency/, /services/ or the service sitemap"
+https://www.singlegrain.com/blog-posts/technical-seo-for-llm-scrapers/,broken_internal_link,https://www.singlegrain.com/artificial-intelligence/five-step-reliable-marketing-bots/ -> 200 (redirects to https://www.singlegrain.com/blog-posts/five-step-reliable-marketing-bots/)
+https://www.singlegrain.com/blog-posts/content-attention-to-pipeline-conversion/,process_leak,"Together with the embedded scene above, that is three on-angle Eric tape inputs for this job, not a link dump."
+https://www.singlegrain.com/blog-posts/content-attention-to-pipeline-conversion/,video_not_embedded,"4 video(s) linked, 0 players embedded"
+https://www.singlegrain.com/blog-posts/content-attention-to-pipeline-conversion/,video_no_timestamp,https://www.youtube.com/watch?v=qVyqQbS3oXs
+https://www.singlegrain.com/blog-posts/content-attention-to-pipeline-conversion/,video_no_timestamp,https://www.youtube.com/watch?v=l7DL-0NmDRU
+https://www.singlegrain.com/blog-posts/content-attention-to-pipeline-conversion/,video_no_timestamp,https://www.youtube.com/watch?v=x7uxtQMNjiE
+https://www.singlegrain.com/blog-posts/content-attention-to-pipeline-conversion/,video_no_timestamp,https://www.youtube.com/watch?v=SrTAYem7OEs
+https://www.singlegrain.com/blog-posts/content-attention-to-pipeline-conversion/,no_service_link,"4 internal links, none to /agency/, /services/ or the service sitemap"
+https://www.singlegrain.com/blog-posts/content-attention-to-pipeline-conversion/,broken_internal_link,https://www.singlegrain.com/artificial-intelligence/crm-field-contracts-marketing-agent-outputs/ -> 404
+https://www.singlegrain.com/blog-posts/content-attention-to-pipeline-conversion/,broken_internal_link,https://www.singlegrain.com/artificial-intelligence/lead-qualify-handoff-contracts-before-human/ -> 404
+https://www.singlegrain.com/blog-posts/how-to-stop-content-agent-killing-posts-that-already-rank/,video_not_embedded,"3 video(s) linked, 0 players embedded"
+https://www.singlegrain.com/blog-posts/how-to-stop-content-agent-killing-posts-that-already-rank/,video_no_timestamp,https://www.youtube.com/watch?v=mLlnVoMqn44
+https://www.singlegrain.com/blog-posts/how-to-stop-content-agent-killing-posts-that-already-rank/,video_no_timestamp,https://www.youtube.com/watch?v=sGDWOMbKGHk
+https://www.singlegrain.com/blog-posts/how-to-stop-content-agent-killing-posts-that-already-rank/,video_no_timestamp,https://www.youtube.com/watch?v=B9QCiV9MN6A
+https://www.singlegrain.com/blog-posts/how-to-stop-content-agent-killing-posts-that-already-rank/,no_service_link,"1 internal links, none to /agency/, /services/ or the service sitemap"
+https://www.singlegrain.com/blog-posts/simplify-before-automate-marketing-agents-64-3/,video_not_embedded,"4 video(s) linked, 0 players embedded"
+https://www.singlegrain.com/blog-posts/simplify-before-automate-marketing-agents-64-3/,video_no_timestamp,https://www.youtube.com/watch?v=HhCW4-eCeG8
+https://www.singlegrain.com/blog-posts/simplify-before-automate-marketing-agents-64-3/,video_no_timestamp,https://www.youtube.com/watch?v=L4mGmQRvRdg
+https://www.singlegrain.com/blog-posts/simplify-before-automate-marketing-agents-64-3/,video_no_timestamp,https://www.youtube.com/watch?v=SrTAYem7OEs
+https://www.singlegrain.com/blog-posts/simplify-before-automate-marketing-agents-64-3/,video_no_timestamp,https://www.youtube.com/watch?v=eKDOcfdcljU
+https://www.singlegrain.com/blog-posts/simplify-before-automate-marketing-agents-64-3/,no_service_link,"7 internal links, none to /agency/, /services/ or the service sitemap"
+https://www.singlegrain.com/blog-posts/simplify-before-automate-marketing-agents-64-3/,broken_internal_link,https://www.singlegrain.com/artificial-intelligence/five-step-reliable-marketing-bots/ -> 200 (redirects to https://www.singlegrain.com/blog-posts/five-step-reliable-marketing-bots/)
+https://www.singlegrain.com/blog-posts/simplify-before-automate-marketing-agents-64-3/,broken_internal_link,https://www.singlegrain.com/artificial-intelligence/how-to-hire-or-build-ai-marketing-agents-that-own-pipeline-jobs-without-a-chatbot-demo/ -> 200 (redirects to https://www.singlegrain.com/blog-posts/how-to-hire-or-build-ai-marketing-agents-that-own-pipeline-jobs-without-a-chatbot-demo/)
+https://www.singlegrain.com/blog-posts/simplify-before-automate-marketing-agents-64-3/,broken_internal_link,https://www.singlegrain.com/artificial-intelligence/slas-kill-switches-managed-marketing-agents/ -> 200 (redirects to https://www.singlegrain.com/blog-posts/slas-kill-switches-managed-marketing-agents/)
+https://www.singlegrain.com/blog-posts/schedule-recurring-marketing-agent-jobs/,video_not_embedded,"5 video(s) linked, 0 players embedded"
+https://www.singlegrain.com/blog-posts/schedule-recurring-marketing-agent-jobs/,video_no_timestamp,https://www.youtube.com/watch?v=SrTAYem7OEs
+https://www.singlegrain.com/blog-posts/schedule-recurring-marketing-agent-jobs/,video_no_timestamp,https://www.youtube.com/watch?v=x7uxtQMNjiE
+https://www.singlegrain.com/blog-posts/schedule-recurring-marketing-agent-jobs/,video_no_timestamp,https://www.youtube.com/watch?v=l7DL-0NmDRU
+https://www.singlegrain.com/blog-posts/schedule-recurring-marketing-agent-jobs/,video_no_timestamp,https://www.youtube.com/watch?v=B9QCiV9MN6A
+https://www.singlegrain.com/blog-posts/schedule-recurring-marketing-agent-jobs/,video_no_timestamp,https://www.youtube.com/watch?v=L4mGmQRvRdg
+https://www.singlegrain.com/blog-posts/schedule-recurring-marketing-agent-jobs/,no_service_link,"8 internal links, none to /agency/, /services/ or the service sitemap"
+https://www.singlegrain.com/blog-posts/schedule-recurring-marketing-agent-jobs/,broken_internal_link,https://www.singlegrain.com/artificial-intelligence/company-brain-stop-agents-guessing-icp/ -> 404
+https://www.singlegrain.com/blog-posts/schedule-recurring-marketing-agent-jobs/,broken_internal_link,https://www.singlegrain.com/artificial-intelligence/five-step-reliable-marketing-bots/ -> 200 (redirects to https://www.singlegrain.com/blog-posts/five-step-reliable-marketing-bots/)
+https://www.singlegrain.com/blog-posts/schedule-recurring-marketing-agent-jobs/,broken_internal_link,https://www.singlegrain.com/artificial-intelligence/how-to-hire-or-build-ai-marketing-agents-that-own-pipeline-jobs-without-a-chatbot-demo/ -> 200 (redirects to https://www.singlegrain.com/blog-posts/how-to-hire-or-build-ai-marketing-agents-that-own-pipeline-jobs-without-a-chatbot-demo/)
+https://www.singlegrain.com/blog-posts/schedule-recurring-marketing-agent-jobs/,broken_internal_link,https://www.singlegrain.com/artificial-intelligence/marketing-agent-pipeline-raci/ -> 200 (redirects to https://www.singlegrain.com/blog-posts/marketing-agent-pipeline-raci/)
+https://www.singlegrain.com/blog-posts/how-to-find-the-best-instagram-hooks-with-jev-and-meta-muse/,video_no_timestamp,https://www.youtube.com/watch?v=C1q--gy5sNU
+https://www.singlegrain.com/blog-posts/how-to-find-the-best-instagram-hooks-with-jev-and-meta-muse/,no_service_link,"4 internal links, none to /agency/, /services/ or the service sitemap"
+https://www.singlegrain.com/blog-posts/programmatic-seo-ai-search-visibility-playbook-saas/,video_no_timestamp,https://www.youtube.com/watch?v=BMrySbBbzY8
+https://www.singlegrain.com/blog-posts/programmatic-seo-ai-search-visibility-playbook-saas/,video_no_timestamp,https://www.youtube.com/watch?v=vBPdvwHH4Og
+https://www.singlegrain.com/blog-posts/programmatic-seo-ai-search-visibility-playbook-saas/,broken_internal_link,https://www.singlegrain.com/agency/managed-marketing-agents/ -> 404
+https://www.singlegrain.com/blog-posts/programmatic-seo-ai-search-visibility-playbook-saas/,broken_internal_link,https://www.singlegrain.com/seo-agency/ -> 200 (redirects to https://www.singlegrain.com/agency/seo-agency/)
+https://www.singlegrain.com/blog-posts/jev-vs-sdr-queue-60000-leads-2000-icp/,video_no_timestamp,https://www.youtube.com/watch?v=wwKotpHzp3g
+https://www.singlegrain.com/blog-posts/jev-vs-sdr-queue-60000-leads-2000-icp/,no_service_link,"4 internal links, none to /agency/, /services/ or the service sitemap"
+https://www.singlegrain.com/blog-posts/ai-powered-cro-agency-buying-guide/,video_no_timestamp,https://www.youtube.com/watch?v=BMrySbBbzY8
+https://www.singlegrain.com/blog-posts/ai-powered-cro-agency-buying-guide/,video_no_timestamp,https://www.youtube.com/watch?v=yulSDGfeSbs
+https://www.singlegrain.com/blog-posts/ai-powered-cro-agency-buying-guide/,broken_internal_link,https://www.singlegrain.com/agency/managed-marketing-agents/ -> 404
+https://www.singlegrain.com/blog-posts/ai-powered-cro-agency-buying-guide/,broken_internal_link,https://www.singlegrain.com/conversion-rate-optimization/ -> 200 (redirects to https://www.singlegrain.com/glossary/what-is-conversion-rate-optimization/)
+https://www.singlegrain.com/blog-posts/ga4-crm-attribution-agency-vs-inhouse-vs-webfx/,video_no_timestamp,https://www.youtube.com/watch?v=QKpRs-2EIiM
+https://www.singlegrain.com/blog-posts/ga4-crm-attribution-agency-vs-inhouse-vs-webfx/,video_no_timestamp,https://www.youtube.com/watch?v=tcgfrAAgRK4
+https://www.singlegrain.com/blog-posts/ga4-crm-attribution-agency-vs-inhouse-vs-webfx/,broken_internal_link,https://www.singlegrain.com/agency/managed-marketing-agents/ -> 404
+https://www.singlegrain.com/blog-posts/churn-signals-hubspot-slack-stripe-agent/,video_no_timestamp,https://www.youtube.com/watch?v=wwKotpHzp3g
+https://www.singlegrain.com/blog-posts/churn-signals-hubspot-slack-stripe-agent/,no_service_link,"4 internal links, none to /agency/, /services/ or the service sitemap"
+https://www.singlegrain.com/blog-posts/jev-sales-call-to-timestamped-article-brief/,video_no_timestamp,https://www.youtube.com/watch?v=QY7X71PKdTI
+https://www.singlegrain.com/blog-posts/jev-sales-call-to-timestamped-article-brief/,no_service_link,"4 internal links, none to /agency/, /services/ or the service sitemap"
+https://www.singlegrain.com/blog-posts/how-to-scale-ai-creative-into-the-thousands-with-seedance-and-meta-ads/,video_no_timestamp,https://www.youtube.com/watch?v=QKpRs-2EIiM
+https://www.singlegrain.com/blog-posts/how-to-scale-ai-creative-into-the-thousands-with-seedance-and-meta-ads/,video_no_timestamp,https://www.youtube.com/watch?v=lyFi_caGvY0
+https://www.singlegrain.com/blog-posts/how-to-scale-ai-creative-into-the-thousands-with-seedance-and-meta-ads/,no_service_link,"5 internal links, none to /agency/, /services/ or the service sitemap"
+https://www.singlegrain.com/blog-posts/ai-content-agent-rewrite-riskier-than-thin-claim/,no_service_link,"4 internal links, none to /agency/, /services/ or the service sitemap"
+https://www.singlegrain.com/blog-posts/openai-dots-vs-grok-bot-vs-meta-muse/,no_service_link,"8 internal links, none to /agency/, /services/ or the service sitemap"
+https://www.singlegrain.com/blog-posts/seedance-2-0-ai-video-ads/,no_service_link,"8 internal links, none to /agency/, /services/ or the service sitemap"
+https://www.singlegrain.com/blog-posts/startups-test-thousands-of-ads/,stale_source,"2011: These are 2011 findings, not current Meta benchmarks."
+https://www.singlegrain.com/blog-posts/startups-test-thousands-of-ads/,stale_source,link https://hbr.org/2011/03/the-short-life-of-online-sales-leads
+https://www.singlegrain.com/blog-posts/startups-test-thousands-of-ads/,video_not_embedded,"6 video(s) linked, 0 players embedded"
+https://www.singlegrain.com/blog-posts/startups-test-thousands-of-ads/,video_no_timestamp,https://www.youtube.com/watch?v=IRAOyo8tEzc
+https://www.singlegrain.com/blog-posts/startups-test-thousands-of-ads/,video_no_timestamp,https://www.youtube.com/watch?v=sYb02534qT0
+https://www.singlegrain.com/blog-posts/startups-test-thousands-of-ads/,video_no_timestamp,https://www.youtube.com/watch?v=OkOrxKoLHtw
+https://www.singlegrain.com/blog-posts/startups-test-thousands-of-ads/,video_no_timestamp,https://www.youtube.com/watch?v=_gKAMSeIMog
+https://www.singlegrain.com/blog-posts/startups-test-thousands-of-ads/,video_no_timestamp,https://www.youtube.com/watch?v=4CkvQjFrvZw
+https://www.singlegrain.com/blog-posts/startups-test-thousands-of-ads/,video_no_timestamp,https://www.youtube.com/watch?v=7E0HTog979s
+https://www.singlegrain.com/blog-posts/startups-test-thousands-of-ads/,no_service_link,"6 internal links, none to /agency/, /services/ or the service sitemap"
+https://www.singlegrain.com/blog-posts/how-to-hire-or-build-ai-marketing-agents-that-own-pipeline-jobs-without-a-chatbot-demo/,stale_source,"2011: Harvard Business Review’s 2011 report described an audit of 2,241 U.S."
+https://www.singlegrain.com/blog-posts/how-to-hire-or-build-ai-marketing-agents-that-own-pipeline-jobs-without-a-chatbot-demo/,stale_source,link https://hbr.org/2011/03/the-short-life-of-online-sales-leads
+https://www.singlegrain.com/blog-posts/how-to-hire-or-build-ai-marketing-agents-that-own-pipeline-jobs-without-a-chatbot-demo/,video_not_embedded,"6 video(s) linked, 0 players embedded"
+https://www.singlegrain.com/blog-posts/how-to-hire-or-build-ai-marketing-agents-that-own-pipeline-jobs-without-a-chatbot-demo/,video_no_timestamp,https://www.youtube.com/watch?v=_gKAMSeIMog
+https://www.singlegrain.com/blog-posts/how-to-hire-or-build-ai-marketing-agents-that-own-pipeline-jobs-without-a-chatbot-demo/,video_no_timestamp,https://www.youtube.com/watch?v=Qzx1tA8seMw
+https://www.singlegrain.com/blog-posts/how-to-hire-or-build-ai-marketing-agents-that-own-pipeline-jobs-without-a-chatbot-demo/,video_no_timestamp,https://www.youtube.com/watch?v=cx9UKy3LA9E
+https://www.singlegrain.com/blog-posts/how-to-hire-or-build-ai-marketing-agents-that-own-pipeline-jobs-without-a-chatbot-demo/,video_no_timestamp,https://www.youtube.com/watch?v=4CkvQjFrvZw
+https://www.singlegrain.com/blog-posts/how-to-hire-or-build-ai-marketing-agents-that-own-pipeline-jobs-without-a-chatbot-demo/,video_no_timestamp,https://www.youtube.com/watch?v=Q0eQlT-Sn-k
+https://www.singlegrain.com/blog-posts/how-to-hire-or-build-ai-marketing-agents-that-own-pipeline-jobs-without-a-chatbot-demo/,video_no_timestamp,https://www.youtube.com/watch?v=7E0HTog979s
+https://www.singlegrain.com/blog-posts/which-ai-marketing-services-to-buy-when-you-need-pipeline-not-another-content-calendar/,stale_source,"2011: Harvard Business Review’s 2011 audit of 2,241 U.S."
+https://www.singlegrain.com/blog-posts/which-ai-marketing-services-to-buy-when-you-need-pipeline-not-another-content-calendar/,stale_source,link https://hbr.org/2011/03/the-short-life-of-online-sales-leads
+https://www.singlegrain.com/blog-posts/which-ai-marketing-services-to-buy-when-you-need-pipeline-not-another-content-calendar/,video_not_embedded,"6 video(s) linked, 0 players embedded"
+https://www.singlegrain.com/blog-posts/which-ai-marketing-services-to-buy-when-you-need-pipeline-not-another-content-calendar/,video_no_timestamp,https://www.youtube.com/watch?v=z8QuGSXMy7Q
+https://www.singlegrain.com/blog-posts/which-ai-marketing-services-to-buy-when-you-need-pipeline-not-another-content-calendar/,video_no_timestamp,https://www.youtube.com/watch?v=Qzx1tA8seMw
+https://www.singlegrain.com/blog-posts/which-ai-marketing-services-to-buy-when-you-need-pipeline-not-another-content-calendar/,video_no_timestamp,https://www.youtube.com/watch?v=_gKAMSeIMog
+https://www.singlegrain.com/blog-posts/which-ai-marketing-services-to-buy-when-you-need-pipeline-not-another-content-calendar/,video_no_timestamp,https://www.youtube.com/watch?v=cUoT1BS11GA
+https://www.singlegrain.com/blog-posts/which-ai-marketing-services-to-buy-when-you-need-pipeline-not-another-content-calendar/,video_no_timestamp,https://www.youtube.com/watch?v=gyyMkg6KQI4
+https://www.singlegrain.com/blog-posts/which-ai-marketing-services-to-buy-when-you-need-pipeline-not-another-content-calendar/,video_no_timestamp,https://www.youtube.com/watch?v=7E0HTog979s
+https://www.singlegrain.com/blog-posts/slas-kill-switches-managed-marketing-agents/,stale_source,"2011: These are historical 2011 inbound-response findings, not outbound-agent benchmarks."
+https://www.singlegrain.com/blog-posts/slas-kill-switches-managed-marketing-agents/,stale_source,link https://hbr.org/2011/03/the-short-life-of-online-sales-leads
+https://www.singlegrain.com/blog-posts/slas-kill-switches-managed-marketing-agents/,video_not_embedded,"8 video(s) linked, 0 players embedded"
+https://www.singlegrain.com/blog-posts/slas-kill-switches-managed-marketing-agents/,video_no_timestamp,https://www.youtube.com/watch?v=MjjxIPsQ6Yg
+https://www.singlegrain.com/blog-posts/slas-kill-switches-managed-marketing-agents/,video_no_timestamp,https://www.youtube.com/watch?v=_gKAMSeIMog
+https://www.singlegrain.com/blog-posts/slas-kill-switches-managed-marketing-agents/,video_no_timestamp,https://www.youtube.com/watch?v=Q0eQlT-Sn-k
+https://www.singlegrain.com/blog-posts/slas-kill-switches-managed-marketing-agents/,video_no_timestamp,https://www.youtube.com/watch?v=gyyMkg6KQI4
+https://www.singlegrain.com/blog-posts/slas-kill-switches-managed-marketing-agents/,video_no_timestamp,https://www.youtube.com/watch?v=OkOrxKoLHtw
+https://www.singlegrain.com/blog-posts/slas-kill-switches-managed-marketing-agents/,video_no_timestamp,https://www.youtube.com/watch?v=fiznz_2gApU
+https://www.singlegrain.com/blog-posts/slas-kill-switches-managed-marketing-agents/,video_no_timestamp,https://www.youtube.com/watch?v=4CkvQjFrvZw
+https://www.singlegrain.com/blog-posts/slas-kill-switches-managed-marketing-agents/,video_no_timestamp,https://www.youtube.com/watch?v=7E0HTog979s
+https://www.singlegrain.com/blog-posts/which-marketing-jobs-a-founder-can-hand-gpt-6-astra-for-a-full-day-before-hiring/,stale_source,2011: Harvard Business Review’s 2011 research on online sales leads associated faster contact with greater qualification likelihood.
+https://www.singlegrain.com/blog-posts/which-marketing-jobs-a-founder-can-hand-gpt-6-astra-for-a-full-day-before-hiring/,stale_source,link https://hbr.org/2011/03/the-short-life-of-online-sales-leads
+https://www.singlegrain.com/blog-posts/which-marketing-jobs-a-founder-can-hand-gpt-6-astra-for-a-full-day-before-hiring/,video_not_embedded,"6 video(s) linked, 0 players embedded"
+https://www.singlegrain.com/blog-posts/which-marketing-jobs-a-founder-can-hand-gpt-6-astra-for-a-full-day-before-hiring/,video_no_timestamp,https://www.youtube.com/watch?v=Qzx1tA8seMw
+https://www.singlegrain.com/blog-posts/which-marketing-jobs-a-founder-can-hand-gpt-6-astra-for-a-full-day-before-hiring/,video_no_timestamp,https://www.youtube.com/watch?v=_gKAMSeIMog
+https://www.singlegrain.com/blog-posts/which-marketing-jobs-a-founder-can-hand-gpt-6-astra-for-a-full-day-before-hiring/,video_no_timestamp,https://www.youtube.com/watch?v=yPgu7V8M8_w
+https://www.singlegrain.com/blog-posts/which-marketing-jobs-a-founder-can-hand-gpt-6-astra-for-a-full-day-before-hiring/,video_no_timestamp,https://www.youtube.com/watch?v=4CkvQjFrvZw
+https://www.singlegrain.com/blog-posts/which-marketing-jobs-a-founder-can-hand-gpt-6-astra-for-a-full-day-before-hiring/,video_no_timestamp,https://www.youtube.com/watch?v=GGzT7zVrRTU
+https://www.singlegrain.com/blog-posts/which-marketing-jobs-a-founder-can-hand-gpt-6-astra-for-a-full-day-before-hiring/,video_no_timestamp,https://www.youtube.com/watch?v=7E0HTog979s
+https://www.singlegrain.com/blog-posts/legacy-content-helping-competitors-audit/,video_not_embedded,"4 video(s) linked, 0 players embedded"
+https://www.singlegrain.com/blog-posts/legacy-content-helping-competitors-audit/,video_no_timestamp,https://www.youtube.com/watch?v=vBPdvwHH4Og
+https://www.singlegrain.com/blog-posts/legacy-content-helping-competitors-audit/,video_no_timestamp,https://www.youtube.com/watch?v=l7DL-0NmDRU
+https://www.singlegrain.com/blog-posts/legacy-content-helping-competitors-audit/,video_no_timestamp,https://www.youtube.com/watch?v=SrTAYem7OEs
+https://www.singlegrain.com/blog-posts/legacy-content-helping-competitors-audit/,video_no_timestamp,https://www.youtube.com/watch?v=x7uxtQMNjiE
+https://www.singlegrain.com/blog-posts/legacy-content-helping-competitors-audit/,no_service_link,"6 internal links, none to /agency/, /services/ or the service sitemap"
+https://www.singlegrain.com/blog-posts/legacy-content-helping-competitors-audit/,broken_internal_link,https://www.singlegrain.com/artificial-intelligence/five-step-reliable-marketing-bots/ -> 200 (redirects to https://www.singlegrain.com/blog-posts/five-step-reliable-marketing-bots/)
+https://www.singlegrain.com/blog-posts/exception-queues-marketing-agents/,video_not_embedded,"3 video(s) linked, 0 players embedded"
+https://www.singlegrain.com/blog-posts/exception-queues-marketing-agents/,video_no_timestamp,https://www.youtube.com/watch?v=B9QCiV9MN6A
+https://www.singlegrain.com/blog-posts/exception-queues-marketing-agents/,video_no_timestamp,https://www.youtube.com/watch?v=L4mGmQRvRdg
+https://www.singlegrain.com/blog-posts/exception-queues-marketing-agents/,video_no_timestamp,https://www.youtube.com/watch?v=SrTAYem7OEs
+https://www.singlegrain.com/blog-posts/exception-queues-marketing-agents/,no_service_link,"5 internal links, none to /agency/, /services/ or the service sitemap"
+https://www.singlegrain.com/blog-posts/exception-queues-marketing-agents/,broken_internal_link,https://www.singlegrain.com/artificial-intelligence/marketing-agent-pipeline-raci/ -> 200 (redirects to https://www.singlegrain.com/blog-posts/marketing-agent-pipeline-raci/)
+https://www.singlegrain.com/blog-posts/exception-queues-marketing-agents/,broken_internal_link,https://www.singlegrain.com/artificial-intelligence/slas-kill-switches-managed-marketing-agents/ -> 200 (redirects to https://www.singlegrain.com/blog-posts/slas-kill-switches-managed-marketing-agents/)
+5 posts: https://www.singlegrain.com/blog-posts/agent-job-cards-definition-of-done/ https://www.singlegrain.com/blog-posts/brand-equity-citation-hygiene-llms/ https://www.singlegrain.com/blog-posts/exception-queues-marketing-agents/ https://www.singlegrain.com/blog-posts/rollback-drills-marketing-agents-production/ https://www.singlegrain.com/blog-posts/simplify-before-automate-marketing-agents-64-3/,repeated_passage,single brain installs the system single grain runs it when you need the team single brain is the ai implementation os for job specific agents evaluations and kill switches
+5 posts: https://www.singlegrain.com/blog-posts/churn-signals-hubspot-slack-stripe-agent/ https://www.singlegrain.com/blog-posts/how-to-find-the-best-instagram-hooks-with-jev-and-meta-muse/ https://www.singlegrain.com/blog-posts/jev-sales-call-to-timestamped-article-brief/ https://www.singlegrain.com/blog-posts/jev-vs-sdr-queue-60000-leads-2000-icp/ https://www.singlegrain.com/blog-posts/programmatic-seo-ai-search-visibility-playbook-saas/,repeated_passage,if the note lives in a random slack thread next week starts from folklore again
+5 posts: https://www.singlegrain.com/blog-posts/ai-content-agent-rewrite-riskier-than-thin-claim/ https://www.singlegrain.com/blog-posts/churn-signals-hubspot-slack-stripe-agent/ https://www.singlegrain.com/blog-posts/how-to-find-the-best-instagram-hooks-with-jev-and-meta-muse/ https://www.singlegrain.com/blog-posts/jev-sales-call-to-timestamped-article-brief/ https://www.singlegrain.com/blog-posts/jev-vs-sdr-queue-60000-leads-2000-icp/,repeated_passage,teams that cannot refuse end up automating noise and then blaming the model for being unreliable when the real failure was missing judgment
+5 posts: https://www.singlegrain.com/blog-posts/ai-content-agent-rewrite-riskier-than-thin-claim/ https://www.singlegrain.com/blog-posts/churn-signals-hubspot-slack-stripe-agent/ https://www.singlegrain.com/blog-posts/how-to-find-the-best-instagram-hooks-with-jev-and-meta-muse/ https://www.singlegrain.com/blog-posts/jev-sales-call-to-timestamped-article-brief/ https://www.singlegrain.com/blog-posts/jev-vs-sdr-queue-60000-leads-2000-icp/,repeated_passage,if nobody can name what gets refused the system will accept everything under time pressure
+4 posts: https://www.singlegrain.com/blog-posts/ai-overview-query-capture-playbook/ https://www.singlegrain.com/blog-posts/brand-equity-citation-hygiene-llms/ https://www.singlegrain.com/blog-posts/content-attention-to-pipeline-conversion/ https://www.singlegrain.com/blog-posts/technical-seo-for-llm-scrapers/,repeated_passage,together with the embedded scene above that is three on angle eric tape inputs for this job not a link dump
+4 posts: https://www.singlegrain.com/blog-posts/churn-signals-hubspot-slack-stripe-agent/ https://www.singlegrain.com/blog-posts/how-to-find-the-best-instagram-hooks-with-jev-and-meta-muse/ https://www.singlegrain.com/blog-posts/jev-sales-call-to-timestamped-article-brief/ https://www.singlegrain.com/blog-posts/jev-vs-sdr-queue-60000-leads-2000-icp/,repeated_passage,the point of a managed job is that a new owner can read the runbook and run the same loop without a private briefing
+4 posts: https://www.singlegrain.com/blog-posts/churn-signals-hubspot-slack-stripe-agent/ https://www.singlegrain.com/blog-posts/how-to-find-the-best-instagram-hooks-with-jev-and-meta-muse/ https://www.singlegrain.com/blog-posts/jev-sales-call-to-timestamped-article-brief/ https://www.singlegrain.com/blog-posts/jev-vs-sdr-queue-60000-leads-2000-icp/,repeated_passage,if the job cannot survive a vacation week it is still a personal workflow not a managed agent job
+4 posts: https://www.singlegrain.com/blog-posts/ai-content-agent-rewrite-riskier-than-thin-claim/ https://www.singlegrain.com/blog-posts/churn-signals-hubspot-slack-stripe-agent/ https://www.singlegrain.com/blog-posts/how-to-find-the-best-instagram-hooks-with-jev-and-meta-muse/ https://www.singlegrain.com/blog-posts/jev-sales-call-to-timestamped-article-brief/,repeated_passage,keep customer identifying detail out of prompts unless the run is in an approved private sandbox
+3 posts: https://www.singlegrain.com/blog-posts/specialized-marketing-llms-pipeline-jobs/ https://www.singlegrain.com/blog-posts/startups-test-thousands-of-ads/ https://www.singlegrain.com/blog-posts/which-ai-marketing-services-to-buy-when-you-need-pipeline-not-another-content-calendar/,repeated_passage,companies found that 37 responded to a web lead within an hour while 23 never responded
+3 posts: https://www.singlegrain.com/blog-posts/rollback-drills-marketing-agents-production/ https://www.singlegrain.com/blog-posts/schedule-recurring-marketing-agent-jobs/ https://www.singlegrain.com/blog-posts/vendor-portability-checklist-managed-marketing-agents/,repeated_passage,open future forum s september report says 81 of 230 marketing and growth leaders are past exploring agentic ai
+3 posts: https://www.singlegrain.com/blog-posts/brand-equity-citation-hygiene-llms/ https://www.singlegrain.com/blog-posts/content-attention-to-pipeline-conversion/ https://www.singlegrain.com/blog-posts/technical-seo-for-llm-scrapers/,repeated_passage,the same review applies reusable workflows beat custom premium work build them then hand them to the team so uncertain rows route to a human instead of auto publishing
+3 posts: https://www.singlegrain.com/blog-posts/content-attention-to-pipeline-conversion/ https://www.singlegrain.com/blog-posts/how-to-stop-content-agent-killing-posts-that-already-rank/ https://www.singlegrain.com/blog-posts/schedule-recurring-marketing-agent-jobs/,repeated_passage,single brain installs the system single grain runs it when you need the team single brain is the ai implementation os for agents eval and kill switches
+3 posts: https://www.singlegrain.com/blog-posts/how-to-find-the-best-instagram-hooks-with-jev-and-meta-muse/ https://www.singlegrain.com/blog-posts/jev-sales-call-to-timestamped-article-brief/ https://www.singlegrain.com/blog-posts/jev-vs-sdr-queue-60000-leads-2000-icp/,repeated_passage,broad rewrites of the whole stack every friday are how institutional memory dies and how teams lose trust in the agent job
