@@ -1,7 +1,7 @@
 # Tracking guard
 
-Run 2026-10-14T08:59+00:00 UTC: 251 pages (singlegrain.com 237, singlebrain.com 3, gateway.singlebrain.com 4, clickflow.com 7).
-Compared with: nothing, first run (baseline).
+Run 2026-10-14T09:14+00:00 UTC: 251 pages (singlegrain.com 237, singlebrain.com 3, gateway.singlebrain.com 4, clickflow.com 7).
+Compared with: 2026-10-14T0859Z.json.
 
 ## Changes since last run: 0 alerts, 0 info
 
