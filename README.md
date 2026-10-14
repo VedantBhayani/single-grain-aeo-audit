@@ -2,10 +2,10 @@
 
 Two read-only tools built for Single Grain, run on its public pages:
 
-1. **[AEO post audit + pre-publish gate](aeo_audit/):** checks what the AEO pipeline published on singlegrain.com against the gates Eric Siu described on camera, and blocks a draft before it ships if it fails one.
+1. **[AEO post audit + pre-publish gate](aeo_audit/):** checks what the AEO pipeline published on singlegrain.com against what Eric Siu said on camera, plus a source-date check, and blocks a draft before it ships if it fails a hard check.
 2. **[Tracking guard](tracking_guard/):** snapshots the tracking tags, forms and index signals on singlegrain.com, singlebrain.com and clickflow.com every week, and alerts when one disappears.
 
-By Vedant Bhayani. Built with Claude Code. I chose what to check, then verified every finding by hand against the live pages and the transcripts.
+By Vedant Bhayani. Built with Claude Code, which wrote most of the code. I chose the problem and had every finding re-checked against the live pages and the transcripts before trusting it.
 
 ## Results, 2026-10-14
 
@@ -13,9 +13,9 @@ By Vedant Bhayani. Built with Claude Code. I chose what to check, then verified 
 
 | What | Flat posts |
 |---|---|
-| Cite a 2011 source after Eric said "we only want stuff after 2020" (Sep 30). All 9 link the same Harvard Business Review lead study he read out on camera. | **9 of 40** |
+| Cite the 2011 Harvard Business Review lead study Eric read out on camera, where he said "maybe I need to refine a little bit and say, hey, we only want stuff after 2020" (AEO webinar, published Oct 1). All 9 link the same study. | **9 of 40** |
 | Publish the pipeline's own instructions to readers ("…three on-angle Eric tape inputs for this job, not a link dump.") | **4 of 40** |
-| Link to internal pages that 404 or redirect, including `/agency/managed-marketing-agents/` | **19 of 40** |
+| Link to internal pages that return 404, including `/agency/managed-marketing-agents/` (8 more only link to old addresses that redirect and still work) | **11 of 40** |
 | Link Eric's videos instead of embedding them | 28 of 40 |
 | Cite a video that doesn't exist | 0 of 40 |
 

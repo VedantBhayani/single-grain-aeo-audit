@@ -1,6 +1,6 @@
 # AEO post audit and pre-publish gate
 
-Checks posts on singlegrain.com against the gates Eric Siu described for his AEO bot, plus a few objective defects. Every check is labelled as one of:
+Checks posts on singlegrain.com against what Eric Siu said on camera about his AEO bot, plus a few objective defects. Every check is labelled as one of:
 - something he said on camera, with his exact words
 - his team's review criteria
 - a defect that is not a rule he stated
@@ -19,8 +19,8 @@ python aeo_audit/audit.py check path/to/draft.html
 
 | Check | Kind | In `check` |
 |---|---|---|
-| Pre-2020 source (year in the text, or in a linked URL's path) | Eric: "we only want stuff after 2020" | **hard fail** |
-| A cited YouTube video doesn't resolve | Eric: "are you just making stuff up?" | **hard fail** |
+| Pre-2020 source (year in the text, or in a linked URL's path) | Eric, as an idea: "maybe I need to refine a little bit and say, hey, we only want stuff after 2020" | **hard fail** |
+| A cited YouTube video doesn't resolve | related to Eric's "real statistics… or are you just making stuff up?" gate (checks the video exists, not the stat) | **hard fail** |
 | His video linked but not embedded | Eric: "embed that part of the YouTube video inside of the blog post" | warning |
 | No images | Eric: "are we putting in images in there as well" | warning |
 | Claimed stat ("a study found…") with no link in its paragraph | His team: "stats must already be named… hyperl[inked]" | warning |
@@ -34,7 +34,7 @@ python aeo_audit/audit.py check path/to/draft.html
 **Not checked:** title promise, fake anonymized reviews, robotic voice. These are judgment calls from his team's review. They'd need a classifier, and a classifier would need hand-labelled posts first to measure how often it's right. Until then, no score is reported.
 
 **Sources:**
-- Quotes are from his Sep 30, 2026 webinar ([youtu.be/45AWhSkkaQ4](https://youtu.be/45AWhSkkaQ4)) and his team-review webinar ([youtu.be/O2D8DvQ6zWA](https://youtu.be/O2D8DvQ6zWA)).
+- Quotes are from his AEO webinar (published Oct 1, 2026) ([youtu.be/45AWhSkkaQ4](https://youtu.be/45AWhSkkaQ4)) and his team-review webinar ([youtu.be/O2D8DvQ6zWA](https://youtu.be/O2D8DvQ6zWA)).
 - The line numbers in `audit.py` refer to auto-generated transcripts, which have no timestamps.
 
 ## How it decides
