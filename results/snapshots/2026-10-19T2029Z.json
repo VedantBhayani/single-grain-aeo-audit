@@ -1,0 +1,6967 @@
+{
+ "https://clickflow.com": {
+  "any_tracking": true,
+  "canonical": "",
+  "final_url": "https://www.clickflow.com/",
+  "form_actions": [],
+  "forms": 0,
+  "ga4": [],
+  "gtm": [
+   "GTM-P2GZXLQ5"
+  ],
+  "js_app": true,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "ClickFlow | Continuous SEO That Plans, Writes, and Reports For You",
+  "trackers": [],
+  "ua": []
+ },
+ "https://clickflow.com/features": {
+  "any_tracking": true,
+  "canonical": "https://clickflow.com/features",
+  "final_url": "https://www.clickflow.com/features",
+  "form_actions": [],
+  "forms": 0,
+  "ga4": [],
+  "gtm": [
+   "GTM-P2GZXLQ5"
+  ],
+  "js_app": true,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "ClickFlow Pro Features \u2014 The Complete List | ClickFlow",
+  "trackers": [],
+  "ua": []
+ },
+ "https://clickflow.com/features/aeo-analytics": {
+  "any_tracking": true,
+  "canonical": "https://clickflow.com/features/aeo-analytics",
+  "final_url": "https://www.clickflow.com/features/aeo-analytics",
+  "form_actions": [],
+  "forms": 0,
+  "ga4": [],
+  "gtm": [
+   "GTM-P2GZXLQ5"
+  ],
+  "js_app": true,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "AEO Analytics \u2014 Track AI Traffic From 12 Platforms | ClickFlow",
+  "trackers": [],
+  "ua": []
+ },
+ "https://clickflow.com/features/ai-visibility": {
+  "any_tracking": true,
+  "canonical": "https://clickflow.com/features/ai-visibility",
+  "final_url": "https://www.clickflow.com/features/ai-visibility",
+  "form_actions": [],
+  "forms": 0,
+  "ga4": [],
+  "gtm": [
+   "GTM-P2GZXLQ5"
+  ],
+  "js_app": true,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "AI Visibility Tracking \u2014 See What ChatGPT Says About Your Brand | ClickFlow",
+  "trackers": [],
+  "ua": []
+ },
+ "https://clickflow.com/features/guest-review-links": {
+  "any_tracking": true,
+  "canonical": "https://clickflow.com/features/guest-review-links",
+  "final_url": "https://www.clickflow.com/features/guest-review-links",
+  "form_actions": [],
+  "forms": 0,
+  "ga4": [],
+  "gtm": [
+   "GTM-P2GZXLQ5"
+  ],
+  "js_app": true,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Guest Review Links \u2014 Client Feedback Without the Client Login | ClickFlow",
+  "trackers": [],
+  "ua": []
+ },
+ "https://clickflow.com/privacy-policy": {
+  "any_tracking": true,
+  "canonical": "",
+  "final_url": "https://www.clickflow.com/privacy-policy",
+  "form_actions": [],
+  "forms": 0,
+  "ga4": [],
+  "gtm": [
+   "GTM-P2GZXLQ5"
+  ],
+  "js_app": true,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Privacy Policy | ClickFlow",
+  "trackers": [],
+  "ua": []
+ },
+ "https://clickflow.com/terms": {
+  "any_tracking": true,
+  "canonical": "",
+  "final_url": "https://www.clickflow.com/terms",
+  "form_actions": [],
+  "forms": 0,
+  "ga4": [],
+  "gtm": [
+   "GTM-P2GZXLQ5"
+  ],
+  "js_app": true,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Terms & Conditions | ClickFlow",
+  "trackers": [],
+  "ua": []
+ },
+ "https://gateway.singlebrain.com/": {
+  "any_tracking": false,
+  "canonical": "https://gateway.singlebrain.com/",
+  "final_url": "https://gateway.singlebrain.com/",
+  "form_actions": [],
+  "forms": 0,
+  "ga4": [],
+  "gtm": [],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "SingleBrain Gateway: one MCP key for all your team's tools",
+  "trackers": [],
+  "ua": []
+ },
+ "https://gateway.singlebrain.com/catalog": {
+  "any_tracking": false,
+  "canonical": "https://gateway.singlebrain.com/catalog",
+  "final_url": "https://gateway.singlebrain.com/catalog",
+  "form_actions": [
+   "/catalog"
+  ],
+  "forms": 1,
+  "ga4": [],
+  "gtm": [],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Tools catalog: what your agent can reach | SingleBrain",
+  "trackers": [],
+  "ua": []
+ },
+ "https://gateway.singlebrain.com/privacy": {
+  "any_tracking": false,
+  "canonical": "",
+  "final_url": "https://gateway.singlebrain.com/privacy",
+  "form_actions": [],
+  "forms": 0,
+  "ga4": [],
+  "gtm": [],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Privacy policy",
+  "trackers": [],
+  "ua": []
+ },
+ "https://gateway.singlebrain.com/support": {
+  "any_tracking": false,
+  "canonical": "",
+  "final_url": "https://gateway.singlebrain.com/support",
+  "form_actions": [],
+  "forms": 0,
+  "ga4": [],
+  "gtm": [],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Support",
+  "trackers": [],
+  "ua": []
+ },
+ "https://gateway.singlebrain.com/terms": {
+  "any_tracking": false,
+  "canonical": "",
+  "final_url": "https://gateway.singlebrain.com/terms",
+  "form_actions": [],
+  "forms": 0,
+  "ga4": [],
+  "gtm": [],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Terms of service",
+  "trackers": [],
+  "ua": []
+ },
+ "https://gateway.singlebrain.com/tools/always-available": {
+  "any_tracking": false,
+  "canonical": "https://gateway.singlebrain.com/tools/always-available",
+  "final_url": "https://gateway.singlebrain.com/tools/always-available",
+  "form_actions": [],
+  "forms": 0,
+  "ga4": [],
+  "gtm": [],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Account for your AI agent | SingleBrain Gateway",
+  "trackers": [],
+  "ua": []
+ },
+ "https://gateway.singlebrain.com/tools/apify-scrapers": {
+  "any_tracking": false,
+  "canonical": "https://gateway.singlebrain.com/tools/apify-scrapers",
+  "final_url": "https://gateway.singlebrain.com/tools/apify-scrapers",
+  "form_actions": [],
+  "forms": 0,
+  "ga4": [],
+  "gtm": [],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Social profile search for your AI agent | SingleBrain Gateway",
+  "trackers": [],
+  "ua": []
+ },
+ "https://gateway.singlebrain.com/tools/asana": {
+  "any_tracking": false,
+  "canonical": "https://gateway.singlebrain.com/tools/asana",
+  "final_url": "https://gateway.singlebrain.com/tools/asana",
+  "form_actions": [],
+  "forms": 0,
+  "ga4": [],
+  "gtm": [],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Asana for your AI agent | SingleBrain Gateway",
+  "trackers": [],
+  "ua": []
+ },
+ "https://gateway.singlebrain.com/tools/coda": {
+  "any_tracking": false,
+  "canonical": "https://gateway.singlebrain.com/tools/coda",
+  "final_url": "https://gateway.singlebrain.com/tools/coda",
+  "form_actions": [],
+  "forms": 0,
+  "ga4": [],
+  "gtm": [],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Coda for your AI agent | SingleBrain Gateway",
+  "trackers": [],
+  "ua": []
+ },
+ "https://gateway.singlebrain.com/tools/email-finder": {
+  "any_tracking": false,
+  "canonical": "https://gateway.singlebrain.com/tools/email-finder",
+  "final_url": "https://gateway.singlebrain.com/tools/email-finder",
+  "form_actions": [],
+  "forms": 0,
+  "ga4": [],
+  "gtm": [],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Email finder for your AI agent | SingleBrain Gateway",
+  "trackers": [],
+  "ua": []
+ },
+ "https://gateway.singlebrain.com/tools/gong": {
+  "any_tracking": false,
+  "canonical": "https://gateway.singlebrain.com/tools/gong",
+  "final_url": "https://gateway.singlebrain.com/tools/gong",
+  "form_actions": [],
+  "forms": 0,
+  "ga4": [],
+  "gtm": [],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Gong calls for your AI agent | SingleBrain Gateway",
+  "trackers": [],
+  "ua": []
+ },
+ "https://gateway.singlebrain.com/tools/google-analytics-and-search-console": {
+  "any_tracking": false,
+  "canonical": "https://gateway.singlebrain.com/tools/google-analytics-and-search-console",
+  "final_url": "https://gateway.singlebrain.com/tools/google-analytics-and-search-console",
+  "form_actions": [],
+  "forms": 0,
+  "ga4": [],
+  "gtm": [],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Analytics & Search Console for your AI agent | SingleBrain Gateway",
+  "trackers": [],
+  "ua": []
+ },
+ "https://gateway.singlebrain.com/tools/google-workspace": {
+  "any_tracking": false,
+  "canonical": "https://gateway.singlebrain.com/tools/google-workspace",
+  "final_url": "https://gateway.singlebrain.com/tools/google-workspace",
+  "form_actions": [],
+  "forms": 0,
+  "ga4": [],
+  "gtm": [],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Sheets, Docs & Calendar for your AI agent | SingleBrain Gateway",
+  "trackers": [],
+  "ua": []
+ },
+ "https://gateway.singlebrain.com/tools/hubspot-crm": {
+  "any_tracking": false,
+  "canonical": "https://gateway.singlebrain.com/tools/hubspot-crm",
+  "final_url": "https://gateway.singlebrain.com/tools/hubspot-crm",
+  "form_actions": [],
+  "forms": 0,
+  "ga4": [],
+  "gtm": [],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "HubSpot CRM for your AI agent | SingleBrain Gateway",
+  "trackers": [],
+  "ua": []
+ },
+ "https://gateway.singlebrain.com/tools/jev": {
+  "any_tracking": false,
+  "canonical": "https://gateway.singlebrain.com/tools/jev",
+  "final_url": "https://gateway.singlebrain.com/tools/jev",
+  "form_actions": [],
+  "forms": 0,
+  "ga4": [],
+  "gtm": [],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Jev for your AI agent | SingleBrain Gateway",
+  "trackers": [],
+  "ua": []
+ },
+ "https://gateway.singlebrain.com/tools/model-rail": {
+  "any_tracking": false,
+  "canonical": "https://gateway.singlebrain.com/tools/model-rail",
+  "final_url": "https://gateway.singlebrain.com/tools/model-rail",
+  "form_actions": [],
+  "forms": 0,
+  "ga4": [],
+  "gtm": [],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Model Rail for your AI agent | SingleBrain Gateway",
+  "trackers": [],
+  "ua": []
+ },
+ "https://gateway.singlebrain.com/tools/prospecting": {
+  "any_tracking": false,
+  "canonical": "https://gateway.singlebrain.com/tools/prospecting",
+  "final_url": "https://gateway.singlebrain.com/tools/prospecting",
+  "form_actions": [],
+  "forms": 0,
+  "ga4": [],
+  "gtm": [],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "B2B prospecting for your AI agent | SingleBrain Gateway",
+  "trackers": [],
+  "ua": []
+ },
+ "https://gateway.singlebrain.com/tools/seo-research": {
+  "any_tracking": false,
+  "canonical": "https://gateway.singlebrain.com/tools/seo-research",
+  "final_url": "https://gateway.singlebrain.com/tools/seo-research",
+  "form_actions": [],
+  "forms": 0,
+  "ga4": [],
+  "gtm": [],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "SEO research for your AI agent | SingleBrain Gateway",
+  "trackers": [],
+  "ua": []
+ },
+ "https://gateway.singlebrain.com/tools/slack": {
+  "any_tracking": false,
+  "canonical": "https://gateway.singlebrain.com/tools/slack",
+  "final_url": "https://gateway.singlebrain.com/tools/slack",
+  "form_actions": [],
+  "forms": 0,
+  "ga4": [],
+  "gtm": [],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Slack for your AI agent | SingleBrain Gateway",
+  "trackers": [],
+  "ua": []
+ },
+ "https://gateway.singlebrain.com/tools/stripe": {
+  "any_tracking": false,
+  "canonical": "https://gateway.singlebrain.com/tools/stripe",
+  "final_url": "https://gateway.singlebrain.com/tools/stripe",
+  "form_actions": [],
+  "forms": 0,
+  "ga4": [],
+  "gtm": [],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Stripe revenue for your AI agent | SingleBrain Gateway",
+  "trackers": [],
+  "ua": []
+ },
+ "https://gateway.singlebrain.com/tools/web-augmented-chat": {
+  "any_tracking": false,
+  "canonical": "https://gateway.singlebrain.com/tools/web-augmented-chat",
+  "final_url": "https://gateway.singlebrain.com/tools/web-augmented-chat",
+  "form_actions": [],
+  "forms": 0,
+  "ga4": [],
+  "gtm": [],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Perplexity Sonar for your AI agent | SingleBrain Gateway",
+  "trackers": [],
+  "ua": []
+ },
+ "https://gateway.singlebrain.com/tools/web-search": {
+  "any_tracking": false,
+  "canonical": "https://gateway.singlebrain.com/tools/web-search",
+  "final_url": "https://gateway.singlebrain.com/tools/web-search",
+  "form_actions": [],
+  "forms": 0,
+  "ga4": [],
+  "gtm": [],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Web search for your AI agent | SingleBrain Gateway",
+  "trackers": [],
+  "ua": []
+ },
+ "https://gateway.singlebrain.com/tools/youtube": {
+  "any_tracking": false,
+  "canonical": "https://gateway.singlebrain.com/tools/youtube",
+  "final_url": "https://gateway.singlebrain.com/tools/youtube",
+  "form_actions": [],
+  "forms": 0,
+  "ga4": [],
+  "gtm": [],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "YouTube channel for your AI agent | SingleBrain Gateway",
+  "trackers": [],
+  "ua": []
+ },
+ "https://gateway.singlebrain.com/workflows": {
+  "any_tracking": false,
+  "canonical": "https://gateway.singlebrain.com/workflows",
+  "final_url": "https://gateway.singlebrain.com/workflows",
+  "form_actions": [],
+  "forms": 0,
+  "ga4": [],
+  "gtm": [],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Workflows: multi-step Claude prompts | SingleBrain Gateway",
+  "trackers": [],
+  "ua": []
+ },
+ "https://gateway.singlebrain.com/workflows/competitor-snapshot": {
+  "any_tracking": false,
+  "canonical": "https://gateway.singlebrain.com/workflows/competitor-snapshot",
+  "final_url": "https://gateway.singlebrain.com/workflows/competitor-snapshot",
+  "form_actions": [],
+  "forms": 0,
+  "ga4": [],
+  "gtm": [],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Competitor snapshot: a Claude workflow | SingleBrain Gateway",
+  "trackers": [],
+  "ua": []
+ },
+ "https://gateway.singlebrain.com/workflows/content-gap-finder": {
+  "any_tracking": false,
+  "canonical": "https://gateway.singlebrain.com/workflows/content-gap-finder",
+  "final_url": "https://gateway.singlebrain.com/workflows/content-gap-finder",
+  "form_actions": [],
+  "forms": 0,
+  "ga4": [],
+  "gtm": [],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Content gap finder: a Claude workflow | SingleBrain Gateway",
+  "trackers": [],
+  "ua": []
+ },
+ "https://gateway.singlebrain.com/workflows/lead-list-builder": {
+  "any_tracking": false,
+  "canonical": "https://gateway.singlebrain.com/workflows/lead-list-builder",
+  "final_url": "https://gateway.singlebrain.com/workflows/lead-list-builder",
+  "form_actions": [],
+  "forms": 0,
+  "ga4": [],
+  "gtm": [],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Lead list builder: a Claude workflow | SingleBrain Gateway",
+  "trackers": [],
+  "ua": []
+ },
+ "https://gateway.singlebrain.com/workflows/linkedin-intent-signals": {
+  "any_tracking": false,
+  "canonical": "https://gateway.singlebrain.com/workflows/linkedin-intent-signals",
+  "final_url": "https://gateway.singlebrain.com/workflows/linkedin-intent-signals",
+  "form_actions": [],
+  "forms": 0,
+  "ga4": [],
+  "gtm": [],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "LinkedIn intent signals: a Claude workflow | SingleBrain Gateway",
+  "trackers": [],
+  "ua": []
+ },
+ "https://gateway.singlebrain.com/workflows/monday-pipeline-review": {
+  "any_tracking": false,
+  "canonical": "https://gateway.singlebrain.com/workflows/monday-pipeline-review",
+  "final_url": "https://gateway.singlebrain.com/workflows/monday-pipeline-review",
+  "form_actions": [],
+  "forms": 0,
+  "ga4": [],
+  "gtm": [],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Monday pipeline review: a Claude workflow | SingleBrain Gateway",
+  "trackers": [],
+  "ua": []
+ },
+ "https://gateway.singlebrain.com/workflows/pre-call-brief": {
+  "any_tracking": false,
+  "canonical": "https://gateway.singlebrain.com/workflows/pre-call-brief",
+  "final_url": "https://gateway.singlebrain.com/workflows/pre-call-brief",
+  "form_actions": [],
+  "forms": 0,
+  "ga4": [],
+  "gtm": [],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Pre-call brief: a Claude workflow | SingleBrain Gateway",
+  "trackers": [],
+  "ua": []
+ },
+ "https://gateway.singlebrain.com/workflows/project-status-update": {
+  "any_tracking": false,
+  "canonical": "https://gateway.singlebrain.com/workflows/project-status-update",
+  "final_url": "https://gateway.singlebrain.com/workflows/project-status-update",
+  "form_actions": [],
+  "forms": 0,
+  "ga4": [],
+  "gtm": [],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Weekly project status: a Claude workflow | SingleBrain Gateway",
+  "trackers": [],
+  "ua": []
+ },
+ "https://gateway.singlebrain.com/workflows/revenue-pulse": {
+  "any_tracking": false,
+  "canonical": "https://gateway.singlebrain.com/workflows/revenue-pulse",
+  "final_url": "https://gateway.singlebrain.com/workflows/revenue-pulse",
+  "form_actions": [],
+  "forms": 0,
+  "ga4": [],
+  "gtm": [],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Revenue pulse: a Claude workflow | SingleBrain Gateway",
+  "trackers": [],
+  "ua": []
+ },
+ "https://gateway.singlebrain.com/workflows/slack-channel-digest": {
+  "any_tracking": false,
+  "canonical": "https://gateway.singlebrain.com/workflows/slack-channel-digest",
+  "final_url": "https://gateway.singlebrain.com/workflows/slack-channel-digest",
+  "form_actions": [],
+  "forms": 0,
+  "ga4": [],
+  "gtm": [],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Slack channel digest: a Claude workflow | SingleBrain Gateway",
+  "trackers": [],
+  "ua": []
+ },
+ "https://gateway.singlebrain.com/workflows/traffic-drop-diagnosis": {
+  "any_tracking": false,
+  "canonical": "https://gateway.singlebrain.com/workflows/traffic-drop-diagnosis",
+  "final_url": "https://gateway.singlebrain.com/workflows/traffic-drop-diagnosis",
+  "form_actions": [],
+  "forms": 0,
+  "ga4": [],
+  "gtm": [],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Why did traffic drop?: a Claude workflow | SingleBrain Gateway",
+  "trackers": [],
+  "ua": []
+ },
+ "https://gateway.singlebrain.com/workflows/weekly-seo-report": {
+  "any_tracking": false,
+  "canonical": "https://gateway.singlebrain.com/workflows/weekly-seo-report",
+  "final_url": "https://gateway.singlebrain.com/workflows/weekly-seo-report",
+  "form_actions": [],
+  "forms": 0,
+  "ga4": [],
+  "gtm": [],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Weekly SEO report: a Claude workflow | SingleBrain Gateway",
+  "trackers": [],
+  "ua": []
+ },
+ "https://gateway.singlebrain.com/workflows/youtube-channel-review": {
+  "any_tracking": false,
+  "canonical": "https://gateway.singlebrain.com/workflows/youtube-channel-review",
+  "final_url": "https://gateway.singlebrain.com/workflows/youtube-channel-review",
+  "form_actions": [],
+  "forms": 0,
+  "ga4": [],
+  "gtm": [],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "YouTube channel review: a Claude workflow | SingleBrain Gateway",
+  "trackers": [],
+  "ua": []
+ },
+ "https://singlebrain.com/": {
+  "any_tracking": true,
+  "canonical": "",
+  "final_url": "https://singlebrain.com/",
+  "form_actions": [],
+  "forms": 0,
+  "ga4": [
+   "G-D8W7293HCY"
+  ],
+  "gtm": [
+   "GTM-W2X8DJBG"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Single Brain, One trusted brain per client. A managed fleet behind it.",
+  "trackers": [],
+  "ua": []
+ },
+ "https://singlebrain.com/get-started": {
+  "any_tracking": true,
+  "canonical": "",
+  "final_url": "https://singlebrain.com/get-started",
+  "form_actions": [],
+  "forms": 1,
+  "ga4": [
+   "G-D8W7293HCY"
+  ],
+  "gtm": [
+   "GTM-W2X8DJBG"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Get started \u2014 Single Brain",
+  "trackers": [],
+  "ua": []
+ },
+ "https://www.singlebrain.com/gateway": {
+  "any_tracking": false,
+  "canonical": "https://gateway.singlebrain.com/",
+  "final_url": "https://gateway.singlebrain.com/",
+  "form_actions": [],
+  "forms": 0,
+  "ga4": [],
+  "gtm": [],
+  "js_app": false,
+  "noindex": false,
+  "redirected": true,
+  "source": "manual",
+  "status": 200,
+  "title": "SingleBrain Gateway: one MCP key for all your team's tools",
+  "trackers": [],
+  "ua": []
+ },
+ "https://www.singlegrain.com/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/",
+  "final_url": "https://www.singlegrain.com/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log"
+  ],
+  "forms": 3,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Single Grain | Revenue Marketing Agency \u2014 Pipeline-Focused SEO, Paid Media & AI Growth",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/about-us-new/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/about-us/",
+  "final_url": "https://www.singlegrain.com/about-us/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": true,
+  "source": "sitemap",
+  "status": 200,
+  "title": "About Us - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/about-us/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/about-us/",
+  "final_url": "https://www.singlegrain.com/about-us/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "About Us - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/about-us/case-studies/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/about-us/case-studies/",
+  "final_url": "https://www.singlegrain.com/about-us/case-studies/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Digital Marketing Case Studies - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/about-us/case-studies/hair-removal/": {
+  "final_url": "https://www.singlegrain.com/about-us/case-studies/hair-removal/",
+  "redirected": false,
+  "source": "sitemap",
+  "status": 404
+ },
+ "https://www.singlegrain.com/about-us/case-studies/harristeeter/": {
+  "final_url": "https://www.singlegrain.com/about-us/case-studies/harristeeter/",
+  "redirected": false,
+  "source": "sitemap",
+  "status": 404
+ },
+ "https://www.singlegrain.com/about-us/how-we-work/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/about-us/",
+  "final_url": "https://www.singlegrain.com/about-us/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": true,
+  "source": "sitemap",
+  "status": 200,
+  "title": "About Us - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/adwords-management-agency/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/adwords-management-agency/",
+  "final_url": "https://www.singlegrain.com/adwords-management-agency/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "AdWords Management Agency - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/agency/aeo-services/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/agency/aeo-services/",
+  "final_url": "https://www.singlegrain.com/agency/aeo-services/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "manual",
+  "status": 200,
+  "title": "AEO Services | Single Grain - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/agency/ai-seo-services/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/agency/ai-seo-services/",
+  "final_url": "https://www.singlegrain.com/agency/ai-seo-services/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "manual",
+  "status": 200,
+  "title": "AI SEO Services - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/ai-marketing-tools/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/ai-marketing-tools/",
+  "final_url": "https://www.singlegrain.com/ai-marketing-tools/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "AI Marketing Tools - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/ai-marketing/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/ai-marketing/",
+  "final_url": "https://www.singlegrain.com/ai-marketing/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "AI Marketing Webinar - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/ai-tools/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/ai-tools/",
+  "final_url": "https://www.singlegrain.com/ai-tools/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "AI Tools - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/ai-transformation-services/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/ai-transformation-services/",
+  "final_url": "https://www.singlegrain.com/ai-transformation-services/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "AI Transformation Services - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/ai-webinar/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/ai-webinar/",
+  "final_url": "https://www.singlegrain.com/ai-webinar/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "AI Marketing Webinar - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/amazon-ads-agency/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/amazon-ads-agency/",
+  "final_url": "https://www.singlegrain.com/amazon-ads-agency/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Amazon Ads Agency Proven to Drive Great Results",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/apply/": {
+  "any_tracking": false,
+  "canonical": "",
+  "final_url": "https://github.com/ericosiu/beat-claude",
+  "form_actions": [],
+  "forms": 0,
+  "ga4": [],
+  "gtm": [],
+  "js_app": false,
+  "noindex": false,
+  "redirected": true,
+  "source": "manual",
+  "status": 200,
+  "title": "GitHub - ericosiu/beat-claude: The hiring challenge for AI-native marketers. Beat Claude to get an interview. \u00b7 GitHub",
+  "trackers": [],
+  "ua": []
+ },
+ "https://www.singlegrain.com/b2b-content-marketing-agency/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/b2b-content-marketing-agency/",
+  "final_url": "https://www.singlegrain.com/b2b-content-marketing-agency/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "B2B Content Marketing Agency for Pipeline | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/b2b-internet-marketing-agency/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/b2b-internet-marketing-agency/",
+  "final_url": "https://www.singlegrain.com/b2b-internet-marketing-agency/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "B2B Internet Marketing Agency Services - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/blockchain-marketing/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/blockchain-marketing/",
+  "final_url": "https://www.singlegrain.com/blockchain-marketing/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Blockchain Marketing Agency Focused on CAC and ROI",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/blog/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/blog/",
+  "final_url": "https://www.singlegrain.com/blog/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit",
+   "https://www.singlegrain.com/"
+  ],
+  "forms": 7,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "What's New In Digital Marketing Blog - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/branding-masterclass": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/branding-masterclass",
+  "final_url": "https://www.singlegrain.com/branding-masterclass",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 4,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Exclusive Offer for Webinar Attendees - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/careers-new/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/",
+  "final_url": "https://www.singlegrain.com/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log"
+  ],
+  "forms": 3,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": true,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Single Grain | Revenue Marketing Agency \u2014 Pipeline-Focused SEO, Paid Media & AI Growth",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/careers/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/careers/",
+  "final_url": "https://www.singlegrain.com/careers/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 7,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Careers at Single Grain: Join Our Team | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/contact-us/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/contact-us/",
+  "final_url": "https://www.singlegrain.com/contact-us/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 7,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "General Inquiries - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/content-marketing-agency/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/content-marketing-agency/",
+  "final_url": "https://www.singlegrain.com/content-marketing-agency/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Content Marketing Agency - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/content-marketing/thought-leadership/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/content-marketing/thought-leadership/",
+  "final_url": "https://www.singlegrain.com/content-marketing/thought-leadership/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Thought Leadership & Data Storytelling Services | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/content-strategy-agency/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/content-strategy-agency/",
+  "final_url": "https://www.singlegrain.com/content-strategy-agency/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Content Strategy Agency - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/conversion-optimization-agency/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/conversion-optimization-agency/",
+  "final_url": "https://www.singlegrain.com/conversion-optimization-agency/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Conversion Rate Optimization Services to Increase Revenue - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/cro-agency/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/cro-agency/",
+  "final_url": "https://www.singlegrain.com/cro-agency/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Conversion Rate Optimization (CRO) Agency | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/cryptocurrency-marketing-agency/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/cryptocurrency-marketing-agency/",
+  "final_url": "https://www.singlegrain.com/cryptocurrency-marketing-agency/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Crypto Marketing Experts for Growth | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/demand-gen-agency/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/demand-gen-agency/",
+  "final_url": "https://www.singlegrain.com/demand-gen-agency/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Demand Gen Agency - Demand Generation Services - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/digitalexits/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/digitalexits/",
+  "final_url": "https://www.singlegrain.com/digitalexits/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "DigitalExits - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/enterprise-seo-agency/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/enterprise-seo-agency/",
+  "final_url": "https://www.singlegrain.com/enterprise-seo-agency/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Enterprise SEO Agency Dedicated to Scaling Growth-Focused Businesses",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/facebook-ad-agency/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/facebook-advertising/",
+  "final_url": "https://www.singlegrain.com/services/facebook-advertising/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": true,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Top Facebook (Meta) Ad Agency in 2024 - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/facebook-advertising/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/facebook-advertising/",
+  "final_url": "https://www.singlegrain.com/facebook-advertising/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Facebook Advertising - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/free-consultation/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/",
+  "final_url": "https://www.singlegrain.com/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log"
+  ],
+  "forms": 3,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": true,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Single Grain | Revenue Marketing Agency \u2014 Pipeline-Focused SEO, Paid Media & AI Growth",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/free-cro/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/free-cro/",
+  "final_url": "https://www.singlegrain.com/free-cro/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 7,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Free CRO - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/free-tools/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/free-tools/",
+  "final_url": "https://www.singlegrain.com/free-tools/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Free Tools - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/free-tools/ai-blog-post-ideas-generator/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/free-tools/ai-blog-post-ideas-generator/",
+  "final_url": "https://www.singlegrain.com/free-tools/ai-blog-post-ideas-generator/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 7,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "AI Blog Post Ideas Generator - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/free-tools/ai-grammar-checker/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/free-tools/ai-grammar-checker/",
+  "final_url": "https://www.singlegrain.com/free-tools/ai-grammar-checker/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 7,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Free AI Grammar Checker \u2014 Instant Results | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/free-tools/ai-meta-description-generator/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/free-tools/ai-meta-description-generator/",
+  "final_url": "https://www.singlegrain.com/free-tools/ai-meta-description-generator/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 7,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "AI Meta Description Generator - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/free-tools/ai-paragraph-generator/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/free-tools/ai-paragraph-generator/",
+  "final_url": "https://www.singlegrain.com/free-tools/ai-paragraph-generator/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 7,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Free AI Paragraph Generator \u2014 No Signup | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/free-tools/ai-paragraph-rewriter/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/free-tools/ai-paragraph-rewriter/",
+  "final_url": "https://www.singlegrain.com/free-tools/ai-paragraph-rewriter/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 7,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Free AI Paragraph Rewriter \u2014 Instant | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/free-tools/ai-paraphrasing-tool/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/free-tools/ai-paraphrasing-tool/",
+  "final_url": "https://www.singlegrain.com/free-tools/ai-paraphrasing-tool/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 7,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Free AI Paraphrasing Tool \u2014 No Signup | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/free-tools/ai-product-description-generator/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/free-tools/ai-product-description-generator/",
+  "final_url": "https://www.singlegrain.com/free-tools/ai-product-description-generator/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 7,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Free AI Product Description Generator | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/free-tools/ai-sentence-rewriter/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/free-tools/ai-sentence-rewriter/",
+  "final_url": "https://www.singlegrain.com/free-tools/ai-sentence-rewriter/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 7,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "AI Sentence Rewriter - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/free-tools/ai-text-humanizer/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/free-tools/ai-text-humanizer/",
+  "final_url": "https://www.singlegrain.com/free-tools/ai-text-humanizer/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 7,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Free AI Text Humanizer \u2014 Bypass Detection | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/free-tools/ai-youtube-name-generator/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/free-tools/ai-youtube-name-generator/",
+  "final_url": "https://www.singlegrain.com/free-tools/ai-youtube-name-generator/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 7,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Free YouTube Name Generator \u2014 AI Powered | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/free-tools/free-ai-conclusion-generator/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/free-tools/free-ai-conclusion-generator/",
+  "final_url": "https://www.singlegrain.com/free-tools/free-ai-conclusion-generator/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 7,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Free AI Conclusion Generator - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/free-tools/free-ai-rewording-tool/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/free-tools/free-ai-rewording-tool/",
+  "final_url": "https://www.singlegrain.com/free-tools/free-ai-rewording-tool/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 7,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Free AI Rewording Tool \u2014 Instant Results | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/free-tools/free-brand-name-generator/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/free-tools/free-brand-name-generator/",
+  "final_url": "https://www.singlegrain.com/free-tools/free-brand-name-generator/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 7,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Free Brand Name Generator - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/free-tools/free-hook-generator/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/free-tools/free-hook-generator/",
+  "final_url": "https://www.singlegrain.com/free-tools/free-hook-generator/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 7,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Free Hook Generator - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/free-tools/free-slogan-generator/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/free-tools/free-slogan-generator/",
+  "final_url": "https://www.singlegrain.com/free-tools/free-slogan-generator/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 7,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Free Slogan Generator \u2014 50+ Ideas Instantly | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/free-tools/free-social-media-bio-generator/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/free-tools/free-social-media-bio-generator/",
+  "final_url": "https://www.singlegrain.com/free-tools/free-social-media-bio-generator/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 7,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Free Social Media Bio Generator - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/free-tools/free-tiktok-hashtag-generator/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/free-tools/free-tiktok-hashtag-generator/",
+  "final_url": "https://www.singlegrain.com/free-tools/free-tiktok-hashtag-generator/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 7,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Free TikTok Hashtag Generator - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/free-tools/free-tiktok-username-generator/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/free-tools/free-tiktok-username-generator/",
+  "final_url": "https://www.singlegrain.com/free-tools/free-tiktok-username-generator/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 7,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Free TikTok Username Generator - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/free-tools/free-video-script-generator/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/free-tools/free-video-script-generator/",
+  "final_url": "https://www.singlegrain.com/free-tools/free-video-script-generator/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 7,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Free Video Script Generator \u2014 AI Powered | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/free-tools/free-youtube-channel-description-generator/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/free-tools/free-youtube-channel-description-generator/",
+  "final_url": "https://www.singlegrain.com/free-tools/free-youtube-channel-description-generator/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 7,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Free YouTube Description Generator \u2014 AI | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/free-tools/free-youtube-name-generator/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/free-tools/free-youtube-name-generator/",
+  "final_url": "https://www.singlegrain.com/free-tools/free-youtube-name-generator/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 7,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Free YouTube Name Generator - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/ga4-migration-services/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/ga4-migration-services/",
+  "final_url": "https://www.singlegrain.com/ga4-migration-services/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "GA4 Migration Services - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/get-ai-seo-quiz/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/get-ai-seo-quiz/",
+  "final_url": "https://www.singlegrain.com/get-ai-seo-quiz/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "AI SEO Quiz - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/get-in-touch/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/",
+  "final_url": "https://www.singlegrain.com/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log"
+  ],
+  "forms": 3,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": true,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Single Grain | Revenue Marketing Agency \u2014 Pipeline-Focused SEO, Paid Media & AI Growth",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/global-seo-agency/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/global-seo-agency/",
+  "final_url": "https://www.singlegrain.com/global-seo-agency/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Global SEO Agency - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/google-ads-agency/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/google-ads-agency/",
+  "final_url": "https://www.singlegrain.com/google-ads-agency/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Google Ads Agency: PPC Management for ROI | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/growth-marketing-weekly/": {
+  "any_tracking": true,
+  "canonical": "https://levelingup.beehiiv.com/subscribe",
+  "final_url": "https://levelingup.beehiiv.com/subscribe",
+  "form_actions": [
+   "/create"
+  ],
+  "forms": 1,
+  "ga4": [
+   "G-N9MPF2DDLR"
+  ],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": true,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Subscribe | Leveling Up",
+  "trackers": [],
+  "ua": []
+ },
+ "https://www.singlegrain.com/growth-score/": {
+  "final_url": "https://www.singlegrain.com/growth-score/",
+  "redirected": false,
+  "source": "sitemap",
+  "status": "robots-disallowed"
+ },
+ "https://www.singlegrain.com/hulu-ads-agency/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/hulu-ads-agency/",
+  "final_url": "https://www.singlegrain.com/hulu-ads-agency/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Hulu Ads Agency to Scale Your Advertising Efforts with Value-Driven Streaming TV Ads",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/instagram-marketing-agency/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/instagram-marketing-agency/",
+  "final_url": "https://www.singlegrain.com/instagram-marketing-agency/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Instagram Marketing Agency Services | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/landing-page-agency/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/landing-page-agency/",
+  "final_url": "https://www.singlegrain.com/landing-page-agency/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Landing Page Agency - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/landing/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/",
+  "final_url": "https://www.singlegrain.com/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log"
+  ],
+  "forms": 3,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": true,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Single Grain | Revenue Marketing Agency \u2014 Pipeline-Focused SEO, Paid Media & AI Growth",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/landing/edu-marketing-guide/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/",
+  "final_url": "https://www.singlegrain.com/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log"
+  ],
+  "forms": 3,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": true,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Single Grain | Revenue Marketing Agency \u2014 Pipeline-Focused SEO, Paid Media & AI Growth",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/landing/growth-everywhere/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/",
+  "final_url": "https://www.singlegrain.com/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log"
+  ],
+  "forms": 3,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": true,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Single Grain | Revenue Marketing Agency \u2014 Pipeline-Focused SEO, Paid Media & AI Growth",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/landing/levelingup/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/",
+  "final_url": "https://www.singlegrain.com/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log"
+  ],
+  "forms": 3,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": true,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Single Grain | Revenue Marketing Agency \u2014 Pipeline-Focused SEO, Paid Media & AI Growth",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/landing/youtube-advertising/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/",
+  "final_url": "https://www.singlegrain.com/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log"
+  ],
+  "forms": 3,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": true,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Single Grain | Revenue Marketing Agency \u2014 Pipeline-Focused SEO, Paid Media & AI Growth",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/learn/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/learn/",
+  "final_url": "https://www.singlegrain.com/learn/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Learn - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/levelingup/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/levelingup/",
+  "final_url": "https://www.singlegrain.com/levelingup/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 7,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Leveling Up - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/linkedin-ads-agency/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/linkedin-ads-agency/",
+  "final_url": "https://www.singlegrain.com/linkedin-ads-agency/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Premier LinkedIn Ads Agency - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/locations/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/about-us/",
+  "final_url": "https://www.singlegrain.com/about-us/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": true,
+  "source": "sitemap",
+  "status": 200,
+  "title": "About Us - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/locations/hollywood/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/about-us/",
+  "final_url": "https://www.singlegrain.com/about-us/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": true,
+  "source": "sitemap",
+  "status": 200,
+  "title": "About Us - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/locations/los-angeles-seo/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/about-us/",
+  "final_url": "https://www.singlegrain.com/about-us/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": true,
+  "source": "sitemap",
+  "status": 200,
+  "title": "About Us - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/locations/pasadena-ca-2/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/about-us/",
+  "final_url": "https://www.singlegrain.com/about-us/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": true,
+  "source": "sitemap",
+  "status": 200,
+  "title": "About Us - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/locations/playa-vista-la/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/about-us/",
+  "final_url": "https://www.singlegrain.com/about-us/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": true,
+  "source": "sitemap",
+  "status": 200,
+  "title": "About Us - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/marketers-guide-actionable-content-marketing-2/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/",
+  "final_url": "https://www.singlegrain.com/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log"
+  ],
+  "forms": 3,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": true,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Single Grain | Revenue Marketing Agency \u2014 Pipeline-Focused SEO, Paid Media & AI Growth",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/marketers-guide-actionable-content-marketing/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/",
+  "final_url": "https://www.singlegrain.com/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log"
+  ],
+  "forms": 3,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": true,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Single Grain | Revenue Marketing Agency \u2014 Pipeline-Focused SEO, Paid Media & AI Growth",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/marketing-plan/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/marketing-plan/",
+  "final_url": "https://www.singlegrain.com/marketing-plan/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 7,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Marketing Plan - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/notice/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/notice/",
+  "final_url": "https://www.singlegrain.com/notice/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Important Notice | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/online-education-marketing-old/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/",
+  "final_url": "https://www.singlegrain.com/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log"
+  ],
+  "forms": 3,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": true,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Single Grain | Revenue Marketing Agency \u2014 Pipeline-Focused SEO, Paid Media & AI Growth",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/openings/": {
+  "final_url": "https://www.singlegrain.com/openings/",
+  "redirected": false,
+  "source": "sitemap",
+  "status": "robots-disallowed"
+ },
+ "https://www.singlegrain.com/our-locations/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/our-locations/",
+  "final_url": "https://www.singlegrain.com/our-locations/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Single Grain Office Locations | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/our-team/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/our-team/",
+  "final_url": "https://www.singlegrain.com/our-team/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Meet the Single Grain Team | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/pagespeedtest/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/pagespeedtest/",
+  "final_url": "https://www.singlegrain.com/pagespeedtest/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "pagespeedtest - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/paid-advertising-agency/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/paid-advertising-agency/",
+  "final_url": "https://www.singlegrain.com/paid-advertising-agency/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Paid Advertising Agency: Proven ROAS | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/paid-social-media-agency/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/paid-social-media-agency/",
+  "final_url": "https://www.singlegrain.com/paid-social-media-agency/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Paid Social Media Agency for Growth | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/ppc-101-what-is-pay-per-click-advertising-3/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/blog-posts/pay-per-click/",
+  "final_url": "https://www.singlegrain.com/blog-posts/pay-per-click/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit",
+   "https://www.singlegrain.com/"
+  ],
+  "forms": 7,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": true,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Pay Per Click Archives - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/ppc-agency/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/ppc-agency/",
+  "final_url": "https://www.singlegrain.com/ppc-agency/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "PPC Agency Focussed on ROAS and Revenue - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/press-media/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/press-media/",
+  "final_url": "https://www.singlegrain.com/press-media/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Press & Media - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/process-proposal/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/",
+  "final_url": "https://www.singlegrain.com/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log"
+  ],
+  "forms": 3,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": true,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Single Grain | Revenue Marketing Agency \u2014 Pipeline-Focused SEO, Paid Media & AI Growth",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/pseo/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/pseo/",
+  "final_url": "https://www.singlegrain.com/pseo/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Programmatic SEO - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/recommended-tools/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/recommended-tools/",
+  "final_url": "https://www.singlegrain.com/recommended-tools/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Recommended Tools that the Single Grain Team Uses",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/register/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/register/",
+  "final_url": "https://www.singlegrain.com/register/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 8,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "How OpenClaw & Claude Code Generates REAL Revenue [LIVE] - Single Grain",
+  "trackers": [
+   "hubspot",
+   "linkedin_insight",
+   "meta_pixel"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/res/digital-marketing-agency/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/res/digital-marketing-agency/",
+  "final_url": "https://www.singlegrain.com/res/digital-marketing-agency/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Digital Marketing Agency: Real Revenue | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/res/digital-marketing-agency/outsource-or-not/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/res/digital-marketing-agency/outsource-or-not/",
+  "final_url": "https://www.singlegrain.com/res/digital-marketing-agency/outsource-or-not/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Should You Hire a Contractor, Marketing Agency or Go In-House?",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/res/digital-marketing-agency/pricing/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/res/digital-marketing-agency/pricing/",
+  "final_url": "https://www.singlegrain.com/res/digital-marketing-agency/pricing/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "The Marketing Agency Pricing Guide - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/res/digital-marketing-agency/services/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/res/digital-marketing-agency/services/",
+  "final_url": "https://www.singlegrain.com/res/digital-marketing-agency/services/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "What Can Digital Marketing Agencies Do for Your Business?",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/res/marketing-guide-for-online-educational-companies/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/res/marketing-guide-for-online-educational-companies/",
+  "final_url": "https://www.singlegrain.com/res/marketing-guide-for-online-educational-companies/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "The Ultimate Marketing Guide for Online Educational Companies",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/res/marketing-guide-for-online-educational-companies/case-studies/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/res/marketing-guide-for-online-educational-companies/case-studies/",
+  "final_url": "https://www.singlegrain.com/res/marketing-guide-for-online-educational-companies/case-studies/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Digital Marketing Case Studies: Educational Companies - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/res/marketing-guide-for-online-educational-companies/content-marketing/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/res/marketing-guide-for-online-educational-companies/content-marketing/",
+  "final_url": "https://www.singlegrain.com/res/marketing-guide-for-online-educational-companies/content-marketing/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Content Marketing for Education Companies - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/res/ppc-101/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/res/ppc-101/",
+  "final_url": "https://www.singlegrain.com/res/ppc-101/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "What Is Pay Per Click Advertising? - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/res/seo-101/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/res/seo-101/",
+  "final_url": "https://www.singlegrain.com/res/seo-101/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "What Is Search Engine Optimization? - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/res/seo-101/main-components-seo/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/res/seo-101/main-components-seo/",
+  "final_url": "https://www.singlegrain.com/res/seo-101/main-components-seo/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "What Are the Main Components of SEO? - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/res/seo-101/measure-seo-roi/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/res/seo-101/measure-seo-roi/",
+  "final_url": "https://www.singlegrain.com/res/seo-101/measure-seo-roi/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "How do you measure SEO ROI? - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/saas-marketing-agency/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/saas-marketing-agency/",
+  "final_url": "https://www.singlegrain.com/saas-marketing-agency/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "SaaS Marketing Agency - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/secure-checkout/thank/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/",
+  "final_url": "https://www.singlegrain.com/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log"
+  ],
+  "forms": 3,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": true,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Single Grain | Revenue Marketing Agency \u2014 Pipeline-Focused SEO, Paid Media & AI Growth",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/sem-agency/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/sem-agency/",
+  "final_url": "https://www.singlegrain.com/sem-agency/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "SEM Agency | Search Engine Marketing Focused on ROI",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services-2/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services-2/",
+  "final_url": "https://www.singlegrain.com/services-2/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Services - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services-new/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/",
+  "final_url": "https://www.singlegrain.com/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log"
+  ],
+  "forms": 3,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": true,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Single Grain | Revenue Marketing Agency \u2014 Pipeline-Focused SEO, Paid Media & AI Growth",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services-new/web3-marketing-agency/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services-new/web3-marketing-agency/",
+  "final_url": "https://www.singlegrain.com/services-new/web3-marketing-agency/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "A Web3 Marketing Agency for Future-Focused Brands - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services-old-2/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/inbound-marketing-agency/",
+  "final_url": "https://www.singlegrain.com/services/inbound-marketing-agency/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": true,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Digital & Inbound Marketing Agency | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services-old-2/back-page-analysis/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/inbound-marketing-agency/",
+  "final_url": "https://www.singlegrain.com/services/inbound-marketing-agency/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": true,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Digital & Inbound Marketing Agency | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services-old-2/blog-management/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/inbound-marketing-agency/",
+  "final_url": "https://www.singlegrain.com/services/inbound-marketing-agency/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": true,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Digital & Inbound Marketing Agency | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services-old-2/keyword-research/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/inbound-marketing-agency/",
+  "final_url": "https://www.singlegrain.com/services/inbound-marketing-agency/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": true,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Digital & Inbound Marketing Agency | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services-old-2/on-page-analysis/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/inbound-marketing-agency/",
+  "final_url": "https://www.singlegrain.com/services/inbound-marketing-agency/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": true,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Digital & Inbound Marketing Agency | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services-old-2/paid-acquisition/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/inbound-marketing-agency/",
+  "final_url": "https://www.singlegrain.com/services/inbound-marketing-agency/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": true,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Digital & Inbound Marketing Agency | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services-old-2/reporting/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/inbound-marketing-agency/",
+  "final_url": "https://www.singlegrain.com/services/inbound-marketing-agency/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": true,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Digital & Inbound Marketing Agency | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services-old-2/traffic-and-revenue/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/inbound-marketing-agency/",
+  "final_url": "https://www.singlegrain.com/services/inbound-marketing-agency/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": true,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Digital & Inbound Marketing Agency | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/abm-for-enterprise/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/abm-for-enterprise/",
+  "final_url": "https://www.singlegrain.com/services/abm-for-enterprise/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "ABM for Enterprise | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/abm-for-financial-services/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/abm-for-financial-services/",
+  "final_url": "https://www.singlegrain.com/services/abm-for-financial-services/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "ABM for Financial Services | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/abm-for-healthcare/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/abm-for-healthcare/",
+  "final_url": "https://www.singlegrain.com/services/abm-for-healthcare/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "ABM for Healthcare | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/abm-for-manufacturing/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/abm-for-manufacturing/",
+  "final_url": "https://www.singlegrain.com/services/abm-for-manufacturing/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "ABM for Manufacturing | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/abm-for-saas-companies/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/abm-for-saas-companies/",
+  "final_url": "https://www.singlegrain.com/services/abm-for-saas-companies/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "ABM for SaaS Companies | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/abm-for-technology-companies/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/abm-for-technology-companies/",
+  "final_url": "https://www.singlegrain.com/services/abm-for-technology-companies/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "ABM for Technology Companies | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/aeo-software-for-b2b/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/aeo-software-for-b2b/",
+  "final_url": "https://www.singlegrain.com/services/aeo-software-for-b2b/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "AEO Software for B2B | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/aeo-software-for-ecommerce/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/aeo-software-for-ecommerce/",
+  "final_url": "https://www.singlegrain.com/services/aeo-software-for-ecommerce/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "AEO Software for Ecommerce | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/aeo-software-for-enterprise/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/aeo-software-for-enterprise/",
+  "final_url": "https://www.singlegrain.com/services/aeo-software-for-enterprise/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "AEO Software for Enterprise | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/aeo-software-for-saas/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/aeo-software-for-saas/",
+  "final_url": "https://www.singlegrain.com/services/aeo-software-for-saas/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "AEO Software for SaaS | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/ai-advertising-agency-for-b2b/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/ai-advertising-agency-for-b2b/",
+  "final_url": "https://www.singlegrain.com/services/ai-advertising-agency-for-b2b/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "AI Advertising Agency for B2B | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/ai-advertising-agency-for-saas/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/ai-advertising-agency-for-saas/",
+  "final_url": "https://www.singlegrain.com/services/ai-advertising-agency-for-saas/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "AI Advertising Agency for SaaS | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/ai-advertising-for-ecommerce/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/ai-advertising-for-ecommerce/",
+  "final_url": "https://www.singlegrain.com/services/ai-advertising-for-ecommerce/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "AI Advertising for Ecommerce | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/ai-advertising-for-education/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/ai-advertising-for-education/",
+  "final_url": "https://www.singlegrain.com/services/ai-advertising-for-education/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "AI Advertising for Education | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/ai-advertising-for-fintech/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/ai-advertising-for-fintech/",
+  "final_url": "https://www.singlegrain.com/services/ai-advertising-for-fintech/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "AI Advertising for Fintech | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/ai-advertising-for-healthcare/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/ai-advertising-for-healthcare/",
+  "final_url": "https://www.singlegrain.com/services/ai-advertising-for-healthcare/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "AI Advertising for Healthcare | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/ai-advertising-for-real-estate/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/ai-advertising-for-real-estate/",
+  "final_url": "https://www.singlegrain.com/services/ai-advertising-for-real-estate/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "AI Advertising for Real Estate | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/ai-content-optimization-tool/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/ai-content-optimization-tool/",
+  "final_url": "https://www.singlegrain.com/services/ai-content-optimization-tool/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "AI Content Optimization Tool | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/ai-seo-for-healthcare/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/ai-seo-for-healthcare/",
+  "final_url": "https://www.singlegrain.com/services/ai-seo-for-healthcare/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "AI SEO for Healthcare | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/ai-seo-for-real-estate/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/ai-seo-for-real-estate/",
+  "final_url": "https://www.singlegrain.com/services/ai-seo-for-real-estate/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "AI SEO for Real Estate | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/ai-seo-tool/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/ai-seo-tool/",
+  "final_url": "https://www.singlegrain.com/services/ai-seo-tool/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "AI SEO Tool | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/amazon-ads/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/amazon-ads/",
+  "final_url": "https://www.singlegrain.com/services/amazon-ads/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Amazon Advertising Services | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/b2b-ad-personalization-software/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/b2b-ad-personalization-software/",
+  "final_url": "https://www.singlegrain.com/services/b2b-ad-personalization-software/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "B2B Ad Personalization Software | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/b2b-personalization-platform/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/b2b-personalization-platform/",
+  "final_url": "https://www.singlegrain.com/services/b2b-personalization-platform/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "B2B Personalization Platform | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/b2b-website-personalization/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/b2b-website-personalization/",
+  "final_url": "https://www.singlegrain.com/services/b2b-website-personalization/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "B2B Website Personalization | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/chatgpt-ads-agency-austin/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/chatgpt-ads-agency-austin/",
+  "final_url": "https://www.singlegrain.com/services/chatgpt-ads-agency-austin/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "ChatGPT Ads Agency Austin | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/chatgpt-ads-agency-boston/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/chatgpt-ads-agency-boston/",
+  "final_url": "https://www.singlegrain.com/services/chatgpt-ads-agency-boston/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "ChatGPT Ads Agency Boston | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/chatgpt-ads-agency-chicago/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/chatgpt-ads-agency-chicago/",
+  "final_url": "https://www.singlegrain.com/services/chatgpt-ads-agency-chicago/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "ChatGPT Ads Agency Chicago | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/chatgpt-ads-agency-dallas/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/chatgpt-ads-agency-dallas/",
+  "final_url": "https://www.singlegrain.com/services/chatgpt-ads-agency-dallas/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "ChatGPT Ads Agency Dallas | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/chatgpt-ads-agency-denver/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/chatgpt-ads-agency-denver/",
+  "final_url": "https://www.singlegrain.com/services/chatgpt-ads-agency-denver/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "ChatGPT Ads Agency Denver | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/chatgpt-ads-agency-for-ecommerce/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/chatgpt-ads-agency-for-ecommerce/",
+  "final_url": "https://www.singlegrain.com/services/chatgpt-ads-agency-for-ecommerce/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "ChatGPT Ads Agency for Ecommerce | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/chatgpt-ads-agency-for-education/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/chatgpt-ads-agency-for-education/",
+  "final_url": "https://www.singlegrain.com/services/chatgpt-ads-agency-for-education/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "ChatGPT Ads Agency for Education | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/chatgpt-ads-agency-for-enterprise/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/chatgpt-ads-agency-for-enterprise/",
+  "final_url": "https://www.singlegrain.com/services/chatgpt-ads-agency-for-enterprise/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "ChatGPT Ads Agency for Enterprise | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/chatgpt-ads-agency-for-financial-services/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/chatgpt-ads-agency-for-financial-services/",
+  "final_url": "https://www.singlegrain.com/services/chatgpt-ads-agency-for-financial-services/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "ChatGPT Ads Agency for Financial Services | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/chatgpt-ads-agency-for-fintech/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/chatgpt-ads-agency-for-fintech/",
+  "final_url": "https://www.singlegrain.com/services/chatgpt-ads-agency-for-fintech/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "ChatGPT Ads Agency for Fintech | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/chatgpt-ads-agency-for-legal-services/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/chatgpt-ads-agency-for-legal-services/",
+  "final_url": "https://www.singlegrain.com/services/chatgpt-ads-agency-for-legal-services/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "ChatGPT Ads Agency for Legal Services | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/chatgpt-ads-agency-for-professional-services/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/chatgpt-ads-agency-for-professional-services/",
+  "final_url": "https://www.singlegrain.com/services/chatgpt-ads-agency-for-professional-services/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "ChatGPT Ads Agency for Professional Services | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/chatgpt-ads-agency-for-real-estate/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/chatgpt-ads-agency-for-real-estate/",
+  "final_url": "https://www.singlegrain.com/services/chatgpt-ads-agency-for-real-estate/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "ChatGPT Ads Agency for Real Estate | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/chatgpt-ads-agency-for-retail/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/chatgpt-ads-agency-for-retail/",
+  "final_url": "https://www.singlegrain.com/services/chatgpt-ads-agency-for-retail/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "ChatGPT Ads Agency for Retail | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/chatgpt-ads-agency-for-startups/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/chatgpt-ads-agency-for-startups/",
+  "final_url": "https://www.singlegrain.com/services/chatgpt-ads-agency-for-startups/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "ChatGPT Ads Agency for Startups | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/chatgpt-ads-agency-los-angeles/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/chatgpt-ads-agency-los-angeles/",
+  "final_url": "https://www.singlegrain.com/services/chatgpt-ads-agency-los-angeles/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "ChatGPT Ads Agency Los Angeles | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/chatgpt-ads-agency-miami/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/chatgpt-ads-agency-miami/",
+  "final_url": "https://www.singlegrain.com/services/chatgpt-ads-agency-miami/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "ChatGPT Ads Agency Miami | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/chatgpt-ads-agency-new-york/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/chatgpt-ads-agency-new-york/",
+  "final_url": "https://www.singlegrain.com/services/chatgpt-ads-agency-new-york/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "ChatGPT Ads Agency New York | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/chatgpt-ads-agency-san-francisco/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/chatgpt-ads-agency-san-francisco/",
+  "final_url": "https://www.singlegrain.com/services/chatgpt-ads-agency-san-francisco/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "ChatGPT Ads Agency San Francisco | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/chatgpt-ads-agency-seattle/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/chatgpt-ads-agency-seattle/",
+  "final_url": "https://www.singlegrain.com/services/chatgpt-ads-agency-seattle/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "ChatGPT Ads Agency Seattle | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/chatgpt-ads-analytics-reporting/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/chatgpt-ads-analytics-reporting/",
+  "final_url": "https://www.singlegrain.com/services/chatgpt-ads-analytics-reporting/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "ChatGPT Ads Analytics & Reporting | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/chatgpt-ads-copywriting-services/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/chatgpt-ads-copywriting-services/",
+  "final_url": "https://www.singlegrain.com/services/chatgpt-ads-copywriting-services/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "ChatGPT Ads Copywriting Services | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/chatgpt-ads-optimization-services/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/chatgpt-ads-optimization-services/",
+  "final_url": "https://www.singlegrain.com/services/chatgpt-ads-optimization-services/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "ChatGPT Ads Optimization Services | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/chatgpt-ads-strategy-services/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/chatgpt-ads-strategy-services/",
+  "final_url": "https://www.singlegrain.com/services/chatgpt-ads-strategy-services/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "ChatGPT Ads Strategy Services | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/connected-tv-advertising-agency/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/connected-tv-advertising-agency/",
+  "final_url": "https://www.singlegrain.com/services/connected-tv-advertising-agency/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Connected TV Advertising Agency | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/content-marketing/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/content-marketing/",
+  "final_url": "https://www.singlegrain.com/services/content-marketing/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Affordable Content Marketing Services | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/content-personalization-software/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/content-personalization-software/",
+  "final_url": "https://www.singlegrain.com/services/content-personalization-software/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Content Personalization Software | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/conversational-advertising-agency/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/conversational-advertising-agency/",
+  "final_url": "https://www.singlegrain.com/services/conversational-advertising-agency/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Conversational Advertising Agency | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/conversion-rate-optimization/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/blog/conversion-rate-optimization/",
+  "final_url": "https://www.singlegrain.com/blog/conversion-rate-optimization/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://www.singlegrain.com/"
+  ],
+  "forms": 7,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": true,
+  "source": "sitemap",
+  "status": 200,
+  "title": "6 Common Conversion Rate Optimization Questions Answered",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/creative-strategy": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/creative-strategy",
+  "final_url": "https://www.singlegrain.com/services/creative-strategy",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Creative Strategy Agency with Proven Experience | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/dao-marketing-agency/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/dao-marketing-agency/",
+  "final_url": "https://www.singlegrain.com/services/dao-marketing-agency/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "DAO Marketing Agency for High-ROI Campaigns | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/display-ads/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/display-ads/",
+  "final_url": "https://www.singlegrain.com/services/display-ads/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Display Advertising Services | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/dynamic-content-platform/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/dynamic-content-platform/",
+  "final_url": "https://www.singlegrain.com/services/dynamic-content-platform/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Dynamic Content Platform | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/facebook-advertising/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/facebook-advertising/",
+  "final_url": "https://www.singlegrain.com/services/facebook-advertising/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Top Facebook (Meta) Ad Agency in 2024 - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/geo-for-b2b-companies/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/geo-for-b2b-companies/",
+  "final_url": "https://www.singlegrain.com/services/geo-for-b2b-companies/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "GEO for B2B Companies | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/geo-for-ecommerce/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/geo-for-ecommerce/",
+  "final_url": "https://www.singlegrain.com/services/geo-for-ecommerce/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "GEO for Ecommerce | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/google-ads/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/google-ads/",
+  "final_url": "https://www.singlegrain.com/services/google-ads/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Google Ads Services for ROI | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/inbound-marketing-agency/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/inbound-marketing-agency/",
+  "final_url": "https://www.singlegrain.com/services/inbound-marketing-agency/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Digital & Inbound Marketing Agency | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/influencer-marketing-agency/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/influencer-marketing-agency/",
+  "final_url": "https://www.singlegrain.com/services/influencer-marketing-agency/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Influencer Marketing Agency | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/linkedin-ads-for-b2b/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/linkedin-ads-for-b2b/",
+  "final_url": "https://www.singlegrain.com/services/linkedin-ads-for-b2b/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "LinkedIn Ads for B2B | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/linkedin-ads-for-enterprise/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/linkedin-ads-for-enterprise/",
+  "final_url": "https://www.singlegrain.com/services/linkedin-ads-for-enterprise/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "LinkedIn Ads for Enterprise | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/linkedin-ads-for-fintech/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/linkedin-ads-for-fintech/",
+  "final_url": "https://www.singlegrain.com/services/linkedin-ads-for-fintech/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "LinkedIn Ads for Fintech | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/linkedin-ads-for-legal-services/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/linkedin-ads-for-legal-services/",
+  "final_url": "https://www.singlegrain.com/services/linkedin-ads-for-legal-services/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "LinkedIn Ads for Legal Services | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/linkedin-ads-for-saas/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/linkedin-ads-for-saas/",
+  "final_url": "https://www.singlegrain.com/services/linkedin-ads-for-saas/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "LinkedIn Ads for SaaS | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/linkedin-ads/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/linkedin-advertising/",
+  "final_url": "https://www.singlegrain.com/services/linkedin-advertising/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": true,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Grain LinkedIn Ads for B2B Success | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/linkedin-advertising/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/linkedin-advertising/",
+  "final_url": "https://www.singlegrain.com/services/linkedin-advertising/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Grain LinkedIn Ads for B2B Success | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/marketing-consulting/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/marketing-consulting/",
+  "final_url": "https://www.singlegrain.com/services/marketing-consulting/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Advertising Consultation Services | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/marketing-funnels/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/marketing-funnels/",
+  "final_url": "https://www.singlegrain.com/services/marketing-funnels/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Advertising Funnels: Optimize & Convert | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/mobile-ads/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/mobile-ads/",
+  "final_url": "https://www.singlegrain.com/services/mobile-ads/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Mobile Advertising Services | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/native-advertising-agency/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/native-advertising-agency/",
+  "final_url": "https://www.singlegrain.com/services/native-advertising-agency/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Native Advertising Agency | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/personalized-landing-pages-software/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/personalized-landing-pages-software/",
+  "final_url": "https://www.singlegrain.com/services/personalized-landing-pages-software/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Personalized Landing Pages Software | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/pinterest-advertising-agency/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/pinterest-advertising-agency/",
+  "final_url": "https://www.singlegrain.com/services/pinterest-advertising-agency/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Pinterest Advertising Agency | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/podcast-ads/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/podcast-ads/",
+  "final_url": "https://www.singlegrain.com/services/podcast-ads/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Best Advertising Podcasts for 2024 | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/ppc/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/ppc/",
+  "final_url": "https://www.singlegrain.com/services/ppc/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Campaign Management Pay Per Click Services | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/programmatic-advertising-agency/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/programmatic-advertising-agency/",
+  "final_url": "https://www.singlegrain.com/services/programmatic-advertising-agency/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Programmatic Advertising Agency | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/real-time-personalization/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/real-time-personalization/",
+  "final_url": "https://www.singlegrain.com/services/real-time-personalization/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Real-Time Personalization | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/reddit/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/reddit/",
+  "final_url": "https://www.singlegrain.com/services/reddit/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Reddit Marketing Agency for Posts and AMAs | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/retargeting/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/blog/ms/ai-and-writing-10/",
+  "final_url": "https://www.singlegrain.com/blog/ms/ai-and-writing-10/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://www.singlegrain.com/"
+  ],
+  "forms": 7,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": true,
+  "source": "sitemap",
+  "status": 200,
+  "title": "How to Set Up a High-Converting Facebook Retargeting Campaign",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/seo-essentials/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/blog-posts/search-engine-optimization/",
+  "final_url": "https://www.singlegrain.com/blog-posts/search-engine-optimization/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit",
+   "https://www.singlegrain.com/"
+  ],
+  "forms": 7,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": true,
+  "source": "sitemap",
+  "status": 200,
+  "title": "SEO Archives - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/seo/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/seo/",
+  "final_url": "https://www.singlegrain.com/services/seo/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "SEO Agency for Rankings and Revenue | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/sevo/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/sevo/",
+  "final_url": "https://www.singlegrain.com/services/sevo/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Search Everywhere Optimization & AI SEO | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/technical-seo/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/technical-seo/",
+  "final_url": "https://www.singlegrain.com/services/technical-seo/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Technical SEO Agency - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/tiktok-ads-agency/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/tiktok-ads-agency/",
+  "final_url": "https://www.singlegrain.com/services/tiktok-ads-agency/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "TikTok Ad Agency for 2024 Growth | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/video-production/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/video-production/",
+  "final_url": "https://www.singlegrain.com/services/video-production/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Video Production Services | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/web3-marketing-agency/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/web3-marketing-agency/",
+  "final_url": "https://www.singlegrain.com/services/web3-marketing-agency/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Web 3.0 Agency for Future Brands | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/services/youtube-ads/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/services/youtube-ads/",
+  "final_url": "https://www.singlegrain.com/services/youtube-ads/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Grain YouTuber Ads - Boost ROI | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/skills/": {
+  "any_tracking": false,
+  "canonical": "",
+  "final_url": "https://github.com/ericosiu/ai-marketing-skills",
+  "form_actions": [],
+  "forms": 0,
+  "ga4": [],
+  "gtm": [],
+  "js_app": false,
+  "noindex": false,
+  "redirected": true,
+  "source": "sitemap",
+  "status": 200,
+  "title": "GitHub - ericosiu/ai-marketing-skills: Open-source AI marketing skills \u2014 growth experiments, sales pipeline, content ops, outbound, SEO, and finance automation \u00b7 GitHub",
+  "trackers": [],
+  "ua": []
+ },
+ "https://www.singlegrain.com/spotify-ads-agency/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/spotify-ads-agency/",
+  "final_url": "https://www.singlegrain.com/spotify-ads-agency/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Spotify Ads Agency That Helps You Drive Engagement with High-Impact Audio Ads",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/strikethrough-text-generator/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/strikethrough-text-generator/",
+  "final_url": "https://www.singlegrain.com/strikethrough-text-generator/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Free Strikethrough Text Generator | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/technical-seo-agency/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/technical-seo-agency/",
+  "final_url": "https://www.singlegrain.com/technical-seo-agency/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Technical SEO Agency for Crawl, Speed and Indexing Fixes",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/technology-marketing-agency/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/technology-marketing-agency/",
+  "final_url": "https://www.singlegrain.com/technology-marketing-agency/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Technology Marketing Agency Focused on Growth - Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/test123/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/",
+  "final_url": "https://www.singlegrain.com/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log"
+  ],
+  "forms": 3,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": true,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Single Grain | Revenue Marketing Agency \u2014 Pipeline-Focused SEO, Paid Media & AI Growth",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/thanks-yt-webinar/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/",
+  "final_url": "https://www.singlegrain.com/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log"
+  ],
+  "forms": 3,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": true,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Single Grain | Revenue Marketing Agency \u2014 Pipeline-Focused SEO, Paid Media & AI Growth",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/underutilized-marketing-channel-ebook/thank-you/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/",
+  "final_url": "https://www.singlegrain.com/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log"
+  ],
+  "forms": 3,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": true,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Single Grain | Revenue Marketing Agency \u2014 Pipeline-Focused SEO, Paid Media & AI Growth",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/unsubscribe/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/",
+  "final_url": "https://www.singlegrain.com/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log"
+  ],
+  "forms": 3,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": true,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Single Grain | Revenue Marketing Agency \u2014 Pipeline-Focused SEO, Paid Media & AI Growth",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/video-advertising/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/blog/video-advertising-trends/",
+  "final_url": "https://www.singlegrain.com/blog/video-advertising-trends/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://www.singlegrain.com/"
+  ],
+  "forms": 7,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": true,
+  "source": "sitemap",
+  "status": 200,
+  "title": "14 Video Advertising Trends You Can't Ignore in 2025 -Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/video-advertising/thank-you/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/",
+  "final_url": "https://www.singlegrain.com/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log"
+  ],
+  "forms": 3,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": true,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Single Grain | Revenue Marketing Agency \u2014 Pipeline-Focused SEO, Paid Media & AI Growth",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/want-acquire-customers/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/",
+  "final_url": "https://www.singlegrain.com/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log"
+  ],
+  "forms": 3,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": true,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Single Grain | Revenue Marketing Agency \u2014 Pipeline-Focused SEO, Paid Media & AI Growth",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/want-acquire-customers/consulting/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/",
+  "final_url": "https://www.singlegrain.com/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log"
+  ],
+  "forms": 3,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": true,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Single Grain | Revenue Marketing Agency \u2014 Pipeline-Focused SEO, Paid Media & AI Growth",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/want-acquire-customers/thank-you/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/",
+  "final_url": "https://www.singlegrain.com/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log"
+  ],
+  "forms": 3,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": true,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Single Grain | Revenue Marketing Agency \u2014 Pipeline-Focused SEO, Paid Media & AI Growth",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/web3-marketing-agency/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/web3-marketing-agency/",
+  "final_url": "https://www.singlegrain.com/web3-marketing-agency/",
+  "form_actions": [
+   "",
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 6,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Web3 Marketing for Future Brands | Single Grain",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/webinar-thank-you": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/webinar-thank-you",
+  "final_url": "https://www.singlegrain.com/webinar-thank-you",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 7,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Webinar Thanks - Single Grain",
+  "trackers": [
+   "hubspot",
+   "meta_pixel"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/webinar/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/webinar/",
+  "final_url": "https://www.singlegrain.com/webinar/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log",
+   "https://app.singlegrain.com/leadhub/submit"
+  ],
+  "forms": 5,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": false,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Webinar - Single Grain",
+  "trackers": [
+   "hubspot",
+   "meta_pixel"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/webinars/6-effective-paid-ads-2016/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/",
+  "final_url": "https://www.singlegrain.com/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log"
+  ],
+  "forms": 3,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": true,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Single Grain | Revenue Marketing Agency \u2014 Pipeline-Focused SEO, Paid Media & AI Growth",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/webinars/7-steps-to-hiring-a-players/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/",
+  "final_url": "https://www.singlegrain.com/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log"
+  ],
+  "forms": 3,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": true,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Single Grain | Revenue Marketing Agency \u2014 Pipeline-Focused SEO, Paid Media & AI Growth",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ },
+ "https://www.singlegrain.com/webinars/how-to-win-with-gmail-advertising/": {
+  "any_tracking": true,
+  "canonical": "https://www.singlegrain.com/",
+  "final_url": "https://www.singlegrain.com/",
+  "form_actions": [
+   "https://app.singlegrain.com/leadhub/log"
+  ],
+  "forms": 3,
+  "ga4": [],
+  "gtm": [
+   "GTM-K3ZSFV"
+  ],
+  "js_app": false,
+  "noindex": false,
+  "redirected": true,
+  "source": "sitemap",
+  "status": 200,
+  "title": "Single Grain | Revenue Marketing Agency \u2014 Pipeline-Focused SEO, Paid Media & AI Growth",
+  "trackers": [
+   "hubspot"
+  ],
+  "ua": [
+   "UA-61805433-1"
+  ]
+ }
+}
