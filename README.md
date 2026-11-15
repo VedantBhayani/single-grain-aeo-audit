@@ -5,18 +5,18 @@ Two read-only tools built for Single Grain, run on its public pages:
 1. **[AEO post audit + pre-publish gate](aeo_audit/):** checks what the AEO pipeline published on singlegrain.com against what Eric Siu said on camera, plus a source-date check, and blocks a draft before it ships if it fails a hard check.
 2. **[Tracking guard](tracking_guard/):** snapshots the tracking tags, forms and index signals on singlegrain.com, singlebrain.com and clickflow.com every week, and alerts when one disappears.
 
-By Vedant Bhayani. Built with Claude Code, which wrote most of the code. I chose the problem and had every finding re-checked against the live pages and the transcripts before trusting it.
+By Vedant Bhayani. Built with Claude Code, which wrote most of the code. I chose the problem and had every Oct 14 finding re-checked against the live pages and the transcripts before trusting it. The watcher's daily findings are machine output: leads to check, not verdicts.
 
 ## AEO watcher: the audit, every day, on its own
 
-[`aeo_watch/`](aeo_watch/) runs the audit's 10 checks every day on a small cloud machine (instabox, free plan):
+[`aeo_watch/`](aeo_watch/) runs the audit's checks every day on a small cloud machine (instabox, free plan). Only the two hard checks (a pre-2020 cited source, a cited video that doesn't resolve) open issues; the other checks are recorded as warnings in each run's `run.json` (and shown on the dashboard under failing posts).
 
 - **Which posts:** by default, posts whose sitemap date changed since the last run, starting from posts modified on or after 2026-10-14. Older posts are checked only when a manual run chooses `all` (every `/blog-posts/` post) or `since <date>`. A big run that hits its 75-minute budget saves its place, and the next run carries on, unless the machine is in its free-plan cooldown; then that day's run fails loudly in Actions and nothing is lost.
-- **Pages are fetched fresh** every run (the repo's 24-hour fetch cache is off for the watcher). A post that errors (network, a 5xx, a crash in the check) is skipped and retried the next run; it never blocks the queue.
-- **One change to the rules:** a pre-2020 year in plain prose ("operating since 2008") is a warning here, not a hard failure, because the watcher opens public issues. A pre-2020 year in a stat or study sentence, or in a linked URL, is still hard.
-- **One AI step:** for those stat or study years, Parallel's Decisions API is asked whether newer data exists, and its sources are shown as suggestions to check. Capped at 25 requests per run (about $0.025 at list price), answers cached, never a hard failure.
-- **Output:** a GitHub issue per failing post, at most 20 new ones per run (the rest open on later runs). A repeat failure gets a comment. The issue closes when a re-check passes or the post is no longer live. A dated run log goes to [`results/watch/`](results/watch/), and a dashboard to GitHub Pages.
-- **How it runs:** a GitHub Action ([`aeo-watch.yml`](.github/workflows/aeo-watch.yml)) wakes the machine at 15:00 UTC and starts the run there; a lock stops two runs overlapping on the machine. The state and the key stay on the machine's disk.
+- **Pages are fetched fresh** every run (the repo's fetch cache is off for the watcher). A post that can't be checked keeps its last result and is retried on the next run, whatever its date; it never blocks the queue. "Can't be checked" means a network error, robots.txt, a 5xx, a 429, a 401/403 (what a bot block looks like), a YouTube check that failed, or a crash in the check. Only a 404, a 410 or a redirect away counts as "no longer live".
+- **One change to the rules:** a pre-2020 year in plain prose ("operating since 2008") is a warning here, not a hard failure, because the watcher opens public issues. A pre-2020 year in a stat or study sentence, or in a linked URL, is still hard. The pre-publish gate (`audit.py check`) stays stricter and blocks both.
+- **One AI step:** for those stat or study years, Parallel's Decisions API is asked whether newer data exists, and its sources are shown as suggestions to check. Capped at 25 requests per run (about $0.025, assuming $0.001 a request; not from billing), answers cached, never a hard failure.
+- **Output:** a GitHub issue per failing post, at most 20 new ones per run (the rest open on later runs). A re-checked post that still fails gets a comment (at most 30 a run). An issue closes when that post's latest result passes or it's no longer live; a failing post that drops out of the sitemap is re-checked to find out. Closing is worked out from all results, so a run whose issue sync failed is caught up by the next one. Each run's log goes to its own folder in [`results/watch/`](results/watch/), and the dashboard to GitHub Pages.
+- **How it runs:** a GitHub Action ([`aeo-watch.yml`](.github/workflows/aeo-watch.yml)) wakes the machine at 15:00 UTC (GitHub may start scheduled runs late) and starts the run there. A lock on the machine stops a second run, and the code update, while one is still going. The state and the key stay on the machine's disk; the machine's key is given only to the steps that talk to it.
 
 ```bash
 python aeo_watch/watch.py run                                   # new or updated posts
@@ -61,8 +61,8 @@ python -m unittest discover -s tests                  # offline tests
 ## How it behaves on someone else's site
 
 - Read-only: no logins, no forms submitted, nothing written anywhere.
-- Honors each site's robots.txt and waits at least 2 seconds between requests.
-- Caches every page for 24 hours in `.cache/` (not committed) and logs every request to `.cache/fetch_log.csv`.
+- Honors each site's robots.txt (RFC 9309: a 4xx robots.txt means no rules, a 5xx or no answer means stay off) and waits at least 2 seconds between requests.
+- Caches definitive answers for 24 hours in `.cache/` (not committed); errors and rate limits are never cached. The watcher and the pre-publish `check` always fetch fresh. Every request is logged to `.cache/fetch_log.csv`.
 
 ## Limits
 
@@ -74,13 +74,13 @@ python -m unittest discover -s tests                  # offline tests
 ## Layout
 
 ```
-common/fetch.py           polite fetcher: robots.txt, 2 s delay, 24 h cache, request log
+common/fetch.py           polite fetcher: robots.txt, 2 s delay, 24 h cache of definitive answers, request log
 aeo_audit/audit.py        audit + gate; skill/SKILL.md tells an agent when and how to run the gate
 aeo_watch/watch.py        daily watcher: new posts only, queue + time budget, Parallel step, dashboard
 aeo_watch/issues.py       one GitHub issue per failing post (runs in the Action)
 aeo_watch/box_run.sh      what the Action starts on the instabox machine
 tracking_guard/guard.py   snapshot + diff
 tests/                    offline unit tests (fake fetcher, handwritten HTML)
-results/                  dated reports and snapshots; the weekly workflow adds to these
-.github/workflows/        tests on every push; tracking guard every Monday
+results/                  dated reports and snapshots; the weekly and daily workflows add to these
+.github/workflows/        tests on every push; tracking guard every Monday; AEO watcher daily
 ```

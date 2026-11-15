@@ -3,6 +3,7 @@ import copy
 import sys
 import unittest
 from pathlib import Path
+from unittest import mock
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
@@ -47,13 +48,20 @@ class DiffTests(unittest.TestCase):
 
 
 class BaselineTests(unittest.TestCase):
-    def test_www_only_redirect_is_low_priority_and_real_redirect_is_named(self):
-        snap = {
-            "https://clickflow.com": page(redirected=True, final_url="https://www.clickflow.com/"),
-            "https://www.singlegrain.com/old-page/": page(redirected=True, final_url="https://www.singlegrain.com/"),
-        }
-        kinds = sorted(k for k, _, _ in guard.baseline(snap))
-        self.assertEqual(kinds, ["listed (sitemap) but redirects", "www / non-www redirect only (low priority)"])
+    def test_www_only_redirect_is_not_reported_and_real_redirect_is_named(self):
+        # Built through facts(), not by hand: the old test hand-built a state facts() can't produce.
+        web = {"https://clickflow.com": (200, "<html></html>", "https://www.clickflow.com/"),
+               "https://www.singlegrain.com/old-page/": (200, "<html></html>", "https://www.singlegrain.com/")}
+        with mock.patch.object(guard, "fetch", lambda u: web[u]):
+            snap = {u: {**guard.facts(u), "source": "sitemap"} for u in web}
+        self.assertEqual([(k, u) for k, u, _ in guard.baseline(snap) if "redirect" in k],
+                         [("listed (sitemap) but redirects", "https://www.singlegrain.com/old-page/")])
+
+    def test_failed_sitemap_keeps_last_snapshot_pages_and_alerts(self):
+        old = {HOME: page(), CONTACT: page()}
+        pages = guard.with_previous({HOME: "sitemap"}, old, [("https://x/sitemap.xml", 503)])
+        self.assertEqual(pages[CONTACT], "previous snapshot (sitemap failed)")
+        self.assertEqual(guard.with_previous({HOME: "sitemap"}, old, []), {HOME: "sitemap"})
 
     def test_page_without_tags_is_reported_not_called_broken(self):
         snap = {"https://gateway.singlebrain.com/": page(gtm=[], trackers=[], any_tracking=False, js_app=True,

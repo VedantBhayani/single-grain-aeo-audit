@@ -120,6 +120,70 @@ class WatchRunTests(unittest.TestCase):
         self.assertEqual([g["url"] for g in payload["gone"]], [A])
         self.assertIn("Not live", watch.dashboard(s, st))
 
+    def test_only_404_410_or_a_redirect_count_as_gone(self):
+        # Review round 3: a 403 (what a bot block looks like) closed issues as "no longer live".
+        for status in (401, 403, 429, 500, 503, "network-error", "robots-disallowed"):
+            self.assertTrue(watch.transient(status), status)
+        for status in (200, 404, 410):
+            self.assertFalse(watch.transient(status), status)
+        self.go([(A, "2026-10-20")])
+        with mock.patch.object(audit, "fetch", fake_web({**WEB, A: (403, "")})):
+            s, _, st = self.go([(A, "2026-10-25")])
+        self.assertEqual((s["failing_now"], s["not_live"], s["retry_next_run"]), (1, 0, 1))
+        self.assertEqual(watch.issues_payload([], st)["gone"], [])
+
+    def test_a_video_we_could_not_check_is_retried_not_passed(self):
+        # A rate-limited oEmbed must not make a post with a private video look clean (and close its issue).
+        audit._service_urls, audit._link_status, audit._videos = None, {}, {}
+        vid = "https://www.youtube.com/watch?v=abcdefghijk"
+        page = (f'<article class="container post-1"><div class="auto-toc"></div><img src=x>'
+                f'<p>Watch <a href="{vid}&t=5">this</a>.</p></article>')
+        web = {**WEB, A: (200, page)}
+
+        def fetch(u):
+            if "oembed" in u:
+                return 429, "", u
+            return fake_web(web)(u)
+        with mock.patch.object(audit, "fetch", fetch):
+            s, checked, st = self.go([(A, "2026-10-20")])
+        self.assertTrue(checked[0]["retry"])
+        self.assertIn(A, st["retry"])
+        self.assertNotIn(A, st["posts"])
+        with mock.patch.object(audit, "fetch", lambda u: (403, "", u) if "oembed" in u else fake_web(web)(u)):
+            audit._videos = {}
+            _, checked, st = self.go([(A, "2026-10-20")])  # retried; now YouTube says private (403)
+        self.assertEqual([h["rule"] for h in checked[0]["hard"]], ["video_unavailable"])
+        self.assertEqual(st["retry"], [])
+
+    def test_an_errored_post_below_the_baseline_is_retried_by_new_runs(self):
+        # Review round 3: a `since` run's error on an old post was never retried by `new` runs.
+        self.go([(B, "2026-10-21")])  # first run sets the baseline to 2026-10-14
+        with mock.patch.object(audit, "fetch", fake_web({**WEB, A: ("network-error", "")})):
+            self.go([(A, "2026-09-01"), (B, "2026-10-21")], mode="since", since="2026-08-01")
+        _, checked, st = self.go([(A, "2026-09-01"), (B, "2026-10-21")])  # new mode; A is below the baseline
+        self.assertEqual(st["baseline"], "2026-10-14")
+        self.assertEqual([p["url"] for p in checked], [A])
+        self.assertEqual(st["retry"], [])
+        self.assertTrue(st["posts"][A]["hard"])
+
+    def test_a_failing_post_that_leaves_the_sitemap_is_rechecked_and_closes(self):
+        # A deleted post usually drops out of the sitemap, so its lastmod never changes again.
+        self.go([(A, "2026-10-20")])
+        with mock.patch.object(audit, "fetch", fake_web({**WEB, A: (404, "")})):
+            s, checked, st = self.go([(B, "2026-10-21")])  # A is gone from the sitemap
+        self.assertIn(A, [p["url"] for p in checked])
+        self.assertEqual(s["failing_now"], 0)
+        self.assertEqual([g["url"] for g in watch.issues_payload(checked, st)["gone"]], [A])
+
+    def test_closing_comes_from_the_state_not_just_this_run(self):
+        # If a run's issue sync never happened (timeout, failed push), the next run still closes the issue.
+        self.go([(A, "2026-10-20")])
+        with mock.patch.object(audit, "fetch", fake_web({**WEB, A: (200, CLEAN)})):
+            self.go([(A, "2026-10-25")])  # A fixed; pretend this run's sync was lost
+        _, checked, st = self.go([(A, "2026-10-25")])  # nothing re-checked
+        self.assertEqual(checked, [])
+        self.assertIn(A, watch.issues_payload(checked, st)["passing"])
+
     def test_failing_posts_not_checked_this_run_are_the_backlog(self):
         _, _, st = self.go([(A, "2026-10-20"), (B, "2026-10-21")])
         _, checked, st = self.go([(A, "2026-10-20"), (B, "2026-10-22")])  # only B re-checked
@@ -256,6 +320,35 @@ class IssueSyncTests(unittest.TestCase):
         self.assertEqual([(k, a if k != "open" else "new") for k, a, _ in actions], [("open", "new"), ("close", 7)])
         self.assertIn(issues.marker(D), actions[0][2])
         self.assertIn("no longer live (status 404)", actions[1][2])
+
+    def test_a_human_closed_issue_gets_a_new_one_only_if_rechecked_and_still_failing(self):
+        closed = [{"number": 9, "body": issues.marker(A), "state": "closed"}]
+        actions, _ = issues.plan(closed, {"failing": [self.failing(A)], "passing": [], "backlog": []})
+        self.assertEqual([k for k, _, _ in actions], ["open"])
+        actions, _ = issues.plan(closed, {"failing": [], "passing": [], "backlog": [self.failing(A)]})
+        self.assertEqual(actions, [])
+
+    def test_comments_are_capped_closing_is_not(self):
+        urls = [f"{SG}/blog-posts/p{i}/" for i in range(5)]
+        open_ = [{"number": i, "body": issues.marker(u), "state": "open"} for i, u in enumerate(urls)]
+        payload = {"failing": [self.failing(u) for u in urls[:3]], "passing": urls[3:], "backlog": []}
+        actions, _ = issues.plan(open_, payload, comment_cap=1)
+        self.assertEqual([k for k, _, _ in actions], ["comment", "close", "close"])
+
+    def test_issue_listing_follows_every_page(self):
+        pages = {1: [{"number": n, "body": "", "state": "open"} for n in range(100)],
+                 2: [{"number": 100, "body": "", "state": "closed", "pull_request": {}}, {"number": 101, "body": "",
+                                                                                          "state": "closed"}]}
+        calls = []
+
+        def gh(method, path, token, body=None):
+            page = int(path.rsplit("page=", 1)[1])
+            calls.append(path)
+            return pages[page]
+        with mock.patch.object(issues, "gh", gh):
+            got = issues.watcher_issues("o/r", "t")
+        self.assertEqual(len(got), 101)  # the pull request is skipped
+        self.assertTrue(all("state=all" in c for c in calls))
 
     def test_backlog_over_the_cap_waits_for_the_next_run(self):
         payload = {"failing": [self.failing(f"{SG}/blog-posts/p{i}/") for i in range(3)], "passing": [],

@@ -17,6 +17,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
+from common import fetch as _fetch_mod  # noqa: E402
 from common.fetch import fetch, write_csv  # noqa: E402
 
 SITE = "https://www.singlegrain.com"
@@ -65,8 +66,13 @@ RULES = {
     "fake_reviews": ("Fake anonymized reviews", f"{TEAM} L342-344", "fake anonymized reviews", True,
                      "his team's criteria"),
     "robotic_voice": ("Robotic voice", f"{TEAM} L345", "robotic voice", True, "his team's criteria"),
+    "video_unchecked": ("Video could not be checked", "", "", False,
+                        "the check failed (rate limit or network), not the video; re-run"),
 }
 HARD = {"stale_source", "video_unavailable"}  # `check` exits 1 on these
+# YouTube oEmbed answers 401/403 for a private or embed-blocked video and 400/404 for a missing one.
+# Anything else that isn't 200 (429, 5xx, network) means the check itself failed: video_unchecked.
+VIDEO_GONE = {400, 401, 403, 404, 410}
 
 STAT = re.compile(r"\b\d+(?:\.\d+)?\s?%|\$\d[\d,.]*\s?(?:[kmb]|million|billion)?\b|\b\d+\s+(?:of|out of)\s+\d+\b", re.I)
 ATTRIBUTION = re.compile(r"\b(study|studies|survey|report(?:ed|s)?|research|according to|found that|"
@@ -182,8 +188,10 @@ def audit_page(url, page):
         if not any(re.search(r"[?&#]t=|start=", r) for r in rests):
             f.append(("video_no_timestamp", f"https://www.youtube.com/watch?v={vid}"))
         info = video_info(vid)
-        if info["status"] != 200:
+        if info["status"] in VIDEO_GONE:
             f.append(("video_unavailable", f"https://www.youtube.com/watch?v={vid} -> oEmbed {info['status']}"))
+        elif info["status"] != 200:  # rate limit, 5xx, network, robots: we don't know, so it's not a failure
+            f.append(("video_unchecked", f"https://www.youtube.com/watch?v={vid} -> oEmbed {info['status']}"))
 
     links = {html.unescape(h).split("?")[0].split("#")[0]
              for h in re.findall(r'href="(https?://www\.singlegrain\.com[^"]*)"', body)}
@@ -325,6 +333,7 @@ def write_report(out, rows, findings, since):
 
 
 def cmd_check(target):
+    _fetch_mod.CACHE_TTL_S = 0  # "fix the draft and run again" must see the fixed draft, not yesterday's copy
     path = Path(target)
     if path.exists():
         page, url = path.read_text(encoding="utf-8", errors="replace"), str(path)
@@ -343,7 +352,14 @@ def cmd_check(target):
 
 def main(argv):
     if len(argv) >= 2 and argv[1] == "run":
-        cmd_run(argv[argv.index("--since") + 1] if "--since" in argv else "2026-08-01")
+        since = "2026-08-01"
+        if "--since" in argv:
+            i = argv.index("--since") + 1
+            if i >= len(argv) or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", argv[i]):
+                print("--since needs a date: YYYY-MM-DD")
+                return 2
+            since = argv[i]
+        cmd_run(since)
         return 0
     if len(argv) == 3 and argv[1] == "check":
         return cmd_check(argv[2])

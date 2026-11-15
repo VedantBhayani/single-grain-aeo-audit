@@ -30,7 +30,7 @@ This is the study Eric read out in the AEO webinar ([youtu.be/45AWhSkkaQ4](https
 
 ### Pipeline instructions published as article text: 4 of 4 still live
 
-Each of these posts still contains: "Together with the embedded scene above, that is three on-angle Eric tape inputs for this job, not a link dump."
+On Oct 14 each of these posts contained: "Together with the embedded scene above, that is three on-angle Eric tape inputs for this job, not a link dump." The script searches each live page for the first pipeline phrase in that sentence ("on-angle"), and it is still there on all 4. The raw output of the 15:20 re-run is in [`verify_live_output.txt`](verify_live_output.txt).
 
 - /blog-posts/ai-overview-query-capture-playbook/
 - /blog-posts/brand-equity-citation-hygiene-llms/

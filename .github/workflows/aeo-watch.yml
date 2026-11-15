@@ -26,9 +26,10 @@ concurrency:
 env:
   BOX: aeo-watcher
   IB: npx --yes instabox@0.8.274
-  INSTABOX_API_KEY: ${{ secrets.INSTABOX_API_KEY }}
   INSTABOX_NO_TELEMETRY: "1"
   REPO_ON_BOX: /data/home/single-grain-aeo-audit
+  # INSTABOX_API_KEY is given only to the three steps that talk to the box, never to the step that
+  # turns scraped text into issues, and never to the deploy job.
 
 jobs:
   watch:
@@ -44,13 +45,18 @@ jobs:
           python-version: "3.12"
 
       - name: Wake the box and update its copy of the repo
+        env:
+          INSTABOX_API_KEY: ${{ secrets.INSTABOX_API_KEY }}
+        # Refuses (exit 75) while an earlier run still holds the lock, so code is never swapped under it.
         run: |
           $IB exec "$BOX" --timeout 120 -- \
-            "test -d $REPO_ON_BOX/.git || git clone -q https://github.com/$GITHUB_REPOSITORY $REPO_ON_BOX; \
+            "exec 9>/data/home/aeo.lock; flock -n 9 || { echo 'an earlier watcher run is still going on the box'; exit 75; }; \
+             test -d $REPO_ON_BOX/.git || git clone -q https://github.com/$GITHUB_REPOSITORY $REPO_ON_BOX; \
              cd $REPO_ON_BOX && git fetch -q && git reset -q --hard origin/$GITHUB_REF_NAME && git log --oneline -1"
 
       - name: Run the watcher on the box
         env:
+          INSTABOX_API_KEY: ${{ secrets.INSTABOX_API_KEY }}
           MODE: ${{ inputs.mode || 'new' }}
           SINCE: ${{ inputs.since }}
         run: |
@@ -69,6 +75,8 @@ jobs:
           exit $CODE
 
       - name: Bring the results back
+        env:
+          INSTABOX_API_KEY: ${{ secrets.INSTABOX_API_KEY }}
         run: |
           $IB cp "$BOX:/data/home/aeo-out.tgz" aeo-out.tgz
           tar xzf aeo-out.tgz

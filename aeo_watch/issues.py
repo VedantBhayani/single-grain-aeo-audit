@@ -8,6 +8,7 @@ One open issue per failing post, found by a hidden marker in its body:
 - failing earlier, never an issue -> open one (the backlog: posts over an earlier run's cap)
 - passing or no longer live, open issue -> close it with a comment
 New issues are capped at NEW_CAP per run so a full run can't flood the repo; the rest wait for the next run.
+Comments are capped at COMMENT_CAP per run. Closing is driven by the whole state, never by one run alone.
 """
 import json
 import os
@@ -22,6 +23,7 @@ from aeo_watch import watch  # noqa: E402  (one wording for an AI answer, shared
 
 LABEL = "aeo-watch"
 NEW_CAP = 20
+COMMENT_CAP = 30  # an `all` run re-checking hundreds of failing posts mustn't hit GitHub's secondary rate limit
 API = "https://api.github.com"
 
 
@@ -49,14 +51,16 @@ def findings_md(p):
     return "\n".join(lines)
 
 
-def plan(issues, payload, cap=NEW_CAP):
-    """issues: [{number, body, state}] with this label, open and closed. Returns (actions, skipped_new)."""
+def plan(issues, payload, cap=NEW_CAP, comment_cap=COMMENT_CAP):
+    """issues: [{number, body, state}] with this label, open and closed. Returns (actions, skipped_new).
+    Closing is never capped: it's what keeps the issue list true."""
     by_url = {url_of(i["body"]): i["number"] for i in issues
               if i.get("state", "open") == "open" and url_of(i["body"])}
     ever = {url_of(i["body"]) for i in issues}
     want = [p for p in payload["failing"] if p["url"] not in by_url]
     want += [p for p in payload.get("backlog", []) if p["url"] not in ever]
-    actions = [("comment", by_url[p["url"]], findings_md(p)) for p in payload["failing"] if p["url"] in by_url]
+    comments = [p for p in payload["failing"] if p["url"] in by_url]
+    actions = [("comment", by_url[p["url"]], findings_md(p)) for p in comments[:comment_cap]]
     for p in want[:cap]:
         path = p["url"].split("singlegrain.com", 1)[-1]
         body = (findings_md(p) + "\n\nOpened by the AEO watcher. It closes this issue itself once the post "
@@ -67,7 +71,7 @@ def plan(issues, payload, cap=NEW_CAP):
             actions.append(("close", by_url[u], "The latest watcher run found no hard failures on this post. Closing."))
     for g in payload.get("gone", []):
         if g["url"] in by_url:
-            where = f", now redirects to {g['final']}" if g.get("final") and g["final"] != g["url"] else ""
+            where = f", now redirects to {quiet(g['final'])}" if g.get("final") and g["final"] != g["url"] else ""
             actions.append(("close", by_url[g["url"]],
                             f"The post is no longer live (status {g['status']}{where}). Closing."))
     return actions, max(0, len(want) - cap)

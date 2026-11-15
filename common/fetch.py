@@ -2,12 +2,16 @@
 
 - Honors each host's robots.txt.
 - At least 2 s between live requests.
-- Caches every response for 24 h in .cache/ so re-runs don't hit the site again.
+- Caches definitive answers (2xx-4xx except 408/425/429) for CACHE_TTL_S, 24 h by default, in .cache/,
+  so re-runs don't hit the site again. Errors (network, 5xx, 429) are never cached: the next run retries.
+  The watcher and the pre-publish `check` set CACHE_TTL_S = 0: they always fetch today's page.
 - Logs every request (live or cached) to .cache/fetch_log.csv.
 """
 import csv
 import hashlib
+import http.client
 import json
+import os
 import time
 import urllib.error
 import urllib.parse
@@ -61,15 +65,32 @@ def fetch(url):
     return _get(url)
 
 
+def cacheable(status):
+    """A definitive answer worth reusing. Errors and rate limits are retried instead."""
+    return isinstance(status, int) and status < 500 and status not in (408, 425, 429)
+
+
+def _cached(key):
+    """The cached response, or None if missing, expired or unreadable (a kill mid-write, a bad disk)."""
+    if CACHE_TTL_S <= 0 or not key.exists():
+        return None
+    try:
+        c = json.loads(key.read_text(encoding="utf-8"))
+        if time.time() - c["fetched_at"] < CACHE_TTL_S and cacheable(c["status"]):
+            return c
+    except (ValueError, KeyError, TypeError, OSError):
+        pass
+    return None
+
+
 def _get(url, retries=3):
     global _last_live
     CACHE.mkdir(parents=True, exist_ok=True)
     key = CACHE / (hashlib.sha1(url.encode()).hexdigest() + ".json")
-    if key.exists():
-        c = json.loads(key.read_text(encoding="utf-8"))
-        if time.time() - c["fetched_at"] < CACHE_TTL_S:
-            _log(url, c["status"], len(c["body"]), True)
-            return c["status"], c["body"], c["final_url"]
+    c = _cached(key)
+    if c:
+        _log(url, c["status"], len(c["body"]), True)
+        return c["status"], c["body"], c["final_url"]
     status, body, final, note = None, "", url, ""
     for attempt in range(retries):
         wait = DELAY_S - (time.time() - _last_live)
@@ -87,11 +108,15 @@ def _get(url, retries=3):
             status, note = e.code, f"http error, attempt {attempt + 1}"
             if e.code < 500 and e.code != 429:
                 break
-        except (urllib.error.URLError, TimeoutError, ConnectionError) as e:
-            status, note = "network-error", f"{e}, attempt {attempt + 1}"
+        except (urllib.error.URLError, http.client.HTTPException, OSError) as e:
+            # OSError covers timeouts, resets and SSL errors; HTTPException covers IncompleteRead.
+            status, body, note = "network-error", "", f"{type(e).__name__}: {e}, attempt {attempt + 1}"
         time.sleep(DELAY_S * (2 ** attempt))
-    key.write_text(json.dumps({"url": url, "status": status, "body": body, "final_url": final,
-                               "fetched_at": time.time()}), encoding="utf-8")
+    if cacheable(status):
+        tmp = key.with_suffix(f".{os.getpid()}.tmp")
+        tmp.write_text(json.dumps({"url": url, "status": status, "body": body, "final_url": final,
+                                   "fetched_at": time.time()}), encoding="utf-8")
+        tmp.replace(key)  # atomic: a killed run never leaves half a cache file
     _log(url, status, len(body), False, note or (f"redirected to {final}" if final != url else ""))
     return status, body, final
 

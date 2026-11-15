@@ -108,7 +108,34 @@ class AuditPageTests(unittest.TestCase):
         html = post("<p>A recent study found that 64% of teams skip QA.</p>")
         self.assertIn("unsourced_claim", self.rules(html))
 
+    def test_video_gone_is_hard_but_a_failed_check_is_not(self):
+        # Review round 3: a 429 or 5xx from oEmbed was reported as "video unavailable", a hard failure.
+        vid = "CCCCCCCCCCC"
+        html = post(f'<p><a href="https://youtu.be/{vid}?t=1">clip</a></p><lite-youtube></lite-youtube>')
+        for status, rule in ((401, "video_unavailable"), (403, "video_unavailable"), (404, "video_unavailable"),
+                             (429, "video_unchecked"), (503, "video_unchecked"), ("network-error", "video_unchecked")):
+            audit._videos = {}
+            with mock.patch.object(audit, "fetch", fake_web({**WEB, oembed(vid): (status, "")})):
+                r = self.rules(html)
+            self.assertIn(rule, r, status)
+            self.assertNotIn({"video_unavailable": "video_unchecked", "video_unchecked": "video_unavailable"}[rule],
+                             r, status)
+
+    def test_check_fetches_fresh(self):
+        from common import fetch as fetch_mod
+        self.addCleanup(setattr, fetch_mod, "CACHE_TTL_S", fetch_mod.CACHE_TTL_S)
+        with redirect_stdout(io.StringIO()):
+            audit.cmd_check(f"{SG}/blog-posts/clean/")
+        self.assertEqual(fetch_mod.CACHE_TTL_S, 0)
+
+    def test_since_without_a_date_is_a_usage_error_not_a_crash(self):
+        with redirect_stdout(io.StringIO()):
+            self.assertEqual(audit.main(["audit.py", "run", "--since"]), 2)
+            self.assertEqual(audit.main(["audit.py", "run", "--since", "yesterday"]), 2)
+
     def test_check_on_a_local_draft_file(self):
+        from common import fetch as fetch_mod
+        self.addCleanup(setattr, fetch_mod, "CACHE_TTL_S", fetch_mod.CACHE_TTL_S)
         with tempfile.TemporaryDirectory() as d:
             bad, clean = Path(d) / "bad.html", Path(d) / "clean.html"
             bad.write_text(BAD, encoding="utf-8")

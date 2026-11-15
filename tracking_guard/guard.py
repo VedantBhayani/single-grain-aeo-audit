@@ -90,13 +90,16 @@ def facts(url):
     return f
 
 
-def discover():
-    """{url: 'sitemap' | 'manual'}, de-duplicated across www/non-www and trailing slashes."""
+def discover(failed=None):
+    """{url: 'sitemap' | 'manual'}, de-duplicated across www/non-www and trailing slashes.
+    A sitemap that fails to load is appended to `failed` as (sitemap, status)."""
     pages = {}
     for sm in SOURCES:
         st, xml, _ = fetch(sm)
         if st != 200:
             print(f"WARN {sm} -> {st}")
+            if failed is not None:
+                failed.append((sm, st))
             continue
         for u in re.findall(r"<loc>([^<]+)</loc>", xml):
             u = html.unescape(u.strip())
@@ -145,11 +148,8 @@ def baseline(snap):
                 out.append((f"listed ({f.get('source', '?')}) but blocked by robots.txt, not checked", url, ""))
             elif f["status"] != 200:
                 out.append(("not 200", url, str(f["status"])))
-            elif f["redirected"]:
-                if norm(f["final_url"]) == norm(url):
-                    out.append(("www / non-www redirect only (low priority)", url, f["final_url"]))
-                else:
-                    out.append((f"listed ({f.get('source', '?')}) but redirects", url, f["final_url"]))
+            elif f["redirected"]:  # facts() already ignores www / non-www and trailing-slash redirects
+                out.append((f"listed ({f.get('source', '?')}) but redirects", url, f["final_url"]))
             else:
                 if not f["any_tracking"]:
                     out.append(("no tracking tag in served HTML" + (" (JS app)" if f.get("js_app") else ""), url, ""))
@@ -189,8 +189,22 @@ def write_report(snap, alerts, prev_name, findings, path):
     print(f"-> {path}")
 
 
+def with_previous(pages, old, failed):
+    """When a sitemap failed, keep checking the pages the last snapshot had, instead of silently
+    dropping them (they'd show as INFO "no longer listed" and never alert on a lost tag)."""
+    if not failed:
+        return pages
+    have = {norm(u) for u in pages}
+    kept = {u: "previous snapshot (sitemap failed)" for u in old if norm(u) not in have}
+    return {**pages, **kept}
+
+
 def cmd_run():
-    pages = discover()
+    SNAPS.mkdir(parents=True, exist_ok=True)
+    prev = sorted(SNAPS.glob("*.json"))
+    old = json.loads(prev[-1].read_text(encoding="utf-8")) if prev else {}
+    failed = []
+    pages = with_previous(discover(failed), old, failed)
     print(f"{len(pages)} pages")
     snap = {}
     for i, (u, src) in enumerate(pages.items(), 1):
@@ -198,12 +212,10 @@ def cmd_run():
         snap[u]["source"] = src
         if i % 50 == 0:
             print(f"  {i}/{len(pages)}")
-    SNAPS.mkdir(parents=True, exist_ok=True)
-    prev = sorted(SNAPS.glob("*.json"))
-    old = json.loads(prev[-1].read_text(encoding="utf-8")) if prev else {}
     stamp = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H%MZ")
     (SNAPS / f"{stamp}.json").write_text(json.dumps(snap, indent=1, sort_keys=True), encoding="utf-8")
     alerts = diff(old, snap) if old else []
+    alerts += [("ALERT", sm, "sitemap", "200", str(st)) for sm, st in failed]  # fail the run loudly
     out = RESULTS / stamp[:10] / "tracking"
     out.mkdir(parents=True, exist_ok=True)
     write_report(snap, alerts, prev[-1].name if prev else "", baseline(snap), out / "report.md")

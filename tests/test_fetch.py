@@ -41,5 +41,67 @@ class RobotsTests(unittest.TestCase):
         get.assert_not_called()
 
 
+class CacheTests(unittest.TestCase):
+    """_get itself, with urlopen faked: what is cached, what isn't, and a corrupt cache file."""
+
+    def setUp(self):
+        import tempfile
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        for name, value in (("CACHE", Path(self.tmp.name)), ("LOG", Path(self.tmp.name) / "log.csv"),
+                            ("DELAY_S", 0), ("CACHE_TTL_S", 3600)):
+            p = mock.patch.object(fetch, name, value)
+            p.start()
+            self.addCleanup(p.stop)
+        self.calls = []
+
+    def serve(self, *answers):
+        """Fake urlopen: each call returns the next answer (an int status or an exception)."""
+        import io
+        import urllib.error
+        seq = list(answers)
+
+        def urlopen(req, timeout=None):
+            self.calls.append(req.full_url)
+            a = seq.pop(0)
+            if isinstance(a, Exception):
+                raise a
+            if a != 200:
+                raise urllib.error.HTTPError(req.full_url, a, "x", {}, io.BytesIO(b""))
+            r = mock.MagicMock()
+            r.__enter__.return_value = mock.Mock(status=200, geturl=lambda: req.full_url,
+                                                 read=lambda: b"<html>ok</html>")
+            return r
+        return mock.patch.object(fetch.urllib.request, "urlopen", urlopen)
+
+    def test_a_200_is_cached(self):
+        with self.serve(200):
+            self.assertEqual(fetch._get(PAGE)[0], 200)
+            self.assertEqual(fetch._get(PAGE)[0], 200)
+        self.assertEqual(len(self.calls), 1)
+
+    def test_errors_are_not_cached(self):
+        import urllib.error
+        with mock.patch.object(fetch.time, "sleep"), self.serve(*([503] * 3), 200):
+            self.assertEqual(fetch._get(PAGE)[0], 503)
+            self.assertEqual(fetch._get(PAGE)[0], 200)  # retried live, not served the cached 503
+        with mock.patch.object(fetch.time, "sleep"), self.serve(*([urllib.error.URLError("down")] * 3)):
+            self.assertEqual(fetch._get(PAGE + "x")[0], "network-error")
+        self.assertFalse(list(Path(self.tmp.name).glob("*.tmp")))
+
+    def test_a_corrupt_cache_file_is_refetched(self):
+        import hashlib
+        (Path(self.tmp.name) / (hashlib.sha1(PAGE.encode()).hexdigest() + ".json")).write_text('{"trunc')
+        with self.serve(200):
+            self.assertEqual(fetch._get(PAGE)[0], 200)
+        self.assertEqual(len(self.calls), 1)
+
+    def test_ttl_zero_always_fetches(self):
+        with mock.patch.object(fetch, "CACHE_TTL_S", 0), self.serve(200, 200):
+            fetch._get(PAGE)
+            fetch._get(PAGE)
+        self.assertEqual(len(self.calls), 2)
+
+
 if __name__ == "__main__":
     unittest.main()

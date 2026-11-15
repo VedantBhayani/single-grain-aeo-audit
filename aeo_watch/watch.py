@@ -5,7 +5,7 @@
   python aeo_watch/watch.py run --mode since --since 2026-10-14
   python aeo_watch/watch.py run ... --budget-min 75 --out DIR
 
-The 10 rule checks are aeo_audit.audit_page. One change: a pre-2020 year in plain prose (not in a
+The rule checks are aeo_audit.audit_page. One change: a pre-2020 year in plain prose (not in a
 stat or study sentence, not in a link) is a warning here, not a hard failure, because the watcher
 opens public issues. The one AI step: for a pre-2020 year in a sentence that cites a stat or study
 (or in a linked URL's path), Parallel is asked whether newer data exists, and its sources are shown
@@ -50,7 +50,7 @@ def load_state(d):
     p = d / "state.json"
     if p.exists():
         return json.loads(p.read_text(encoding="utf-8"))
-    return {"baseline": None, "seen": {}, "queue": [], "posts": {}, "parallel_cache": {}, "runs": []}
+    return {"baseline": None, "seen": {}, "queue": [], "retry": [], "posts": {}, "parallel_cache": {}, "runs": []}
 
 
 def save_state(d, st):
@@ -71,7 +71,13 @@ def candidates(mode, since, posts, st):
     else:  # new: changed since we last saw it, and not older than the first run's baseline
         base = st["baseline"]
         picked = [(u, m) for u, m in posts if m >= base and st["seen"].get(u) != m]
-    return [u for u, _ in sorted(picked, key=lambda x: (x[1], x[0]))]
+    urls = [u for u, _ in sorted(picked, key=lambda x: (x[1], x[0]))]
+    # Every mode also re-tries posts that errored last time (whatever their date), and re-checks a failing
+    # post that left the sitemap: a deleted post usually drops out, so its lastmod never changes again.
+    listed = {u for u, _ in posts}
+    urls += st.get("retry", [])
+    urls += sorted(u for u, p in st["posts"].items() if p.get("hard") and u not in listed)
+    return list(dict.fromkeys(urls))
 
 
 def enqueue(st, urls):
@@ -179,8 +185,10 @@ class Parallel:
 # ---------------------------------------------------------------- check one post
 
 def transient(status):
-    """Worth retrying next run: a network error, robots, a 5xx or a 429. A 404 or a redirect is an answer."""
-    return not isinstance(status, int) or status >= 500 or status == 429
+    """Anything except 200, 404 and 410 means "couldn't check": network, robots, 5xx, 429, and 401/403,
+    which is what a bot block looks like. Only a 404/410 or a redirect away says a post is gone, so a
+    Cloudflare block can never close an issue."""
+    return status not in (200, 404, 410)
 
 
 def not_checked(url, lastmod, status, note=""):
@@ -196,6 +204,9 @@ def check_post(url, lastmod, ai, today):
         return {"url": url, "lastmod": lastmod, "live": False, "status": str(st), "final": final,
                 "hard": [], "warn": [], "suggestions": []}
     row, f, _ = audit.audit_page(url, page)
+    unchecked = [e for k, e in f if k == "video_unchecked"]
+    if unchecked:  # a cited video we couldn't check could be the post's hard failure: don't guess, retry
+        return not_checked(url, lastmod, "video-unchecked", unchecked[0])
     cited = set(stale_claims(f))
     hard, warn = [], []
     for k, e in f:
@@ -248,9 +259,15 @@ def run(mode="new", since=None, budget_min=75.0, out=None, posts=None, ai=None,
             res = not_checked(url, lastmod.get(url, ""), "check-error", f"{type(e).__name__}: {e}"[:200])
         res["checked_at"] = now.isoformat(timespec="minutes")
         res["was_failing"] = bool(prev and prev.get("hard"))
-        if not res.get("retry"):  # an error keeps the last real result and isn't marked seen
+        retry = st.setdefault("retry", [])
+        if res.get("retry"):  # an error keeps the last real result, isn't marked seen, and is tried next run
+            if url not in retry:
+                retry.append(url)
+        else:
             st["posts"][url] = res
             st["seen"][url] = lastmod.get(url, "")
+            if url in retry:
+                retry.remove(url)
         st["queue"].pop(0)
         checked.append(res)
         save_state(d, st)  # progress survives a pause, a cooldown or a kill
@@ -276,19 +293,21 @@ def run(mode="new", since=None, budget_min=75.0, out=None, posts=None, ai=None,
 # ---------------------------------------------------------------- outputs
 
 def issues_payload(checked, st):
-    """What the GitHub side needs.
+    """What the GitHub side needs. Built from the whole state, not just this run, so if an earlier
+    run's issue sync never happened (a timeout, a failed push), this run still closes what it should.
     failing: checked this run and failing (comment on its issue, or open one)
     backlog: failing in the state but not checked this run (open an issue only if it never had one)
-    passing / gone: checked this run and passing, or no longer live (close its issue)"""
+    passing / gone: passing, or no longer live, by the latest result for each post (close its issue)"""
     def row(p):
         return {"url": p["url"], "title": p.get("title", ""), "hard": p["hard"],
                 "suggestions": p.get("suggestions", []), "checked_at": p.get("checked_at", "")}
     now = {p["url"] for p in checked}
+    posts = sorted(st["posts"].items())
     return {"failing": [row(p) for p in checked if p["hard"]],
-            "backlog": [row(p) for u, p in sorted(st["posts"].items()) if p.get("hard") and u not in now],
-            "passing": [p["url"] for p in checked if p["live"] and not p["hard"]],
-            "gone": [{"url": p["url"], "status": p["status"], "final": p.get("final", "")}
-                     for p in checked if not p["live"] and not p.get("retry")]}
+            "backlog": [row(p) for u, p in posts if p.get("hard") and u not in now],
+            "passing": [u for u, p in posts if p.get("live") and not p.get("hard")],
+            "gone": [{"url": u, "status": p.get("status", ""), "final": p.get("final", "")}
+                     for u, p in posts if not p.get("live")]}
 
 
 def report_md(summary, checked):
@@ -319,11 +338,12 @@ def report_md(summary, checked):
     return "\n".join(lines) + "\n"
 
 
-def ai_line(sg):
-    """One honest line per Parallel answer, in plain text."""
+def ai_line(sg, text=str, link=lambda x: x["url"]):
+    """One honest line per Parallel answer: the single wording for the report, issues and dashboard.
+    The dashboard passes text=esc and a link that renders an <a>."""
     if not sg["sources"]:
-        return f"no newer data found (p={sg['p']})"
-    return f"newer data likely (p={sg['p']}), check: " + ", ".join(x["url"] for x in sg["sources"])
+        return text(f"no newer data found (p={sg['p']})")
+    return text(f"newer data likely (p={sg['p']}), check: ") + ", ".join(link(x) for x in sg["sources"])
 
 
 def esc(s):
@@ -342,9 +362,7 @@ def dashboard(summary, st):
         hard = "".join(f"<li><b>{esc(h['name'])}</b>: {esc(h['evidence'])}</li>" for h in p["hard"])
         sugg = "".join(
             f"<li><span class=ai>AI</span> <q>{esc(g['claim'][:160])}</q>: "
-            + (("newer data likely (p=" + esc(g["p"]) + "), check: "
-                + ", ".join(f"<a href='{esc(x['url'])}'>{esc(x['title'] or x['url'])}</a>" for x in g["sources"]))
-               if g["sources"] else f"no newer data found (p={esc(g['p'])})")
+            + ai_line(g, text=esc, link=lambda x: f"<a href='{esc(x['url'])}'>{esc(x['title'] or x['url'])}</a>")
             + "</li>"
             for g in p.get("suggestions", []))
         warn = "".join(f"<li>{esc(w['name'])}: {esc(w['evidence'])}</li>" for w in p.get("warn", []))

@@ -1,0 +1,32 @@
+﻿== HBR 2011 link: 9 posts flagged on Oct 14
+  200 hbr_links=1 modified=2026-09-25  five-step-reliable-marketing-bots/
+  200 hbr_links=1 modified=2026-10-16  forward-deployed-marketer/
+  200 hbr_links=1 modified=2026-10-14  how-to-hire-or-build-ai-marketing-agents-that-own-pipeline-jobs-without-a-chatbot-demo/
+  200 hbr_links=1 modified=2026-09-25  marketing-agent-pipeline-raci/
+  200 hbr_links=1 modified=2026-10-14  slas-kill-switches-managed-marketing-agents/
+  200 hbr_links=1 modified=2026-09-25  specialized-marketing-llms-pipeline-jobs/
+  200 hbr_links=1 modified=2026-10-14  startups-test-thousands-of-ads/
+  200 hbr_links=1 modified=2026-10-14  which-ai-marketing-services-to-buy-when-you-need-pipeline-not-another-content-calendar/
+  200 hbr_links=1 modified=2026-10-14  which-marketing-jobs-a-founder-can-hand-gpt-6-astra-for-a-full-day-before-hiring/
+
+== Pipeline instructions published: 4 on Oct 14
+  200 still_there=True [on-angle]  ai-overview-query-capture-playbook/
+     Oct 14 evidence: Together with the embedded scene above, that is three on-angle Eric tape inputs for this job, not a link dump.
+  200 still_there=True [on-angle]  brand-equity-citation-hygiene-llms/
+     Oct 14 evidence: Together with the embedded scene above, that is three on-angle Eric tape inputs for this job, not a link dump.
+  200 still_there=True [on-angle]  technical-seo-for-llm-scrapers/
+     Oct 14 evidence: Together with the embedded scene above, that is three on-angle Eric tape inputs for this job, not a link dump.
+  200 still_there=True [on-angle]  content-attention-to-pipeline-conversion/
+     Oct 14 evidence: Together with the embedded scene above, that is three on-angle Eric tape inputs for this job, not a link dump.
+
+== Internal links that 404'd on Oct 14: 10 distinct, all re-checked
+  now 404  https://www.singlegrain.com/agency/managed-marketing-agents/
+  now 404  https://www.singlegrain.com/artificial-intelligence/company-brain-stop-agents-guessing-icp/
+  now 404  https://www.singlegrain.com/artificial-intelligence/crm-field-contracts-marketing-agent-outputs/
+  now 404  https://www.singlegrain.com/artificial-intelligence/how-many-agent-jobs-before-hire-human/
+  now 404  https://www.singlegrain.com/artificial-intelligence/how-to-price-managed-marketing-agents-without-guessing-margin/
+  now 404  https://www.singlegrain.com/artificial-intelligence/incident-response-agent-ships-bad-copy/
+  now 404  https://www.singlegrain.com/artificial-intelligence/landing-page-creative-claim-consistency/
+  now 404  https://www.singlegrain.com/artificial-intelligence/lead-qualify-handoff-contracts-before-human/
+  now 404  https://www.singlegrain.com/artificial-intelligence/marketing-agent-eval-harness-before-crm/
+  now 404  https://www.singlegrain.com/artificial-intelligence/prompt-version-pinning-specialized-marketing-llms/
