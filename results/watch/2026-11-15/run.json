@@ -1,13 +1,13 @@
 {
  "summary": {
-  "run_at": "2026-11-15T13:51+00:00",
-  "mode": "new",
+  "run_at": "2026-11-15T14:06+00:00",
+  "mode": "since",
   "since": "2026-10-14",
   "checked": 97,
   "queued_left": 0,
-  "failing_now": 11,
-  "new_failures": 11,
-  "fixed": 0,
+  "failing_now": 10,
+  "new_failures": 0,
+  "fixed": 1,
   "not_live": 0,
   "parallel_calls": 9,
   "parallel_cost_usd": 0.009,
@@ -60,7 +60,7 @@
     }
    ],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -79,7 +79,7 @@
     }
    ],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -141,12 +141,8 @@
    "suggestions": [
     {
      "claim": "2011: Harvard Business Review’s 2011 report described an audit of 2,241 U.S.",
-     "p": 0.6397760607980222,
+     "p": 0.69,
      "sources": [
-      {
-       "url": "https://hbr.org/2011/03/the-short-life-of-online-sales-leads?639a0fac_page=3",
-       "title": "The Short Life of Online Sales Leads"
-      },
       {
        "url": "https://bizgrowthaxel.com/blog/speed-to-lead-research-in-practice",
        "title": "Speed-to-Lead Research in Practice: HBR's 2,241-Firm Audit"
@@ -154,26 +150,21 @@
       {
        "url": "https://www.cience.com/programmable-revenue/issue-01/the-42-hour-problem",
        "title": "The 42-hour problem: fifteen years of knowing better, and the median never moved. | Programmable Revenue"
+      },
+      {
+       "url": "https://www.usecarly.com/blog/speed-to-lead-statistics/",
+       "title": "Speed to Lead Statistics 2026: 5-Minute Rule, Response Times"
       }
      ]
     },
     {
      "claim": "link https://hbr.org/2011/03/the-short-life-of-online-sales-leads",
-     "p": 0.0610434725089729,
-     "sources": [
-      {
-       "url": "https://web.archive.org/web/20231223103032/https://hbr.org/2011/03/the-short-life-of-online-sales-leads",
-       "title": "The Short Life of Online Sales Leads"
-      },
-      {
-       "url": "https://marketinque.com/wiki/source/hbr-short-life-of-online-sales-leads",
-       "title": "Source: The Short Life of Online Sales Leads — marketinque"
-      }
-     ]
+     "p": 0.09,
+     "sources": []
     }
    ],
-   "checked_at": "2026-11-15T13:51+00:00",
-   "was_failing": false
+   "checked_at": "2026-11-15T14:06+00:00",
+   "was_failing": true
   },
   {
    "url": "https://www.singlegrain.com/blog-posts/jev-sales-call-analysis-timestamped-article-brief-v2/",
@@ -185,7 +176,7 @@
    "hard": [],
    "warn": [],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -204,7 +195,7 @@
     }
    ],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -253,7 +244,7 @@
     }
    ],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -267,15 +258,15 @@
     {
      "rule": "stale_source",
      "name": "Pre-2020 source",
-     "evidence": "2011: These are historical 2011 inbound-response findings, not outbound-agent benchmarks."
-    },
-    {
-     "rule": "stale_source",
-     "name": "Pre-2020 source",
      "evidence": "link https://hbr.org/2011/03/the-short-life-of-online-sales-leads"
     }
    ],
    "warn": [
+    {
+     "rule": "stale_source",
+     "name": "Pre-2020 year, not a cited stat",
+     "evidence": "2011: These are historical 2011 inbound-response findings, not outbound-agent benchmarks."
+    },
     {
      "rule": "video_not_embedded",
      "name": "His video linked, not embedded",
@@ -330,21 +321,12 @@
    "suggestions": [
     {
      "claim": "link https://hbr.org/2011/03/the-short-life-of-online-sales-leads",
-     "p": 0.0610434725089729,
-     "sources": [
-      {
-       "url": "https://web.archive.org/web/20231223103032/https://hbr.org/2011/03/the-short-life-of-online-sales-leads",
-       "title": "The Short Life of Online Sales Leads"
-      },
-      {
-       "url": "https://marketinque.com/wiki/source/hbr-short-life-of-online-sales-leads",
-       "title": "Source: The Short Life of Online Sales Leads — marketinque"
-      }
-     ]
+     "p": 0.09,
+     "sources": []
     }
    ],
-   "checked_at": "2026-11-15T13:51+00:00",
-   "was_failing": false
+   "checked_at": "2026-11-15T14:06+00:00",
+   "was_failing": true
   },
   {
    "url": "https://www.singlegrain.com/blog-posts/startups-test-thousands-of-ads/",
@@ -357,15 +339,15 @@
     {
      "rule": "stale_source",
      "name": "Pre-2020 source",
-     "evidence": "2011: These are 2011 findings, not current Meta benchmarks."
-    },
-    {
-     "rule": "stale_source",
-     "name": "Pre-2020 source",
      "evidence": "link https://hbr.org/2011/03/the-short-life-of-online-sales-leads"
     }
    ],
    "warn": [
+    {
+     "rule": "stale_source",
+     "name": "Pre-2020 year, not a cited stat",
+     "evidence": "2011: These are 2011 findings, not current Meta benchmarks."
+    },
     {
      "rule": "video_not_embedded",
      "name": "His video linked, not embedded",
@@ -415,21 +397,12 @@
    "suggestions": [
     {
      "claim": "link https://hbr.org/2011/03/the-short-life-of-online-sales-leads",
-     "p": 0.0610434725089729,
-     "sources": [
-      {
-       "url": "https://web.archive.org/web/20231223103032/https://hbr.org/2011/03/the-short-life-of-online-sales-leads",
-       "title": "The Short Life of Online Sales Leads"
-      },
-      {
-       "url": "https://marketinque.com/wiki/source/hbr-short-life-of-online-sales-leads",
-       "title": "Source: The Short Life of Online Sales Leads — marketinque"
-      }
-     ]
+     "p": 0.09,
+     "sources": []
     }
    ],
-   "checked_at": "2026-11-15T13:51+00:00",
-   "was_failing": false
+   "checked_at": "2026-11-15T14:06+00:00",
+   "was_failing": true
   },
   {
    "url": "https://www.singlegrain.com/blog-posts/which-ai-marketing-services-to-buy-when-you-need-pipeline-not-another-content-calendar/",
@@ -442,15 +415,15 @@
     {
      "rule": "stale_source",
      "name": "Pre-2020 source",
-     "evidence": "2011: Harvard Business Review’s 2011 audit of 2,241 U.S."
-    },
-    {
-     "rule": "stale_source",
-     "name": "Pre-2020 source",
      "evidence": "link https://hbr.org/2011/03/the-short-life-of-online-sales-leads"
     }
    ],
    "warn": [
+    {
+     "rule": "stale_source",
+     "name": "Pre-2020 year, not a cited stat",
+     "evidence": "2011: Harvard Business Review’s 2011 audit of 2,241 U.S."
+    },
     {
      "rule": "video_not_embedded",
      "name": "His video linked, not embedded",
@@ -495,21 +468,12 @@
    "suggestions": [
     {
      "claim": "link https://hbr.org/2011/03/the-short-life-of-online-sales-leads",
-     "p": 0.0610434725089729,
-     "sources": [
-      {
-       "url": "https://web.archive.org/web/20231223103032/https://hbr.org/2011/03/the-short-life-of-online-sales-leads",
-       "title": "The Short Life of Online Sales Leads"
-      },
-      {
-       "url": "https://marketinque.com/wiki/source/hbr-short-life-of-online-sales-leads",
-       "title": "Source: The Short Life of Online Sales Leads — marketinque"
-      }
-     ]
+     "p": 0.09,
+     "sources": []
     }
    ],
-   "checked_at": "2026-11-15T13:51+00:00",
-   "was_failing": false
+   "checked_at": "2026-11-15T14:06+00:00",
+   "was_failing": true
   },
   {
    "url": "https://www.singlegrain.com/blog-posts/which-marketing-jobs-a-founder-can-hand-gpt-6-astra-for-a-full-day-before-hiring/",
@@ -570,39 +534,17 @@
    "suggestions": [
     {
      "claim": "2011: Harvard Business Review’s 2011 research on online sales leads associated faster contact with greater qualification likelihood.",
-     "p": 0.5076354766322275,
-     "sources": [
-      {
-       "url": "https://hbr.org/2011/03/the-short-life-of-online-sales-leads?639a0fac_page=3",
-       "title": "The Short Life of Online Sales Leads"
-      },
-      {
-       "url": "https://socianet.co.uk/post/lead-response-time-statistics",
-       "title": "Lead response time statistics: what the studies really say"
-      },
-      {
-       "url": "https://www.usecarly.com/blog/speed-to-lead-statistics/",
-       "title": "Speed to Lead Statistics 2026: 5-Minute Rule, Response Times"
-      }
-     ]
+     "p": 0.49,
+     "sources": []
     },
     {
      "claim": "link https://hbr.org/2011/03/the-short-life-of-online-sales-leads",
-     "p": 0.0610434725089729,
-     "sources": [
-      {
-       "url": "https://web.archive.org/web/20231223103032/https://hbr.org/2011/03/the-short-life-of-online-sales-leads",
-       "title": "The Short Life of Online Sales Leads"
-      },
-      {
-       "url": "https://marketinque.com/wiki/source/hbr-short-life-of-online-sales-leads",
-       "title": "Source: The Short Life of Online Sales Leads — marketinque"
-      }
-     ]
+     "p": 0.09,
+     "sources": []
     }
    ],
-   "checked_at": "2026-11-15T13:51+00:00",
-   "was_failing": false
+   "checked_at": "2026-11-15T14:06+00:00",
+   "was_failing": true
   },
   {
    "url": "https://www.singlegrain.com/blog-posts/21-grok-bot-use-cases-i-run-across-my-agency-without-losing-control/",
@@ -620,7 +562,7 @@
     }
    ],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -633,7 +575,7 @@
    "hard": [],
    "warn": [],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -646,7 +588,7 @@
    "hard": [],
    "warn": [],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -665,7 +607,7 @@
     }
    ],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -684,7 +626,7 @@
     }
    ],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -697,7 +639,7 @@
    "hard": [],
    "warn": [],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -710,7 +652,7 @@
    "hard": [],
    "warn": [],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -723,7 +665,7 @@
    "hard": [],
    "warn": [],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -736,7 +678,7 @@
    "hard": [],
    "warn": [],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -770,7 +712,7 @@
     }
    ],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -837,39 +779,17 @@
    "suggestions": [
     {
      "claim": "2011: For supporting evidence, a 2011 Harvard Business Review article reported an audit of 2,241 U.S.",
-     "p": 0.19273068908148083,
-     "sources": [
-      {
-       "url": "https://www.datamagnet.co/post/recruiter-response-time-job-change-signal-benchmarks/",
-       "title": "Recruiter Response Time Benchmarks: How Fast in 2026?"
-      },
-      {
-       "url": "http://faq.library.illinois.edu/business/faq/83996",
-       "title": "\n        Where can I find the full-text of the Harvard Business Review? - FAQ and Chat\n    "
-      },
-      {
-       "url": "https://www.denkproducties.nl/media/daniel-kahneman-hbr-before-you-make-that-big-decision.pdf",
-       "title": "daniel-kahneman-hbr-before-you-make-that-big-decision. ..."
-      }
-     ]
+     "p": 0.19,
+     "sources": []
     },
     {
      "claim": "link https://hbr.org/2011/03/the-short-life-of-online-sales-leads",
-     "p": 0.0610434725089729,
-     "sources": [
-      {
-       "url": "https://web.archive.org/web/20231223103032/https://hbr.org/2011/03/the-short-life-of-online-sales-leads",
-       "title": "The Short Life of Online Sales Leads"
-      },
-      {
-       "url": "https://marketinque.com/wiki/source/hbr-short-life-of-online-sales-leads",
-       "title": "Source: The Short Life of Online Sales Leads — marketinque"
-      }
-     ]
+     "p": 0.09,
+     "sources": []
     }
    ],
-   "checked_at": "2026-11-15T13:51+00:00",
-   "was_failing": false
+   "checked_at": "2026-11-15T14:06+00:00",
+   "was_failing": true
   },
   {
    "url": "https://www.singlegrain.com/blog-posts/gemini-4-argon-ai-mode/",
@@ -881,7 +801,7 @@
    "hard": [],
    "warn": [],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -894,7 +814,7 @@
    "hard": [],
    "warn": [],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -913,7 +833,7 @@
     }
    ],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -943,8 +863,8 @@
     }
    ],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
-   "was_failing": false
+   "checked_at": "2026-11-15T14:06+00:00",
+   "was_failing": true
   },
   {
    "url": "https://www.singlegrain.com/blog-posts/is-ai-content-bad-for-seo/",
@@ -962,7 +882,7 @@
     }
    ],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -981,7 +901,7 @@
     }
    ],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -992,11 +912,6 @@
    "published": "2023-11-14",
    "modified": "2026-10-16",
    "hard": [
-    {
-     "rule": "stale_source",
-     "name": "Pre-2020 source",
-     "evidence": "2008: 6) BuySellAds Operating since 2008, BuySellAds (BSA) offers advertisers a mix of display ads, media buys, sponsored content and custom unit opportunities."
-    },
     {
      "rule": "stale_source",
      "name": "Pre-2020 source",
@@ -1014,6 +929,11 @@
     }
    ],
    "warn": [
+    {
+     "rule": "stale_source",
+     "name": "Pre-2020 year, not a cited stat",
+     "evidence": "2008: 6) BuySellAds Operating since 2008, BuySellAds (BSA) offers advertisers a mix of display ads, media buys, sponsored content and custom unit opportunities."
+    },
     {
      "rule": "video_not_embedded",
      "name": "His video linked, not embedded",
@@ -1053,7 +973,7 @@
    "suggestions": [
     {
      "claim": "link https://www.wordstream.com/blog/ws/2016/02/29/google-adwords-industry-benchmarks",
-     "p": 0.8147237131811808,
+     "p": 0.81,
      "sources": [
       {
        "url": "https://www.wordstream.com/blog/2026-google-ads-benchmarks",
@@ -1071,7 +991,7 @@
     },
     {
      "claim": "link https://www.wordstream.com/blog/ws/2017/02/28/facebook-advertising-benchmarks",
-     "p": 0.801208644823244,
+     "p": 0.82,
      "sources": [
       {
        "url": "https://www.wordstream.com/ppc-benchmarks",
@@ -1089,25 +1009,25 @@
     },
     {
      "claim": "link https://www.wordstream.com/blog/ws/2015/02/25/bings-ads-vs-google-adwords",
-     "p": 0.46863744873037233,
+     "p": 0.53,
      "sources": [
       {
        "url": "https://www.wordstream.com/blog/google-ads-cost",
        "title": "How Much Does Google Ads Cost? | WordStream"
       },
       {
-       "url": "https://www.wordstream.com/blog/ws/2016/02/29/google-adwords-industry-benchmarks",
-       "title": "Google Ads Benchmarks for YOUR Industry [Updated!]"
+       "url": "https://www.wordstream.com/google-ads-industry-benchmarks-lookup",
+       "title": "Google Ads Industry Benchmarks Lookup | WordStream"
       },
       {
-       "url": "https://www.wordstream.com/blog/google-ads-reports",
-       "title": "Want Better Google Ads Insights? Try These 6 Reports | WordStream"
+       "url": "https://www.wordstream.com/blog/online-advertising-costs",
+       "title": "The Comprehensive Guide to Online Advertising Costs for 2026"
       }
      ]
     }
    ],
-   "checked_at": "2026-11-15T13:51+00:00",
-   "was_failing": false
+   "checked_at": "2026-11-15T14:06+00:00",
+   "was_failing": true
   },
   {
    "url": "https://www.singlegrain.com/blog-posts/agentic-crm-attio-ai-agents/",
@@ -1125,7 +1045,7 @@
     }
    ],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -1135,14 +1055,13 @@
    "title": "Humanizer Skill: How to Make AI Grade Its Own Content Drafts",
    "published": "2026-10-20",
    "modified": "",
-   "hard": [
+   "hard": [],
+   "warn": [
     {
      "rule": "stale_source",
-     "name": "Pre-2020 source",
+     "name": "Pre-2020 year, not a cited stat",
      "evidence": "2019: Before: “This initiative marked a pivotal moment in the evolution of digital marketing.” After: “The company launched its first programmatic ad campaign in 2019.” Superficial -ing analyses cost 8 points."
-    }
-   ],
-   "warn": [
+    },
     {
      "rule": "unsourced_claim",
      "name": "Claimed stat with no link in its paragraph",
@@ -1155,8 +1074,8 @@
     }
    ],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
-   "was_failing": false
+   "checked_at": "2026-11-15T14:06+00:00",
+   "was_failing": true
   },
   {
    "url": "https://www.singlegrain.com/blog-posts/personal-agent-protocol-agentic-commerce/",
@@ -1168,7 +1087,7 @@
    "hard": [],
    "warn": [],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -1181,7 +1100,7 @@
    "hard": [],
    "warn": [],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -1200,7 +1119,7 @@
     }
    ],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -1219,7 +1138,7 @@
     }
    ],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -1232,7 +1151,7 @@
    "hard": [],
    "warn": [],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -1245,7 +1164,7 @@
    "hard": [],
    "warn": [],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -1258,7 +1177,7 @@
    "hard": [],
    "warn": [],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -1271,7 +1190,7 @@
    "hard": [],
    "warn": [],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -1284,7 +1203,7 @@
    "hard": [],
    "warn": [],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -1297,7 +1216,7 @@
    "hard": [],
    "warn": [],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -1310,7 +1229,7 @@
    "hard": [],
    "warn": [],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -1323,7 +1242,7 @@
    "hard": [],
    "warn": [],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -1336,7 +1255,7 @@
    "hard": [],
    "warn": [],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -1349,7 +1268,7 @@
    "hard": [],
    "warn": [],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -1368,7 +1287,7 @@
     }
    ],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -1381,7 +1300,7 @@
    "hard": [],
    "warn": [],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -1400,7 +1319,7 @@
     }
    ],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -1424,7 +1343,7 @@
     }
    ],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -1437,7 +1356,7 @@
    "hard": [],
    "warn": [],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -1450,7 +1369,7 @@
    "hard": [],
    "warn": [],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -1484,7 +1403,7 @@
     }
    ],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -1503,7 +1422,7 @@
     }
    ],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -1532,7 +1451,7 @@
     }
    ],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -1551,7 +1470,7 @@
     }
    ],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -1564,7 +1483,7 @@
    "hard": [],
    "warn": [],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -1596,7 +1515,7 @@
    "suggestions": [
     {
      "claim": "2018: In a 2018 eyetracking study on scrolling and attention from Nielsen Norman Group, people spent about 57% of their page-viewing time above the fold and 74% in the first two screens.",
-     "p": 0.5987146055612793,
+     "p": 0.62,
      "sources": [
       {
        "url": "https://www.nngroup.com/articles/scrolling-and-attention-original-research/?lm=infinite-scrolling-when&pt=youtubevideo",
@@ -1613,8 +1532,8 @@
      ]
     }
    ],
-   "checked_at": "2026-11-15T13:51+00:00",
-   "was_failing": false
+   "checked_at": "2026-11-15T14:06+00:00",
+   "was_failing": true
   },
   {
    "url": "https://www.singlegrain.com/blog-posts/ai-agent-memory/",
@@ -1632,7 +1551,7 @@
     }
    ],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -1656,7 +1575,7 @@
     }
    ],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -1675,7 +1594,7 @@
     }
    ],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -1702,7 +1621,7 @@
    "suggestions": [
     {
      "claim": "link https://hbr.org/2014/10/the-value-of-keeping-the-right-customers",
-     "p": 0.6615450295740786,
+     "p": 0.53,
      "sources": [
       {
        "url": "https://www.vendasta.com/blog/client-retention-strategies",
@@ -1719,8 +1638,8 @@
      ]
     }
    ],
-   "checked_at": "2026-11-15T13:51+00:00",
-   "was_failing": false
+   "checked_at": "2026-11-15T14:06+00:00",
+   "was_failing": true
   },
   {
    "url": "https://www.singlegrain.com/blog-posts/competitor-ads-analysis/",
@@ -1732,7 +1651,7 @@
    "hard": [],
    "warn": [],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -1761,7 +1680,7 @@
     }
    ],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -1795,7 +1714,7 @@
     }
    ],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -1808,7 +1727,7 @@
    "hard": [],
    "warn": [],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -1821,7 +1740,7 @@
    "hard": [],
    "warn": [],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -1845,7 +1764,7 @@
     }
    ],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -1864,7 +1783,7 @@
     }
    ],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -1877,7 +1796,7 @@
    "hard": [],
    "warn": [],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -1896,7 +1815,7 @@
     }
    ],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -1909,7 +1828,7 @@
    "hard": [],
    "warn": [],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -1928,7 +1847,7 @@
     }
    ],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -1941,7 +1860,7 @@
    "hard": [],
    "warn": [],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -1954,7 +1873,7 @@
    "hard": [],
    "warn": [],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -1993,7 +1912,7 @@
     }
    ],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -2027,7 +1946,7 @@
     }
    ],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -2071,7 +1990,7 @@
     }
    ],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -2115,7 +2034,7 @@
     }
    ],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -2159,7 +2078,7 @@
     }
    ],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -2188,7 +2107,7 @@
     }
    ],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -2222,7 +2141,7 @@
     }
    ],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -2235,7 +2154,7 @@
    "hard": [],
    "warn": [],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -2254,7 +2173,7 @@
     }
    ],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -2278,7 +2197,7 @@
     }
    ],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -2297,7 +2216,7 @@
     }
    ],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -2310,7 +2229,7 @@
    "hard": [],
    "warn": [],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -2323,7 +2242,7 @@
    "hard": [],
    "warn": [],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -2336,7 +2255,7 @@
    "hard": [],
    "warn": [],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -2355,7 +2274,7 @@
     }
    ],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -2368,7 +2287,7 @@
    "hard": [],
    "warn": [],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -2381,7 +2300,7 @@
    "hard": [],
    "warn": [],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -2400,7 +2319,7 @@
     }
    ],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -2419,7 +2338,7 @@
     }
    ],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -2438,7 +2357,7 @@
     }
    ],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -2472,7 +2391,7 @@
     }
    ],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -2506,7 +2425,7 @@
     }
    ],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -2545,7 +2464,7 @@
     }
    ],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   },
   {
@@ -2584,7 +2503,7 @@
     }
    ],
    "suggestions": [],
-   "checked_at": "2026-11-15T13:51+00:00",
+   "checked_at": "2026-11-15T14:06+00:00",
    "was_failing": false
   }
  ]

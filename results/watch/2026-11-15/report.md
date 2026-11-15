@@ -1,9 +1,9 @@
-# AEO watcher run, 2026-11-15T13:51+00:00 UTC
+# AEO watcher run, 2026-11-15T14:06+00:00 UTC
 
-Mode `new` since 2026-10-14. Checked 97 posts; 0 still queued for the next run.
+Mode `since` since 2026-10-14. Checked 97 posts; 0 still queued for the next run.
 
-- Failing now (all tracked posts): **11**
-- New failures this run: 11 · fixed this run: 0 · not live: 0
+- Failing now (all tracked posts): **10**
+- New failures this run: 0 · fixed this run: 1 · not live: 0
 - Parallel: 9 requests, $0.009
 
 ## pass: https://www.singlegrain.com/blog-posts/exception-queues-marketing-agents/
@@ -15,8 +15,8 @@ Mode `new` since 2026-10-14. Checked 97 posts; 0 still queued for the next run.
 ## FAIL: https://www.singlegrain.com/blog-posts/how-to-hire-or-build-ai-marketing-agents-that-own-pipeline-jobs-without-a-chatbot-demo/
 - **Pre-2020 source**: 2011: Harvard Business Review’s 2011 report described an audit of 2,241 U.S.
 - **Pre-2020 source**: link https://hbr.org/2011/03/the-short-life-of-online-sales-leads
-- AI (Parallel, p=0.6397760607980222): newer data for `2011: Harvard Business Review’s 2011 report described an audit of 2,241 U.S.` → https://hbr.org/2011/03/the-short-life-of-online-sales-leads?639a0fac_page=3, https://bizgrowthaxel.com/blog/speed-to-lead-research-in-practice, https://www.cience.com/programmable-revenue/issue-01/the-42-hour-problem
-- AI (Parallel, p=0.0610434725089729): newer data for `link https://hbr.org/2011/03/the-short-life-of-online-sales-leads` → https://web.archive.org/web/20231223103032/https://hbr.org/2011/03/the-short-life-of-online-sales-leads, https://marketinque.com/wiki/source/hbr-short-life-of-online-sales-leads
+- AI (Parallel): newer data likely (p=0.69), check: https://bizgrowthaxel.com/blog/speed-to-lead-research-in-practice, https://www.cience.com/programmable-revenue/issue-01/the-42-hour-problem, https://www.usecarly.com/blog/speed-to-lead-statistics/ · `2011: Harvard Business Review’s 2011 report described an audit of 2,241 U.S.`
+- AI (Parallel): no newer data found (p=0.09) · `link https://hbr.org/2011/03/the-short-life-of-online-sales-leads`
 - 7 warnings (see run.json)
 
 ## pass: https://www.singlegrain.com/blog-posts/jev-sales-call-analysis-timestamped-article-brief-v2/
@@ -28,28 +28,25 @@ Mode `new` since 2026-10-14. Checked 97 posts; 0 still queued for the next run.
 - 7 warnings (see run.json)
 
 ## FAIL: https://www.singlegrain.com/blog-posts/slas-kill-switches-managed-marketing-agents/
-- **Pre-2020 source**: 2011: These are historical 2011 inbound-response findings, not outbound-agent benchmarks.
 - **Pre-2020 source**: link https://hbr.org/2011/03/the-short-life-of-online-sales-leads
-- AI (Parallel, p=0.0610434725089729): newer data for `link https://hbr.org/2011/03/the-short-life-of-online-sales-leads` → https://web.archive.org/web/20231223103032/https://hbr.org/2011/03/the-short-life-of-online-sales-leads, https://marketinque.com/wiki/source/hbr-short-life-of-online-sales-leads
-- 10 warnings (see run.json)
+- AI (Parallel): no newer data found (p=0.09) · `link https://hbr.org/2011/03/the-short-life-of-online-sales-leads`
+- 11 warnings (see run.json)
 
 ## FAIL: https://www.singlegrain.com/blog-posts/startups-test-thousands-of-ads/
-- **Pre-2020 source**: 2011: These are 2011 findings, not current Meta benchmarks.
 - **Pre-2020 source**: link https://hbr.org/2011/03/the-short-life-of-online-sales-leads
-- AI (Parallel, p=0.0610434725089729): newer data for `link https://hbr.org/2011/03/the-short-life-of-online-sales-leads` → https://web.archive.org/web/20231223103032/https://hbr.org/2011/03/the-short-life-of-online-sales-leads, https://marketinque.com/wiki/source/hbr-short-life-of-online-sales-leads
-- 9 warnings (see run.json)
+- AI (Parallel): no newer data found (p=0.09) · `link https://hbr.org/2011/03/the-short-life-of-online-sales-leads`
+- 10 warnings (see run.json)
 
 ## FAIL: https://www.singlegrain.com/blog-posts/which-ai-marketing-services-to-buy-when-you-need-pipeline-not-another-content-calendar/
-- **Pre-2020 source**: 2011: Harvard Business Review’s 2011 audit of 2,241 U.S.
 - **Pre-2020 source**: link https://hbr.org/2011/03/the-short-life-of-online-sales-leads
-- AI (Parallel, p=0.0610434725089729): newer data for `link https://hbr.org/2011/03/the-short-life-of-online-sales-leads` → https://web.archive.org/web/20231223103032/https://hbr.org/2011/03/the-short-life-of-online-sales-leads, https://marketinque.com/wiki/source/hbr-short-life-of-online-sales-leads
-- 8 warnings (see run.json)
+- AI (Parallel): no newer data found (p=0.09) · `link https://hbr.org/2011/03/the-short-life-of-online-sales-leads`
+- 9 warnings (see run.json)
 
 ## FAIL: https://www.singlegrain.com/blog-posts/which-marketing-jobs-a-founder-can-hand-gpt-6-astra-for-a-full-day-before-hiring/
 - **Pre-2020 source**: 2011: Harvard Business Review’s 2011 research on online sales leads associated faster contact with greater qualification likelihood.
 - **Pre-2020 source**: link https://hbr.org/2011/03/the-short-life-of-online-sales-leads
-- AI (Parallel, p=0.5076354766322275): newer data for `2011: Harvard Business Review’s 2011 research on online sales leads associated faster contact with greater qualification` → https://hbr.org/2011/03/the-short-life-of-online-sales-leads?639a0fac_page=3, https://socianet.co.uk/post/lead-response-time-statistics, https://www.usecarly.com/blog/speed-to-lead-statistics/
-- AI (Parallel, p=0.0610434725089729): newer data for `link https://hbr.org/2011/03/the-short-life-of-online-sales-leads` → https://web.archive.org/web/20231223103032/https://hbr.org/2011/03/the-short-life-of-online-sales-leads, https://marketinque.com/wiki/source/hbr-short-life-of-online-sales-leads
+- AI (Parallel): no newer data found (p=0.49) · `2011: Harvard Business Review’s 2011 research on online sales leads associated faster contact with greater qualification`
+- AI (Parallel): no newer data found (p=0.09) · `link https://hbr.org/2011/03/the-short-life-of-online-sales-leads`
 - 7 warnings (see run.json)
 
 ## pass: https://www.singlegrain.com/blog-posts/21-grok-bot-use-cases-i-run-across-my-agency-without-losing-control/
@@ -79,8 +76,8 @@ Mode `new` since 2026-10-14. Checked 97 posts; 0 still queued for the next run.
 ## FAIL: https://www.singlegrain.com/blog-posts/forward-deployed-marketer/
 - **Pre-2020 source**: 2011: For supporting evidence, a 2011 Harvard Business Review article reported an audit of 2,241 U.S.
 - **Pre-2020 source**: link https://hbr.org/2011/03/the-short-life-of-online-sales-leads
-- AI (Parallel, p=0.19273068908148083): newer data for `2011: For supporting evidence, a 2011 Harvard Business Review article reported an audit of 2,241 U.S.` → https://www.datamagnet.co/post/recruiter-response-time-job-change-signal-benchmarks/, http://faq.library.illinois.edu/business/faq/83996, https://www.denkproducties.nl/media/daniel-kahneman-hbr-before-you-make-that-big-decision.pdf
-- AI (Parallel, p=0.0610434725089729): newer data for `link https://hbr.org/2011/03/the-short-life-of-online-sales-leads` → https://web.archive.org/web/20231223103032/https://hbr.org/2011/03/the-short-life-of-online-sales-leads, https://marketinque.com/wiki/source/hbr-short-life-of-online-sales-leads
+- AI (Parallel): no newer data found (p=0.19) · `2011: For supporting evidence, a 2011 Harvard Business Review article reported an audit of 2,241 U.S.`
+- AI (Parallel): no newer data found (p=0.09) · `link https://hbr.org/2011/03/the-short-life-of-online-sales-leads`
 - 8 warnings (see run.json)
 
 ## pass: https://www.singlegrain.com/blog-posts/gemini-4-argon-ai-mode/
@@ -101,21 +98,19 @@ Mode `new` since 2026-10-14. Checked 97 posts; 0 still queued for the next run.
 - 1 warnings (see run.json)
 
 ## FAIL: https://www.singlegrain.com/blog-posts/pay-per-click/alternative-ad-networks/
-- **Pre-2020 source**: 2008: 6) BuySellAds Operating since 2008, BuySellAds (BSA) offers advertisers a mix of display ads, media buys, sponsored content and custom unit opportunities.
 - **Pre-2020 source**: link https://www.wordstream.com/blog/ws/2016/02/29/google-adwords-industry-benchmarks
 - **Pre-2020 source**: link https://www.wordstream.com/blog/ws/2017/02/28/facebook-advertising-benchmarks
 - **Pre-2020 source**: link https://www.wordstream.com/blog/ws/2015/02/25/bings-ads-vs-google-adwords
-- AI (Parallel, p=0.8147237131811808): newer data for `link https://www.wordstream.com/blog/ws/2016/02/29/google-adwords-industry-benchmarks` → https://www.wordstream.com/blog/2026-google-ads-benchmarks, https://www.wordstream.com/blog/2025-google-ads-benchmarks?product=machine-learning, https://www.wordstream.com/blog/2024-google-ads-benchmarks
-- AI (Parallel, p=0.801208644823244): newer data for `link https://www.wordstream.com/blog/ws/2017/02/28/facebook-advertising-benchmarks` → https://www.wordstream.com/ppc-benchmarks, https://www.wordstream.com/blog/facebook-ads-benchmarks-2026, https://www.wordstream.com/resources/facebook-benchmarks
-- AI (Parallel, p=0.46863744873037233): newer data for `link https://www.wordstream.com/blog/ws/2015/02/25/bings-ads-vs-google-adwords` → https://www.wordstream.com/blog/google-ads-cost, https://www.wordstream.com/blog/ws/2016/02/29/google-adwords-industry-benchmarks, https://www.wordstream.com/blog/google-ads-reports
-- 7 warnings (see run.json)
+- AI (Parallel): newer data likely (p=0.81), check: https://www.wordstream.com/blog/2026-google-ads-benchmarks, https://www.wordstream.com/blog/2025-google-ads-benchmarks?product=machine-learning, https://www.wordstream.com/blog/2024-google-ads-benchmarks · `link https://www.wordstream.com/blog/ws/2016/02/29/google-adwords-industry-benchmarks`
+- AI (Parallel): newer data likely (p=0.82), check: https://www.wordstream.com/ppc-benchmarks, https://www.wordstream.com/blog/facebook-ads-benchmarks-2026, https://www.wordstream.com/resources/facebook-benchmarks · `link https://www.wordstream.com/blog/ws/2017/02/28/facebook-advertising-benchmarks`
+- AI (Parallel): newer data likely (p=0.53), check: https://www.wordstream.com/blog/google-ads-cost, https://www.wordstream.com/google-ads-industry-benchmarks-lookup, https://www.wordstream.com/blog/online-advertising-costs · `link https://www.wordstream.com/blog/ws/2015/02/25/bings-ads-vs-google-adwords`
+- 8 warnings (see run.json)
 
 ## pass: https://www.singlegrain.com/blog-posts/agentic-crm-attio-ai-agents/
 - 1 warnings (see run.json)
 
-## FAIL: https://www.singlegrain.com/blog-posts/humanizer-skill-ai-draft-score/
-- **Pre-2020 source**: 2019: Before: “This initiative marked a pivotal moment in the evolution of digital marketing.” After: “The company launched its first programmatic ad campaign in 2019.” Superficial -ing analyses cost 8 points.
-- 2 warnings (see run.json)
+## pass: https://www.singlegrain.com/blog-posts/humanizer-skill-ai-draft-score/
+- 3 warnings (see run.json)
 
 ## pass: https://www.singlegrain.com/blog-posts/personal-agent-protocol-agentic-commerce/
 
@@ -178,7 +173,7 @@ Mode `new` since 2026-10-14. Checked 97 posts; 0 still queued for the next run.
 
 ## FAIL: https://www.singlegrain.com/blog-posts/saas-landing-page-examples/
 - **Pre-2020 source**: 2018: In a 2018 eyetracking study on scrolling and attention from Nielsen Norman Group, people spent about 57% of their page-viewing time above the fold and 74% in the first two screens.
-- AI (Parallel, p=0.5987146055612793): newer data for `2018: In a 2018 eyetracking study on scrolling and attention from Nielsen Norman Group, people spent about 57% of their ` → https://www.nngroup.com/articles/scrolling-and-attention-original-research/?lm=infinite-scrolling-when&pt=youtubevideo, https://www.nngroup.com/articles/scrolling-and-attention-original-research?lm=talking-head-video-is-boring-online&pt=article, https://northkeelsystems.com/blog/first-screen-gets-most-attention/
+- AI (Parallel): newer data likely (p=0.62), check: https://www.nngroup.com/articles/scrolling-and-attention-original-research/?lm=infinite-scrolling-when&pt=youtubevideo, https://www.nngroup.com/articles/scrolling-and-attention-original-research?lm=talking-head-video-is-boring-online&pt=article, https://northkeelsystems.com/blog/first-screen-gets-most-attention/ · `2018: In a 2018 eyetracking study on scrolling and attention from Nielsen Norman Group, people spent about 57% of their `
 - 2 warnings (see run.json)
 
 ## pass: https://www.singlegrain.com/blog-posts/ai-agent-memory/
@@ -192,7 +187,7 @@ Mode `new` since 2026-10-14. Checked 97 posts; 0 still queued for the next run.
 
 ## FAIL: https://www.singlegrain.com/blog-posts/client-retention-strategies/
 - **Pre-2020 source**: link https://hbr.org/2014/10/the-value-of-keeping-the-right-customers
-- AI (Parallel, p=0.6615450295740786): newer data for `link https://hbr.org/2014/10/the-value-of-keeping-the-right-customers` → https://www.vendasta.com/blog/client-retention-strategies, https://www.studocu.vn/vn/document/truong-dai-hoc-ngoai-thuong/hrm/hbr-marketing-case-study-the-value-of-retaining-customers/154366292, https://prometheanresearch.com/client-retention-strategies-for-agencies
+- AI (Parallel): newer data likely (p=0.53), check: https://www.vendasta.com/blog/client-retention-strategies, https://www.studocu.vn/vn/document/truong-dai-hoc-ngoai-thuong/hrm/hbr-marketing-case-study-the-value-of-retaining-customers/154366292, https://prometheanresearch.com/client-retention-strategies-for-agencies · `link https://hbr.org/2014/10/the-value-of-keeping-the-right-customers`
 - 1 warnings (see run.json)
 
 ## pass: https://www.singlegrain.com/blog-posts/competitor-ads-analysis/
