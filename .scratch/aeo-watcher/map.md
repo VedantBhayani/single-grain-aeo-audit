@@ -30,11 +30,14 @@ The existing AEO audit runs every day by itself on one instabox box (free plan).
   - **Output:** a dated report committed to `results/`, and a dashboard on GitHub Pages as the main link.
   - **Box:** template `agent-browser`, name `aeo-watcher`. Code goes in `aeo_watch/` in this repo.
   - **Cut:** the Jev duplicate-topic check, and escalating to Parallel when Jev is unsure (unmeasured; not enough time).
+- [Create box and prove it reaches the site](issues/01-create-box-and-prove-it-reaches-the-site.md): aeo-watcher is up; Python 3.13, /data persists, outbound HTTPS works.
+- [Can a GitHub Action drive the box](issues/02-can-a-github-action-drive-the-box.md): yes, with exec --background, jobs wait and cp. The 120-min free run means a full run must queue over several days.
+- [Watcher code](issues/04-watcher-code.md): built and tested. "Updated" means the sitemap lastmod changed (simple, and no body storage). A box test checked 14 posts with 0 hard failures.
+- [Workflow, issues, Pages](issues/05-workflow-issues-pages.md): built; Pages enabled; the first Actions run waits on the keys.
 
 ## Not yet specified
 
-- Whether the box also serves the dashboard at its own URL; this depends on ticket 01.
-- How an exact "updated" post is detected (sitemap lastmod vs body hash); settle while building ticket 04.
+- Nothing open. Tickets 03 (keys) and 06 (first live run and hand check) remain.
 
 ## Out of scope
 
@@ -42,3 +45,4 @@ The existing AEO audit runs every day by itself on one instabox box (free plan).
 - Messaging Single Grain about findings.
 - The Jev duplicate-topic check and Parallel for company facts.
 - Changes to the tracking guard.
+- The box serving its own dashboard URL: Pages is the only link, which is simpler and can't be in cooldown.
