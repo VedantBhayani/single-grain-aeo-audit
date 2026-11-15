@@ -2,6 +2,8 @@
 
 Were the October findings real, and are they still live a month later? This re-check was run on 2026-11-15 (about 13:40 UTC) against the live site. It uses separate code ([`verify_live.py`](verify_live.py)): plain downloads and text search, with none of the audit's parsing, and 2 s between requests.
 
+Re-run the same day at about 15:20 UTC after a review found that the first version didn't check robots.txt and sent a generic browser User-Agent. The script now honours robots.txt (singlegrain.com allows every path checked here) and identifies itself. The results were identical, and this time all 10 of the Oct 14 404s were re-checked, not 8.
+
 ```bash
 python results/2026-11-15/verify_live.py results/2026-10-14/aeo/findings.csv
 ```
@@ -35,9 +37,9 @@ Each of these posts still contains: "Together with the embedded scene above, tha
 - /blog-posts/technical-seo-for-llm-scrapers/
 - /blog-posts/content-attention-to-pipeline-conversion/
 
-### Internal links that returned 404 on Oct 14: 8 of 8 re-checked still return 404
+### Internal links that returned 404 on Oct 14: 10 of 10 still return 404
 
-10 distinct URLs returned 404 on Oct 14. The first 8 in alphabetical order were re-checked:
+10 distinct URLs returned 404 on Oct 14 (the first run re-checked 8; the 15:20 re-run checked all 10):
 
 - /agency/managed-marketing-agents/
 - /artificial-intelligence/company-brain-stop-agents-guessing-icp/
@@ -47,6 +49,8 @@ Each of these posts still contains: "Together with the embedded scene above, tha
 - /artificial-intelligence/incident-response-agent-ships-bad-copy/
 - /artificial-intelligence/landing-page-creative-claim-consistency/
 - /artificial-intelligence/lead-qualify-handoff-contracts-before-human/
+- /artificial-intelligence/marketing-agent-eval-harness-before-crm/
+- /artificial-intelligence/prompt-version-pinning-specialized-marketing-llms/
 
 ## What this does and doesn't show
 

@@ -40,7 +40,7 @@ Limits: it checks public posts **after** they're published, because it can't see
 
 The newest post, `/blog-posts/seedance-2-0-ai-video-ads/` (Oct 13), passes every hard check.
 
-**Re-checked Nov 15 with separate code:** all 9 HBR links, all 4 pipeline-instruction leaks and 8 of 8 re-checked 404s are still live a month later. See [`results/2026-11-15/verification.md`](results/2026-11-15/verification.md).
+**Re-checked Nov 15 with separate code:** all 9 HBR links and all 4 pipeline-instruction leaks are still live a month later, and all 10 internal links that 404'd still 404. See [`results/2026-11-15/verification.md`](results/2026-11-15/verification.md).
 
 **Tracking guard:** 251 pages across 4 sites. Full report: [`results/2026-10-14/tracking/report.md`](results/2026-10-14/tracking/report.md).
 - Every live singlegrain.com page carries GTM-K3ZSFV; singlebrain.com and clickflow.com carry theirs.

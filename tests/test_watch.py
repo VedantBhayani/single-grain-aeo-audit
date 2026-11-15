@@ -129,7 +129,7 @@ class WatchRunTests(unittest.TestCase):
     def test_cli_fetches_fresh(self):
         old = watch.fetch_mod.CACHE_TTL_S
         self.addCleanup(setattr, watch.fetch_mod, "CACHE_TTL_S", old)
-        with mock.patch.object(watch, "run", return_value=({}, [], {})):
+        with mock.patch.object(watch, "run", return_value=({}, [], {})), mock.patch("builtins.print"):
             watch.main(["watch.py", "run"])
         self.assertEqual(watch.fetch_mod.CACHE_TTL_S, 0)
 
@@ -157,6 +157,17 @@ class WatchRunTests(unittest.TestCase):
 
 
 class AIStepTests(unittest.TestCase):
+    def test_audit_evidence_format_the_watcher_relies_on(self):
+        # The watcher parses audit's stale_source evidence: "YYYY: sentence" and "link URL".
+        # If audit.py changes that wording, this fails here instead of the watcher going quiet.
+        page = ('<article class="container post-1"><p>A 2011 study found that 71% of leads go cold.</p>'
+                '<p>See <a href="https://hbr.org/2011/03/x">this</a>.</p></article>')
+        _, f, _ = audit.audit_page(f"{SG}/blog-posts/fmt/", page)
+        ev = [e for k, e in f if k == "stale_source"]
+        self.assertIn("link https://hbr.org/2011/03/x", ev)
+        self.assertTrue(any(e.startswith("2011: A 2011 study") for e in ev))
+        self.assertEqual(len(watch.stale_claims(f)), 2)
+
     def test_only_stat_or_study_sentences_and_dated_links_go_to_parallel(self):
         f = [("stale_source", "2011: A 2011 study found that 71% of leads go cold."),
              ("stale_source", "2009: Single Grain was founded in 2009."),
@@ -266,6 +277,11 @@ class IssueSyncTests(unittest.TestCase):
         payload = {"failing": [self.failing(f"{SG}/blog-posts/p{i}/") for i in range(5)], "passing": []}
         actions, skipped = issues.plan([], payload, cap=3)
         self.assertEqual((len(actions), skipped), (3, 2))
+
+    def test_issue_bodies_break_mentions(self):
+        p = {**self.failing(A), "hard": [{"name": "n", "evidence": "2011: per @someone's study, email me@x.com"}]}
+        body = issues.findings_md(p)
+        self.assertNotRegex(body, r"@[A-Za-z0-9]")
 
     def test_marker_round_trip(self):
         self.assertEqual(issues.url_of("text\n" + issues.marker(A)), A)

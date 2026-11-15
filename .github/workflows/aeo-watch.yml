@@ -17,11 +17,7 @@ on:
         description: "YYYY-MM-DD (for mode since, or the first run's baseline)"
         required: false
 
-permissions:
-  contents: write
-  issues: write
-  pages: write
-  id-token: write
+permissions: {}  # each job asks for only what it needs
 
 concurrency:
   group: aeo-watch
@@ -38,9 +34,9 @@ jobs:
   watch:
     runs-on: ubuntu-latest
     timeout-minutes: 120
-    environment:
-      name: github-pages
-      url: ${{ steps.deploy.outputs.page_url }}
+    permissions:
+      contents: write  # commit the run log
+      issues: write    # one issue per failing post
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-python@v6
@@ -50,8 +46,8 @@ jobs:
       - name: Wake the box and update its copy of the repo
         run: |
           $IB exec "$BOX" --timeout 120 -- \
-            "test -d $REPO_ON_BOX/.git || git clone -q https://github.com/${{ github.repository }} $REPO_ON_BOX; \
-             cd $REPO_ON_BOX && git fetch -q && git reset -q --hard origin/${{ github.ref_name }} && git log --oneline -1"
+            "test -d $REPO_ON_BOX/.git || git clone -q https://github.com/$GITHUB_REPOSITORY $REPO_ON_BOX; \
+             cd $REPO_ON_BOX && git fetch -q && git reset -q --hard origin/$GITHUB_REF_NAME && git log --oneline -1"
 
       - name: Run the watcher on the box
         env:
@@ -76,9 +72,9 @@ jobs:
         run: |
           $IB cp "$BOX:/data/home/aeo-out.tgz" aeo-out.tgz
           tar xzf aeo-out.tgz
-          DAY=$(date -u +%Y-%m-%d)
-          mkdir -p "results/watch/$DAY" site
-          cp aeo-out/run.json aeo-out/report.md "results/watch/$DAY/"
+          RUN=$(date -u +%Y-%m-%dT%H%MZ)  # one folder per run, so two runs on one day don't overwrite
+          mkdir -p "results/watch/$RUN" site
+          cp aeo-out/run.json aeo-out/report.md "results/watch/$RUN/"
           cp aeo-out/index.html site/index.html
           cat aeo-out/report.md >> "$GITHUB_STEP_SUMMARY"
 
@@ -98,5 +94,17 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site
+
+  # Pages rights live only here, in a job that never touches scraped content.
+  deploy:
+    needs: watch
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
       - id: deploy
         uses: actions/deploy-pages@v4

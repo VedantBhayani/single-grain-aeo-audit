@@ -11,10 +11,14 @@ New issues are capped at NEW_CAP per run so a full run can't flood the repo; the
 """
 import json
 import os
+import re
 import sys
 import urllib.error
 import urllib.request
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from aeo_watch import watch  # noqa: E402  (one wording for an AI answer, shared with the report)
 
 LABEL = "aeo-watch"
 NEW_CAP = 20
@@ -33,15 +37,15 @@ def url_of(body):
     return body[s + len("<!-- aeo-watch:"):e] or None
 
 
+def quiet(s):
+    """Scraped text goes into an issue body: break @mentions so a post can't notify a GitHub user."""
+    return re.sub(r"@(?=[A-Za-z0-9])", "@​", str(s))
+
+
 def findings_md(p):
     lines = [f"Checked {p['checked_at']} UTC: {p['url']}", ""]
-    lines += [f"- **{h['name']}**: {h['evidence']}" for h in p["hard"]]
-    for g in p.get("suggestions", []):
-        if g["sources"]:
-            lines.append(f"- AI (Parallel, unverified): newer data likely (p={g['p']}), check: "
-                         + ", ".join(x["url"] for x in g["sources"]))
-        else:
-            lines.append(f"- AI (Parallel): no newer data found (p={g['p']})")
+    lines += [f"- **{h['name']}**: {quiet(h['evidence'])}" for h in p["hard"]]
+    lines += [f"- AI (Parallel, unverified): {quiet(watch.ai_line(g))}" for g in p.get("suggestions", [])]
     return "\n".join(lines)
 
 

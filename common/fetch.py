@@ -43,7 +43,12 @@ def allowed(url):
     if host not in _robots:
         rp = urllib.robotparser.RobotFileParser()
         st, body, _ = _get(host + "/robots.txt")
-        rp.parse(body.splitlines() if st == 200 else [])
+        if st == 200:
+            rp.parse(body.splitlines())
+        elif isinstance(st, int) and st < 500:
+            rp.parse([])  # RFC 9309: a 4xx robots.txt means no rules
+        else:
+            rp.parse(["User-agent: *", "Disallow: /"])  # 5xx or unreachable: assume disallowed (RFC 9309)
         _robots[host] = rp
     return _robots[host].can_fetch(USER_AGENT, url)
 
