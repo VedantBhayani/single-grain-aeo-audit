@@ -1,4 +1,9 @@
 .cache/
+.state/
+.env
+site/
+aeo-out/
+aeo-out.tgz
 __pycache__/
 *.pyc
 .run_*.log

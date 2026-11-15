@@ -7,6 +7,23 @@ Two read-only tools built for Single Grain, run on its public pages:
 
 By Vedant Bhayani. Built with Claude Code, which wrote most of the code. I chose the problem and had every finding re-checked against the live pages and the transcripts before trusting it.
 
+## AEO watcher: the audit, every day, on its own
+
+[`aeo_watch/`](aeo_watch/) runs the same 10 checks every day on a small cloud machine (instabox, free plan), on new posts only:
+
+- **Which posts:** by default, posts that are new or updated since the last run. A manual run can choose `all` (every `/blog-posts/` post) or `since <date>`. A big run that hits its 75-minute budget saves its place and continues the next day.
+- **One AI step:** when a pre-2020 year sits in a sentence that cites a stat or study, or in a linked URL's path, Parallel's Decisions API is asked whether newer data exists, and its sources are shown as suggestions to check. Capped at 25 requests ($0.025) per run, and never a hard failure.
+- **Output:** one GitHub issue per post that fails a hard check (closed automatically once it passes), a dated run log in [`results/watch/`](results/watch/), and a dashboard on GitHub Pages.
+- **How it runs:** a GitHub Action ([`aeo-watch.yml`](.github/workflows/aeo-watch.yml)) wakes the machine at 15:00 UTC and starts the run there. The state, cache and key stay on the machine's disk.
+
+```bash
+python aeo_watch/watch.py run                                   # new or updated posts
+python aeo_watch/watch.py run --mode all                        # everything (spans several runs)
+python aeo_watch/watch.py run --mode since --since 2026-10-14   # from a date
+```
+
+Limits: it checks public posts **after** they're published, because it can't see drafts. With WordPress draft access, the same checks become a gate before publishing. Parallel's suggestions are unverified leads, not fixes.
+
 ## Results, 2026-10-14
 
 **AEO audit:** 48 `/blog-posts/` pages updated since Aug 1, of which 40 are in the flat `/blog-posts/<slug>/` format Eric showed on camera. Full report: [`results/2026-10-14/aeo/report.md`](results/2026-10-14/aeo/report.md).
@@ -55,6 +72,9 @@ python -m unittest discover -s tests                  # offline tests
 ```
 common/fetch.py           polite fetcher: robots.txt, 2 s delay, 24 h cache, request log
 aeo_audit/audit.py        audit + gate; skill/SKILL.md tells an agent when and how to run the gate
+aeo_watch/watch.py        daily watcher: new posts only, queue + time budget, Parallel step, dashboard
+aeo_watch/issues.py       one GitHub issue per failing post (runs in the Action)
+aeo_watch/box_run.sh      what the Action starts on the instabox machine
 tracking_guard/guard.py   snapshot + diff
 tests/                    offline unit tests (fake fetcher, handwritten HTML)
 results/                  dated reports and snapshots; the weekly workflow adds to these
