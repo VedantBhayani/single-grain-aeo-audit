@@ -87,6 +87,52 @@ class WatchRunTests(unittest.TestCase):
         self.assertFalse(checked[0]["live"])
         self.assertEqual(checked[0]["hard"], [])
 
+    def test_a_crashing_post_is_skipped_not_a_poison_pill(self):
+        # Review, Nov 15: a post that raised stayed at the head of the queue and stopped every later run.
+        real = watch.check_post
+
+        def flaky(url, *a):
+            if url == A:
+                raise KeyError("boom")
+            return real(url, *a)
+        with mock.patch.object(watch, "check_post", flaky):
+            s, checked, st = self.go([(A, "2026-10-20"), (B, "2026-10-21")])
+        self.assertEqual([p["url"] for p in checked], [A, B])
+        self.assertEqual((s["retry_next_run"], s["queued_left"]), (1, 0))
+        self.assertNotIn(A, st["seen"])  # so the next run tries it again
+        _, again, _ = self.go([(A, "2026-10-20"), (B, "2026-10-21")])
+        self.assertEqual([p["url"] for p in again], [A])
+
+    def test_a_transient_error_keeps_the_last_result_and_is_retried(self):
+        self.go([(A, "2026-10-20")])  # failing
+        with mock.patch.object(audit, "fetch", fake_web({**WEB, A: ("network-error", "")})):
+            s, checked, st = self.go([(A, "2026-10-25")])
+        self.assertTrue(checked[0]["retry"])
+        self.assertEqual((s["failing_now"], s["fixed"], s["not_live"]), (1, 0, 0))  # not "fixed", not "gone"
+        self.assertEqual(st["seen"][A], "2026-10-20")
+
+    def test_a_post_that_is_gone_closes_out(self):
+        self.go([(A, "2026-10-20")])  # failing
+        with mock.patch.object(audit, "fetch", fake_web({**WEB, A: (404, "")})):
+            s, checked, st = self.go([(A, "2026-10-25")])
+        self.assertEqual((s["failing_now"], s["fixed"], s["not_live"]), (0, 0, 1))
+        payload = watch.issues_payload(checked, st)
+        self.assertEqual([g["url"] for g in payload["gone"]], [A])
+        self.assertIn("Not live", watch.dashboard(s, st))
+
+    def test_failing_posts_not_checked_this_run_are_the_backlog(self):
+        _, _, st = self.go([(A, "2026-10-20"), (B, "2026-10-21")])
+        _, checked, st = self.go([(A, "2026-10-20"), (B, "2026-10-22")])  # only B re-checked
+        payload = watch.issues_payload(checked, st)
+        self.assertEqual([p["url"] for p in payload["backlog"]], [A])
+
+    def test_cli_fetches_fresh(self):
+        old = watch.fetch_mod.CACHE_TTL_S
+        self.addCleanup(setattr, watch.fetch_mod, "CACHE_TTL_S", old)
+        with mock.patch.object(watch, "run", return_value=({}, [], {})):
+            watch.main(["watch.py", "run"])
+        self.assertEqual(watch.fetch_mod.CACHE_TTL_S, 0)
+
     def test_fixed_post_is_counted(self):
         self.go([(A, "2026-10-20")])
         with mock.patch.object(audit, "fetch", fake_web({**WEB, A: (200, CLEAN)})):
@@ -101,6 +147,7 @@ class WatchRunTests(unittest.TestCase):
             payload = json.loads(Path(out, "issues.json").read_text(encoding="utf-8"))
             self.assertEqual([p["url"] for p in payload["failing"]], [A])
             self.assertEqual(payload["passing"], [B])
+            self.assertIn("modified on or after 2026-10-14", Path(out, "index.html").read_text(encoding="utf-8"))
         st = {"posts": {A: {"url": A, "title": "<script>x</script>", "live": True, "checked_at": "t",
                             "hard": [{"name": "n", "evidence": "<b>"}], "warn": [], "suggestions": []}}}
         page = watch.dashboard({"run_at": "t", "mode": "new", "failing_now": 1, "checked": 1,
@@ -128,6 +175,15 @@ class AIStepTests(unittest.TestCase):
                               {"url": "https://example.org/2024-report", "title": "new"}]}
         s = watch.suggestion(resp, [old])
         self.assertEqual(s, {"p": 0.91, "sources": [{"url": "https://example.org/2024-report", "title": "new"}]})
+
+    def test_suggestion_survives_junk_and_keeps_only_http_links(self):
+        # Review: a null title crashed the post; a javascript: URL would have reached the dashboard's href.
+        resp = {"answers": {"newer": {"noul": 0.9}},
+                "citations": [None, {"url": None, "title": None}, {"url": "javascript:alert(1)", "title": "x"},
+                              {"url": "https://example.org/r", "title": None}]}
+        self.assertEqual(watch.suggestion(resp, []), {"p": 0.9, "sources": [{"url": "https://example.org/r", "title": ""}]})
+        for junk in (None, [], {"answers": None}, {"answers": {"newer": {"noul": "high"}}}):
+            self.assertEqual(watch.suggestion(junk, [])["sources"], [])
 
     def test_low_probability_shows_no_sources(self):
         # Regression (live run): p=0.06 means "no newer data"; its citations were shown as if they were.
@@ -179,6 +235,24 @@ class IssueSyncTests(unittest.TestCase):
         return {"url": url, "title": "t", "checked_at": "2026-11-15T15:00", "suggestions": [],
                 "hard": [{"name": "Pre-2020 source", "evidence": "2011: ..."}]}
 
+    def test_gone_closes_and_backlog_opens_only_if_never_issued(self):
+        D = f"{SG}/blog-posts/d/"
+        all_ = [{"number": 7, "body": issues.marker(A), "state": "open"},
+                {"number": 9, "body": issues.marker(B), "state": "closed"}]  # a human closed B
+        payload = {"failing": [], "passing": [], "gone": [{"url": A, "status": "404", "final": A}],
+                   "backlog": [self.failing(B), self.failing(D)]}
+        actions, skipped = issues.plan(all_, payload)
+        self.assertEqual([(k, a if k != "open" else "new") for k, a, _ in actions], [("open", "new"), ("close", 7)])
+        self.assertIn(issues.marker(D), actions[0][2])
+        self.assertIn("no longer live (status 404)", actions[1][2])
+
+    def test_backlog_over_the_cap_waits_for_the_next_run(self):
+        payload = {"failing": [self.failing(f"{SG}/blog-posts/p{i}/") for i in range(3)], "passing": [],
+                   "backlog": [self.failing(f"{SG}/blog-posts/q{i}/") for i in range(3)]}
+        actions, skipped = issues.plan([], payload, cap=4)
+        self.assertEqual((len(actions), skipped), (4, 2))
+        self.assertTrue(all("/p" in a for _, a, _ in actions[:3]))  # this run's failures go first
+
     def test_open_comment_close(self):
         open_ = [{"number": 7, "body": "x " + issues.marker(A)}, {"number": 8, "body": issues.marker(B)}]
         payload = {"failing": [self.failing(A), self.failing(C)], "passing": [B]}
@@ -196,6 +270,7 @@ class IssueSyncTests(unittest.TestCase):
     def test_marker_round_trip(self):
         self.assertEqual(issues.url_of("text\n" + issues.marker(A)), A)
         self.assertIsNone(issues.url_of("no marker"))
+        self.assertIsNone(issues.url_of("<!-- aeo-watch:https://x/ no end"))
 
 
 if __name__ == "__main__":

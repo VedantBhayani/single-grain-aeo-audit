@@ -5,12 +5,15 @@
   python aeo_watch/watch.py run --mode since --since 2026-10-14
   python aeo_watch/watch.py run ... --budget-min 75 --out DIR
 
-The 10 rule checks are aeo_audit.audit_page, unchanged. The one AI step: for a pre-2020 year
-in a sentence that cites a stat or study (or in a linked URL's path), Parallel is asked whether
-newer data exists, and its sources are shown as suggestions to check. It is never a hard failure.
+The 10 rule checks are aeo_audit.audit_page. One change: a pre-2020 year in plain prose (not in a
+stat or study sentence, not in a link) is a warning here, not a hard failure, because the watcher
+opens public issues. The one AI step: for a pre-2020 year in a sentence that cites a stat or study
+(or in a linked URL's path), Parallel is asked whether newer data exists, and its sources are shown
+as suggestions to check. It is never a hard failure.
 
 State (seen posts, queue, results) lives in AEO_STATE (default .state/ in the repo; /data on the box),
-so a run that hits its time budget leaves the rest queued and the next run carries on.
+so a run that hits its time budget leaves the rest queued and the next run carries on. A post that
+errors (network, 5xx, a crash in the check) is skipped and retried next run, never marked seen.
 """
 import argparse
 import html
@@ -27,6 +30,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 from aeo_audit import audit  # noqa: E402
+from common import fetch as fetch_mod  # noqa: E402
 
 FIRST_RUN_SINCE = "2026-10-14"  # the day of the last manual audit
 PARALLEL_URL = "https://api.parallel.ai/v1/decisions"
@@ -125,18 +129,24 @@ def bare(u):
 def suggestion(resp, old_sources):
     """Parallel's answer -> {p, sources}. Sources only when p >= SHOW_AT, and never singlegrain.com,
     the old source itself (any query string), or an archived copy of it."""
-    p = (resp.get("answers", {}).get("newer") or {}).get("noul")
-    p = round(p, 2) if isinstance(p, (int, float)) else None
+    resp = resp if isinstance(resp, dict) else {}
+    newer = (resp.get("answers") if isinstance(resp.get("answers"), dict) else {}).get("newer")
+    p = newer.get("noul") if isinstance(newer, dict) else None
+    p = round(p, 2) if isinstance(p, (int, float)) and not isinstance(p, bool) else None
     if p is None or p < SHOW_AT:
         return {"p": p, "sources": []}
     olds = {bare(o) for o in old_sources}
     src = []
-    for c in resp.get("citations") or []:
-        u = c.get("url", "")
-        b = bare(u)
-        if not u or "singlegrain.com" in b or b in olds or any(o and o in b for o in olds if "web.archive.org" in b):
+    cites = resp.get("citations")
+    for c in cites if isinstance(cites, list) else []:
+        if not isinstance(c, dict):
             continue
-        src.append({"url": u, "title": c.get("title", "")[:140]})
+        u = str(c.get("url") or "")
+        b = bare(u)
+        if (not re.match(r"https?://", u, re.I)  # third-party data goes into an href: http(s) only
+                or "singlegrain.com" in b or b in olds or any(o and o in b for o in olds if "web.archive.org" in b)):
+            continue
+        src.append({"url": u, "title": str(c.get("title") or "")[:140]})
     return {"p": p, "sources": src[:3]}
 
 
@@ -168,8 +178,20 @@ class Parallel:
 
 # ---------------------------------------------------------------- check one post
 
+def transient(status):
+    """Worth retrying next run: a network error, robots, a 5xx or a 429. A 404 or a redirect is an answer."""
+    return not isinstance(status, int) or status >= 500 or status == 429
+
+
+def not_checked(url, lastmod, status, note=""):
+    return {"url": url, "lastmod": lastmod, "live": False, "status": str(status), "retry": True,
+            "note": note, "hard": [], "warn": [], "suggestions": []}
+
+
 def check_post(url, lastmod, ai, today):
     st, page, final = audit.fetch(url)
+    if transient(st):
+        return not_checked(url, lastmod, st)
     if st != 200 or final.rstrip("/") != url.rstrip("/"):
         return {"url": url, "lastmod": lastmod, "live": False, "status": str(st), "final": final,
                 "hard": [], "warn": [], "suggestions": []}
@@ -220,22 +242,27 @@ def run(mode="new", since=None, budget_min=75.0, out=None, posts=None, ai=None,
     while st["queue"] and (clock() - start) < budget_min * 60:
         url = st["queue"][0]
         prev = st["posts"].get(url)
-        res = check_post(url, lastmod.get(url, ""), ai, today)
+        try:
+            res = check_post(url, lastmod.get(url, ""), ai, today)
+        except Exception as e:  # one bad post must never stop this run and every run after it
+            res = not_checked(url, lastmod.get(url, ""), "check-error", f"{type(e).__name__}: {e}"[:200])
         res["checked_at"] = now.isoformat(timespec="minutes")
         res["was_failing"] = bool(prev and prev.get("hard"))
-        st["posts"][url] = res
-        st["seen"][url] = lastmod.get(url, "")
+        if not res.get("retry"):  # an error keeps the last real result and isn't marked seen
+            st["posts"][url] = res
+            st["seen"][url] = lastmod.get(url, "")
         st["queue"].pop(0)
         checked.append(res)
         save_state(d, st)  # progress survives a pause, a cooldown or a kill
 
     summary = {
-        "run_at": now.isoformat(timespec="minutes"), "mode": mode, "since": since,
+        "run_at": now.isoformat(timespec="minutes"), "mode": mode, "since": since, "baseline": st["baseline"],
         "checked": len(checked), "queued_left": len(st["queue"]),
         "failing_now": sum(1 for p in st["posts"].values() if p.get("hard")),
         "new_failures": sum(1 for p in checked if p["hard"] and not p["was_failing"]),
-        "fixed": sum(1 for p in checked if not p["hard"] and p["was_failing"]),
-        "not_live": sum(1 for p in checked if not p["live"]),
+        "fixed": sum(1 for p in checked if p["live"] and not p["hard"] and p["was_failing"]),
+        "not_live": sum(1 for p in checked if not p["live"] and not p.get("retry")),
+        "retry_next_run": sum(1 for p in checked if p.get("retry")),
         "parallel_calls": ai.calls, "parallel_cost_usd": round(ai.calls * PARALLEL_USD, 3),
         "ai_note": ai.skipped,
     }
@@ -248,12 +275,20 @@ def run(mode="new", since=None, budget_min=75.0, out=None, posts=None, ai=None,
 
 # ---------------------------------------------------------------- outputs
 
-def issues_payload(checked):
-    """What the GitHub side needs: posts checked this run, failing or passing."""
-    return {"failing": [{"url": p["url"], "title": p.get("title", ""), "hard": p["hard"],
-                         "suggestions": p["suggestions"], "checked_at": p["checked_at"]}
-                        for p in checked if p["hard"]],
-            "passing": [p["url"] for p in checked if p["live"] and not p["hard"]]}
+def issues_payload(checked, st):
+    """What the GitHub side needs.
+    failing: checked this run and failing (comment on its issue, or open one)
+    backlog: failing in the state but not checked this run (open an issue only if it never had one)
+    passing / gone: checked this run and passing, or no longer live (close its issue)"""
+    def row(p):
+        return {"url": p["url"], "title": p.get("title", ""), "hard": p["hard"],
+                "suggestions": p.get("suggestions", []), "checked_at": p.get("checked_at", "")}
+    now = {p["url"] for p in checked}
+    return {"failing": [row(p) for p in checked if p["hard"]],
+            "backlog": [row(p) for u, p in sorted(st["posts"].items()) if p.get("hard") and u not in now],
+            "passing": [p["url"] for p in checked if p["live"] and not p["hard"]],
+            "gone": [{"url": p["url"], "status": p["status"], "final": p.get("final", "")}
+                     for p in checked if not p["live"] and not p.get("retry")]}
 
 
 def report_md(summary, checked):
@@ -262,11 +297,17 @@ def report_md(summary, checked):
              f"Mode `{s['mode']}`{' since ' + s['since'] if s['since'] else ''}. "
              f"Checked {s['checked']} posts; {s['queued_left']} still queued for the next run.", "",
              f"- Failing now (all tracked posts): **{s['failing_now']}**",
-             f"- New failures this run: {s['new_failures']} · fixed this run: {s['fixed']} · not live: {s['not_live']}",
+             f"- New failures this run: {s['new_failures']} · fixed this run: {s['fixed']} · not live: {s['not_live']}"
+             f" · errors, retried next run: {s['retry_next_run']}",
+             f"- Tracks posts modified on or after {s['baseline']}; older posts are checked only by an `all` "
+             "or `since` run.",
              f"- Parallel: {s['parallel_calls']} requests, ${s['parallel_cost_usd']}"
              + (f" ({s['ai_note']})" if s["ai_note"] else ""), ""]
     for p in checked:
-        mark = "FAIL" if p["hard"] else ("not live" if not p["live"] else "pass")
+        if p.get("retry"):
+            mark = f"error ({p['status']}{', ' + p['note'] if p.get('note') else ''}), retried next run"
+        else:
+            mark = "FAIL" if p["hard"] else ("pass" if p["live"] else f"not live ({p['status']})")
         lines.append(f"## {mark}: {p['url']}")
         for h in p["hard"]:
             lines.append(f"- **{h['name']}**: {h['evidence']}")
@@ -293,7 +334,9 @@ def dashboard(summary, st):
     posts = sorted(st["posts"].values(), key=lambda p: p.get("checked_at", ""), reverse=True)
     failing = [p for p in posts if p.get("hard")]
     passing = [p for p in posts if p.get("live") and not p.get("hard")]
+    gone = [p for p in posts if not p.get("live")]
     s = summary
+    base = st.get("baseline") or FIRST_RUN_SINCE
 
     def card(p):
         hard = "".join(f"<li><b>{esc(h['name'])}</b>: {esc(h['evidence'])}</li>" for h in p["hard"])
@@ -313,6 +356,9 @@ def dashboard(summary, st):
 
     rows = "".join(f"<li><a href='{esc(p['url'])}'>{esc(p.get('title') or p['url'])}</a> "
                    f"<span class=meta>{esc(p.get('checked_at'))}</span></li>" for p in passing)
+    gone_rows = "".join(f"<li>{esc(p['url'])} <span class=meta>status {esc(p.get('status'))}"
+                        + (f" → {esc(p['final'])}" if p.get("final") and p["final"] != p["url"] else "")
+                        + f" · checked {esc(p.get('checked_at'))}</span></li>" for p in gone)
     return f"""<!doctype html><html lang=en><head><meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1"><title>AEO Watcher</title>
 <style>
@@ -329,6 +375,8 @@ footer{{color:var(--mute);font-size:13px;border-top:1px solid var(--line);margin
 </style></head><body><main>
 <h1>AEO Watcher · singlegrain.com</h1>
 <p class=meta>Last run {esc(s['run_at'])} UTC · mode {esc(s['mode'])} · runs daily on an instabox machine</p>
+<p class=meta>Tracks posts modified on or after {esc(base)}. Older posts are checked only by a full (<code>all</code>) run,
+so older failures are not counted here until one runs.</p>
 <div class=stats>
 <div class=bad><b>{s['failing_now']}</b>posts failing a hard check</div>
 <div><b>{len(passing)}</b>passing</div>
@@ -338,6 +386,7 @@ footer{{color:var(--mute);font-size:13px;border-top:1px solid var(--line);margin
 </div>
 <h2>Failing</h2>{''.join(card(p) for p in failing) or '<p>None.</p>'}
 <h2>Passing</h2><details><summary>{len(passing)} posts</summary><ul>{rows}</ul></details>
+<h2>Not live</h2>{f'<details><summary>{len(gone)} posts (404 or redirected)</summary><ul>{gone_rows}</ul></details>' if gone else '<p>None.</p>'}
 <footer>Hard checks are text and link rules with no AI: a pre-2020 source, a cited video that doesn't resolve.
 <span class=ai>AI</span> lines are Parallel's suggested newer sources: unverified, check before using.
 Public pages only, checked after publishing. Read-only, robots.txt respected, 2 s between requests.
@@ -351,7 +400,7 @@ def write_outputs(out, summary, checked, st):
     (out / "run.json").write_text(json.dumps({"summary": summary, "posts": checked}, indent=1,
                                              ensure_ascii=False), encoding="utf-8")
     (out / "report.md").write_text(report_md(summary, checked), encoding="utf-8")
-    (out / "issues.json").write_text(json.dumps(issues_payload(checked), indent=1, ensure_ascii=False),
+    (out / "issues.json").write_text(json.dumps(issues_payload(checked, st), indent=1, ensure_ascii=False),
                                      encoding="utf-8")
     (out / "index.html").write_text(dashboard(summary, st), encoding="utf-8")
 
@@ -366,6 +415,7 @@ def main(argv):
     a = ap.parse_args(argv[1:])
     if a.since and not re.fullmatch(r"\d{4}-\d{2}-\d{2}", a.since):
         sys.exit("--since must be YYYY-MM-DD")
+    fetch_mod.CACHE_TTL_S = 0  # the watcher's job is today's page: never serve the shared 24 h cache
     summary, _, _ = run(a.mode, a.since, a.budget_min, a.out)
     print(json.dumps(summary, indent=1))
     return 0

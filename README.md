@@ -9,12 +9,14 @@ By Vedant Bhayani. Built with Claude Code, which wrote most of the code. I chose
 
 ## AEO watcher: the audit, every day, on its own
 
-[`aeo_watch/`](aeo_watch/) runs the same 10 checks every day on a small cloud machine (instabox, free plan), on new posts only:
+[`aeo_watch/`](aeo_watch/) runs the audit's 10 checks every day on a small cloud machine (instabox, free plan):
 
-- **Which posts:** by default, posts that are new or updated since the last run. A manual run can choose `all` (every `/blog-posts/` post) or `since <date>`. A big run that hits its 75-minute budget saves its place and continues the next day.
-- **One AI step:** when a pre-2020 year sits in a sentence that cites a stat or study, or in a linked URL's path, Parallel's Decisions API is asked whether newer data exists, and its sources are shown as suggestions to check. Capped at 25 requests ($0.025) per run, and never a hard failure.
-- **Output:** one GitHub issue per post that fails a hard check (closed automatically once it passes), a dated run log in [`results/watch/`](results/watch/), and a dashboard on GitHub Pages.
-- **How it runs:** a GitHub Action ([`aeo-watch.yml`](.github/workflows/aeo-watch.yml)) wakes the machine at 15:00 UTC and starts the run there. The state, cache and key stay on the machine's disk.
+- **Which posts:** by default, posts whose sitemap date changed since the last run, starting from posts modified on or after 2026-10-14. Older posts are checked only when a manual run chooses `all` (every `/blog-posts/` post) or `since <date>`. A big run that hits its 75-minute budget saves its place, and the next run carries on, unless the machine is in its free-plan cooldown; then that day's run fails loudly in Actions and nothing is lost.
+- **Pages are fetched fresh** every run (the repo's 24-hour fetch cache is off for the watcher). A post that errors (network, a 5xx, a crash in the check) is skipped and retried the next run; it never blocks the queue.
+- **One change to the rules:** a pre-2020 year in plain prose ("operating since 2008") is a warning here, not a hard failure, because the watcher opens public issues. A pre-2020 year in a stat or study sentence, or in a linked URL, is still hard.
+- **One AI step:** for those stat or study years, Parallel's Decisions API is asked whether newer data exists, and its sources are shown as suggestions to check. Capped at 25 requests per run (about $0.025 at list price), answers cached, never a hard failure.
+- **Output:** a GitHub issue per failing post, at most 20 new ones per run (the rest open on later runs). A repeat failure gets a comment. The issue closes when a re-check passes or the post is no longer live. A dated run log goes to [`results/watch/`](results/watch/), and a dashboard to GitHub Pages.
+- **How it runs:** a GitHub Action ([`aeo-watch.yml`](.github/workflows/aeo-watch.yml)) wakes the machine at 15:00 UTC and starts the run there; a lock stops two runs overlapping on the machine. The state and the key stay on the machine's disk.
 
 ```bash
 python aeo_watch/watch.py run                                   # new or updated posts

@@ -3,15 +3,18 @@
   python aeo_watch/issues.py path/to/issues.json   # needs GITHUB_TOKEN and GITHUB_REPOSITORY
 
 One open issue per failing post, found by a hidden marker in its body:
-- failing, no open issue  -> open one (at most NEW_CAP per run, so a full run can't flood the repo)
-- failing, open issue     -> comment with this run's findings
-- passing, open issue     -> close it with a comment
+- failing this run, open issue    -> comment with this run's findings
+- failing this run, no open issue -> open one (a human-closed one is reopened as new only if it's still failing)
+- failing earlier, never an issue -> open one (the backlog: posts over an earlier run's cap)
+- passing or no longer live, open issue -> close it with a comment
+New issues are capped at NEW_CAP per run so a full run can't flood the repo; the rest wait for the next run.
 """
 import json
 import os
 import sys
 import urllib.error
 import urllib.request
+from pathlib import Path
 
 LABEL = "aeo-watch"
 NEW_CAP = 20
@@ -24,9 +27,10 @@ def marker(url):
 
 def url_of(body):
     s = (body or "").find("<!-- aeo-watch:")
-    if s < 0:
+    e = (body or "").find(" -->", s)
+    if s < 0 or e < 0:
         return None
-    return body[s + len("<!-- aeo-watch:"):body.find(" -->", s)]
+    return body[s + len("<!-- aeo-watch:"):e] or None
 
 
 def findings_md(p):
@@ -41,25 +45,28 @@ def findings_md(p):
     return "\n".join(lines)
 
 
-def plan(open_issues, payload, cap=NEW_CAP):
-    """open_issues: [{number, body}]. Returns (actions, skipped_new)."""
-    by_url = {url_of(i["body"]): i["number"] for i in open_issues if url_of(i["body"])}
-    actions, new = [], 0
-    for p in payload["failing"]:
-        n = by_url.get(p["url"])
-        if n:
-            actions.append(("comment", n, findings_md(p)))
-        elif new < cap:
-            new += 1
-            path = p["url"].split("singlegrain.com", 1)[-1]
-            body = (findings_md(p) + "\n\nOpened by the AEO watcher. It closes this issue itself once the post "
-                    "passes the hard checks.\n" + marker(p["url"]))
-            actions.append(("open", f"AEO hard failure: {path}", body))
-    skipped = sum(1 for p in payload["failing"] if not by_url.get(p["url"])) - new
+def plan(issues, payload, cap=NEW_CAP):
+    """issues: [{number, body, state}] with this label, open and closed. Returns (actions, skipped_new)."""
+    by_url = {url_of(i["body"]): i["number"] for i in issues
+              if i.get("state", "open") == "open" and url_of(i["body"])}
+    ever = {url_of(i["body"]) for i in issues}
+    want = [p for p in payload["failing"] if p["url"] not in by_url]
+    want += [p for p in payload.get("backlog", []) if p["url"] not in ever]
+    actions = [("comment", by_url[p["url"]], findings_md(p)) for p in payload["failing"] if p["url"] in by_url]
+    for p in want[:cap]:
+        path = p["url"].split("singlegrain.com", 1)[-1]
+        body = (findings_md(p) + "\n\nOpened by the AEO watcher. It closes this issue itself once the post "
+                "passes the hard checks or is no longer live.\n" + marker(p["url"]))
+        actions.append(("open", f"AEO hard failure: {path}", body))
     for u in payload["passing"]:
         if u in by_url:
             actions.append(("close", by_url[u], "The latest watcher run found no hard failures on this post. Closing."))
-    return actions, skipped
+    for g in payload.get("gone", []):
+        if g["url"] in by_url:
+            where = f", now redirects to {g['final']}" if g.get("final") and g["final"] != g["url"] else ""
+            actions.append(("close", by_url[g["url"]],
+                            f"The post is no longer live (status {g['status']}{where}). Closing."))
+    return actions, max(0, len(want) - cap)
 
 
 def gh(method, path, token, body=None):
@@ -73,11 +80,13 @@ def gh(method, path, token, body=None):
     return json.loads(raw) if raw else None
 
 
-def open_issues(repo, token):
+def watcher_issues(repo, token):
+    """Every issue with the label, open and closed."""
     out, page = [], 1
     while True:
-        batch = gh("GET", f"/repos/{repo}/issues?state=open&labels={LABEL}&per_page=100&page={page}", token)
-        out += [{"number": i["number"], "body": i.get("body") or ""} for i in batch if "pull_request" not in i]
+        batch = gh("GET", f"/repos/{repo}/issues?state=all&labels={LABEL}&per_page=100&page={page}", token)
+        out += [{"number": i["number"], "body": i.get("body") or "", "state": i["state"]}
+                for i in batch if "pull_request" not in i]
         if len(batch) < 100:
             return out
         page += 1
@@ -85,13 +94,13 @@ def open_issues(repo, token):
 
 def main(argv):
     token, repo = os.environ["GITHUB_TOKEN"], os.environ["GITHUB_REPOSITORY"]
-    payload = json.loads(open(argv[1], encoding="utf-8").read())
+    payload = json.loads(Path(argv[1]).read_text(encoding="utf-8"))
     try:
         gh("POST", f"/repos/{repo}/labels", token, {"name": LABEL, "color": "b42318"})
     except urllib.error.HTTPError as e:
         if e.code != 422:  # 422 = the label already exists
             raise
-    actions, skipped = plan(open_issues(repo, token), payload)
+    actions, skipped = plan(watcher_issues(repo, token), payload)
     for kind, a, b in actions:
         if kind == "open":
             gh("POST", f"/repos/{repo}/issues", token, {"title": a, "body": b, "labels": [LABEL]})
@@ -100,9 +109,9 @@ def main(argv):
         else:
             gh("POST", f"/repos/{repo}/issues/{a}/comments", token, {"body": b})
             gh("PATCH", f"/repos/{repo}/issues/{a}", token, {"state": "closed"})
-        print(kind, a if kind != "open" else a)
+        print(kind, a)
     if skipped:
-        print(f"{skipped} failing posts got no new issue this run (cap {NEW_CAP}); they're on the dashboard.")
+        print(f"{skipped} failing posts wait for an issue (cap {NEW_CAP} per run); the next run opens them.")
     return 0
 
 
