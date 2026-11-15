@@ -1,4 +1,4 @@
-"""AEO watcher: the existing audit, on a schedule, on new posts only.
+"""AEO watcher: the existing audit, on a schedule, on new or updated posts (or all, or since a date).
 
   python aeo_watch/watch.py run                       # new or updated posts since the last run
   python aeo_watch/watch.py run --mode all            # every /blog-posts/ post (spans several runs)
@@ -13,10 +13,13 @@ as suggestions to check. It is never a hard failure.
 
 State (seen posts, queue, results) lives in AEO_STATE (default .state/ in the repo; /data on the box),
 so a run that hits its time budget leaves the rest queued and the next run carries on. A post that
-errors (network, 5xx, a crash in the check) is skipped and retried next run, never marked seen.
+can't be checked (network, robots, 5xx, 429, 401/403, a crash, or a failed YouTube check on a post with
+no other hard failure) keeps its last result, goes on the retry list, and is tried every run until a
+check succeeds. Only 404/410 or a redirect away means "no longer live".
 """
 import argparse
 import html
+import http.client
 import json
 import os
 import re
@@ -34,7 +37,7 @@ from common import fetch as fetch_mod  # noqa: E402
 
 FIRST_RUN_SINCE = "2026-10-14"  # the day of the last manual audit
 PARALLEL_URL = "https://api.parallel.ai/v1/decisions"
-PARALLEL_USD = 0.001            # list price per request
+PARALLEL_USD = 0.001            # assumed price per request, for the cost estimate (not from billing)
 PARALLEL_CAP = 25               # requests per run, at most
 NEWER_Q = ("A credible source published in 2020 or later gives data on the same claim "
            "as this sentence or source.")
@@ -175,7 +178,8 @@ class Parallel:
         try:
             self.calls += 1
             raw = self.ask(self.key, claim, page_url, today)
-        except (urllib.error.URLError, TimeoutError, ValueError, OSError) as e:
+        except (urllib.error.URLError, http.client.HTTPException, ValueError, OSError) as e:
+            # HTTPException covers a connection dropped mid-answer: the AI step stops, the post doesn't.
             self.skipped = f"Parallel error: {str(e)[:120]}"
             return None
         self.cache[claim] = {"raw": raw}
@@ -205,9 +209,10 @@ def check_post(url, lastmod, ai, today):
                 "hard": [], "warn": [], "suggestions": []}
     row, f, _ = audit.audit_page(url, page)
     unchecked = [e for k, e in f if k == "video_unchecked"]
-    if unchecked:  # a cited video we couldn't check could be the post's hard failure: don't guess, retry
-        return not_checked(url, lastmod, "video-unchecked", unchecked[0])
     cited = set(stale_claims(f))
+    if unchecked and not any(k in audit.HARD and (k != "stale_source" or e in cited) for k, e in f):
+        # A video we couldn't check could be this post's only hard failure: don't call it clean, retry.
+        return not_checked(url, lastmod, "video-unchecked", unchecked[0])
     hard, warn = [], []
     for k, e in f:
         if k == "stale_source" and e not in cited:
@@ -224,9 +229,10 @@ def check_post(url, lastmod, ai, today):
         s = ai.newer(claim, url, today, old_links)
         if s is not None:
             sugg.append({"claim": claim, **s})
+    # Failing anyway, so record it; but the unchecked video still needs checking: keep it on the retry list.
     return {"url": url, "lastmod": lastmod, "live": True, "title": row["title"],
             "published": row["published"], "modified": row["modified"],
-            "hard": hard, "warn": warn, "suggestions": sugg}
+            "hard": hard, "warn": warn, "suggestions": sugg, "recheck": bool(unchecked)}
 
 
 # ---------------------------------------------------------------- run
@@ -237,14 +243,17 @@ def run(mode="new", since=None, budget_min=75.0, out=None, posts=None, ai=None,
     today = now.strftime("%Y-%m-%d")
     d = state_dir()
     st = load_state(d)
-    if st["baseline"] is None:
-        st["baseline"] = since or FIRST_RUN_SINCE
     if mode == "since" and not since:
         sys.exit("--mode since needs --since YYYY-MM-DD")
-    if mode == "new" and since and not st["seen"]:
-        st["baseline"] = since
+    if st["baseline"] is None or (mode == "new" and since and not st["seen"]):
+        # Where `new` mode starts tracking: 2026-10-14, or the date a first `new` run was given.
+        # A `since` or `all` run checks old posts without moving it.
+        st["baseline"] = since if mode == "new" and since else FIRST_RUN_SINCE
 
-    posts = posts if posts is not None else audit.post_urls("0")  # every /blog-posts/ URL with a lastmod
+    sitemap_errors = []
+    if posts is None:
+        posts = audit.post_urls("0")  # every /blog-posts/ URL with a lastmod
+        sitemap_errors = [f"{u} -> {s}" for u, s in audit.sitemap_errors]
     lastmod = dict(posts)
     enqueue(st, candidates(mode, since, posts, st))
     ai = ai or Parallel(env_key("PARALLEL_API_KEY"), st["parallel_cache"])
@@ -259,15 +268,20 @@ def run(mode="new", since=None, budget_min=75.0, out=None, posts=None, ai=None,
             res = not_checked(url, lastmod.get(url, ""), "check-error", f"{type(e).__name__}: {e}"[:200])
         res["checked_at"] = now.isoformat(timespec="minutes")
         res["was_failing"] = bool(prev and prev.get("hard"))
-        retry = st.setdefault("retry", [])
-        if res.get("retry"):  # an error keeps the last real result, isn't marked seen, and is tried next run
-            if url not in retry:
-                retry.append(url)
-        else:
+        # News for the issue: a first result, different hard findings, or an edit that didn't fix it.
+        # A re-check that finds exactly the same thing again (a retry, an unlisted post) isn't news.
+        res["news"] = (not prev or prev.get("hard") != res["hard"] or prev.get("lastmod") != res["lastmod"])
+        retry, since_ = st.setdefault("retry", []), st.setdefault("retry_since", {})
+        if not res.get("retry"):  # a real result: store it (an error keeps the last real one)
             st["posts"][url] = res
             st["seen"][url] = lastmod.get(url, "")
-            if url in retry:
-                retry.remove(url)
+        if res.get("retry") or res.get("recheck"):  # tried again next run; the dashboard says since when
+            if url not in retry:
+                retry.append(url)
+            since_.setdefault(url, today)
+        elif url in retry:
+            retry.remove(url)
+            since_.pop(url, None)
         st["queue"].pop(0)
         checked.append(res)
         save_state(d, st)  # progress survives a pause, a cooldown or a kill
@@ -280,8 +294,10 @@ def run(mode="new", since=None, budget_min=75.0, out=None, posts=None, ai=None,
         "fixed": sum(1 for p in checked if p["live"] and not p["hard"] and p["was_failing"]),
         "not_live": sum(1 for p in checked if not p["live"] and not p.get("retry")),
         "retry_next_run": sum(1 for p in checked if p.get("retry")),
+        "cannot_check": len(st.get("retry", [])),  # all posts on the retry list, whatever run put them there
         "parallel_calls": ai.calls, "parallel_cost_usd": round(ai.calls * PARALLEL_USD, 3),
         "ai_note": ai.skipped,
+        "sitemap_errors": sitemap_errors,  # post sitemaps that failed: their posts weren't seen this run
     }
     st["runs"] = (st["runs"] + [summary])[-60:]
     save_state(d, st)
@@ -299,15 +315,17 @@ def issues_payload(checked, st):
     backlog: failing in the state but not checked this run (open an issue only if it never had one)
     passing / gone: passing, or no longer live, by the latest result for each post (close its issue)"""
     def row(p):
-        return {"url": p["url"], "title": p.get("title", ""), "hard": p["hard"],
+        return {"url": p["url"], "title": p.get("title", ""), "hard": p["hard"], "news": p.get("news", True),
                 "suggestions": p.get("suggestions", []), "checked_at": p.get("checked_at", "")}
-    now = {p["url"] for p in checked}
+    now = {p["url"] for p in checked if not p.get("retry")}
     posts = sorted(st["posts"].items())
-    return {"failing": [row(p) for p in checked if p["hard"]],
+    return {"checked": sorted(now),
+            "failing": [row(p) for p in checked if p["hard"]],
             "backlog": [row(p) for u, p in posts if p.get("hard") and u not in now],
-            "passing": [u for u, p in posts if p.get("live") and not p.get("hard")],
-            "gone": [{"url": u, "status": p.get("status", ""), "final": p.get("final", "")}
-                     for u, p in posts if not p.get("live")]}
+            "passing": [{"url": u, "checked_at": p.get("checked_at", "")}
+                        for u, p in posts if p.get("live") and not p.get("hard")],
+            "gone": [{"url": u, "status": p.get("status", ""), "final": p.get("final", ""),
+                      "checked_at": p.get("checked_at", "")} for u, p in posts if not p.get("live")]}
 
 
 def report_md(summary, checked):
@@ -317,11 +335,16 @@ def report_md(summary, checked):
              f"Checked {s['checked']} posts; {s['queued_left']} still queued for the next run.", "",
              f"- Failing now (all tracked posts): **{s['failing_now']}**",
              f"- New failures this run: {s['new_failures']} · fixed this run: {s['fixed']} · not live: {s['not_live']}"
-             f" · errors, retried next run: {s['retry_next_run']}",
+             f" · errors, retried next run: {s['retry_next_run']}"
+             f" · on the retry list in total: {s['cannot_check']}",
              f"- Tracks posts modified on or after {s['baseline']}; older posts are checked only by an `all` "
              "or `since` run.",
              f"- Parallel: {s['parallel_calls']} requests, ${s['parallel_cost_usd']}"
-             + (f" ({s['ai_note']})" if s["ai_note"] else ""), ""]
+             + (f" ({s['ai_note']})" if s["ai_note"] else "")]
+    if s.get("sitemap_errors"):
+        lines.append("- **Post sitemaps that failed (their posts weren't seen this run):** "
+                     + "; ".join(s["sitemap_errors"]))
+    lines.append("")
     for p in checked:
         if p.get("retry"):
             mark = f"error ({p['status']}{', ' + p['note'] if p.get('note') else ''}), retried next run"
@@ -355,6 +378,7 @@ def dashboard(summary, st):
     failing = [p for p in posts if p.get("hard")]
     passing = [p for p in posts if p.get("live") and not p.get("hard")]
     gone = [p for p in posts if not p.get("live")]
+    stuck = [(u, st.get("retry_since", {}).get(u, "?")) for u in st.get("retry", [])]
     s = summary
     base = st.get("baseline") or FIRST_RUN_SINCE
 
@@ -393,8 +417,9 @@ footer{{color:var(--mute);font-size:13px;border-top:1px solid var(--line);margin
 </style></head><body><main>
 <h1>AEO Watcher · singlegrain.com</h1>
 <p class=meta>Last run {esc(s['run_at'])} UTC · mode {esc(s['mode'])} · runs daily on an instabox machine</p>
-<p class=meta>Tracks posts modified on or after {esc(base)}. Older posts are checked only by a full (<code>all</code>) run,
-so older failures are not counted here until one runs.</p>
+<p class=meta>Tracks posts modified on or after {esc(base)}. Older posts are checked only by a manual
+<code>all</code> or <code>since</code> run, so older failures are not counted here until one runs.</p>
+{''.join(f"<p class=meta><b>Sitemap failed this run:</b> {esc(e)}</p>" for e in s.get('sitemap_errors') or [])}
 <div class=stats>
 <div class=bad><b>{s['failing_now']}</b>posts failing a hard check</div>
 <div><b>{len(passing)}</b>passing</div>
@@ -405,6 +430,8 @@ so older failures are not counted here until one runs.</p>
 <h2>Failing</h2>{''.join(card(p) for p in failing) or '<p>None.</p>'}
 <h2>Passing</h2><details><summary>{len(passing)} posts</summary><ul>{rows}</ul></details>
 <h2>Not live</h2>{f'<details><summary>{len(gone)} posts (404 or redirected)</summary><ul>{gone_rows}</ul></details>' if gone else '<p>None.</p>'}
+<h2>Couldn't check</h2>{('<p class=meta>Retried every run. Until one succeeds, each keeps its last result above.</p><ul>'
+  + ''.join(f"<li>{esc(u)} <span class=meta>since {esc(d)}</span></li>" for u, d in stuck) + '</ul>') if stuck else '<p>None.</p>'}
 <footer>Hard checks are text and link rules with no AI: a pre-2020 source, a cited video that doesn't resolve.
 <span class=ai>AI</span> lines are Parallel's suggested newer sources: unverified, check before using.
 Public pages only, checked after publishing. Read-only, robots.txt respected, 2 s between requests.

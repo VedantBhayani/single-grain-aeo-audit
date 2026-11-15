@@ -189,13 +189,25 @@ def write_report(snap, alerts, prev_name, findings, path):
     print(f"-> {path}")
 
 
+def carry_forward(url, new, old, stamp):
+    """A page we couldn't check this run (429, 5xx, 401/403, network, robots) keeps last run's facts, so a
+    blip neither raises a false "tags removed" alert nor becomes next week's baseline and hides a real loss.
+    Only 200, 404 and 410 are answers. Returns (facts, an INFO line or None)."""
+    if new["status"] in (200, 404, 410) or url not in old:
+        return new, None
+    kept = {**old[url], "unchecked": f"{new['status']} at {stamp}; facts carried from the last run"}
+    return kept, ("INFO", url, "unchecked", 200, f"{new['status']} (last run's facts kept)")
+
+
 def with_previous(pages, old, failed):
     """When a sitemap failed, keep checking the pages the last snapshot had, instead of silently
     dropping them (they'd show as INFO "no longer listed" and never alert on a lost tag)."""
     if not failed:
         return pages
+    host = lambda u: urllib.parse.urlparse(u).netloc.replace("www.", "")  # noqa: E731
+    down = {host(sm) for sm, _ in failed}  # only the sites whose sitemap failed
     have = {norm(u) for u in pages}
-    kept = {u: "previous snapshot (sitemap failed)" for u in old if norm(u) not in have}
+    kept = {u: "previous snapshot (sitemap failed)" for u in old if norm(u) not in have and host(u) in down}
     return {**pages, **kept}
 
 
@@ -206,15 +218,20 @@ def cmd_run():
     failed = []
     pages = with_previous(discover(failed), old, failed)
     print(f"{len(pages)} pages")
-    snap = {}
+    stamp = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H%MZ")
+    snap, unchecked = {}, []
     for i, (u, src) in enumerate(pages.items(), 1):
-        snap[u] = facts(u)
+        snap[u], miss = carry_forward(u, facts(u), old, stamp)
         snap[u]["source"] = src
+        if miss:
+            unchecked.append(miss)
         if i % 50 == 0:
             print(f"  {i}/{len(pages)}")
-    stamp = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H%MZ")
-    (SNAPS / f"{stamp}.json").write_text(json.dumps(snap, indent=1, sort_keys=True), encoding="utf-8")
+    tmp = SNAPS / f"{stamp}.json.tmp"
+    tmp.write_text(json.dumps(snap, indent=1, sort_keys=True), encoding="utf-8")
+    tmp.replace(SNAPS / f"{stamp}.json")  # atomic: a killed run never leaves a half snapshot as the baseline
     alerts = diff(old, snap) if old else []
+    alerts += unchecked
     alerts += [("ALERT", sm, "sitemap", "200", str(st)) for sm, st in failed]  # fail the run loudly
     out = RESULTS / stamp[:10] / "tracking"
     out.mkdir(parents=True, exist_ok=True)

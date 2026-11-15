@@ -2,7 +2,7 @@
 
 Were the October findings real, and are they still live a month later? This re-check was run on 2026-11-15 (about 13:40 UTC) against the live site. It uses separate code ([`verify_live.py`](verify_live.py)): plain downloads and text search, with none of the audit's parsing, and 2 s between requests.
 
-Re-run the same day at about 15:20 UTC after a review found that the first version didn't check robots.txt and sent a generic browser User-Agent. The script now honours robots.txt (singlegrain.com allows every path checked here) and identifies itself. The results were identical, and this time all 10 of the Oct 14 404s were re-checked, not 8.
+Re-run the same day at about 15:20 UTC after a review found that the first version didn't check robots.txt and sent a generic browser User-Agent. The script now honours robots.txt and identifies itself. singlegrain.com's robots.txt disallows only `/wp-admin/`, `/thankyou*`, `/search/` and a few similar paths, none of them checked here ([`robots_check_output.txt`](robots_check_output.txt), from [`robots_check.py`](robots_check.py)). It also shows why the first robots-aware attempt refused everything: the site answers Python's default User-Agent with 403. The results were identical, and this time all 10 of the Oct 14 404s were re-checked, not 8.
 
 ```bash
 python results/2026-11-15/verify_live.py results/2026-10-14/aeo/findings.csv
@@ -39,7 +39,7 @@ On Oct 14 each of these posts contained: "Together with the embedded scene above
 
 ### Internal links that returned 404 on Oct 14: 10 of 10 still return 404
 
-10 distinct URLs returned 404 on Oct 14 (the first run re-checked 8; the 15:20 re-run checked all 10):
+10 distinct URLs returned 404 on Oct 14 (the 13:40 run re-checked the first 8, as this file's first version in git history says; the 15:20 re-run checked all 10):
 
 - /agency/managed-marketing-agents/
 - /artificial-intelligence/company-brain-stop-agents-guessing-icp/

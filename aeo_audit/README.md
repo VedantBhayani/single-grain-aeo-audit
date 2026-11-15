@@ -11,7 +11,8 @@ Checks posts on singlegrain.com against what Eric Siu said on camera about his A
 # Everything in /blog-posts/ updated since a date -> results/<today>/aeo/{report.md, findings.csv, posts.csv}
 python aeo_audit/audit.py run --since 2026-08-01
 
-# Gate one page before it publishes: a preview URL or a saved .html file. Exit code 1 = don't publish.
+# Gate one page before it publishes: a preview URL or a saved .html file. Always fetches fresh.
+# Exit code 1 = don't publish. 3 = couldn't finish (page or a video check didn't answer): re-run. 0 = publish.
 python aeo_audit/audit.py check path/to/draft.html
 ```
 
@@ -30,6 +31,7 @@ python aeo_audit/audit.py check path/to/draft.html
 | No link to a service page | defect (he called them "always helpful") | warning |
 | No table of contents | defect | warning |
 | Same 15+ word passage in 3+ posts | defect (site-wide `run` only) | n/a |
+| A video or internal link that couldn't be checked (rate limit, block, network) | not a check: the check itself failed | video: **exit 3, re-run**; link: warning |
 
 **Not checked:** title promise, fake anonymized reviews, robotic voice. These are judgment calls from his team's review. They'd need a classifier, and a classifier would need hand-labelled posts first to measure how often it's right. Until then, no score is reported.
 
@@ -47,9 +49,13 @@ python aeo_audit/audit.py check path/to/draft.html
 **Videos**
 - Videos come from `youtube.com/watch`, `/embed`, `/shorts` and `youtu.be` links.
 - "Resolves" means YouTube's public oEmbed endpoint returns the video. That doesn't prove the video says what the post claims.
+- oEmbed answering 400, 401, 403, 404 or 410 means the video is missing, private or blocked from embedding: a hard fail. Any other non-answer (429, 5xx, network) means the check failed, not the video: "could not be checked".
 
 **Internal links**
-- A link fails if it doesn't return 200 at the same URL, so redirects count.
+- A link fails if it returns 404/410, or 200 at a different URL (a redirect). Any other answer (429, 5xx, 401/403, network, robots.txt) is "could not be checked", not "broken".
+
+**Site-wide `run`**
+- A post that answers 429, 5xx, 401/403 or a network error is listed as `fetch_failed` (not audited, re-run), not as "not a live post". A post sitemap that fails is printed as a WARN and its posts are missing from that run.
 
 **Service pages**
 - `/agency/…`, `/services/…`, or anything in `service-sitemap.xml`. The live `/agency/` pages aren't in any sitemap, so the path rule is needed.

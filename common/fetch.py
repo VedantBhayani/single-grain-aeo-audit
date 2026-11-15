@@ -2,8 +2,8 @@
 
 - Honors each host's robots.txt.
 - At least 2 s between live requests.
-- Caches definitive answers (2xx-4xx except 408/425/429) for CACHE_TTL_S, 24 h by default, in .cache/,
-  so re-runs don't hit the site again. Errors (network, 5xx, 429) are never cached: the next run retries.
+- Caches definitive answers (2xx, 3xx, 404, 410) for CACHE_TTL_S, 24 h by default, in .cache/, so re-runs
+  don't hit the site again. Errors (network, 5xx, 429, 401/403) are never cached: the next run retries.
   The watcher and the pre-publish `check` set CACHE_TTL_S = 0: they always fetch today's page.
 - Logs every request (live or cached) to .cache/fetch_log.csv.
 """
@@ -49,10 +49,10 @@ def allowed(url):
         st, body, _ = _get(host + "/robots.txt")
         if st == 200:
             rp.parse(body.splitlines())
-        elif isinstance(st, int) and st < 500:
+        elif isinstance(st, int) and st < 500 and st != 429:
             rp.parse([])  # RFC 9309: a 4xx robots.txt means no rules
         else:
-            rp.parse(["User-agent: *", "Disallow: /"])  # 5xx or unreachable: assume disallowed (RFC 9309)
+            rp.parse(["User-agent: *", "Disallow: /"])  # 5xx, 429 or unreachable: stay off (RFC 9309)
         _robots[host] = rp
     return _robots[host].can_fetch(USER_AGENT, url)
 
@@ -66,8 +66,9 @@ def fetch(url):
 
 
 def cacheable(status):
-    """A definitive answer worth reusing. Errors and rate limits are retried instead."""
-    return isinstance(status, int) and status < 500 and status not in (408, 425, 429)
+    """A definitive answer worth reusing: 2xx, 3xx, 404 or 410. Everything else (network, 5xx, 429, and
+    401/403, which is what a bot block looks like) is retried instead of being remembered for a day."""
+    return isinstance(status, int) and (200 <= status < 400 or status in (404, 410))
 
 
 def _cached(key):
@@ -111,7 +112,8 @@ def _get(url, retries=3):
         except (urllib.error.URLError, http.client.HTTPException, OSError) as e:
             # OSError covers timeouts, resets and SSL errors; HTTPException covers IncompleteRead.
             status, body, note = "network-error", "", f"{type(e).__name__}: {e}, attempt {attempt + 1}"
-        time.sleep(DELAY_S * (2 ** attempt))
+        if attempt < retries - 1:
+            time.sleep(DELAY_S * (2 ** attempt))  # back off before the next try (none after the last)
     if cacheable(status):
         tmp = key.with_suffix(f".{os.getpid()}.tmp")
         tmp.write_text(json.dumps({"url": url, "status": status, "body": body, "final_url": final,

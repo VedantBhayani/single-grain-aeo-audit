@@ -29,10 +29,10 @@ class RobotsTests(unittest.TestCase):
         fetch._robots.clear()
         self.assertTrue(self.allowed_when_robots_is(403))
 
-    def test_5xx_or_unreachable_means_stay_off(self):
-        self.assertFalse(self.allowed_when_robots_is(503))
-        fetch._robots.clear()
-        self.assertFalse(self.allowed_when_robots_is("network-error"))
+    def test_5xx_429_or_unreachable_means_stay_off(self):
+        for status in (503, 429, "network-error"):
+            fetch._robots.clear()
+            self.assertFalse(self.allowed_when_robots_is(status), status)
 
     def test_disallowed_page_is_never_fetched(self):
         fetch._robots["https://example.org"] = mock.Mock(can_fetch=lambda ua, u: False)
@@ -95,6 +95,40 @@ class CacheTests(unittest.TestCase):
         with self.serve(200):
             self.assertEqual(fetch._get(PAGE)[0], 200)
         self.assertEqual(len(self.calls), 1)
+
+    def test_backs_off_between_tries_but_not_after_the_last(self):
+        with mock.patch.object(fetch.time, "sleep") as sleep, self.serve(503, 503, 503):
+            fetch._get(PAGE)
+        self.assertEqual([c.args[0] for c in sleep.call_args_list], [0, 0])  # DELAY_S is 0 here: 2 backoffs
+
+    def test_403_and_429_are_not_cached(self):
+        with mock.patch.object(fetch.time, "sleep"), self.serve(403, 429, 429, 429, 200):
+            self.assertEqual(fetch._get(PAGE)[0], 403)
+            self.assertEqual(fetch._get(PAGE)[0], 429)
+            self.assertEqual(fetch._get(PAGE)[0], 200)
+
+    def test_a_dropped_connection_mid_body_is_a_network_error_not_a_crash(self):
+        import http.client
+        import ssl
+        with mock.patch.object(fetch.time, "sleep"), \
+                self.serve(http.client.IncompleteRead(b"x"), ssl.SSLError("bad"), ConnectionResetError()):
+            self.assertEqual(fetch._get(PAGE)[0], "network-error")
+
+    def test_a_write_killed_halfway_never_corrupts_the_cache(self):
+        import hashlib
+        with self.serve(200):
+            fetch._get(PAGE)  # a good cached copy
+        key = Path(self.tmp.name) / (hashlib.sha1(PAGE.encode()).hexdigest() + ".json")
+        good = key.read_text(encoding="utf-8")
+        real = Path.write_text
+
+        def dies_halfway(self_, data, *a, **kw):
+            real(self_, data[: len(data) // 2], *a, **kw)
+            raise KeyboardInterrupt  # the box paused mid-write
+        with mock.patch.object(fetch, "CACHE_TTL_S", 0), self.serve(200), \
+                mock.patch.object(Path, "write_text", dies_halfway), self.assertRaises(KeyboardInterrupt):
+            fetch._get(PAGE)
+        self.assertEqual(key.read_text(encoding="utf-8"), good)
 
     def test_ttl_zero_always_fetches(self):
         with mock.patch.object(fetch, "CACHE_TTL_S", 0), self.serve(200, 200):

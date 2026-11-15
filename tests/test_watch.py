@@ -70,6 +70,24 @@ class WatchRunTests(unittest.TestCase):
         _, checked, _ = self.go([(A, "2026-10-20"), (B, "2020-01-01")], mode="all")
         self.assertEqual({p["url"] for p in checked}, {A, B})
 
+    def test_a_first_since_run_does_not_move_the_baseline(self):
+        _, _, st = self.go([(A, "2026-09-02")], mode="since", since="2026-09-01")
+        self.assertEqual(st["baseline"], "2026-10-14")
+        os.remove(Path(self.tmp.name) / "state.json")
+        _, _, st = self.go([(A, "2026-10-20")], since="2026-10-01")  # a first `new` run may set it
+        self.assertEqual(st["baseline"], "2026-10-01")
+
+    def test_failed_post_sitemaps_are_reported(self):
+        with mock.patch.object(audit, "post_urls", lambda since: [(A, "2026-10-20")]), \
+                mock.patch.object(audit, "sitemap_errors", [("https://x/post-sitemap3.xml", 503)]), \
+                tempfile.TemporaryDirectory() as out:
+            s, _, _ = watch.run(ai=FakeAI(), now=NOW, out=out)
+            report = Path(out, "report.md").read_text(encoding="utf-8")
+            page = Path(out, "index.html").read_text(encoding="utf-8")
+        self.assertEqual(s["sitemap_errors"], ["https://x/post-sitemap3.xml -> 503"])
+        self.assertIn("post-sitemap3.xml -> 503", report)
+        self.assertIn("Sitemap failed this run", page)
+
     def test_since_mode(self):
         _, checked, _ = self.go([(A, "2026-10-20"), (B, "2026-09-02")], mode="since", since="2026-09-01")
         self.assertEqual({p["url"] for p in checked}, {A, B})
@@ -182,7 +200,32 @@ class WatchRunTests(unittest.TestCase):
             self.go([(A, "2026-10-25")])  # A fixed; pretend this run's sync was lost
         _, checked, st = self.go([(A, "2026-10-25")])  # nothing re-checked
         self.assertEqual(checked, [])
-        self.assertIn(A, watch.issues_payload(checked, st)["passing"])
+        self.assertIn(A, [p["url"] for p in watch.issues_payload(checked, st)["passing"]])
+
+    def test_a_rate_limited_video_does_not_hide_a_real_failure(self):
+        # Round-4 review: video_unchecked threw away a definite stale_source, so the post got no issue.
+        vid = "https://www.youtube.com/watch?v=abcdefghijk"
+        page = (f'<article class="container post-1"><div class="auto-toc"></div><img src=x>'
+                f'<p>A 2011 study found that 71% of leads go cold. <a href="{vid}&t=5">clip</a></p></article>')
+        audit._service_urls, audit._link_status, audit._videos = None, {}, {}
+        web = {**WEB, A: (200, page)}
+        with mock.patch.object(audit, "fetch", lambda u: (429, "", u) if "oembed" in u else fake_web(web)(u)):
+            s, checked, st = self.go([(A, "2026-10-20")])
+        self.assertEqual([h["rule"] for h in st["posts"][A]["hard"]], ["stale_source"])  # recorded as failing
+        self.assertEqual(s["failing_now"], 1)
+        self.assertIn(A, st["retry"])  # and the video is checked again next run
+        self.assertIn(A, watch.dashboard(s, st).split("Couldn't check")[1])
+
+    def test_a_recheck_that_finds_the_same_thing_is_not_news(self):
+        # Round-4 review: a live failing post missing from the sitemap got the same comment every day.
+        self.go([(A, "2026-10-20")])
+        _, checked, st = self.go([(B, "2026-10-21")])  # A left the sitemap but is still live and failing
+        a = [p for p in checked if p["url"] == A][0]
+        self.assertTrue(a["news"])  # first time: its lastmod went from a date to unlisted
+        _, checked, st = self.go([(B, "2026-10-21")])
+        a = [p for p in checked if p["url"] == A][0]
+        self.assertFalse(a["news"])
+        self.assertFalse(watch.issues_payload(checked, st)["failing"][0]["news"])
 
     def test_failing_posts_not_checked_this_run_are_the_backlog(self):
         _, _, st = self.go([(A, "2026-10-20"), (B, "2026-10-21")])
@@ -210,7 +253,7 @@ class WatchRunTests(unittest.TestCase):
             self.assertEqual(names, ["index.html", "issues.json", "report.md", "run.json"])
             payload = json.loads(Path(out, "issues.json").read_text(encoding="utf-8"))
             self.assertEqual([p["url"] for p in payload["failing"]], [A])
-            self.assertEqual(payload["passing"], [B])
+            self.assertEqual([p["url"] for p in payload["passing"]], [B])
             self.assertIn("modified on or after 2026-10-14", Path(out, "index.html").read_text(encoding="utf-8"))
         st = {"posts": {A: {"url": A, "title": "<script>x</script>", "live": True, "checked_at": "t",
                             "hard": [{"name": "n", "evidence": "<b>"}], "warn": [], "suggestions": []}}}
@@ -297,11 +340,13 @@ class AIStepTests(unittest.TestCase):
         ai3.newer("old-format", "u", "d")
         self.assertEqual(calls[-1], "old-format")
 
-        def broken(*a):
-            raise urllib.error.URLError("down")
-        ai2 = watch.Parallel("k", {}, ask=broken)
-        self.assertIsNone(ai2.newer("x", "u", "d"))
-        self.assertIn("error", ai2.skipped)
+        import http.client
+        for exc in (urllib.error.URLError("down"), http.client.IncompleteRead(b"x"), TimeoutError()):
+            def broken(*a):
+                raise exc
+            ai2 = watch.Parallel("k", {}, ask=broken)
+            self.assertIsNone(ai2.newer("x", "u", "d"), exc)
+            self.assertIn("error", ai2.skipped)
         self.assertIsNone(watch.Parallel(None, {}).newer("x", "u", "d"))
 
 
@@ -314,7 +359,7 @@ class IssueSyncTests(unittest.TestCase):
         D = f"{SG}/blog-posts/d/"
         all_ = [{"number": 7, "body": issues.marker(A), "state": "open"},
                 {"number": 9, "body": issues.marker(B), "state": "closed"}]  # a human closed B
-        payload = {"failing": [], "passing": [], "gone": [{"url": A, "status": "404", "final": A}],
+        payload = {"checked": [A], "failing": [], "passing": [], "gone": [{"url": A, "status": "404", "final": A}],
                    "backlog": [self.failing(B), self.failing(D)]}
         actions, skipped = issues.plan(all_, payload)
         self.assertEqual([(k, a if k != "open" else "new") for k, a, _ in actions], [("open", "new"), ("close", 7)])
@@ -331,9 +376,26 @@ class IssueSyncTests(unittest.TestCase):
     def test_comments_are_capped_closing_is_not(self):
         urls = [f"{SG}/blog-posts/p{i}/" for i in range(5)]
         open_ = [{"number": i, "body": issues.marker(u), "state": "open"} for i, u in enumerate(urls)]
-        payload = {"failing": [self.failing(u) for u in urls[:3]], "passing": urls[3:], "backlog": []}
+        payload = {"checked": urls, "failing": [self.failing(u) for u in urls[:3]],
+                   "passing": [{"url": u} for u in urls[3:]], "backlog": []}
         actions, _ = issues.plan(open_, payload, comment_cap=1)
         self.assertEqual([k for k, _, _ in actions], ["comment", "close", "close"])
+
+    def test_no_comment_when_nothing_is_new(self):
+        open_ = [{"number": 7, "body": issues.marker(A), "state": "open"}]
+        actions, _ = issues.plan(open_, {"failing": [{**self.failing(A), "news": False}], "passing": []})
+        self.assertEqual(actions, [])
+
+    def test_catch_up_close_respects_a_human_reopen(self):
+        # Not re-checked this run: close only if the post's result is newer than the issue's last activity.
+        def issue(updated):
+            return [{"number": 7, "body": issues.marker(A), "state": "open", "updated_at": updated}]
+        passing = {"checked": [], "failing": [], "passing": [{"url": A, "checked_at": "2026-11-15T15:26+00:00"}]}
+        self.assertEqual([k for k, _, _ in issues.plan(issue("2026-11-15T14:00:00Z"), passing)[0]], ["close"])
+        self.assertEqual(issues.plan(issue("2026-11-15T16:00:00Z"), passing)[0], [])  # reopened at 16:00
+        self.assertEqual(issues.plan(issue(""), passing)[0], [])  # unknown: leave it open
+        rechecked = {**passing, "checked": [A]}
+        self.assertEqual([k for k, _, _ in issues.plan(issue("2026-11-15T16:00:00Z"), rechecked)[0]], ["close"])
 
     def test_issue_listing_follows_every_page(self):
         pages = {1: [{"number": n, "body": "", "state": "open"} for n in range(100)],
@@ -359,7 +421,7 @@ class IssueSyncTests(unittest.TestCase):
 
     def test_open_comment_close(self):
         open_ = [{"number": 7, "body": "x " + issues.marker(A)}, {"number": 8, "body": issues.marker(B)}]
-        payload = {"failing": [self.failing(A), self.failing(C)], "passing": [B]}
+        payload = {"checked": [A, B, C], "failing": [self.failing(A), self.failing(C)], "passing": [{"url": B}]}
         actions, skipped = issues.plan(open_, payload)
         kinds = [(k, a if k != "open" else "new") for k, a, _ in actions]
         self.assertEqual(kinds, [("comment", 7), ("open", "new"), ("close", 8)])

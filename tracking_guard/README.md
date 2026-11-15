@@ -19,9 +19,10 @@ Pages come from the sitemaps of singlegrain.com (page and service sitemaps), sin
 - a GTM container, GA4 or UA ID, or tracker disappears (HubSpot, Meta pixel, LinkedIn Insight, Vercel Analytics, PostHog, Segment, Clarity, Plausible)
 - a page has fewer forms, or a form posts somewhere else
 - the canonical changes, or noindex turns on
-- the status code changes, or a page starts redirecting
+- the status code changes (to 404/410, or from them), or a page starts redirecting
+- a sitemap fails to load. Its site's pages from the last snapshot are still checked, so nothing drops out unseen.
 
-New tags and title changes are logged as INFO only.
+New tags and title changes are logged as INFO only. A page that couldn't be checked this run (429, 5xx, 401/403, network, robots.txt) keeps last run's facts and is logged as INFO, so a blip neither raises a false alert nor becomes the baseline that hides a real loss next week.
 
 ## Limits
 

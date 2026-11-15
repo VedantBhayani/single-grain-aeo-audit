@@ -57,11 +57,56 @@ class BaselineTests(unittest.TestCase):
         self.assertEqual([(k, u) for k, u, _ in guard.baseline(snap) if "redirect" in k],
                          [("listed (sitemap) but redirects", "https://www.singlegrain.com/old-page/")])
 
-    def test_failed_sitemap_keeps_last_snapshot_pages_and_alerts(self):
-        old = {HOME: page(), CONTACT: page()}
-        pages = guard.with_previous({HOME: "sitemap"}, old, [("https://x/sitemap.xml", 503)])
+    def test_failed_sitemap_keeps_last_snapshot_pages_of_that_site_only(self):
+        other = "https://www.clickflow.com/removed-on-purpose/"
+        old = {HOME: page(), CONTACT: page(), other: page()}
+        pages = guard.with_previous({HOME: "sitemap"}, old, [("https://www.singlegrain.com/sitemap_index.xml", 503)])
         self.assertEqual(pages[CONTACT], "previous snapshot (sitemap failed)")
+        self.assertNotIn(other, pages)  # clickflow's sitemap was fine: a page gone from it is just gone
         self.assertEqual(guard.with_previous({HOME: "sitemap"}, old, []), {HOME: "sitemap"})
+
+    def test_a_blip_keeps_last_runs_facts_and_does_not_alert(self):
+        old = {HOME: page(final_url=HOME)}
+        for status in (503, 429, 403, "network-error", "robots-disallowed"):
+            kept, line = guard.carry_forward(HOME, {"status": status, "final_url": HOME, "redirected": False},
+                                             old, "2026-11-16T1500Z")
+            self.assertEqual(kept["gtm"], ["GTM-K3ZSFV"], status)
+            self.assertEqual([a for a in guard.diff(old, {HOME: kept}) if a[0] == "ALERT"], [], status)
+            self.assertEqual(line[0], "INFO")
+        gone = {"status": 404, "final_url": HOME, "redirected": False}
+        self.assertEqual(guard.carry_forward(HOME, gone, old, "t"), (gone, None))  # a 404 is an answer
+
+    def test_a_snapshot_killed_mid_write_never_becomes_the_baseline(self):
+        import tempfile
+        with tempfile.TemporaryDirectory() as d:
+            snaps = Path(d) / "snaps"
+            snaps.mkdir()
+            (snaps / "2026-11-09T1500Z.json").write_text("{}")
+            with mock.patch.object(guard, "SNAPS", snaps), mock.patch.object(guard, "RESULTS", Path(d)), \
+                    mock.patch.object(guard, "discover", lambda failed=None: {HOME: "manual"}), \
+                    mock.patch.object(guard, "facts", lambda u: page(final_url=u)), \
+                    mock.patch.object(Path, "replace", side_effect=KeyboardInterrupt), \
+                    mock.patch("builtins.print"), self.assertRaises(KeyboardInterrupt):
+                guard.cmd_run()
+            self.assertEqual(sorted(p.name for p in snaps.glob("*.json")), ["2026-11-09T1500Z.json"])
+
+    def test_a_failed_sitemap_fails_the_run(self):
+        import tempfile
+        with tempfile.TemporaryDirectory() as d:
+            snaps = Path(d) / "snaps"
+            snaps.mkdir()
+            (snaps / "2026-11-09T1500Z.json").write_text('{"%s": %s}' % (HOME, __import__("json").dumps(page())))
+
+            def discover(failed=None):
+                failed.append(("https://www.singlegrain.com/sitemap_index.xml", 503))
+                return {}
+            with mock.patch.object(guard, "SNAPS", snaps), mock.patch.object(guard, "RESULTS", Path(d)), \
+                    mock.patch.object(guard, "discover", discover), \
+                    mock.patch.object(guard, "facts", lambda u: page(final_url=u)), \
+                    mock.patch("builtins.print"):
+                self.assertEqual(guard.cmd_run(), 1)
+            report = next(Path(d).glob("*/tracking/report.md")).read_text(encoding="utf-8")
+        self.assertIn("sitemap_index.xml", report)
 
     def test_page_without_tags_is_reported_not_called_broken(self):
         snap = {"https://gateway.singlebrain.com/": page(gtm=[], trackers=[], any_tracking=False, js_app=True,

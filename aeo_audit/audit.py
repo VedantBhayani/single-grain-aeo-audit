@@ -4,7 +4,9 @@ Checks what the AEO pipeline actually published against the gates Eric Siu descr
 plus a few objective defects. Every check says which it is. Read-only, public pages only.
 
   python aeo_audit/audit.py run [--since 2026-08-01]   # all /blog-posts/ updated since the date
-  python aeo_audit/audit.py check <url-or-draft.html>  # gate one page; exit 1 on a hard failure
+  python aeo_audit/audit.py check <url-or-draft.html>  # gate one page; exit 1 on a hard failure,
+                                                       # 3 if the page or a cited video couldn't be
+                                                       # checked (re-run)
 """
 import html
 import json
@@ -68,6 +70,8 @@ RULES = {
     "robotic_voice": ("Robotic voice", f"{TEAM} L345", "robotic voice", True, "his team's criteria"),
     "video_unchecked": ("Video could not be checked", "", "", False,
                         "the check failed (rate limit or network), not the video; re-run"),
+    "link_unchecked": ("Internal link could not be checked", "", "", False,
+                       "the check failed (rate limit, block or network), not the link; re-run"),
 }
 HARD = {"stale_source", "video_unavailable"}  # `check` exits 1 on these
 # YouTube oEmbed answers 401/403 for a private or embed-blocked video and 400/404 for a missing one.
@@ -147,8 +151,10 @@ def video_info(vid):
         if st == 200:
             try:
                 d = json.loads(body)
-                info.update(title=d.get("title", ""), author=d.get("author_name", ""))
-            except json.JSONDecodeError:
+                if not isinstance(d, dict):
+                    raise ValueError("oEmbed answer is not an object")
+                info.update(title=str(d.get("title") or ""), author=str(d.get("author_name") or ""))
+            except ValueError:  # JSONDecodeError is a ValueError
                 info["status"] = "bad-json"
         _videos[vid] = info
     return _videos[vid]
@@ -200,8 +206,12 @@ def audit_page(url, page):
         f.append(("no_service_link", f"{len(links)} internal links, none to /agency/, /services/ or the service sitemap"))
     for u in sorted(links):
         ok, st, final = link_status(u)
-        if not ok:
+        if ok:
+            continue
+        if st in (200, 404, 410):  # a 404/410, or a 200 that landed somewhere else: a real answer
             f.append(("broken_internal_link", f"{u} -> {st}" + ("" if final == u else f" (redirects to {final})")))
+        else:  # 429, 5xx, 401/403, network, robots: the check failed, not the link
+            f.append(("link_unchecked", f"{u} -> {st}"))
 
     if "auto-toc" not in body:
         f.append(("no_toc", "no auto-toc block"))
@@ -241,16 +251,22 @@ def repeated_passages(sents_by_url, min_words=15, min_posts=3):
 
 # ---------------------------------------------------------------- inventory
 
+sitemap_errors = []  # post sitemaps that failed in the last post_urls() call: (url, status)
+
+
 def post_urls(since):
-    """(url, lastmod) for every /blog-posts/ URL in the post sitemaps with lastmod >= since."""
+    """(url, lastmod) for every /blog-posts/ URL in the post sitemaps with lastmod >= since.
+    A post sitemap that fails is skipped and recorded in `sitemap_errors`, so callers can say so."""
     st, index, _ = fetch(f"{SITE}/sitemap_index.xml")
     if st != 200:
         sys.exit(f"sitemap index fetch failed: {st}")
     out = []
+    sitemap_errors.clear()
     for sm in re.findall(r"<loc>([^<]+/post-sitemap\d*\.xml)</loc>", index):
         st, xml, _ = fetch(sm)
         if st != 200:
             print(f"WARN {sm} -> {st}")
+            sitemap_errors.append((sm, st))
             continue
         for block in re.findall(r"(?s)<url>(.*?)</url>", xml):
             loc = re.search(r"<loc>([^<]+)</loc>", block)
@@ -270,6 +286,9 @@ def cmd_run(since):
     rows, findings, sents_by_url = [], [], {}
     for url, _ in posts:
         st, page, final = fetch(url)
+        if st not in (200, 404, 410):  # 429, 5xx, 401/403, network, robots: we don't know, so don't say "not live"
+            findings.append({"url": url, "rule": "fetch_failed", "evidence": f"status {st}; not audited, re-run"})
+            continue
         if st != 200 or final.rstrip("/") != url.rstrip("/"):
             findings.append({"url": url, "rule": "not_a_live_post", "evidence": f"status {st}, final {final}"})
             continue
@@ -333,21 +352,33 @@ def write_report(out, rows, findings, since):
 
 
 def cmd_check(target):
-    _fetch_mod.CACHE_TTL_S = 0  # "fix the draft and run again" must see the fixed draft, not yesterday's copy
+    ttl, _fetch_mod.CACHE_TTL_S = _fetch_mod.CACHE_TTL_S, 0  # "fix and run again" must see the fixed draft
+    try:
+        return _check(target)
+    finally:
+        _fetch_mod.CACHE_TTL_S = ttl  # don't change the cache for anything else in this process
+
+
+def _check(target):
     path = Path(target)
     if path.exists():
         page, url = path.read_text(encoding="utf-8", errors="replace"), str(path)
     else:
         st, page, _ = fetch(target)
-        if st != 200:
-            sys.exit(f"fetch failed: {st}")
+        if st != 200:  # couldn't check is not the same as failed: exit 3, not 1
+            print(f"UNCHECKED: fetching the page failed ({st}); nothing was checked. Re-run.")
+            return 3
         url = target
     _, f, _ = audit_page(url, page)
     for k, e in f:
-        print(f"{'FAIL' if k in HARD else 'warn'} {k}: {e}")
+        print(f"{'FAIL' if k in HARD else 'UNCHECKED' if k == 'video_unchecked' else 'warn'} {k}: {e}")
     hard = sum(1 for k, _ in f if k in HARD)
-    print(f"\n{len(f)} findings, {hard} hard failures")
-    return 1 if hard else 0
+    unchecked = sum(1 for k, _ in f if k == "video_unchecked")
+    print(f"\n{len(f)} findings, {hard} hard failures" + (f", {unchecked} videos not checked" if unchecked else ""))
+    if hard:
+        return 1
+    # A gate must not pass what it couldn't check: a rate-limited YouTube check is "not yet", not "fine".
+    return 3 if unchecked else 0
 
 
 def main(argv):

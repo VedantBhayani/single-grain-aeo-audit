@@ -20,6 +20,7 @@ python aeo_audit/audit.py check <preview-url-or-draft.html>
 - **Exit code 1 (hard failure):** don't publish. The output names the rule and quotes the sentence or link. Fix the draft and run again. Hard failures:
   - a source from before 2020
   - a cited YouTube video that doesn't resolve
+- **Exit code 3 (`UNCHECKED` lines):** the gate couldn't finish: the preview page didn't load, or YouTube didn't answer a video check (rate limit or network), so it can't say the draft passes. Don't publish yet: wait a few minutes and run again.
 - **Exit code 0 with `warn` lines:** publishing is allowed. Pass every warn line to the human reviewer together with the draft. Don't fix warnings silently and don't drop them.
 - **Never edit or publish anything from inside this skill.** It only reports.
 

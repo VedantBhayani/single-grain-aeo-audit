@@ -1,0 +1,5 @@
+﻿Python-urllib/3.12 ERR HTTP Error 403: Forbidden
+SingleGrainAEOAudit-verif 200 370
+can_fetch blog-post: True
+can_fetch /artificial-intelligence/x: True
+['User-agent: *', 'Disallow: /wp-admin/', 'Disallow: /thankyou*', 'Disallow: /?firebase-messaging-sw', 'Disallow: /conversions-ga/', 'Disallow: /search/', 'Disallow: /openings/', 'Disallow: /growth-score/', 'Disallow: /*/page/', 'Disallow: /page/']

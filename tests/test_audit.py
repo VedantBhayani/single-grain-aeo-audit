@@ -121,12 +121,67 @@ class AuditPageTests(unittest.TestCase):
             self.assertNotIn({"video_unavailable": "video_unchecked", "video_unchecked": "video_unavailable"}[rule],
                              r, status)
 
-    def test_check_fetches_fresh(self):
+    def test_check_fetches_fresh_and_restores_the_cache_setting(self):
         from common import fetch as fetch_mod
-        self.addCleanup(setattr, fetch_mod, "CACHE_TTL_S", fetch_mod.CACHE_TTL_S)
-        with redirect_stdout(io.StringIO()):
+        seen, before = [], fetch_mod.CACHE_TTL_S
+
+        def spy(u):
+            seen.append(fetch_mod.CACHE_TTL_S)  # what the real fetcher would see on every request
+            return fake_web(WEB)(u)
+        with mock.patch.object(audit, "fetch", spy), redirect_stdout(io.StringIO()):
             audit.cmd_check(f"{SG}/blog-posts/clean/")
-        self.assertEqual(fetch_mod.CACHE_TTL_S, 0)
+        self.assertTrue(seen)
+        self.assertEqual(set(seen), {0})
+        self.assertEqual(fetch_mod.CACHE_TTL_S, before)
+
+    def test_gate_does_not_pass_a_video_it_could_not_check(self):
+        vid = "DDDDDDDDDDD"
+        html = post(f'<p><a href="https://youtu.be/{vid}?t=1">clip</a></p><lite-youtube></lite-youtube>')
+        with tempfile.TemporaryDirectory() as d:
+            draft = Path(d) / "draft.html"
+            draft.write_text(html, encoding="utf-8")
+            for status, code in ((429, 3), (403, 1), (200, 0)):
+                audit._videos = {}
+                web = {**WEB, oembed(vid): (status, OK_VIDEO if status == 200 else "")}
+                with mock.patch.object(audit, "fetch", fake_web(web)), redirect_stdout(io.StringIO()):
+                    self.assertEqual(audit.cmd_check(str(draft)), code, status)
+
+    def test_an_internal_link_that_could_not_be_checked_is_not_called_broken(self):
+        link = f"{SG}/some-page/"
+        html = post(f'<p>See <a href="{link}">this</a> and <a href="{SG}/agency/x/">us</a>.</p>')
+        for status, rule in ((404, "broken_internal_link"), (429, "link_unchecked"), (503, "link_unchecked"),
+                             (403, "link_unchecked"), ("robots-disallowed", "link_unchecked")):
+            audit._link_status = {}
+            with mock.patch.object(audit, "fetch", fake_web({**WEB, link: (status, "")})):
+                r = self.rules(html)
+            self.assertIn(rule, r, status)
+            self.assertEqual(r.count("broken_internal_link") + r.count("link_unchecked"), 1, status)
+
+    def test_odd_oembed_json_is_bad_json_not_a_crash(self):
+        vid = "EEEEEEEEEEE"
+        html = post(f'<p><a href="https://youtu.be/{vid}?t=1">clip</a></p><lite-youtube></lite-youtube>')
+        for body in ("[1, 2]", '"text"', "not json"):
+            audit._videos = {}
+            with mock.patch.object(audit, "fetch", fake_web({**WEB, oembed(vid): (200, body)})):
+                self.assertIn("video_unchecked", self.rules(html), body)
+
+    def test_gate_says_unchecked_not_fail_when_the_page_does_not_load(self):
+        with mock.patch.object(audit, "fetch", fake_web({**WEB, f"{SG}/blog-posts/preview/": (503, "")})), \
+                redirect_stdout(io.StringIO()):
+            self.assertEqual(audit.cmd_check(f"{SG}/blog-posts/preview/"), 3)
+
+    def test_site_run_says_fetch_failed_not_not_live_for_a_blip(self):
+        posts = [(f"{SG}/blog-posts/ok/", "2026-10-01"), (f"{SG}/blog-posts/blip/", "2026-10-01"),
+                 (f"{SG}/blog-posts/gone/", "2026-10-01")]
+        web = {**WEB, posts[0][0]: (200, CLEAN), posts[1][0]: (503, ""), posts[2][0]: (404, "")}
+        with tempfile.TemporaryDirectory() as d, mock.patch.object(audit, "RESULTS", Path(d)), \
+                mock.patch.object(audit, "post_urls", lambda since: posts), \
+                mock.patch.object(audit, "fetch", fake_web(web)), redirect_stdout(io.StringIO()):
+            audit.cmd_run("2026-08-01")
+            rows = next(Path(d).glob("*/aeo/findings.csv")).read_text(encoding="utf-8")
+        self.assertIn("blip/,fetch_failed", rows)
+        self.assertIn("gone/,not_a_live_post", rows)
+        self.assertNotIn("blip/,not_a_live_post", rows)
 
     def test_since_without_a_date_is_a_usage_error_not_a_crash(self):
         with redirect_stdout(io.StringIO()):
@@ -134,8 +189,6 @@ class AuditPageTests(unittest.TestCase):
             self.assertEqual(audit.main(["audit.py", "run", "--since", "yesterday"]), 2)
 
     def test_check_on_a_local_draft_file(self):
-        from common import fetch as fetch_mod
-        self.addCleanup(setattr, fetch_mod, "CACHE_TTL_S", fetch_mod.CACHE_TTL_S)
         with tempfile.TemporaryDirectory() as d:
             bad, clean = Path(d) / "bad.html", Path(d) / "clean.html"
             bad.write_text(BAD, encoding="utf-8")

@@ -28,8 +28,8 @@ env:
   IB: npx --yes instabox@0.8.274
   INSTABOX_NO_TELEMETRY: "1"
   REPO_ON_BOX: /data/home/single-grain-aeo-audit
-  # INSTABOX_API_KEY is given only to the three steps that talk to the box, never to the step that
-  # turns scraped text into issues, and never to the deploy job.
+  # INSTABOX_API_KEY is given only to the three steps that talk to the box, never to the issues job
+  # (which turns scraped text into issues) and never to the deploy job.
 
 jobs:
   watch:
@@ -37,10 +37,9 @@ jobs:
     timeout-minutes: 120
     permissions:
       contents: write  # commit the run log
-      issues: write    # one issue per failing post
     steps:
-      - uses: actions/checkout@v5
-      - uses: actions/setup-python@v6
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
         with:
           python-version: "3.12"
 
@@ -94,14 +93,37 @@ jobs:
           git diff --cached --quiet || git commit -q -m "aeo watch: run $(date -u +%Y-%m-%dT%H:%MZ)"
           git pull -q --rebase && git push
 
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: issues
+          path: aeo-out/issues.json
+          retention-days: 7
+
+      - uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3
+        with:
+          path: site
+
+  # Its own job, so a GitHub API hiccup here can't stop the dashboard from deploying (the next run
+  # catches up, because closing is worked out from all results). Only this job can write issues.
+  issues:
+    needs: watch
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: "3.12"
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          name: issues
+          path: aeo-out
       - name: Sync issues
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python aeo_watch/issues.py aeo-out/issues.json
-
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: site
 
   # Pages rights live only here, in a job that never touches scraped content.
   deploy:
@@ -115,4 +137,4 @@ jobs:
       url: ${{ steps.deploy.outputs.page_url }}
     steps:
       - id: deploy
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4

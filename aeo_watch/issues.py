@@ -16,6 +16,7 @@ import re
 import sys
 import urllib.error
 import urllib.request
+from datetime import datetime
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
@@ -51,26 +52,52 @@ def findings_md(p):
     return "\n".join(lines)
 
 
+def when(s):
+    """ISO time from the watcher ("2026-11-15T15:26+00:00") or GitHub ("2026-11-15T15:26:31Z"), or None."""
+    try:
+        return datetime.fromisoformat(s.replace("Z", "+00:00"))
+    except (AttributeError, ValueError):
+        return None
+
+
+def closable(p, by_url, updated, checked):
+    """Close an open issue if this run re-checked the post, or (catching up after a lost sync) if the
+    post's result is newer than the issue's last activity. A human reopening the issue is newer activity,
+    so a reopened issue stays open until the post is re-checked again."""
+    u = p["url"]
+    if u not in by_url:
+        return False
+    if u in checked:
+        return True
+    a, b = when(p.get("checked_at")), when(updated.get(u))
+    return bool(a and b and a > b)
+
+
 def plan(issues, payload, cap=NEW_CAP, comment_cap=COMMENT_CAP):
     """issues: [{number, body, state}] with this label, open and closed. Returns (actions, skipped_new).
     Closing is never capped: it's what keeps the issue list true."""
     by_url = {url_of(i["body"]): i["number"] for i in issues
               if i.get("state", "open") == "open" and url_of(i["body"])}
+    updated = {url_of(i["body"]): i.get("updated_at", "") for i in issues
+               if i.get("state", "open") == "open" and url_of(i["body"])}
+    checked = set(payload.get("checked", []))
     ever = {url_of(i["body"]) for i in issues}
     want = [p for p in payload["failing"] if p["url"] not in by_url]
     want += [p for p in payload.get("backlog", []) if p["url"] not in ever]
-    comments = [p for p in payload["failing"] if p["url"] in by_url]
+    # Comment only on news: a re-check that finds the same thing again would just be noise.
+    comments = [p for p in payload["failing"] if p["url"] in by_url and p.get("news", True)]
     actions = [("comment", by_url[p["url"]], findings_md(p)) for p in comments[:comment_cap]]
     for p in want[:cap]:
         path = p["url"].split("singlegrain.com", 1)[-1]
         body = (findings_md(p) + "\n\nOpened by the AEO watcher. It closes this issue itself once the post "
                 "passes the hard checks or is no longer live.\n" + marker(p["url"]))
         actions.append(("open", f"AEO hard failure: {path}", body))
-    for u in payload["passing"]:
-        if u in by_url:
-            actions.append(("close", by_url[u], "The latest watcher run found no hard failures on this post. Closing."))
+    for p in payload["passing"]:
+        if closable(p, by_url, updated, checked):
+            actions.append(("close", by_url[p["url"]],
+                            "The latest watcher run found no hard failures on this post. Closing."))
     for g in payload.get("gone", []):
-        if g["url"] in by_url:
+        if closable(g, by_url, updated, checked):
             where = f", now redirects to {quiet(g['final'])}" if g.get("final") and g["final"] != g["url"] else ""
             actions.append(("close", by_url[g["url"]],
                             f"The post is no longer live (status {g['status']}{where}). Closing."))
@@ -93,7 +120,8 @@ def watcher_issues(repo, token):
     out, page = [], 1
     while True:
         batch = gh("GET", f"/repos/{repo}/issues?state=all&labels={LABEL}&per_page=100&page={page}", token)
-        out += [{"number": i["number"], "body": i.get("body") or "", "state": i["state"]}
+        out += [{"number": i["number"], "body": i.get("body") or "", "state": i["state"],
+                 "updated_at": i.get("updated_at") or ""}
                 for i in batch if "pull_request" not in i]
         if len(batch) < 100:
             return out
