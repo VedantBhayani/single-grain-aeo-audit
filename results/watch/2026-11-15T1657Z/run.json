@@ -1,0 +1,2703 @@
+{
+ "summary": {
+  "run_at": "2026-11-15T16:39+00:00",
+  "mode": "since",
+  "since": "2026-10-14",
+  "baseline": "2026-10-14",
+  "checked": 97,
+  "queued_left": 0,
+  "failing_now": 5,
+  "new_failures": 0,
+  "fixed": 5,
+  "not_live": 0,
+  "retry_next_run": 0,
+  "cannot_check": 0,
+  "parallel_calls": 0,
+  "parallel_cost_usd": 0.0,
+  "ai_note": null,
+  "sitemap_errors": []
+ },
+ "posts": [
+  {
+   "url": "https://www.singlegrain.com/blog-posts/exception-queues-marketing-agents/",
+   "lastmod": "2026-10-14",
+   "live": true,
+   "title": "Exception Queues: When Marketing Agents Must Escalate to Humans - Single Grain",
+   "published": "2026-09-21",
+   "modified": "2026-10-14",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "video_not_embedded",
+     "name": "His video linked, not embedded",
+     "evidence": "3 video(s) linked, 0 players embedded"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=B9QCiV9MN6A"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=L4mGmQRvRdg"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=SrTAYem7OEs"
+    },
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "5 internal links, none to /agency/, /services/ or the service sitemap"
+    },
+    {
+     "rule": "broken_internal_link",
+     "name": "Internal link that 404s or redirects",
+     "evidence": "https://www.singlegrain.com/artificial-intelligence/marketing-agent-pipeline-raci/ -> 200 (redirects to https://www.singlegrain.com/blog-posts/marketing-agent-pipeline-raci/)"
+    },
+    {
+     "rule": "broken_internal_link",
+     "name": "Internal link that 404s or redirects",
+     "evidence": "https://www.singlegrain.com/artificial-intelligence/slas-kill-switches-managed-marketing-agents/ -> 200 (redirects to https://www.singlegrain.com/blog-posts/slas-kill-switches-managed-marketing-agents/)"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/how-to-find-the-best-instagram-hooks-with-jev-and-meta-muse-v2/",
+   "lastmod": "2026-10-14",
+   "live": true,
+   "title": "Instagram Hooks: How to Find Winners With Jev and Meta Muse",
+   "published": "2026-10-14",
+   "modified": "2026-10-14",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "4 internal links, none to /agency/, /services/ or the service sitemap"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/how-to-hire-or-build-ai-marketing-agents-that-own-pipeline-jobs-without-a-chatbot-demo/",
+   "lastmod": "2026-10-14",
+   "live": true,
+   "title": "How to hire or build AI marketing agents that own pipeline jobs without a chatbot demo - Single Grain",
+   "published": "2026-09-16",
+   "modified": "2026-10-14",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "stale_source",
+     "name": "Pre-2020 stat, labelled as old by the post",
+     "evidence": "2011: Harvard Business Review’s 2011 report described an audit of 2,241 U.S."
+    },
+    {
+     "rule": "stale_source",
+     "name": "Pre-2020 stat, labelled as old by the post",
+     "evidence": "link https://hbr.org/2011/03/the-short-life-of-online-sales-leads"
+    },
+    {
+     "rule": "video_not_embedded",
+     "name": "His video linked, not embedded",
+     "evidence": "6 video(s) linked, 0 players embedded"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=_gKAMSeIMog"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=Qzx1tA8seMw"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=cx9UKy3LA9E"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=4CkvQjFrvZw"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=Q0eQlT-Sn-k"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=7E0HTog979s"
+    }
+   ],
+   "suggestions": [
+    {
+     "claim": "2011: Harvard Business Review’s 2011 report described an audit of 2,241 U.S.",
+     "p": 0.69,
+     "sources": [
+      {
+       "url": "https://bizgrowthaxel.com/blog/speed-to-lead-research-in-practice",
+       "title": "Speed-to-Lead Research in Practice: HBR's 2,241-Firm Audit"
+      },
+      {
+       "url": "https://www.cience.com/programmable-revenue/issue-01/the-42-hour-problem",
+       "title": "The 42-hour problem: fifteen years of knowing better, and the median never moved. | Programmable Revenue"
+      },
+      {
+       "url": "https://www.usecarly.com/blog/speed-to-lead-statistics/",
+       "title": "Speed to Lead Statistics 2026: 5-Minute Rule, Response Times"
+      }
+     ]
+    },
+    {
+     "claim": "link https://hbr.org/2011/03/the-short-life-of-online-sales-leads",
+     "p": 0.09,
+     "sources": []
+    }
+   ],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": true,
+   "news": true
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/jev-sales-call-analysis-timestamped-article-brief-v2/",
+   "lastmod": "2026-10-14",
+   "live": true,
+   "title": "Sales Call Analysis: Turn One Call Into an Article Brief",
+   "published": "2026-10-14",
+   "modified": "2026-10-14",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/jev-vs-sdr-queue-ai-lead-qualification-v2/",
+   "lastmod": "2026-10-14",
+   "live": true,
+   "title": "AI Lead Qualification: Jev vs. Your SDR Queue on 60,000 Leads",
+   "published": "2026-10-14",
+   "modified": "2026-10-14",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "5 internal links, none to /agency/, /services/ or the service sitemap"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/legacy-content-helping-competitors-audit/",
+   "lastmod": "2026-10-14",
+   "live": true,
+   "title": "Legacy Content Helping Competitors: An AEO+SEO Cannibalization Audit - Single Grain",
+   "published": "2026-09-23",
+   "modified": "2026-10-14",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "video_not_embedded",
+     "name": "His video linked, not embedded",
+     "evidence": "4 video(s) linked, 0 players embedded"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=vBPdvwHH4Og"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=l7DL-0NmDRU"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=SrTAYem7OEs"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=x7uxtQMNjiE"
+    },
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "6 internal links, none to /agency/, /services/ or the service sitemap"
+    },
+    {
+     "rule": "broken_internal_link",
+     "name": "Internal link that 404s or redirects",
+     "evidence": "https://www.singlegrain.com/artificial-intelligence/five-step-reliable-marketing-bots/ -> 200 (redirects to https://www.singlegrain.com/blog-posts/five-step-reliable-marketing-bots/)"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/slas-kill-switches-managed-marketing-agents/",
+   "lastmod": "2026-10-14",
+   "live": true,
+   "title": "SLAs and Kill Switches for Managed Marketing Agents - Single Grain",
+   "published": "2026-09-16",
+   "modified": "2026-10-14",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "stale_source",
+     "name": "Pre-2020 year, not a cited stat",
+     "evidence": "2011: These are historical 2011 inbound-response findings, not outbound-agent benchmarks."
+    },
+    {
+     "rule": "stale_source",
+     "name": "Pre-2020 stat, labelled as old by the post",
+     "evidence": "link https://hbr.org/2011/03/the-short-life-of-online-sales-leads"
+    },
+    {
+     "rule": "video_not_embedded",
+     "name": "His video linked, not embedded",
+     "evidence": "8 video(s) linked, 0 players embedded"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=MjjxIPsQ6Yg"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=_gKAMSeIMog"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=Q0eQlT-Sn-k"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=gyyMkg6KQI4"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=OkOrxKoLHtw"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=fiznz_2gApU"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=4CkvQjFrvZw"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=7E0HTog979s"
+    },
+    {
+     "rule": "broken_internal_link",
+     "name": "Internal link that 404s or redirects",
+     "evidence": "https://www.singlegrain.com/blog-posts/jev-vs-sdr-queue-60000-leads-2000-icp/ -> 200 (redirects to https://www.singlegrain.com/blog-posts/jev-vs-sdr-queue-ai-lead-qualification-v2/)"
+    }
+   ],
+   "suggestions": [
+    {
+     "claim": "link https://hbr.org/2011/03/the-short-life-of-online-sales-leads",
+     "p": 0.09,
+     "sources": []
+    }
+   ],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": true,
+   "news": true
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/startups-test-thousands-of-ads/",
+   "lastmod": "2026-10-14",
+   "live": true,
+   "title": "Why Top Startups Test Thousands of Ads at Once - Single Grain",
+   "published": "2026-09-16",
+   "modified": "2026-10-14",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "stale_source",
+     "name": "Pre-2020 year, not a cited stat",
+     "evidence": "2011: These are 2011 findings, not current Meta benchmarks."
+    },
+    {
+     "rule": "stale_source",
+     "name": "Pre-2020 stat, labelled as old by the post",
+     "evidence": "link https://hbr.org/2011/03/the-short-life-of-online-sales-leads"
+    },
+    {
+     "rule": "video_not_embedded",
+     "name": "His video linked, not embedded",
+     "evidence": "6 video(s) linked, 0 players embedded"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=IRAOyo8tEzc"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=sYb02534qT0"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=OkOrxKoLHtw"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=_gKAMSeIMog"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=4CkvQjFrvZw"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=7E0HTog979s"
+    },
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "6 internal links, none to /agency/, /services/ or the service sitemap"
+    },
+    {
+     "rule": "broken_internal_link",
+     "name": "Internal link that 404s or redirects",
+     "evidence": "https://www.singlegrain.com/blog-posts/how-to-find-the-best-instagram-hooks-with-jev-and-meta-muse/ -> 200 (redirects to https://www.singlegrain.com/blog-posts/how-to-find-the-best-instagram-hooks-with-jev-and-meta-muse-v2/)"
+    }
+   ],
+   "suggestions": [
+    {
+     "claim": "link https://hbr.org/2011/03/the-short-life-of-online-sales-leads",
+     "p": 0.09,
+     "sources": []
+    }
+   ],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": true,
+   "news": true
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/which-ai-marketing-services-to-buy-when-you-need-pipeline-not-another-content-calendar/",
+   "lastmod": "2026-10-14",
+   "live": true,
+   "title": "Which AI marketing services to buy when you need pipeline, not another content calendar - Single Grain",
+   "published": "2026-09-16",
+   "modified": "2026-10-14",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "stale_source",
+     "name": "Pre-2020 year, not a cited stat",
+     "evidence": "2011: Harvard Business Review’s 2011 audit of 2,241 U.S."
+    },
+    {
+     "rule": "stale_source",
+     "name": "Pre-2020 stat, labelled as old by the post",
+     "evidence": "link https://hbr.org/2011/03/the-short-life-of-online-sales-leads"
+    },
+    {
+     "rule": "video_not_embedded",
+     "name": "His video linked, not embedded",
+     "evidence": "6 video(s) linked, 0 players embedded"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=z8QuGSXMy7Q"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=Qzx1tA8seMw"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=_gKAMSeIMog"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=cUoT1BS11GA"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=gyyMkg6KQI4"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=7E0HTog979s"
+    },
+    {
+     "rule": "broken_internal_link",
+     "name": "Internal link that 404s or redirects",
+     "evidence": "https://www.singlegrain.com/blog-posts/jev-sales-call-to-timestamped-article-brief/ -> 200 (redirects to https://www.singlegrain.com/blog-posts/jev-sales-call-analysis-timestamped-article-brief-v2/)"
+    }
+   ],
+   "suggestions": [
+    {
+     "claim": "link https://hbr.org/2011/03/the-short-life-of-online-sales-leads",
+     "p": 0.09,
+     "sources": []
+    }
+   ],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": true,
+   "news": true
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/which-marketing-jobs-a-founder-can-hand-gpt-6-astra-for-a-full-day-before-hiring/",
+   "lastmod": "2026-10-14",
+   "live": true,
+   "title": "Which marketing jobs a founder can hand GPT-6 Astra for a full day before hiring - Single Grain",
+   "published": "2026-09-16",
+   "modified": "2026-10-14",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "stale_source",
+     "name": "Pre-2020 stat, labelled as old by the post",
+     "evidence": "2011: Harvard Business Review’s 2011 research on online sales leads associated faster contact with greater qualification likelihood."
+    },
+    {
+     "rule": "stale_source",
+     "name": "Pre-2020 stat, labelled as old by the post",
+     "evidence": "link https://hbr.org/2011/03/the-short-life-of-online-sales-leads"
+    },
+    {
+     "rule": "video_not_embedded",
+     "name": "His video linked, not embedded",
+     "evidence": "6 video(s) linked, 0 players embedded"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=Qzx1tA8seMw"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=_gKAMSeIMog"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=yPgu7V8M8_w"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=4CkvQjFrvZw"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=GGzT7zVrRTU"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=7E0HTog979s"
+    }
+   ],
+   "suggestions": [
+    {
+     "claim": "2011: Harvard Business Review’s 2011 research on online sales leads associated faster contact with greater qualification likelihood.",
+     "p": 0.49,
+     "sources": []
+    },
+    {
+     "claim": "link https://hbr.org/2011/03/the-short-life-of-online-sales-leads",
+     "p": 0.09,
+     "sources": []
+    }
+   ],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": true,
+   "news": true
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/21-grok-bot-use-cases-i-run-across-my-agency-without-losing-control/",
+   "lastmod": "2026-10-15",
+   "live": true,
+   "title": "21 Grok Bot Use Cases: How I Hand Off Marketing Work to AI Agents",
+   "published": "2026-10-15",
+   "modified": "",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "broken_internal_link",
+     "name": "Internal link that 404s or redirects",
+     "evidence": "https://www.singlegrain.com/blog-posts/jev-sales-call-to-timestamped-article-brief/ -> 200 (redirects to https://www.singlegrain.com/blog-posts/jev-sales-call-analysis-timestamped-article-brief-v2/)"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/6-questions-we-send-every-ai-native-hire-and-why-x-hours-matter/",
+   "lastmod": "2026-10-15",
+   "live": true,
+   "title": "How to Hire AI-Native Marketers: 6 Questions That Filter Fast",
+   "published": "2026-10-15",
+   "modified": "2026-10-15",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/ai-avatar-video-digital-twin/",
+   "lastmod": "2026-10-15",
+   "live": true,
+   "title": "AI Avatar Video: Can a Digital Twin Run Your Content?",
+   "published": "2026-10-15",
+   "modified": "",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/ai-design-agents-marketing-teams/",
+   "lastmod": "2026-10-15",
+   "live": true,
+   "title": "AI Design Agents: How Marketing Teams Can Use Them Well",
+   "published": "2026-10-15",
+   "modified": "2026-10-15",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "5 internal links, none to /agency/, /services/ or the service sitemap"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/ai-influencers-brands/",
+   "lastmod": "2026-10-15",
+   "live": true,
+   "title": "AI Influencers for Brands: Hype, Risks, and Smart Uses",
+   "published": "2026-10-15",
+   "modified": "2026-10-15",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "4 internal links, none to /agency/, /services/ or the service sitemap"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/ai-pitch-decks-generic/",
+   "lastmod": "2026-10-15",
+   "live": true,
+   "title": "AI Pitch Decks: How to Stop Them Looking Generic",
+   "published": "2026-10-15",
+   "modified": "2026-10-15",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/interactive-ai-answers-traffic/",
+   "lastmod": "2026-10-15",
+   "live": true,
+   "title": "Interactive AI Chat Answers: Will They Steal Your Clicks?",
+   "published": "2026-10-15",
+   "modified": "2026-10-15",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/marketing-to-ai-agents-how-im-getting-my-brand-on-their-shortlist/",
+   "lastmod": "2026-10-15",
+   "live": true,
+   "title": "Marketing to AI Agents: How to Win When the Buyer Is a Bot",
+   "published": "2026-10-15",
+   "modified": "2026-10-15",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/tiktok-search-ads-smart-plus/",
+   "lastmod": "2026-10-15",
+   "live": true,
+   "title": "TikTok Search Ads and Smart+: What Changed for Brands",
+   "published": "2026-10-15",
+   "modified": "2026-10-15",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/blogging/the-importance-and-power-of-guest-posting-and-how-to-get-started-with-this-strategy/",
+   "lastmod": "2026-10-16",
+   "live": true,
+   "title": "6 Benefits of Guest Blogging (And How to Get Started!)",
+   "published": "2023-11-21",
+   "modified": "2026-10-16",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "31 internal links, none to /agency/, /services/ or the service sitemap"
+    },
+    {
+     "rule": "broken_internal_link",
+     "name": "Internal link that 404s or redirects",
+     "evidence": "https://www.singlegrain.com/content-marketing-strategy-2/how-to-measure-your-content-marketing-roi-with-google-analytics/ -> 200 (redirects to https://www.singlegrain.com/blog-posts/conversions/how-to-set-up-goals-funnels-google-analytics-v5/)"
+    },
+    {
+     "rule": "broken_internal_link",
+     "name": "Internal link that 404s or redirects",
+     "evidence": "https://www.singlegrain.com/seo/how-to-write-content-for-people-and-optimize-it-for-google/ -> 410"
+    },
+    {
+     "rule": "no_toc",
+     "name": "No table of contents",
+     "evidence": "no auto-toc block"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/forward-deployed-marketer/",
+   "lastmod": "2026-10-16",
+   "live": true,
+   "title": "How to Embed a Forward Deployed Marketer Who Ships Agents - Single Grain",
+   "published": "2026-09-16",
+   "modified": "2026-10-16",
+   "hard": [
+    {
+     "rule": "stale_source",
+     "name": "Pre-2020 source",
+     "evidence": "2011: For supporting evidence, a 2011 Harvard Business Review article reported an audit of 2,241 U.S."
+    },
+    {
+     "rule": "stale_source",
+     "name": "Pre-2020 source",
+     "evidence": "link https://hbr.org/2011/03/the-short-life-of-online-sales-leads"
+    }
+   ],
+   "warn": [
+    {
+     "rule": "video_not_embedded",
+     "name": "His video linked, not embedded",
+     "evidence": "7 video(s) linked, 0 players embedded"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=Qzx1tA8seMw"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=cx9UKy3LA9E"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=FQ3v-rHyHuY"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=wWxJBzEbEJA"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=fiznz_2gApU"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=4CkvQjFrvZw"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=7E0HTog979s"
+    }
+   ],
+   "suggestions": [
+    {
+     "claim": "2011: For supporting evidence, a 2011 Harvard Business Review article reported an audit of 2,241 U.S.",
+     "p": 0.19,
+     "sources": []
+    },
+    {
+     "claim": "link https://hbr.org/2011/03/the-short-life-of-online-sales-leads",
+     "p": 0.09,
+     "sources": []
+    }
+   ],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": true,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/gemini-4-argon-ai-mode/",
+   "lastmod": "2026-10-16",
+   "live": true,
+   "title": "Gemini 4 Argon in AI Mode: What to Test",
+   "published": "2026-10-16",
+   "modified": "",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/google-ai-mode-links-update/",
+   "lastmod": "2026-10-16",
+   "live": true,
+   "title": "Google AI Mode Links Update: What Changed for Clicks",
+   "published": "2026-10-16",
+   "modified": "2026-10-16",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/how-top-marketers-run-ai-agents-daily-while-most-teams-fall-behind/",
+   "lastmod": "2026-10-16",
+   "live": true,
+   "title": "How the Top 1% of Marketers Use AI Agents (and What Most Miss)",
+   "published": "2026-10-16",
+   "modified": "",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "7 internal links, none to /agency/, /services/ or the service sitemap"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/i-fired-my-youtube-team-here-is-what-ai-youtube-automation-did-to-my-views/",
+   "lastmod": "2026-10-16",
+   "live": true,
+   "title": "AI YouTube Automation: How My Views Went From 300 to 8,000",
+   "published": "2026-10-16",
+   "modified": "2026-10-16",
+   "hard": [
+    {
+     "rule": "video_unavailable",
+     "name": "Cited video does not resolve",
+     "evidence": "https://www.youtube.com/watch?v=D5MeFtrnuOE -> oEmbed 403"
+    }
+   ],
+   "warn": [
+    {
+     "rule": "video_not_embedded",
+     "name": "His video linked, not embedded",
+     "evidence": "1 video(s) linked, 0 players embedded"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=D5MeFtrnuOE"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": true,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/is-ai-content-bad-for-seo/",
+   "lastmod": "2026-10-16",
+   "live": true,
+   "title": "Is AI Content Bad for SEO? What Google's New Rules Say",
+   "published": "2026-10-16",
+   "modified": "",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "7 internal links, none to /agency/, /services/ or the service sitemap"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/meta-advantage-plus-ai-tools/",
+   "lastmod": "2026-10-16",
+   "live": true,
+   "title": "Meta Advantage+ AI Tools: What's Live and What to Test",
+   "published": "2026-10-16",
+   "modified": "2026-10-16",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "8 internal links, none to /agency/, /services/ or the service sitemap"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/pay-per-click/alternative-ad-networks/",
+   "lastmod": "2026-10-16",
+   "live": true,
+   "title": "15 Best Alternative Ad Networks to Google | Single Grain",
+   "published": "2023-11-14",
+   "modified": "2026-10-16",
+   "hard": [
+    {
+     "rule": "stale_source",
+     "name": "Pre-2020 source",
+     "evidence": "link https://www.wordstream.com/blog/ws/2016/02/29/google-adwords-industry-benchmarks"
+    },
+    {
+     "rule": "stale_source",
+     "name": "Pre-2020 source",
+     "evidence": "link https://www.wordstream.com/blog/ws/2017/02/28/facebook-advertising-benchmarks"
+    },
+    {
+     "rule": "stale_source",
+     "name": "Pre-2020 source",
+     "evidence": "link https://www.wordstream.com/blog/ws/2015/02/25/bings-ads-vs-google-adwords"
+    }
+   ],
+   "warn": [
+    {
+     "rule": "stale_source",
+     "name": "Pre-2020 year, not a cited stat",
+     "evidence": "2008: 6) BuySellAds Operating since 2008, BuySellAds (BSA) offers advertisers a mix of display ads, media buys, sponsored content and custom unit opportunities."
+    },
+    {
+     "rule": "video_not_embedded",
+     "name": "His video linked, not embedded",
+     "evidence": "2 video(s) linked, 0 players embedded"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=fwnENGothDk"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=YeKxOPGK8H8"
+    },
+    {
+     "rule": "broken_internal_link",
+     "name": "Internal link that 404s or redirects",
+     "evidence": "https://www.singlegrain.com/blog/ms/website-conversion-optimization/ -> 410"
+    },
+    {
+     "rule": "broken_internal_link",
+     "name": "Internal link that 404s or redirects",
+     "evidence": "https://www.singlegrain.com/digital-marketing/how-to-set-up-a-high-converting-facebook-retargeting-campaign/ -> 200 (redirects to https://www.singlegrain.com/blog/ms/ai-and-writing-10/)"
+    },
+    {
+     "rule": "broken_internal_link",
+     "name": "Internal link that 404s or redirects",
+     "evidence": "https://www.singlegrain.com/seo/click-through-rates/ -> 200 (redirects to https://www.singlegrain.com/conversion-rate/increase-organic-ctr/)"
+    },
+    {
+     "rule": "no_toc",
+     "name": "No table of contents",
+     "evidence": "no auto-toc block"
+    }
+   ],
+   "suggestions": [
+    {
+     "claim": "link https://www.wordstream.com/blog/ws/2016/02/29/google-adwords-industry-benchmarks",
+     "p": 0.81,
+     "sources": [
+      {
+       "url": "https://www.wordstream.com/blog/2026-google-ads-benchmarks",
+       "title": "Google Ads Benchmarks 2026: Competitive Data & Insights for Every Industry | WordStream"
+      },
+      {
+       "url": "https://www.wordstream.com/blog/2025-google-ads-benchmarks?product=machine-learning",
+       "title": "Google Ads Benchmarks 2025: Competitive Data & Insights for Every Industry | WordStream"
+      },
+      {
+       "url": "https://www.wordstream.com/blog/2024-google-ads-benchmarks",
+       "title": "Google Ads Benchmarks 2024: New Trends & Insights for Key Industries | WordStream"
+      }
+     ]
+    },
+    {
+     "claim": "link https://www.wordstream.com/blog/ws/2017/02/28/facebook-advertising-benchmarks",
+     "p": 0.82,
+     "sources": [
+      {
+       "url": "https://www.wordstream.com/ppc-benchmarks",
+       "title": "Digital Benchmarks by Industry: PPC | WordStream"
+      },
+      {
+       "url": "https://www.wordstream.com/blog/facebook-ads-benchmarks-2026",
+       "title": "Facebook Ads Benchmarks 2026: NEW Data, Trends, & Insights for Your Industry | WordStream"
+      },
+      {
+       "url": "https://www.wordstream.com/resources/facebook-benchmarks",
+       "title": "Facebook Ads Benchmarks for 2026: NEW Data, Trends, & Insights for Your Industry | WordStream"
+      }
+     ]
+    },
+    {
+     "claim": "link https://www.wordstream.com/blog/ws/2015/02/25/bings-ads-vs-google-adwords",
+     "p": 0.53,
+     "sources": [
+      {
+       "url": "https://www.wordstream.com/blog/google-ads-cost",
+       "title": "How Much Does Google Ads Cost? | WordStream"
+      },
+      {
+       "url": "https://www.wordstream.com/google-ads-industry-benchmarks-lookup",
+       "title": "Google Ads Industry Benchmarks Lookup | WordStream"
+      },
+      {
+       "url": "https://www.wordstream.com/blog/online-advertising-costs",
+       "title": "The Comprehensive Guide to Online Advertising Costs for 2026"
+      }
+     ]
+    }
+   ],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": true,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/agentic-crm-attio-ai-agents/",
+   "lastmod": "2026-10-20",
+   "live": true,
+   "title": "Agentic CRM: What Attio's AI Agent Architecture Means for RevOps",
+   "published": "2026-10-20",
+   "modified": "",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "9 internal links, none to /agency/, /services/ or the service sitemap"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/humanizer-skill-ai-draft-score/",
+   "lastmod": "2026-10-20",
+   "live": true,
+   "title": "Humanizer Skill: How to Make AI Grade Its Own Content Drafts",
+   "published": "2026-10-20",
+   "modified": "",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "stale_source",
+     "name": "Pre-2020 year, not a cited stat",
+     "evidence": "2019: Before: “This initiative marked a pivotal moment in the evolution of digital marketing.” After: “The company launched its first programmatic ad campaign in 2019.” Superficial -ing analyses cost 8 points."
+    },
+    {
+     "rule": "unsourced_claim",
+     "name": "Claimed stat with no link in its paragraph",
+     "evidence": "Before: “Experts believe AI will transform the marketing landscape.” After: “A 2024 Gartner survey found 67% of CMOs plan to increase AI spend next year.”"
+    },
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "9 internal links, none to /agency/, /services/ or the service sitemap"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/personal-agent-protocol-agentic-commerce/",
+   "lastmod": "2026-10-20",
+   "live": true,
+   "title": "Personal Agent Protocol: What Agentic Commerce Means for B2B",
+   "published": "2026-10-20",
+   "modified": "",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/ai-agent-adoption-statistics-2026/",
+   "lastmod": "2026-10-21",
+   "live": true,
+   "title": "AI Agent Adoption Statistics 2026: What Business Leaders Should Know",
+   "published": "2026-10-21",
+   "modified": "",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/vibe-coding-apps-google-play-ai-studio/",
+   "lastmod": "2026-10-21",
+   "live": true,
+   "title": "Vibe Coding Apps on Google Play: What It Means for Marketers",
+   "published": "2026-10-21",
+   "modified": "2026-10-21",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "8 internal links, none to /agency/, /services/ or the service sitemap"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/ai-voice-agents-build-or-buy-platform/",
+   "lastmod": "2026-10-22",
+   "live": true,
+   "title": "Should You Build AI Voice Agents on OpenAI or Buy a Platform?",
+   "published": "2026-10-22",
+   "modified": "2026-10-22",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "12 internal links, none to /agency/, /services/ or the service sitemap"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/what-is-a-slop-grenade/",
+   "lastmod": "2026-10-22",
+   "live": true,
+   "title": "What Is a Slop Grenade? How My Team Keeps AI Slop Off Client Work",
+   "published": "2026-10-22",
+   "modified": "2026-10-22",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/what-is-an-ai-outreach-agent/",
+   "lastmod": "2026-10-22",
+   "live": true,
+   "title": "What Is an AI Outreach Agent? How It Works and Why It Matters",
+   "published": "2026-10-22",
+   "modified": "",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/ai-agent-guardrails-which-bots-can-hit-send/",
+   "lastmod": "2026-10-23",
+   "live": true,
+   "title": "AI Agent Guardrails: How to Decide Which Bots Can Hit Send",
+   "published": "2026-10-23",
+   "modified": "",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/ai-sales-assistant-call-prep/",
+   "lastmod": "2026-10-23",
+   "live": true,
+   "title": "AI Sales Assistant for Call Prep: What It Does and What to Buy",
+   "published": "2026-10-23",
+   "modified": "",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/google-ai-mode-ads/",
+   "lastmod": "2026-10-23",
+   "live": true,
+   "title": "Google AI Mode Ads Are Being Tested. Are Your Campaigns Ready?",
+   "published": "2026-10-23",
+   "modified": "",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/grok-bot-templates/",
+   "lastmod": "2026-10-23",
+   "live": true,
+   "title": "Grok Bot Templates: How to Import + 5 Free Templates",
+   "published": "2026-10-23",
+   "modified": "2026-10-23",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/how-to-build-topical-authority/",
+   "lastmod": "2026-10-23",
+   "live": true,
+   "title": "How to Build Topical Authority: Get Cited on Google and AI",
+   "published": "2026-10-23",
+   "modified": "",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/keyword-cannibalization/",
+   "lastmod": "2026-10-23",
+   "live": true,
+   "title": "Keyword Cannibalization: How to Identify and Fix It (Real Example!)",
+   "published": "2026-10-23",
+   "modified": "2026-10-23",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/meta-externalagent/",
+   "lastmod": "2026-10-23",
+   "live": true,
+   "title": "Meta-ExternalAgent Explained: Should You Block Meta's AI Crawler?",
+   "published": "2026-10-23",
+   "modified": "2026-10-23",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/meta-partnership-ads/",
+   "lastmod": "2026-10-23",
+   "live": true,
+   "title": "Meta Partnership Ads: What They Are and How Brands Use Them",
+   "published": "2026-10-23",
+   "modified": "",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/ai-landing-page-15-minutes/",
+   "lastmod": "2026-10-27",
+   "live": true,
+   "title": "AI Landing Page: How I Drafted Our Careers Page in 15 Minutes",
+   "published": "2026-10-27",
+   "modified": "",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "7 internal links, none to /agency/, /services/ or the service sitemap"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/ai-visibility-audit-jev-images/",
+   "lastmod": "2026-10-27",
+   "live": true,
+   "title": "How I Run an AI Visibility Audit in Minutes With Jev Images",
+   "published": "2026-10-27",
+   "modified": "",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/claude-duet/",
+   "lastmod": "2026-10-27",
+   "live": true,
+   "title": "Claude Duet: What Can Anthropic's New Agent Do for You?",
+   "published": "2026-10-27",
+   "modified": "",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "7 internal links, none to /agency/, /services/ or the service sitemap"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/facebook-ads-cost/",
+   "lastmod": "2026-10-27",
+   "live": true,
+   "title": "Facebook Ads Cost in 2026: How to Keep Costs Down",
+   "published": "2026-10-27",
+   "modified": "",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "unsourced_claim",
+     "name": "Claimed stat with no link in its paragraph",
+     "evidence": "Triple Whale’s ecommerce data puts the median Meta CPM at $15.06 and CPA at $38.99, while WordStream’s 2026 report shows a $0.60 traffic CPC and a $27.39 cost per lead."
+    },
+    {
+     "rule": "broken_internal_link",
+     "name": "Internal link that 404s or redirects",
+     "evidence": "https://www.singlegrain.com/case-studies/schumacher-homes/ -> 200 (redirects to https://www.singlegrain.com/case-studies/schumacher-homes-meta-campaign/)"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/google-ads-channel-prioritization/",
+   "lastmod": "2026-10-27",
+   "live": true,
+   "title": "Google Ads Channel Prioritization: Where Should Budget Go?",
+   "published": "2026-10-27",
+   "modified": "2026-10-27",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/how-to-build-and-grade-an-seo-plan/",
+   "lastmod": "2026-10-28",
+   "live": true,
+   "title": "How to Build an SEO Plan and Grade It Before You Fund It",
+   "published": "2026-10-28",
+   "modified": "",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/rule-of-7-marketing/",
+   "lastmod": "2026-10-28",
+   "live": true,
+   "title": "Rule of 7 Marketing Is Dead: Why Buyers Now Need 28 Touches",
+   "published": "2026-10-28",
+   "modified": "",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "unsourced_claim",
+     "name": "Claimed stat with no link in its paragraph",
+     "evidence": "The study tops out at 23 for its highest price band, but deal sizes for many of the companies I talk to run well past $10,000, and buying groups keep getting bigger."
+    },
+    {
+     "rule": "video_not_embedded",
+     "name": "His video linked, not embedded",
+     "evidence": "1 video(s) linked, 0 players embedded"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=Lj43x8UEzE0"
+    },
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "7 internal links, none to /agency/, /services/ or the service sitemap"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/ai-operating-system-for-business/",
+   "lastmod": "2026-10-29",
+   "live": true,
+   "title": "AI Operating System for Business: How to Run Bot Fleets Everyday",
+   "published": "2026-10-29",
+   "modified": "2026-10-29",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "7 internal links, none to /agency/, /services/ or the service sitemap"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/ai-spend-per-employee/",
+   "lastmod": "2026-10-29",
+   "live": true,
+   "title": "AI Spend Per Employee: Why Spending Caps Work & Exceptions",
+   "published": "2026-10-29",
+   "modified": "2026-10-29",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "unsourced_claim",
+     "name": "Claimed stat with no link in its paragraph",
+     "evidence": "Sources reported some employees had spent as much as $1,000 a month, and extra use now goes to a project budget."
+    },
+    {
+     "rule": "unsourced_claim",
+     "name": "Claimed stat with no link in its paragraph",
+     "evidence": "According to an internal announcement, Accenture now pays $29 a month per person for Claude use ."
+    },
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "6 internal links, none to /agency/, /services/ or the service sitemap"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/facebook-ads-for-b2b/",
+   "lastmod": "2026-10-29",
+   "live": true,
+   "title": "Facebook Ads for B2B: How to Get Qualified Leads, Not Junk",
+   "published": "2026-10-29",
+   "modified": "",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "broken_internal_link",
+     "name": "Internal link that 404s or redirects",
+     "evidence": "https://www.singlegrain.com/services/linkedin-ads/ -> 200 (redirects to https://www.singlegrain.com/services/linkedin-advertising/)"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/performance-max-image-extraction/",
+   "lastmod": "2026-10-29",
+   "live": true,
+   "title": "Performance Max Image Extraction: What It Is and How to Opt Out",
+   "published": "2026-10-29",
+   "modified": "",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/saas-landing-page-examples/",
+   "lastmod": "2026-10-29",
+   "live": true,
+   "title": "SaaS Landing Page Examples: What Converts Above the Fold",
+   "published": "2026-10-29",
+   "modified": "",
+   "hard": [
+    {
+     "rule": "stale_source",
+     "name": "Pre-2020 source",
+     "evidence": "2018: In a 2018 eyetracking study on scrolling and attention from Nielsen Norman Group, people spent about 57% of their page-viewing time above the fold and 74% in the first two screens."
+    }
+   ],
+   "warn": [
+    {
+     "rule": "unsourced_claim",
+     "name": "Claimed stat with no link in its paragraph",
+     "evidence": "In a Nielsen Norman Group eyetracking study, people spent about 57% of their viewing time above the fold, so your headline, CTA, and proof belong there."
+    },
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "10 internal links, none to /agency/, /services/ or the service sitemap"
+    }
+   ],
+   "suggestions": [
+    {
+     "claim": "2018: In a 2018 eyetracking study on scrolling and attention from Nielsen Norman Group, people spent about 57% of their page-viewing time above the fold and 74% in the first two screens.",
+     "p": 0.62,
+     "sources": [
+      {
+       "url": "https://www.nngroup.com/articles/scrolling-and-attention-original-research/?lm=infinite-scrolling-when&pt=youtubevideo",
+       "title": "Scrolling and Attention (Jakob Nielsen's Original Research  Study) - NN/G"
+      },
+      {
+       "url": "https://www.nngroup.com/articles/scrolling-and-attention-original-research?lm=talking-head-video-is-boring-online&pt=article",
+       "title": "Scrolling and Attention (Jakob Nielsen's Original Research  Study) - NN/G"
+      },
+      {
+       "url": "https://northkeelsystems.com/blog/first-screen-gets-most-attention/",
+       "title": "57% of Page Viewing Time Happens Above the Fold"
+      }
+     ]
+    }
+   ],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": true,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/ai-agent-memory/",
+   "lastmod": "2026-10-30",
+   "live": true,
+   "title": "AI Agent Memory: How to Turn Repetitive Corrections Into Rules",
+   "published": "2026-10-30",
+   "modified": "2026-10-30",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "6 internal links, none to /agency/, /services/ or the service sitemap"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/ai-overview-statistics-buying-searches/",
+   "lastmod": "2026-10-30",
+   "live": true,
+   "title": "AI Overview Statistics: 88% of Buying Searches Now Appear in AIO",
+   "published": "2026-10-30",
+   "modified": "2026-10-30",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "unsourced_claim",
+     "name": "Claimed stat with no link in its paragraph",
+     "evidence": "Pew Research found people clicked a regular result on 8% of visits with an AI summary and 15% without one."
+    },
+    {
+     "rule": "broken_internal_link",
+     "name": "Internal link that 404s or redirects",
+     "evidence": "https://www.singlegrain.com/artificial-intelligence/13-ways-to-rank-in-ai-overviews-with-aio-optimization/ -> 200 (redirects to https://www.singlegrain.com/search-everywhere-optimization/multi-llm-optimization-ranking-in-chatgpt-perplexity-gemini-claude/)"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/automation-bias-experts-side-with-ai/",
+   "lastmod": "2026-10-30",
+   "live": true,
+   "title": "Automation Bias: Stop Your Team Rubber-Stamping AI Mistakes",
+   "published": "2026-10-30",
+   "modified": "2026-10-30",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "unsourced_claim",
+     "name": "Claimed stat with no link in its paragraph",
+     "evidence": "Self-reports miss deferral, since only 15% of analysts in the study credited the agent at all."
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/client-retention-strategies/",
+   "lastmod": "2026-10-30",
+   "live": true,
+   "title": "Client Retention Strategies: 5 Ways to Keep Clients From Leaving",
+   "published": "2026-10-30",
+   "modified": "",
+   "hard": [
+    {
+     "rule": "stale_source",
+     "name": "Pre-2020 source",
+     "evidence": "link https://hbr.org/2014/10/the-value-of-keeping-the-right-customers"
+    }
+   ],
+   "warn": [
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "9 internal links, none to /agency/, /services/ or the service sitemap"
+    }
+   ],
+   "suggestions": [
+    {
+     "claim": "link https://hbr.org/2014/10/the-value-of-keeping-the-right-customers",
+     "p": 0.53,
+     "sources": [
+      {
+       "url": "https://www.vendasta.com/blog/client-retention-strategies",
+       "title": "10 Effective Client Retention Strategies for Agencies"
+      },
+      {
+       "url": "https://www.studocu.vn/vn/document/truong-dai-hoc-ngoai-thuong/hrm/hbr-marketing-case-study-the-value-of-retaining-customers/154366292",
+       "title": "HBR Marketing Case Study: The Value of Retaining Customers - Studocu"
+      },
+      {
+       "url": "https://prometheanresearch.com/client-retention-strategies-for-agencies",
+       "title": "Client Retention Strategies for Agencies (2026 Guide)"
+      }
+     ]
+    }
+   ],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": true,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/competitor-ads-analysis/",
+   "lastmod": "2026-10-30",
+   "live": true,
+   "title": "Competitor Ads Analysis: Find the Creative Gaps Before You Spend",
+   "published": "2026-10-30",
+   "modified": "",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/gbrain-vs-obsidian-one-memory/",
+   "lastmod": "2026-10-30",
+   "live": true,
+   "title": "GBrain and Obsidian: Can One Memory Run Across Your Agents?",
+   "published": "2026-10-30",
+   "modified": "2026-10-30",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "unsourced_claim",
+     "name": "Claimed stat with no link in its paragraph",
+     "evidence": "Oracle found a Reddit marketing agency page converting at 17.5%, and the insight sat in an SEO report."
+    },
+    {
+     "rule": "video_not_embedded",
+     "name": "His video linked, not embedded",
+     "evidence": "1 video(s) linked, 0 players embedded"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=q9Jo5P_qles"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/how-to-build-an-ai-chief-of-staff/",
+   "lastmod": "2026-10-30",
+   "live": true,
+   "title": "What Is an AI Chief of Staff? Build Your Own in 7 Steps",
+   "published": "2026-10-30",
+   "modified": "",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "video_not_embedded",
+     "name": "His video linked, not embedded",
+     "evidence": "2 video(s) linked, 0 players embedded"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=rSKwyE5_EJA"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=HKYQDzTzH7s"
+    },
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "16 internal links, none to /agency/, /services/ or the service sitemap"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/seo-content-checklist/",
+   "lastmod": "2026-10-30",
+   "live": true,
+   "title": "SEO Content Checklist: 8 Best Checks for Top Performing Content",
+   "published": "2026-10-30",
+   "modified": "",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/how-to-find-buyer-intent-signals/",
+   "lastmod": "2026-11-02",
+   "live": true,
+   "title": "How to Find Buyer Intent Signals: My $0.31 Claude Workflow",
+   "published": "2026-10-16",
+   "modified": "2026-11-02",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/reddit-ads-cost-budget/",
+   "lastmod": "2026-11-02",
+   "live": true,
+   "title": "Reddit Ads Cost: How to Budget and Bid for Reddit Ads",
+   "published": "2026-10-23",
+   "modified": "2026-11-02",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "unsourced_claim",
+     "name": "Claimed stat with no link in its paragraph",
+     "evidence": "Reddit says traffic advertisers using CBO saw 10% lower CPCs, based on a Reddit internal study from Q4 2025."
+    },
+    {
+     "rule": "unsourced_claim",
+     "name": "Claimed stat with no link in its paragraph",
+     "evidence": "Reddit reports advertisers scoring 80% or higher saw 19.6% lower blended CPA than lower scorers, and a five-point score increase was associated with 4.4% lower blended CPA, both from Reddit internal data for July to September 2026."
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/seedance-2-0-ai-video-ads/",
+   "lastmod": "2026-11-02",
+   "live": true,
+   "title": "Seedance 2.0: How Marketers Turn AI Video Into Winning Ads",
+   "published": "2026-10-13",
+   "modified": "2026-11-02",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "9 internal links, none to /agency/, /services/ or the service sitemap"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/how-often-should-you-blog/",
+   "lastmod": "2026-11-03",
+   "live": true,
+   "title": "How Often Should You Blog? 5 Business Blogging Frequency Tips",
+   "published": "2026-11-03",
+   "modified": "",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/how-to-monitor-ai-agents/",
+   "lastmod": "2026-11-03",
+   "live": true,
+   "title": "How to Monitor AI Agents With a Weekly Health Check That Works",
+   "published": "2026-11-03",
+   "modified": "2026-11-03",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "10 internal links, none to /agency/, /services/ or the service sitemap"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/lost-deal-analysis-closed-lost-scoring/",
+   "lastmod": "2026-11-03",
+   "live": true,
+   "title": "Which Closed-Lost Deals Should You Revive? Lost Deal Analysis",
+   "published": "2026-11-03",
+   "modified": "",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/press-release-seo-ai-citations/",
+   "lastmod": "2026-11-03",
+   "live": true,
+   "title": "Press Release SEO: How to Earn More AI Citations",
+   "published": "2026-11-03",
+   "modified": "2026-11-03",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "unsourced_claim",
+     "name": "Claimed stat with no link in its paragraph",
+     "evidence": "More than half of AI citations (56.4%) landed over a week after the release went out, so a one-day report misses most of the value."
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/what-is-lead-enrichment/",
+   "lastmod": "2026-11-03",
+   "live": true,
+   "title": "What Is Lead Enrichment? Top Strategies to Scale It With AI",
+   "published": "2026-11-03",
+   "modified": "",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/ai-overview-ctr-opt-out-test/",
+   "lastmod": "2026-11-04",
+   "live": true,
+   "title": "AI Overview CTR: Will Opting Out Your Site Cost You Leads?",
+   "published": "2026-11-04",
+   "modified": "",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/ai-roi-how-to-measure/",
+   "lastmod": "2026-11-04",
+   "live": true,
+   "title": "AI ROI: How Do You Measure It and See Returns?",
+   "published": "2026-11-04",
+   "modified": "",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "video_not_embedded",
+     "name": "His video linked, not embedded",
+     "evidence": "3 video(s) linked, 0 players embedded"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=tTruM2VB9C0"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=dkYRUyoRhL4"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=SNwddbFNu28"
+    },
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "7 internal links, none to /agency/, /services/ or the service sitemap"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/ai-visibility-report-lead-magnet/",
+   "lastmod": "2026-11-04",
+   "live": true,
+   "title": "How to Use an AI Visibility Report to Turn Interest Into Sales Calls",
+   "published": "2026-11-04",
+   "modified": "",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "video_not_embedded",
+     "name": "His video linked, not embedded",
+     "evidence": "3 video(s) linked, 0 players embedded"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=1Kbe_p-9BpM"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=B1vdxZXJqes"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=7K7z-uaGnsI"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/what-is-an-ai-native-company/",
+   "lastmod": "2026-11-04",
+   "live": true,
+   "title": "What Is an AI Native Company? Ultimate Guide to AI Native Teams",
+   "published": "2026-11-04",
+   "modified": "",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "video_not_embedded",
+     "name": "His video linked, not embedded",
+     "evidence": "4 video(s) linked, 0 players embedded"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=dkYRUyoRhL4"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=NoohHrD4QuQ"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=1Kbe_p-9BpM"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=sLiWVtHYJvE"
+    },
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "8 internal links, none to /agency/, /services/ or the service sitemap"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/anthropic-s-1-ai-spenders/",
+   "lastmod": "2026-11-06",
+   "live": true,
+   "title": "Anthropic S-1: Should You Raise Your AI Budget or Fix It?",
+   "published": "2026-11-06",
+   "modified": "2026-11-06",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "unsourced_claim",
+     "name": "Claimed stat with no link in its paragraph",
+     "evidence": "According to recent stats, roughly 12,000 customers each generate $100,000 or more in yearly revenue for Anthropic."
+    },
+    {
+     "rule": "video_not_embedded",
+     "name": "His video linked, not embedded",
+     "evidence": "3 video(s) linked, 0 players embedded"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=B1vdxZXJqes"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=_FT22KkWaLg"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=tTruM2VB9C0"
+    },
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "6 internal links, none to /agency/, /services/ or the service sitemap"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/stalled-deals-how-to-increase-using-ai/",
+   "lastmod": "2026-11-06",
+   "live": true,
+   "title": "Stalled Deals: How to Increase Buyer Replies Using AI",
+   "published": "2026-11-06",
+   "modified": "",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "video_not_embedded",
+     "name": "His video linked, not embedded",
+     "evidence": "3 video(s) linked, 0 players embedded"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=_FT22KkWaLg"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=rSKwyE5_EJA"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=lWqGzJFZYF4"
+    },
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "7 internal links, none to /agency/, /services/ or the service sitemap"
+    },
+    {
+     "rule": "broken_internal_link",
+     "name": "Internal link that 404s or redirects",
+     "evidence": "https://www.singlegrain.com/sales-enablement/ -> 200 (redirects to https://www.singlegrain.com/)"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/go-to-market-strategy-before-launch-spend/",
+   "lastmod": "2026-11-07",
+   "live": true,
+   "title": "How Do You Test a Go-to-Market Strategy Before Launch Spend?",
+   "published": "2026-11-07",
+   "modified": "2026-11-07",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "video_not_embedded",
+     "name": "His video linked, not embedded",
+     "evidence": "2 video(s) linked, 0 players embedded"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=tTruM2VB9C0"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=1Kbe_p-9BpM"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/site-migration-issues-lead-dip-tracking/",
+   "lastmod": "2026-11-07",
+   "live": true,
+   "title": "Site Migration Issues: Is Your Lead Dip Real or Broken Tracking?",
+   "published": "2026-11-07",
+   "modified": "",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "video_not_embedded",
+     "name": "His video linked, not embedded",
+     "evidence": "2 video(s) linked, 0 players embedded"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=_FT22KkWaLg"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=Kj-tdb7w14U"
+    },
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "8 internal links, none to /agency/, /services/ or the service sitemap"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/who-owns-ai-generated-images-ad-creative/",
+   "lastmod": "2026-11-07",
+   "live": true,
+   "title": "Who Owns AI Generated Images? Can Your Ad Team Use Them Safely?",
+   "published": "2026-11-07",
+   "modified": "",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/x-follower-analysis/",
+   "lastmod": "2026-11-07",
+   "live": true,
+   "title": "Twitter Follower Analysis: Find Buyers and Deals in Your Audience",
+   "published": "2026-11-07",
+   "modified": "2026-11-07",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "6 internal links, none to /agency/, /services/ or the service sitemap"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/follow-up-email-after-networking-event/",
+   "lastmod": "2026-11-09",
+   "live": true,
+   "title": "Follow Up Email After Networking Event: Free Templates + AI Bot",
+   "published": "2026-11-09",
+   "modified": "2026-11-09",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "unsourced_claim",
+     "name": "Claimed stat with no link in its paragraph",
+     "evidence": "The same 2025 consulting survey found 29% of respondents follow up within a day, while about half wait two to three days."
+    },
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "12 internal links, none to /agency/, /services/ or the service sitemap"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/building-an-editorial-review-process-for-ai-accuracy/",
+   "lastmod": "2026-11-10",
+   "live": true,
+   "title": "Building an AI Editorial Review Process for Accuracy",
+   "published": "2026-01-21",
+   "modified": "2026-11-10",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "broken_internal_link",
+     "name": "Internal link that 404s or redirects",
+     "evidence": "https://www.singlegrain.com/content-marketing-strategy-2/using-content-pruning-to-improve-ai-search-visibility/ -> 404"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/ai-agents-in-slack/",
+   "lastmod": "2026-11-11",
+   "live": true,
+   "title": "AI Agents in Slack: Rules for Adding Bots to Team Chats",
+   "published": "2026-11-11",
+   "modified": "",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/codex-vs-claude-code-marketing-ops/",
+   "lastmod": "2026-11-11",
+   "live": true,
+   "title": "Codex vs Claude Code: Which Best Fits Your Marketing Ops?",
+   "published": "2026-11-11",
+   "modified": "",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/creative-request-form-how-to-guide/",
+   "lastmod": "2026-11-11",
+   "live": true,
+   "title": "Creative Request Form: How to Build It to Simplify Ad Requests",
+   "published": "2026-11-11",
+   "modified": "",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/crm-retargeting/",
+   "lastmod": "2026-11-11",
+   "live": true,
+   "title": "CRM Retargeting: How to Win Back Leads Who Have Not Bought",
+   "published": "2026-11-11",
+   "modified": "",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "broken_internal_link",
+     "name": "Internal link that 404s or redirects",
+     "evidence": "https://www.singlegrain.com/services/retargeting/ -> 200 (redirects to https://www.singlegrain.com/blog/ms/ai-and-writing-10/)"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/how-much-to-charge-for-sponsorship-brand-guide/",
+   "lastmod": "2026-11-11",
+   "live": true,
+   "title": "How Much to Charge for Sponsorship: Brand Sponsorship Guide",
+   "published": "2026-11-11",
+   "modified": "",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/hubspot-salesforce-sync/",
+   "lastmod": "2026-11-11",
+   "live": true,
+   "title": "HubSpot Salesforce Sync Dropping MQLs? How to Fix the Handoff",
+   "published": "2026-11-11",
+   "modified": "",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/linkedin-ads-crm-integration-4-checks/",
+   "lastmod": "2026-11-11",
+   "live": true,
+   "title": "LinkedIn Ads CRM Integration: What to Check Before You Connect",
+   "published": "2026-11-11",
+   "modified": "",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "broken_internal_link",
+     "name": "Internal link that 404s or redirects",
+     "evidence": "https://www.singlegrain.com/services/linkedin-ads/ -> 200 (redirects to https://www.singlegrain.com/services/linkedin-advertising/)"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/offline-conversion-tracking/",
+   "lastmod": "2026-11-11",
+   "live": true,
+   "title": "Offline Conversion Tracking: Which Ads Bring Real Visits?",
+   "published": "2026-11-11",
+   "modified": "",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "8 internal links, none to /agency/, /services/ or the service sitemap"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/recruiting-email-deliverability/",
+   "lastmod": "2026-11-11",
+   "live": true,
+   "title": "Recruiting Email Deliverability: How to Keep Outreach Out of Spam",
+   "published": "2026-11-11",
+   "modified": "",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "broken_internal_link",
+     "name": "Internal link that 404s or redirects",
+     "evidence": "https://www.singlegrain.com/email-marketing/the-10-minute-guide-to-cold-email-campaigns-for-marketers/ -> 200 (redirects to https://www.singlegrain.com/email-marketing/how-to-get-more-responses-from-cold-emails/)"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/b2b-lead-list-claude/",
+   "lastmod": "2026-11-13",
+   "live": true,
+   "title": "How to Build a Lead List in Claude: Workflow to Review Contracts",
+   "published": "2026-11-13",
+   "modified": "",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "video_not_embedded",
+     "name": "His video linked, not embedded",
+     "evidence": "2 video(s) linked, 0 players embedded"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=B1vdxZXJqes"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=-yqmzy44EU4"
+    },
+    {
+     "rule": "broken_internal_link",
+     "name": "Internal link that 404s or redirects",
+     "evidence": "https://www.singlegrain.com/blog-posts/jev-vs-sdr-queue-60000-leads-2000-icp/ -> 200 (redirects to https://www.singlegrain.com/blog-posts/jev-vs-sdr-queue-ai-lead-qualification-v2/)"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/chatgpt-plugins-for-business/",
+   "lastmod": "2026-11-13",
+   "live": true,
+   "title": "ChatGPT Plugins: Should You Build for Growth or Retention?",
+   "published": "2026-11-13",
+   "modified": "",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "video_not_embedded",
+     "name": "His video linked, not embedded",
+     "evidence": "3 video(s) linked, 0 players embedded"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=-yqmzy44EU4"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=DjkLkMQos-g"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=B1vdxZXJqes"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/google-ads-all-conversions-tab/",
+   "lastmod": "2026-11-13",
+   "live": true,
+   "title": "Google Ads All Conversions: Are Your Bids Chasing Bad Leads?",
+   "published": "2026-11-13",
+   "modified": "",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "video_not_embedded",
+     "name": "His video linked, not embedded",
+     "evidence": "3 video(s) linked, 0 players embedded"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=tTruM2VB9C0"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=_FT22KkWaLg"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=B1vdxZXJqes"
+    },
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "6 internal links, none to /agency/, /services/ or the service sitemap"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/how-to-do-a-time-audit-business-ai/",
+   "lastmod": "2026-11-13",
+   "live": true,
+   "title": "How to Do a Time Audit: Which AI Handoff Is Worth the Cost?",
+   "published": "2026-11-13",
+   "modified": "",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "video_not_embedded",
+     "name": "His video linked, not embedded",
+     "evidence": "3 video(s) linked, 0 players embedded"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=_FT22KkWaLg"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=-yqmzy44EU4"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=tTruM2VB9C0"
+    },
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "6 internal links, none to /agency/, /services/ or the service sitemap"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-15T16:39+00:00",
+   "was_failing": false,
+   "news": false
+  }
+ ]
+}
