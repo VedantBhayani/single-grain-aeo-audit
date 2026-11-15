@@ -1,0 +1,326 @@
+{
+ "summary": {
+  "run_at": "2026-11-15T15:07+00:00",
+  "mode": "since",
+  "since": "2026-11-10",
+  "baseline": "2026-10-14",
+  "checked": 14,
+  "queued_left": 0,
+  "failing_now": 10,
+  "new_failures": 0,
+  "fixed": 0,
+  "not_live": 0,
+  "retry_next_run": 0,
+  "parallel_calls": 0,
+  "parallel_cost_usd": 0.0,
+  "ai_note": null
+ },
+ "posts": [
+  {
+   "url": "https://www.singlegrain.com/blog-posts/building-an-editorial-review-process-for-ai-accuracy/",
+   "lastmod": "2026-11-10",
+   "live": true,
+   "title": "Building an AI Editorial Review Process for Accuracy",
+   "published": "2026-01-21",
+   "modified": "2026-11-10",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "broken_internal_link",
+     "name": "Internal link that 404s or redirects",
+     "evidence": "https://www.singlegrain.com/content-marketing-strategy-2/using-content-pruning-to-improve-ai-search-visibility/ -> 404"
+    }
+   ],
+   "suggestions": [],
+   "checked_at": "2026-11-15T15:07+00:00",
+   "was_failing": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/ai-agents-in-slack/",
+   "lastmod": "2026-11-11",
+   "live": true,
+   "title": "AI Agents in Slack: Rules for Adding Bots to Team Chats",
+   "published": "2026-11-11",
+   "modified": "",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "checked_at": "2026-11-15T15:07+00:00",
+   "was_failing": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/codex-vs-claude-code-marketing-ops/",
+   "lastmod": "2026-11-11",
+   "live": true,
+   "title": "Codex vs Claude Code: Which Best Fits Your Marketing Ops?",
+   "published": "2026-11-11",
+   "modified": "",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "checked_at": "2026-11-15T15:07+00:00",
+   "was_failing": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/creative-request-form-how-to-guide/",
+   "lastmod": "2026-11-11",
+   "live": true,
+   "title": "Creative Request Form: How to Build It to Simplify Ad Requests",
+   "published": "2026-11-11",
+   "modified": "",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "checked_at": "2026-11-15T15:07+00:00",
+   "was_failing": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/crm-retargeting/",
+   "lastmod": "2026-11-11",
+   "live": true,
+   "title": "CRM Retargeting: How to Win Back Leads Who Have Not Bought",
+   "published": "2026-11-11",
+   "modified": "",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "broken_internal_link",
+     "name": "Internal link that 404s or redirects",
+     "evidence": "https://www.singlegrain.com/services/retargeting/ -> 200 (redirects to https://www.singlegrain.com/blog/ms/ai-and-writing-10/)"
+    }
+   ],
+   "suggestions": [],
+   "checked_at": "2026-11-15T15:07+00:00",
+   "was_failing": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/how-much-to-charge-for-sponsorship-brand-guide/",
+   "lastmod": "2026-11-11",
+   "live": true,
+   "title": "How Much to Charge for Sponsorship: Brand Sponsorship Guide",
+   "published": "2026-11-11",
+   "modified": "",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "checked_at": "2026-11-15T15:07+00:00",
+   "was_failing": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/hubspot-salesforce-sync/",
+   "lastmod": "2026-11-11",
+   "live": true,
+   "title": "HubSpot Salesforce Sync Dropping MQLs? How to Fix the Handoff",
+   "published": "2026-11-11",
+   "modified": "",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "checked_at": "2026-11-15T15:07+00:00",
+   "was_failing": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/linkedin-ads-crm-integration-4-checks/",
+   "lastmod": "2026-11-11",
+   "live": true,
+   "title": "LinkedIn Ads CRM Integration: What to Check Before You Connect",
+   "published": "2026-11-11",
+   "modified": "",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "broken_internal_link",
+     "name": "Internal link that 404s or redirects",
+     "evidence": "https://www.singlegrain.com/services/linkedin-ads/ -> 200 (redirects to https://www.singlegrain.com/services/linkedin-advertising/)"
+    }
+   ],
+   "suggestions": [],
+   "checked_at": "2026-11-15T15:07+00:00",
+   "was_failing": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/offline-conversion-tracking/",
+   "lastmod": "2026-11-11",
+   "live": true,
+   "title": "Offline Conversion Tracking: Which Ads Bring Real Visits?",
+   "published": "2026-11-11",
+   "modified": "",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "8 internal links, none to /agency/, /services/ or the service sitemap"
+    }
+   ],
+   "suggestions": [],
+   "checked_at": "2026-11-15T15:07+00:00",
+   "was_failing": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/recruiting-email-deliverability/",
+   "lastmod": "2026-11-11",
+   "live": true,
+   "title": "Recruiting Email Deliverability: How to Keep Outreach Out of Spam",
+   "published": "2026-11-11",
+   "modified": "",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "broken_internal_link",
+     "name": "Internal link that 404s or redirects",
+     "evidence": "https://www.singlegrain.com/email-marketing/the-10-minute-guide-to-cold-email-campaigns-for-marketers/ -> 200 (redirects to https://www.singlegrain.com/email-marketing/how-to-get-more-responses-from-cold-emails/)"
+    }
+   ],
+   "suggestions": [],
+   "checked_at": "2026-11-15T15:07+00:00",
+   "was_failing": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/b2b-lead-list-claude/",
+   "lastmod": "2026-11-13",
+   "live": true,
+   "title": "How to Build a Lead List in Claude: Workflow to Review Contracts",
+   "published": "2026-11-13",
+   "modified": "",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "video_not_embedded",
+     "name": "His video linked, not embedded",
+     "evidence": "2 video(s) linked, 0 players embedded"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=B1vdxZXJqes"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=-yqmzy44EU4"
+    },
+    {
+     "rule": "broken_internal_link",
+     "name": "Internal link that 404s or redirects",
+     "evidence": "https://www.singlegrain.com/blog-posts/jev-vs-sdr-queue-60000-leads-2000-icp/ -> 200 (redirects to https://www.singlegrain.com/blog-posts/jev-vs-sdr-queue-ai-lead-qualification-v2/)"
+    }
+   ],
+   "suggestions": [],
+   "checked_at": "2026-11-15T15:07+00:00",
+   "was_failing": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/chatgpt-plugins-for-business/",
+   "lastmod": "2026-11-13",
+   "live": true,
+   "title": "ChatGPT Plugins: Should You Build for Growth or Retention?",
+   "published": "2026-11-13",
+   "modified": "",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "video_not_embedded",
+     "name": "His video linked, not embedded",
+     "evidence": "3 video(s) linked, 0 players embedded"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=-yqmzy44EU4"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=DjkLkMQos-g"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=B1vdxZXJqes"
+    }
+   ],
+   "suggestions": [],
+   "checked_at": "2026-11-15T15:07+00:00",
+   "was_failing": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/google-ads-all-conversions-tab/",
+   "lastmod": "2026-11-13",
+   "live": true,
+   "title": "Google Ads All Conversions: Are Your Bids Chasing Bad Leads?",
+   "published": "2026-11-13",
+   "modified": "",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "video_not_embedded",
+     "name": "His video linked, not embedded",
+     "evidence": "3 video(s) linked, 0 players embedded"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=tTruM2VB9C0"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=_FT22KkWaLg"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=B1vdxZXJqes"
+    },
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "6 internal links, none to /agency/, /services/ or the service sitemap"
+    }
+   ],
+   "suggestions": [],
+   "checked_at": "2026-11-15T15:07+00:00",
+   "was_failing": false
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/how-to-do-a-time-audit-business-ai/",
+   "lastmod": "2026-11-13",
+   "live": true,
+   "title": "How to Do a Time Audit: Which AI Handoff Is Worth the Cost?",
+   "published": "2026-11-13",
+   "modified": "",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "video_not_embedded",
+     "name": "His video linked, not embedded",
+     "evidence": "3 video(s) linked, 0 players embedded"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=_FT22KkWaLg"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=-yqmzy44EU4"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=tTruM2VB9C0"
+    },
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "6 internal links, none to /agency/, /services/ or the service sitemap"
+    }
+   ],
+   "suggestions": [],
+   "checked_at": "2026-11-15T15:07+00:00",
+   "was_failing": false
+  }
+ ]
+}
