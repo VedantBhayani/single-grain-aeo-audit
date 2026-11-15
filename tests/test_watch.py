@@ -22,7 +22,7 @@ NOW = datetime(2026, 11, 15, 15, 0, tzinfo=timezone.utc)
 class FakeAI:
     calls, skipped = 0, None
 
-    def newer(self, claim, page_url, today):
+    def newer(self, claim, page_url, today, old_sources=()):
         return None
 
 
@@ -117,13 +117,37 @@ class AIStepTests(unittest.TestCase):
              ("no_toc", "no auto-toc block")]
         self.assertEqual(watch.stale_claims(f), [f[0][1], f[2][1]])
 
-    def test_suggestion_drops_own_site_and_the_old_source(self):
-        resp = {"answers": {"newer": {"noul": 0.9}},
+    def test_suggestion_drops_own_site_the_old_source_its_variants_and_archives(self):
+        # Regression (live run, Nov 15): the old HBR article came back with "?page=3" and as a web.archive.org copy.
+        old = "https://hbr.org/2011/03/x"
+        resp = {"answers": {"newer": {"noul": 0.9123}},
                 "citations": [{"url": "https://www.singlegrain.com/x", "title": "own"},
                               {"url": "https://hbr.org/2011/03/x/", "title": "old"},
+                              {"url": "https://hbr.org/2011/03/x?639a0fac_page=3", "title": "old, query"},
+                              {"url": "https://web.archive.org/web/2023/https://hbr.org/2011/03/x", "title": "archive"},
                               {"url": "https://example.org/2024-report", "title": "new"}]}
-        s = watch.suggestion(resp, "link https://hbr.org/2011/03/x")
-        self.assertEqual(s, {"p": 0.9, "sources": [{"url": "https://example.org/2024-report", "title": "new"}]})
+        s = watch.suggestion(resp, [old])
+        self.assertEqual(s, {"p": 0.91, "sources": [{"url": "https://example.org/2024-report", "title": "new"}]})
+
+    def test_low_probability_shows_no_sources(self):
+        # Regression (live run): p=0.06 means "no newer data"; its citations were shown as if they were.
+        resp = {"answers": {"newer": {"noul": 0.061}}, "citations": [{"url": "https://example.org/a", "title": "a"}]}
+        s = watch.suggestion(resp, [])
+        self.assertEqual(s, {"p": 0.06, "sources": []})
+        self.assertIn("no newer data found", watch.ai_line({"claim": "c", **s}))
+
+    def test_prose_year_is_a_warning_not_a_hard_failure(self):
+        # Regression (live run): "launched ... in 2019" in an example sentence opened a public issue.
+        audit._service_urls, audit._link_status, audit._videos = None, {}, {}
+        page = ('<html><body><article class="container post-1"><div class="auto-toc"></div><img src=x>'
+                "<p>The company launched its first programmatic ad campaign in 2019.</p>"
+                "<p>A 2011 study found that 71% of leads go cold.</p></article></body></html>")
+        u = f"{SG}/blog-posts/prose/"
+        with mock.patch.object(audit, "fetch", fake_web({**WEB, u: (200, page)})):
+            res = watch.check_post(u, "2026-11-01", FakeAI(), "2026-11-15")
+        self.assertEqual([h["evidence"][:4] for h in res["hard"]], ["2011"])
+        self.assertTrue(any(w["name"] == "Pre-2020 year, not a cited stat" and w["evidence"].startswith("2019")
+                            for w in res["warn"]))
 
     def test_parallel_is_capped_cached_and_never_fatal(self):
         calls = []
@@ -131,12 +155,16 @@ class AIStepTests(unittest.TestCase):
         def ask(key, claim, url, today):
             calls.append(claim)
             return {"answers": {"newer": {"noul": 0.5}}, "citations": []}
-        cache = {}
+        cache = {"old-format": {"p": 0.9, "sources": []}}  # first-run cache shape: no raw answer, so re-asked
         ai = watch.Parallel("k", cache, cap=2, ask=ask)
         for c in ("one", "two", "one", "three"):
             ai.newer(c, "u", "d")
         self.assertEqual(calls, ["one", "two"])  # "one" again came from the cache; "three" hit the cap
         self.assertIn("cap", ai.skipped)
+        self.assertEqual(cache["one"], {"raw": {"answers": {"newer": {"noul": 0.5}}, "citations": []}})
+        ai3 = watch.Parallel("k", cache, ask=ask)
+        ai3.newer("old-format", "u", "d")
+        self.assertEqual(calls[-1], "old-format")
 
         def broken(*a):
             raise urllib.error.URLError("down")

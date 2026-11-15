@@ -33,8 +33,11 @@ def findings_md(p):
     lines = [f"Checked {p['checked_at']} UTC: {p['url']}", ""]
     lines += [f"- **{h['name']}**: {h['evidence']}" for h in p["hard"]]
     for g in p.get("suggestions", []):
-        src = ", ".join(x["url"] for x in g["sources"]) or "none found"
-        lines.append(f"- AI suggestion (Parallel, p={g['p']}, unverified): newer data → {src}")
+        if g["sources"]:
+            lines.append(f"- AI (Parallel, unverified): newer data likely (p={g['p']}), check: "
+                         + ", ".join(x["url"] for x in g["sources"]))
+        else:
+            lines.append(f"- AI (Parallel): no newer data found (p={g['p']})")
     return "\n".join(lines)
 
 

@@ -114,14 +114,27 @@ def ask_parallel(key, claim, page_url, today):
         return json.load(r)
 
 
-def suggestion(resp, claim):
-    """Parallel's answer -> {p, sources}. Drops singlegrain.com pages and the old source itself."""
+SHOW_AT = 0.5  # below this Parallel is saying "no newer data", so its citations are not suggestions
+
+
+def bare(u):
+    """URL without scheme, query, fragment or trailing slash, for comparing sources."""
+    return re.sub(r"^https?://(www\.)?", "", u.split("#")[0].split("?")[0]).rstrip("/").lower()
+
+
+def suggestion(resp, old_sources):
+    """Parallel's answer -> {p, sources}. Sources only when p >= SHOW_AT, and never singlegrain.com,
+    the old source itself (any query string), or an archived copy of it."""
     p = (resp.get("answers", {}).get("newer") or {}).get("noul")
-    old = claim[5:] if claim.startswith("link ") else ""
+    p = round(p, 2) if isinstance(p, (int, float)) else None
+    if p is None or p < SHOW_AT:
+        return {"p": p, "sources": []}
+    olds = {bare(o) for o in old_sources}
     src = []
     for c in resp.get("citations") or []:
         u = c.get("url", "")
-        if not u or "singlegrain.com" in u or (old and u.rstrip("/") == old.rstrip("/")):
+        b = bare(u)
+        if not u or "singlegrain.com" in b or b in olds or any(o and o in b for o in olds if "web.archive.org" in b):
             continue
         src.append({"url": u, "title": c.get("title", "")[:140]})
     return {"p": p, "sources": src[:3]}
@@ -134,9 +147,10 @@ class Parallel:
         self.key, self.cache, self.cap, self.ask = key, cache, cap, ask
         self.calls, self.skipped = 0, None if key else "no PARALLEL_API_KEY on the box"
 
-    def newer(self, claim, page_url, today):
-        if claim in self.cache:
-            return self.cache[claim]
+    def newer(self, claim, page_url, today, old_sources=()):
+        hit = self.cache.get(claim)
+        if isinstance(hit, dict) and "raw" in hit:  # the raw answer is cached, so filters can change later
+            return suggestion(hit["raw"], old_sources)
         if self.skipped:
             return None
         if self.calls >= self.cap:
@@ -144,12 +158,12 @@ class Parallel:
             return None
         try:
             self.calls += 1
-            s = suggestion(self.ask(self.key, claim, page_url, today), claim)
+            raw = self.ask(self.key, claim, page_url, today)
         except (urllib.error.URLError, TimeoutError, ValueError, OSError) as e:
             self.skipped = f"Parallel error: {str(e)[:120]}"
             return None
-        self.cache[claim] = s
-        return s
+        self.cache[claim] = {"raw": raw}
+        return suggestion(raw, old_sources)
 
 
 # ---------------------------------------------------------------- check one post
@@ -160,11 +174,21 @@ def check_post(url, lastmod, ai, today):
         return {"url": url, "lastmod": lastmod, "live": False, "status": str(st), "final": final,
                 "hard": [], "warn": [], "suggestions": []}
     row, f, _ = audit.audit_page(url, page)
-    hard = [{"rule": k, "name": audit.RULES[k][0], "evidence": e} for k, e in f if k in audit.HARD]
-    warn = [{"rule": k, "name": audit.RULES[k][0], "evidence": e} for k, e in f if k not in audit.HARD]
+    cited = set(stale_claims(f))
+    hard, warn = [], []
+    for k, e in f:
+        if k == "stale_source" and e not in cited:
+            # A pre-2020 year in plain prose ("operating since 2008", an example sentence) is not a source.
+            # The watcher opens public issues, so only a cited stat/study or a dated link counts as hard.
+            warn.append({"rule": k, "name": "Pre-2020 year, not a cited stat", "evidence": e})
+        elif k in audit.HARD:
+            hard.append({"rule": k, "name": audit.RULES[k][0], "evidence": e})
+        else:
+            warn.append({"rule": k, "name": audit.RULES[k][0], "evidence": e})
+    old_links = [c[5:] for c in cited if c.startswith("link ")]
     sugg = []
     for claim in stale_claims(f):
-        s = ai.newer(claim, url, today)
+        s = ai.newer(claim, url, today, old_links)
         if s is not None:
             sugg.append({"claim": claim, **s})
     return {"url": url, "lastmod": lastmod, "live": True, "title": row["title"],
@@ -247,12 +271,18 @@ def report_md(summary, checked):
         for h in p["hard"]:
             lines.append(f"- **{h['name']}**: {h['evidence']}")
         for sg in p["suggestions"]:
-            src = ", ".join(x["url"] for x in sg["sources"]) or "none found"
-            lines.append(f"- AI (Parallel, p={sg['p']}): newer data for `{sg['claim'][:120]}` → {src}")
+            lines.append(f"- AI (Parallel): {ai_line(sg)} · `{sg['claim'][:120]}`")
         if p["warn"]:
             lines.append(f"- {len(p['warn'])} warnings (see run.json)")
         lines.append("")
     return "\n".join(lines) + "\n"
+
+
+def ai_line(sg):
+    """One honest line per Parallel answer, in plain text."""
+    if not sg["sources"]:
+        return f"no newer data found (p={sg['p']})"
+    return f"newer data likely (p={sg['p']}), check: " + ", ".join(x["url"] for x in sg["sources"])
 
 
 def esc(s):
@@ -268,9 +298,11 @@ def dashboard(summary, st):
     def card(p):
         hard = "".join(f"<li><b>{esc(h['name'])}</b>: {esc(h['evidence'])}</li>" for h in p["hard"])
         sugg = "".join(
-            f"<li><span class=ai>AI</span> newer data for <q>{esc(g['claim'][:160])}</q> "
-            f"(p={esc(g['p'])}): " + (", ".join(f"<a href='{esc(x['url'])}'>{esc(x['title'] or x['url'])}</a>"
-                                               for x in g["sources"]) or "none found") + "</li>"
+            f"<li><span class=ai>AI</span> <q>{esc(g['claim'][:160])}</q>: "
+            + (("newer data likely (p=" + esc(g["p"]) + "), check: "
+                + ", ".join(f"<a href='{esc(x['url'])}'>{esc(x['title'] or x['url'])}</a>" for x in g["sources"]))
+               if g["sources"] else f"no newer data found (p={esc(g['p'])})")
+            + "</li>"
             for g in p.get("suggestions", []))
         warn = "".join(f"<li>{esc(w['name'])}: {esc(w['evidence'])}</li>" for w in p.get("warn", []))
         return (f"<article><h3><a href='{esc(p['url'])}'>{esc(p.get('title') or p['url'])}</a></h3>"
