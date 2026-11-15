@@ -82,7 +82,7 @@ def env_key(name):
     if os.environ.get(name):
         return os.environ[name]
     f = Path(os.environ.get("AEO_ENV_FILE", ROOT / ".env"))
-    if f.exists():
+    if f.is_file():
         for line in f.read_text(encoding="utf-8").splitlines():
             k, _, v = line.partition("=")
             if k.strip() == name and v.strip():
