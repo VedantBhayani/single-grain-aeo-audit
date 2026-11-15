@@ -310,6 +310,54 @@ class AIStepTests(unittest.TestCase):
         self.assertEqual(s, {"p": 0.06, "sources": []})
         self.assertIn("no newer data found", watch.ai_line({"claim": "c", **s}))
 
+    def test_a_stat_the_post_labels_as_old_is_a_warning(self):
+        # The real paragraphs, copied from the live posts on Nov 15 (hand check: results/2026-11-15/hand-check.md).
+        # #1 #2 #3 #4 #6 label the 2011 HBR stat as old; #5 limits what it proves but never says it's old.
+        hbr = "https://hbr.org/2011/03/the-short-life-of-online-sales-leads"
+        a = f'<a href="{hbr}">'
+        paras = {
+            "1": f"The operational reason to inspect that whole handoff predates agents. {a}Harvard Business Review’s "
+                 "2011 report</a> described an audit of 2,241 U.S. companies: 37% responded to a web lead within an "
+                 "hour, while 23% never responded. This is historical evidence, not a current industry baseline. Use "
+                 "it to justify checking response coverage as well as routing speed.",
+            "2": f"For lead generation, include sales handling in the measurement plan. A historical {a}Harvard Business "
+                 "Review audit</a> of 2,241 U.S. companies found that 37% responded to a web lead within an hour, "
+                 "while 23% never responded. These are 2011 findings, not current Meta benchmarks.",
+            "3": f"Speed still matters. An {a}HBR audit</a> of 2,241 U.S. companies reported that 37% responded to a "
+                 "web-generated test lead within an hour, while 23% never responded. These are historical 2011 "
+                 "inbound-response findings, not outbound-agent benchmarks.",
+            "4": f"Check the downstream handoff too. {a}Harvard Business Review’s 2011 audit</a> of 2,241 U.S. "
+                 "companies found that 37% responded to a web lead within an hour, while 23% never responded. This is "
+                 "an older operational warning, not a current AI benchmark.",
+            "5": "The numerical context keeps the promise bounded. For supporting evidence, a "
+                 f"{a}2011 Harvard Business Review article</a> reported an audit of 2,241 U.S. companies: 37% responded "
+                 "to a web-generated test lead within an hour, while 23% never responded. Those were inbound "
+                 "inquiries, not stalled opportunities. The findings justify auditing follow-up gaps; they do not "
+                 "predict this agent’s conversion lift.",
+            "6": f"{a}Harvard Business Review’s 2011 research</a> on online sales leads associated faster contact with "
+                 "greater qualification likelihood. That older evidence supports inspecting response handling, not "
+                 "promising a conversion lift from this audit.",
+        }
+        for n, text in paras.items():
+            audit._service_urls, audit._link_status, audit._videos = None, {}, {}
+            u = f"{SG}/blog-posts/hbr-{n}/"
+            page = (f'<html><body><article class="container post-1"><div class="auto-toc"></div><img src=x>'
+                    f"<p>{text}</p></article></body></html>")
+            with mock.patch.object(audit, "fetch", fake_web({**WEB, u: (200, page)})):
+                res = watch.check_post(u, "2026-10-14", FakeAI(), "2026-11-15")
+            if n == "5":
+                self.assertEqual(len(res["hard"]), 2, n)  # the sentence and the link
+            else:
+                self.assertEqual(res["hard"], [], n)
+                self.assertTrue(any(w["name"] == "Pre-2020 stat, labelled as old by the post" for w in res["warn"]), n)
+
+    def test_older_about_people_is_not_a_label(self):
+        page = ('<article class="container post-1"><p>A 2015 study of older adults found that 40% of them '
+                "shop online.</p></article>")
+        self.assertFalse(watch.labelled_old(page, "2015: A 2015 study of older adults found that 40% of them shop online."))
+        self.assertEqual(watch.split("an audit of 2,241 U.S. companies: 37% did. This is old."),
+                         ["an audit of 2,241 U.S. companies: 37% did.", "This is old."])
+
     def test_prose_year_is_a_warning_not_a_hard_failure(self):
         # Regression (live run): "launched ... in 2019" in an example sentence opened a public issue.
         audit._service_urls, audit._link_status, audit._videos = None, {}, {}
@@ -380,6 +428,14 @@ class IssueSyncTests(unittest.TestCase):
                    "passing": [{"url": u} for u in urls[3:]], "backlog": []}
         actions, _ = issues.plan(open_, payload, comment_cap=1)
         self.assertEqual([k for k, _, _ in actions], ["comment", "close", "close"])
+
+    def test_a_labelled_old_post_closes_with_the_reason_and_the_hand_check(self):
+        open_ = [{"number": 2, "body": issues.marker(A), "state": "open"}]
+        actions, _ = issues.plan(open_, {"checked": [A], "failing": [],
+                                         "passing": [{"url": A, "labelled_old": True}]})
+        self.assertEqual(actions[0][:2], ("close", 2))
+        self.assertIn("labels its pre-2020 stat as old", actions[0][2])
+        self.assertIn("results/2026-11-15/hand-check.md", actions[0][2])
 
     def test_no_comment_when_nothing_is_new(self):
         open_ = [{"number": 7, "body": issues.marker(A), "state": "open"}]

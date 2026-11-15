@@ -118,6 +118,47 @@ def stale_claims(findings):
     return list(dict.fromkeys(out))
 
 
+# The post itself saying its old stat is old: "historic(al)", "older evidence/data/...", "not (a) current".
+# From the Nov 15 hand check (results/2026-11-15/hand-check.md) and the live sentences behind it.
+# "older" counts only before a word about evidence, so "a 2015 study of older adults" stays a failure.
+OLD_LABEL = re.compile(r"\b(?:historic(?:al)?|not (?:a )?current|older (?:\w+ )?(?:evidence|data|stud(?:y|ies)|"
+                       r"research|findings?|warning|benchmarks?|statistics?|numbers?|figures?|reports?))\b", re.I)
+LABELLED = "Pre-2020 stat, labelled as old by the post"
+HAND_CHECK = "results/2026-11-15/hand-check.md"
+LINK_MARK = "⁣"  # invisible separator: marks where a link sits inside its sentence
+
+
+def blocks(body):
+    """Each <p>/<li> of the post body as plain text, with every link's position marked by its href."""
+    out = []
+    for _, inner in re.findall(r"(?s)<(p|li)\b[^>]*>(.*?)</\1>", body):
+        marked = re.sub(r'<a\b[^>]*href="([^"]+)"[^>]*>', lambda m: f" {LINK_MARK}{html.unescape(m.group(1))}{LINK_MARK} ",
+                        inner)
+        out.append(audit.strip(marked))
+    return out
+
+
+def split(text):
+    """Sentences, splitting only before a capital, digit or quote, so "2,241 U.S. companies" stays whole."""
+    return [s.strip() for s in re.split(r"(?<=[.!?])\s+(?=[A-Z0-9\"“‘(" + LINK_MARK + "])", text) if s.strip()]
+
+
+def labelled_old(body, evidence):
+    """True if the post labels this stale finding as old, in the finding's sentence or the next one.
+    evidence is audit's "YYYY: sentence" or "link URL"."""
+    if evidence.startswith("link "):
+        needle = f"{LINK_MARK}{evidence[5:]}{LINK_MARK}"
+    else:
+        needle = evidence.split(": ", 1)[-1].rstrip(".…")[:120]
+    for text in blocks(body):
+        sents = split(text)
+        for i, s in enumerate(sents):
+            if needle in s:
+                window = " ".join(sents[i:i + 2]).replace(LINK_MARK, " ")
+                return bool(OLD_LABEL.search(window))
+    return False
+
+
 def ask_parallel(key, claim, page_url, today):
     body = json.dumps({"state": {"claim": claim, "found_on": page_url, "today": today},
                        "questions": {"newer": {"type": "noul", "instructions": NEWER_Q}}}).encode()
@@ -210,19 +251,24 @@ def check_post(url, lastmod, ai, today):
     row, f, _ = audit.audit_page(url, page)
     unchecked = [e for k, e in f if k == "video_unchecked"]
     cited = set(stale_claims(f))
-    if unchecked and not any(k in audit.HARD and (k != "stale_source" or e in cited) for k, e in f):
-        # A video we couldn't check could be this post's only hard failure: don't call it clean, retry.
-        return not_checked(url, lastmod, "video-unchecked", unchecked[0])
     hard, warn = [], []
+    body = audit.article_html(page)
     for k, e in f:
         if k == "stale_source" and e not in cited:
             # A pre-2020 year in plain prose ("operating since 2008", an example sentence) is not a source.
             # The watcher opens public issues, so only a cited stat/study or a dated link counts as hard.
             warn.append({"rule": k, "name": "Pre-2020 year, not a cited stat", "evidence": e})
+        elif k == "stale_source" and labelled_old(body, e):
+            # The post itself says the data is old ("historical", "older", "not a current benchmark"):
+            # not presented as current, so a warning. Hand-checked on Nov 15 (results/2026-11-15/hand-check.md).
+            warn.append({"rule": k, "name": LABELLED, "evidence": e})
         elif k in audit.HARD:
             hard.append({"rule": k, "name": audit.RULES[k][0], "evidence": e})
         else:
             warn.append({"rule": k, "name": audit.RULES[k][0], "evidence": e})
+    if unchecked and not hard:
+        # A video we couldn't check could be this post's only hard failure: don't call it clean, retry.
+        return not_checked(url, lastmod, "video-unchecked", unchecked[0])
     old_links = [c[5:] for c in cited if c.startswith("link ")]
     sugg = []
     for claim in stale_claims(f):
@@ -322,7 +368,8 @@ def issues_payload(checked, st):
     return {"checked": sorted(now),
             "failing": [row(p) for p in checked if p["hard"]],
             "backlog": [row(p) for u, p in posts if p.get("hard") and u not in now],
-            "passing": [{"url": u, "checked_at": p.get("checked_at", "")}
+            "passing": [{"url": u, "checked_at": p.get("checked_at", ""),
+                         "labelled_old": any(w.get("name") == LABELLED for w in p.get("warn", []))}
                         for u, p in posts if p.get("live") and not p.get("hard")],
             "gone": [{"url": u, "status": p.get("status", ""), "final": p.get("final", ""),
                       "checked_at": p.get("checked_at", "")} for u, p in posts if not p.get("live")]}

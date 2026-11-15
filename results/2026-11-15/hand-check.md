@@ -90,6 +90,22 @@ Ctrl+F on the normal page only finds visible text, not link targets. That's why 
 - **Sentence:** "After: 'The company launched its first programmatic ad campaign in 2019.'"
 - This is a made-up example in a writing rubric ("Before and After Examples From the Rubric"), not a cited source.
 
+## Addendum, same day: #1 is labelled old too (added by Claude; the text above is unchanged)
+
+Before building the rule, Claude fetched the 6 HBR posts again (read-only) to test it on the real text, and found that #1 does label its stat as old, two sentences after the number:
+
+> "Harvard Business Review's 2011 report described an audit of 2,241 U.S. companies: 37% responded to a web lead within an hour, while 23% never responded. This is historical evidence, not a current industry baseline."
+
+- **Re-checked by Vedant** on the live page (Ctrl+F `2,241`, then the next sentence): the sentence is there. **#1 is ⚠️ weak, not ✅.**
+- **Not a site change:** every one of the 6 posts still shows its Oct 14–16 modified time, so the text was there during the hand check; the label was missed because it sits after the number, not beside it.
+- **Exact live wording** for two of the quotes above (same meaning): #2 reads "A historical Harvard Business Review audit… These are 2011 findings, not current Meta benchmarks."; #3 ends "…Use them to justify staffed queues and escalation coverage."
+
+**Corrected result: 5 ✅ true (#5, #7, #8, #10, #11), 5 ⚠️ weak (#1, #2, #3, #4, #6), 0 ❌ wrong.** The honest headline is 5 real problems.
+
+**The rule change** (`aeo_watch/watch.py`, `labelled_old`): a pre-2020 stat, or the dated link in its sentence, whose sentence or next sentence says "historic(al)", "not (a) current", or "older" + an evidence word ("older evidence", "older operational warning") becomes the warning "Pre-2020 stat, labelled as old by the post". Run against all 10 live posts: #1 #2 #3 #4 #6 become warnings; #5 #7 #8 #10 #11 stay hard. The test uses the real paragraphs. The pre-publish gate is unchanged: it still blocks any pre-2020 source in a draft.
+
+Evidence, with the scripts that produced it, in [`labelled-old-check/`](labelled-old-check/): `hbr_context.txt` (the live paragraph around each HBR link), `modtimes.txt` (modified dates then and now: unchanged), `rule_live.txt` (the rule run on all 10 live posts).
+
 ## Not checked
 
 The 3 posts last modified Sep 25 that also cite HBR 2011 (listed in `verification.md`). The watcher skips them because of the 2026-10-14 baseline.

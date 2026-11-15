@@ -1,0 +1,24 @@
+﻿===== #1 how-to-hire-or-build-ai-marketing-agents-that-own-pipeline-jobs-without-a-chatbot-demo/ status 200
+  FINDING: 2011: Harvard Business Review’s 2011 report described an audit of 2,241 U.S.
+  FINDING: link https://hbr.org/2011/03/the-short-life-of-online-sales-leads
+  BLOCK: The operational reason to inspect that whole handoff predates agents. Harvard Business Review’s 2011 report described an audit of 2,241 U.S. companies: 37% responded to a web lead within an hour, while 23% never responded. This is historical evidence, not a current industry baseline. Use it to justify checking response coverage as well as routing speed. Establish your own baseline before claiming improvement.
+===== #2 startups-test-thousands-of-ads/ status 200
+  FINDING: 2011: These are 2011 findings, not current Meta benchmarks.
+  FINDING: link https://hbr.org/2011/03/the-short-life-of-online-sales-leads
+  BLOCK: For lead generation, include sales handling in the measurement plan. A historical Harvard Business Review audit of 2,241 U.S. companies found that 37% responded to a web lead within an hour, while 23% never responded. These are 2011 findings, not current Meta benchmarks. They support a specific recommendation: log response time alongside creative performance.
+===== #3 slas-kill-switches-managed-marketing-agents/ status 200
+  FINDING: 2011: These are historical 2011 inbound-response findings, not outbound-agent benchmarks.
+  FINDING: link https://hbr.org/2011/03/the-short-life-of-online-sales-leads
+  BLOCK: Speed still matters. An HBR audit of 2,241 U.S. companies reported that 37% responded to a web-generated test lead within an hour, while 23% never responded. These are historical 2011 inbound-response findings, not outbound-agent benchmarks. Use them to justify staffed queues and escalation coverage. Resume with corrected audience evidence and a limited batch, not the entire accumulated backlog.
+===== #4 which-ai-marketing-services-to-buy-when-you-need-pipeline-not-another-content-calendar/ status 200
+  FINDING: 2011: Harvard Business Review’s 2011 audit of 2,241 U.S.
+  FINDING: link https://hbr.org/2011/03/the-short-life-of-online-sales-leads
+  BLOCK: Check the downstream handoff too. Harvard Business Review’s 2011 audit of 2,241 U.S. companies found that 37% responded to a web lead within an hour, while 23% never responded. This is an older operational warning, not a current AI benchmark. Audit your own response times before adding acquisition spend. If routing is the bottleneck, buy a monitored CRM handoff with an assigned seller and an exception queue.
+===== #5 forward-deployed-marketer/ status 200
+  FINDING: 2011: For supporting evidence, a 2011 Harvard Business Review article reported an audit of 2,241 U.S.
+  FINDING: link https://hbr.org/2011/03/the-short-life-of-online-sales-leads
+  BLOCK: The numerical context keeps the promise bounded. Eric’s reported 17-of-100 adoption figure and 3.5% staff coverage favor a contained deployment. For supporting evidence, a 2011 Harvard Business Review article reported an audit of 2,241 U.S. companies: 37% responded to a web-generated test lead within an hour, while 23% never responded. Those were inbound inquiries, not stalled opportunities. The findings justify auditing follow-up gaps; they do not predict this agent’s conversion lift.
+===== #6 which-marketing-jobs-a-founder-can-hand-gpt-6-astra-for-a-full-day-before-hiring/ status 200
+  FINDING: 2011: Harvard Business Review’s 2011 research on online sales leads associated faster contact with greater qualification likelihood.
+  FINDING: link https://hbr.org/2011/03/the-short-life-of-online-sales-leads
+  BLOCK: Harvard Business Review’s 2011 research on online sales leads associated faster contact with greater qualification likelihood. That older evidence supports inspecting response handling, not promising a conversion lift from this audit. Revisit the response-time baseline after implementation and distinguish an acknowledgment from a salesperson’s substantive reply.

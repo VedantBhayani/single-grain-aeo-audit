@@ -1,0 +1,25 @@
+﻿WARN-ONLY  how-to-hire-or-build-ai-marketing-agents-that-own-pipeline-j
+    labelled old: 2011: Harvard Business Review’s 2011 report described an audit of 2,241 U.S.
+    labelled old: link https://hbr.org/2011/03/the-short-life-of-online-sales-leads
+WARN-ONLY  slas-kill-switches-managed-marketing-agents/
+    labelled old: link https://hbr.org/2011/03/the-short-life-of-online-sales-leads
+WARN-ONLY  startups-test-thousands-of-ads/
+    labelled old: link https://hbr.org/2011/03/the-short-life-of-online-sales-leads
+WARN-ONLY  which-ai-marketing-services-to-buy-when-you-need-pipeline-no
+    labelled old: link https://hbr.org/2011/03/the-short-life-of-online-sales-leads
+WARN-ONLY  which-marketing-jobs-a-founder-can-hand-gpt-6-astra-for-a-fu
+    labelled old: 2011: Harvard Business Review’s 2011 research on online sales leads associated faster cont
+    labelled old: link https://hbr.org/2011/03/the-short-life-of-online-sales-leads
+HARD  forward-deployed-marketer/
+    hard: 2011: For supporting evidence, a 2011 Harvard Business Review article reported an audit of 2,241 U.S.
+    hard: link https://hbr.org/2011/03/the-short-life-of-online-sales-leads
+HARD  i-fired-my-youtube-team-here-is-what-ai-youtube-automation-d
+    hard: https://www.youtube.com/watch?v=D5MeFtrnuOE -> oEmbed 403
+HARD  pay-per-click/alternative-ad-networks/
+    hard: link https://www.wordstream.com/blog/ws/2016/02/29/google-adwords-industry-benchmarks
+    hard: link https://www.wordstream.com/blog/ws/2017/02/28/facebook-advertising-benchmarks
+    hard: link https://www.wordstream.com/blog/ws/2015/02/25/bings-ads-vs-google-adwords
+HARD  saas-landing-page-examples/
+    hard: 2018: In a 2018 eyetracking study on scrolling and attention from Nielsen Norman Group, people spent about 57%
+HARD  client-retention-strategies/
+    hard: link https://hbr.org/2014/10/the-value-of-keeping-the-right-customers

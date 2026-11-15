@@ -94,8 +94,12 @@ def plan(issues, payload, cap=NEW_CAP, comment_cap=COMMENT_CAP):
         actions.append(("open", f"AEO hard failure: {path}", body))
     for p in payload["passing"]:
         if closable(p, by_url, updated, checked):
-            actions.append(("close", by_url[p["url"]],
-                            "The latest watcher run found no hard failures on this post. Closing."))
+            why = ("The latest watcher run found no hard failures on this post. Closing."
+                   if not p.get("labelled_old") else
+                   "The post labels its pre-2020 stat as old (\"historical\", \"older\", \"not a current "
+                   "benchmark\"), so it isn't presented as current: now a warning, not a hard failure. "
+                   f"Hand-checked on the live page: {watch.HAND_CHECK}. Closing.")
+            actions.append(("close", by_url[p["url"]], why))
     for g in payload.get("gone", []):
         if closable(g, by_url, updated, checked):
             where = f", now redirects to {quiet(g['final'])}" if g.get("final") and g["final"] != g["url"] else ""

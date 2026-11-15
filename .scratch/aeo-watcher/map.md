@@ -35,11 +35,12 @@ The existing AEO audit runs every day by itself on one instabox box (free plan).
 - [Watcher code](issues/04-watcher-code.md): built and tested. "Updated" means the sitemap lastmod changed (simple, and no body storage). A box test checked 14 posts with 0 hard failures.
 - [Workflow, issues, Pages](issues/05-workflow-issues-pages.md): built; Pages enabled; the first Actions run waits on the keys.
 - [Keys on the box and in GitHub, unread](issues/03-keys-on-the-box-and-in-github-unread.md): both set by Vedant; checked by presence, mode and size only, never the value.
+- [First live run and hand check](issues/06-first-live-run-and-hand-check.md): Vedant hand-checked all 10 findings: 0 wrong, 5 real, 5 where the post labels the old stat as old; a rule now makes those warnings. Headline: 5 real problems.
 - [Hardening from the two-axis review](issues/07-hardening-from-the-two-axis-review.md): three review rounds; an error never closes an issue or blocks the queue, closing comes from the whole state, pages fetched fresh, least privilege in the workflow.
 
 ## Not yet specified
 
-- Nothing open. Ticket 06 (hand check of 3 findings by Vedant) remains.
+- Nothing open. The map is done; the next step is the call.
 
 ## Out of scope
 
