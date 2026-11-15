@@ -12,7 +12,8 @@ Do the first live run on posts since 2026-10-14. Vedant hand-checks 3 findings a
 - Fixed in ce951a9 with 3 regression tests (32/32 pass).
 - Run 2 (Actions 43722522198, 14:06 UTC): 97 re-scored, not re-fetched (52 s: the shared 24 h fetch cache served Run 1's pages; fixed in ticket 07); 10 failing; #9 closed automatically, plus an explanatory comment. Pages shows 10.
 - The private video on #7 was confirmed on YouTube's own page (\"Private video\").
-- Hand check (Vedant, Nov 15, all 10 open findings, not just 3): [results/2026-11-15/hand-check.md](../../../results/2026-11-15/hand-check.md). 0 wrong. After Claude re-fetched the posts to build the rule, #1 turned out to label its stat as old too (Vedant re-checked it on the live page), so the corrected result is 5 true (#5, #7, #8, #10, #11) and 5 weak (#1, #2, #3, #4, #6): the post itself calls the 2011 HBR stat historical or older. #7 is "Video unavailable" (not "private"). #11's stat is Reichheld/Bain from the 1990s behind a 2014 HBR link.
+- Hand check (Vedant, Nov 15, all 10 open findings, not just 3): [results/2026-11-15/hand-check.md](../../../results/2026-11-15/hand-check.md). 0 wrong. After Claude re-fetched the posts to build the rule, #1 turned out to label its stat as old too (Vedant re-checked it on the live page), so the corrected result is 5 true and 5 weak (the post itself calls the 2011 HBR stat historical or older). By real GitHub issue number (hand-check.md swapped four of them; see its correction section): true #6, #7, #8, #10, #11; weak #1, #2, #3, #4, #5.
+- Run 43736721359 (16:57 UTC, `since 2026-10-14`, 97 posts fetched fresh): failing 5, fixed 5, 0 errors. Issues #1-#5 closed, each with a comment linking the hand check; #6, #7, #8, #10, #11 open. Dashboard shows 5. #7 is "Video unavailable" (not "private"). #11's stat is Reichheld/Bain from the 1990s behind a 2014 HBR link.
 
 ## Answer
 

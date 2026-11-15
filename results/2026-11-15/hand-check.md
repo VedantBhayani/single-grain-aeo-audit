@@ -106,6 +106,19 @@ Before building the rule, Claude fetched the 6 HBR posts again (read-only) to te
 
 Evidence, with the scripts that produced it, in [`labelled-old-check/`](labelled-old-check/): `hbr_context.txt` (the live paragraph around each HBR link), `modtimes.txt` (modified dates then and now: unchanged), `rule_live.txt` (the rule run on all 10 live posts).
 
+## Correction: issue numbers (added after the 16:57 UTC run; the verdicts are unchanged)
+
+Four issue numbers in the tables above are swapped. The verdict for each **post** is right; only the number next to it is wrong. The real GitHub issues:
+
+| Post | Number used above | Real issue |
+|---|---|---|
+| /blog-posts/slas-kill-switches-managed-marketing-agents/ | #3 | **#2** |
+| /blog-posts/startups-test-thousands-of-ads/ | #2 | **#3** |
+| /blog-posts/which-marketing-jobs-a-founder-can-hand-gpt-6-astra-for-a-full-day-before-hiring/ | #6 | **#5** |
+| /blog-posts/forward-deployed-marketer/ | #5 | **#6** |
+
+So by real issue number: **5 real problems: #6, #7, #8, #10, #11** (still open). **5 labelled as old: #1, #2, #3, #4, #5**, closed by the run at 16:57 UTC (Actions 43736721359), each with a comment linking this file. #1, #4, #7, #8, #9, #10, #11 were numbered correctly.
+
 ## Not checked
 
 The 3 posts last modified Sep 25 that also cite HBR 2011 (listed in `verification.md`). The watcher skips them because of the 2026-10-14 baseline.
