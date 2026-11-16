@@ -122,3 +122,19 @@ So by real issue number: **5 real problems: #6, #7, #8, #10, #11** (still open).
 ## Not checked
 
 The 3 posts last modified Sep 25 that also cite HBR 2011 (listed in `verification.md`). The watcher skips them because of the 2026-10-14 baseline.
+
+## Addendum, Nov 16: #6 is labelled old too, in a chart and the next paragraph (added by Claude; the text above is unchanged)
+
+#6 is /blog-posts/forward-deployed-marketer/, the post Eric had on screen in the AEO webinar. Its HBR paragraph ends "…they do not predict this agent's conversion lift." The hand check marked it ✅ (borderline) because that paragraph never says the data is old. The hand check missed the label that comes right after it.
+
+- **What Vedant saw** on the live page in Chrome (screenshot, 2026-11-16): directly below that paragraph is a chart image titled "Historical benchmark: response to a web-generated test lead".
+- **The next paragraph** begins: "Keep those measures distinct: company adoption, staff coverage, and historical lead-response rates have different denominators."
+- **Why the watcher misses it:** the chart's title is text inside an image (the HTML has only `alt="Diagram 2"`), and the `labelled_old` rule reads only the stat's own paragraph (that sentence and the next). So #6 still hard-fails.
+- **Not shown to be a site change:** the image sits in the `2026/09` uploads folder and the post's modified time is still 2026-10-16, so it was probably there during the hand check.
+- **Decision (Vedant, 2026-11-16):** by the same standard as #1-#5, #6 is ⚠️ labelled as old. No code change before the interview. #6 stays open on purpose, as a documented limit. Closing it by hand wouldn't stick: `issues.py` reopens a still-failing post as a new issue, by design.
+
+**Corrected result: 4 real problems (#7, #8, #10, #11); 6 labelled as old (#1-#5 by the watcher, #6 by hand only); 0 findings wrong.** Every flagged source really is on the page. What changed twice (#1, then #6) is whether the post labels it as old. The watcher still shows 5 open problems.
+
+**Eric's quote** ("a 2011, maybe that's a little too old… maybe I need to refine a little bit and say, hey, we only want stuff after 2020") was confirmed by Vedant at 7:30 and 7:37 of the edited cut, youtu.be/1jQJlxZNsFY. It's tentative: he says "maybe" twice.
+
+Evidence, with the script that produced it: [`labelled-old-check/fdm_chart.txt`](labelled-old-check/fdm_chart.txt) (the HBR paragraph, the `<figure>` after it, the next paragraph and the modified time; the chart title was read by Vedant, since the script can't read image text).

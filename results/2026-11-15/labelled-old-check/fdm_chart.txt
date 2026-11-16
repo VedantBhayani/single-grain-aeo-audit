@@ -1,0 +1,15 @@
+# Output of fdm_chart.py, run 2026-11-16 (fresh fetch, read-only).
+# The script reads the HTML only; it cannot read text inside the image. The chart's title,
+# "Historical benchmark: response to a web-generated test lead", was read by Vedant on the
+# live page in Chrome on 2026-11-16.
+
+===== #6 https://www.singlegrain.com/blog-posts/forward-deployed-marketer/ status 200
+  modified: 2026-10-16T15:28:26+00:00
+  HBR PARAGRAPH: The numerical context keeps the promise bounded. Eric’s reported 17-of-100 adoption figure and 3.5% staff coverage favor a contained deployment. For supporting evidence, a 2011 Harvard Business Review article reported an audit of 2,241 U.S. companies: 37% responded to a web-generated test lead within an hour, while 23% never responded. Those were inbound inquiries, not stalled opportunities. The findings justify auditing follow-up gaps; they do not predict this agent’s conversion lift.
+  BETWEEN (stripped): ''
+  FIGURE: <figure class="sg-chart" style="margin:28px 0;">
+    img src: https://www.singlegrain.com/wp-content/uploads/2026/09/02-hbr-chart-diagram-2-forward-deployed.png
+    img alt: Diagram 2
+    figure text (stripped): ''
+  BETWEEN (stripped): ''
+  NEXT PARAGRAPH: Keep those measures distinct: company adoption, staff coverage, and historical lead-response rates have different denominators. None is a Single Grain client result. For this build, success means accurate eligibility, grounded drafts, and less preparation work. Recovered conversations can become a downstream measure, but drafted messages are not recovered revenue.
