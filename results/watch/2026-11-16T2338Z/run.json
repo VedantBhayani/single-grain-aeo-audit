@@ -1,0 +1,163 @@
+{
+ "summary": {
+  "run_at": "2026-11-16T23:36+00:00",
+  "mode": "new",
+  "since": null,
+  "baseline": "2026-10-14",
+  "checked": 6,
+  "queued_left": 0,
+  "failing_now": 6,
+  "new_failures": 1,
+  "fixed": 0,
+  "not_live": 0,
+  "retry_next_run": 0,
+  "cannot_check": 0,
+  "parallel_calls": 2,
+  "parallel_cost_usd": 0.002,
+  "ai_note": null,
+  "sitemap_errors": []
+ },
+ "posts": [
+  {
+   "url": "https://www.singlegrain.com/blog-posts/ai-referral-traffic/",
+   "lastmod": "2026-11-16",
+   "live": true,
+   "title": "AI Referral Traffic: Does It Convert Better? How to Track It",
+   "published": "2026-11-16",
+   "modified": "",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "unsourced_claim",
+     "name": "Claimed stat with no link in its paragraph",
+     "evidence": "Adobe’s latest data shows AI-referred retail shoppers converting 60% better than everyone else."
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-16T23:36+00:00",
+   "was_failing": false,
+   "news": true
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/crisis-communication-plan/",
+   "lastmod": "2026-11-16",
+   "live": true,
+   "title": "Crisis Communication Plan: How to Handle Crisis PR",
+   "published": "2026-11-16",
+   "modified": "",
+   "hard": [
+    {
+     "rule": "stale_source",
+     "name": "Pre-2020 source",
+     "evidence": "2019: The Crisp 2019 Crisis Impact Report , which surveyed 2,000 US and UK consumers, found clear expectations."
+    },
+    {
+     "rule": "stale_source",
+     "name": "Pre-2020 source",
+     "evidence": "2019: In Crisp’s 2019 survey, 53% of consumers expected a response within 60 minutes, and 34% expected one within 30 minutes."
+    }
+   ],
+   "warn": [
+    {
+     "rule": "unsourced_claim",
+     "name": "Claimed stat with no link in its paragraph",
+     "evidence": "In a Crisp survey of 2,000 consumers, 53% expected a brand to respond within 60 minutes of a crisis."
+    },
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "8 internal links, none to /agency/, /services/ or the service sitemap"
+    }
+   ],
+   "suggestions": [
+    {
+     "claim": "2019: The Crisp 2019 Crisis Impact Report , which surveyed 2,000 US and UK consumers, found clear expectations.",
+     "p": 0.32,
+     "sources": []
+    },
+    {
+     "claim": "2019: In Crisp’s 2019 survey, 53% of consumers expected a response within 60 minutes, and 34% expected one within 30 minutes.",
+     "p": 0.24,
+     "sources": []
+    }
+   ],
+   "recheck": false,
+   "checked_at": "2026-11-16T23:36+00:00",
+   "was_failing": false,
+   "news": true
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/gtm-ai-agents/",
+   "lastmod": "2026-11-16",
+   "live": true,
+   "title": "AI Agents for GTM: How to Build AI Agents for Go To Market Team",
+   "published": "2026-11-16",
+   "modified": "2026-11-16",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "8 internal links, none to /agency/, /services/ or the service sitemap"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-16T23:36+00:00",
+   "was_failing": false,
+   "news": true
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/pay-for-performance-seo/",
+   "lastmod": "2026-11-16",
+   "live": true,
+   "title": "Is Pay for Performance SEO Worth It? Pricing Model Explained",
+   "published": "2026-11-16",
+   "modified": "",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-16T23:36+00:00",
+   "was_failing": false,
+   "news": true
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/sales-win-rate/",
+   "lastmod": "2026-11-16",
+   "live": true,
+   "title": "What Is a Good Sales Win Rate? When Wins Become Warnings",
+   "published": "2026-11-16",
+   "modified": "",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "unsourced_claim",
+     "name": "Claimed stat with no link in its paragraph",
+     "evidence": "Ebsta and Pavilion’s 2025 benchmark put the new-logo average at 19%, while expansion deals closed at 45%."
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-16T23:36+00:00",
+   "was_failing": false,
+   "news": true
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/short-form-vs-long-form-content/",
+   "lastmod": "2026-11-16",
+   "live": true,
+   "title": "Short Form vs Long Form Content: Where Should Video Budget Go",
+   "published": "2026-11-16",
+   "modified": "2026-11-16",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-16T23:36+00:00",
+   "was_failing": false,
+   "news": true
+  }
+ ]
+}
