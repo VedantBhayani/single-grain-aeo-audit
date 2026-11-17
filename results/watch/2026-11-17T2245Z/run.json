@@ -1,0 +1,43 @@
+{
+ "summary": {
+  "run_at": "2026-11-17T22:44+00:00",
+  "mode": "new",
+  "since": null,
+  "baseline": "2026-10-14",
+  "checked": 1,
+  "queued_left": 0,
+  "failing_now": 6,
+  "new_failures": 0,
+  "fixed": 0,
+  "not_live": 0,
+  "retry_next_run": 0,
+  "cannot_check": 0,
+  "parallel_calls": 0,
+  "parallel_cost_usd": 0.0,
+  "ai_note": null,
+  "sitemap_errors": []
+ },
+ "posts": [
+  {
+   "url": "https://www.singlegrain.com/blog-posts/how-to-monitor-ai-agents/",
+   "lastmod": "2026-11-17",
+   "live": true,
+   "title": "How to Monitor AI Agents With a Weekly Health Check That Works",
+   "published": "2026-11-03",
+   "modified": "2026-11-17",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "10 internal links, none to /agency/, /services/ or the service sitemap"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-17T22:44+00:00",
+   "was_failing": false,
+   "news": true
+  }
+ ]
+}
