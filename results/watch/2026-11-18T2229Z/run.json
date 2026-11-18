@@ -1,0 +1,388 @@
+{
+ "summary": {
+  "run_at": "2026-11-18T22:26+00:00",
+  "mode": "new",
+  "since": null,
+  "baseline": "2026-10-14",
+  "checked": 15,
+  "queued_left": 0,
+  "failing_now": 9,
+  "new_failures": 3,
+  "fixed": 0,
+  "not_live": 0,
+  "retry_next_run": 0,
+  "cannot_check": 0,
+  "parallel_calls": 2,
+  "parallel_cost_usd": 0.002,
+  "ai_note": null,
+  "sitemap_errors": []
+ },
+ "posts": [
+  {
+   "url": "https://www.singlegrain.com/blog-posts/agentic-checkout/",
+   "lastmod": "2026-11-18",
+   "live": true,
+   "title": "Agentic Checkout Is Live in ChatGPT: Is Your Store Ready?",
+   "published": "2026-11-18",
+   "modified": "",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "unsourced_claim",
+     "name": "Claimed stat with no link in its paragraph",
+     "evidence": "In one PPC Land-reported test, bot protection refused a shopping agent at 14.5% of 200 retailers."
+    },
+    {
+     "rule": "unsourced_claim",
+     "name": "Claimed stat with no link in its paragraph",
+     "evidence": "PPC Land reported that when Blend ran a shopping agent against 200 UK and US retailers, bot protection refused it at 29 of them on both attempts, a 14.5% rate."
+    },
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "8 internal links, none to /agency/, /services/ or the service sitemap"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-18T22:26+00:00",
+   "was_failing": false,
+   "news": true
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/ai-bot-traffic/",
+   "lastmod": "2026-11-18",
+   "live": true,
+   "title": "What is B2A? AI Bot Traffic vs Real Revenue Explained",
+   "published": "2026-11-18",
+   "modified": "",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "unsourced_claim",
+     "name": "Claimed stat with no link in its paragraph",
+     "evidence": "HUMAN’s October data shows Meta’s Muse driving about 60% of agent activity and OpenAI products a combined 30%."
+    },
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "7 internal links, none to /agency/, /services/ or the service sitemap"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-18T22:26+00:00",
+   "was_failing": false,
+   "news": true
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/ai-candidate-screening/",
+   "lastmod": "2026-11-18",
+   "live": true,
+   "title": "AI Candidate Screening: Find Top Talent in Social Comments",
+   "published": "2026-11-18",
+   "modified": "2026-11-18",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "7 internal links, none to /agency/, /services/ or the service sitemap"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-18T22:26+00:00",
+   "was_failing": false,
+   "news": true
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/amazon-ad-tag-vs-amazon-attribution/",
+   "lastmod": "2026-11-18",
+   "live": true,
+   "title": "Amazon Attribution vs Amazon Ad Tag: Which Tracks Better?",
+   "published": "2026-11-18",
+   "modified": "2026-11-18",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-18T22:26+00:00",
+   "was_failing": false,
+   "news": true
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/brand-bidding/",
+   "lastmod": "2026-11-18",
+   "live": true,
+   "title": "Brand Bidding: Should You Bid on Your Own Brand?",
+   "published": "2026-11-18",
+   "modified": "",
+   "hard": [
+    {
+     "rule": "stale_source",
+     "name": "Pre-2020 source",
+     "evidence": "2016: Watch Cost and Quality Trends PPC Land cites a WordStream median CPC of $5.42, up from $2.32 in 2016."
+    }
+   ],
+   "warn": [
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "6 internal links, none to /agency/, /services/ or the service sitemap"
+    }
+   ],
+   "suggestions": [
+    {
+     "claim": "2016: Watch Cost and Quality Trends PPC Land cites a WordStream median CPC of $5.42, up from $2.32 in 2016.",
+     "p": 0.97,
+     "sources": [
+      {
+       "url": "https://ppc.land/google-ads-cpl-drops-for-first-time-since-2020-as-cpc-hits-5-42",
+       "title": "Google Ads CPL drops for first time since 2020 as CPC hits $5.42"
+      },
+      {
+       "url": "https://www.wordstream.com/ppc-benchmarks",
+       "title": "Digital Benchmarks by Industry: PPC | WordStream"
+      },
+      {
+       "url": "https://www.wordstream.com/blog/2026-google-ads-benchmarks?ref=ppc.land",
+       "title": "Google Ads Benchmarks 2026: Competitive Data & Insights for Every Industry | WordStream"
+      }
+     ]
+    }
+   ],
+   "recheck": false,
+   "checked_at": "2026-11-18T22:26+00:00",
+   "was_failing": false,
+   "news": true
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/chatgpt-usage-limits/",
+   "lastmod": "2026-11-18",
+   "live": true,
+   "title": "ChatGPT Usage Limits Changed: How to Budget Seats for a Team",
+   "published": "2026-11-18",
+   "modified": "",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "6 internal links, none to /agency/, /services/ or the service sitemap"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-18T22:26+00:00",
+   "was_failing": false,
+   "news": true
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/elon-musk-algorithm/",
+   "lastmod": "2026-11-18",
+   "live": true,
+   "title": "Elon Musk Algorithm: 5 Steps to Run Before You Automating Work",
+   "published": "2026-11-18",
+   "modified": "",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "stale_source",
+     "name": "Pre-2020 year, not a cited stat",
+     "evidence": "2015: Jon McNeill, Tesla’s president of sales from 2015 to 2018, laid it out in his book The Algorithm ."
+    },
+    {
+     "rule": "stale_source",
+     "name": "Pre-2020 year, not a cited stat",
+     "evidence": "2018: Jon McNeill, Tesla’s president of sales from 2015 to 2018, laid it out in his book The Algorithm ."
+    },
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "7 internal links, none to /agency/, /services/ or the service sitemap"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-18T22:26+00:00",
+   "was_failing": false,
+   "news": true
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/fable-5-2/",
+   "lastmod": "2026-11-18",
+   "live": true,
+   "title": "Fable 5.2 for Marketing: Is It Worth Switching Your Model?",
+   "published": "2026-11-18",
+   "modified": "",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "7 internal links, none to /agency/, /services/ or the service sitemap"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-18T22:26+00:00",
+   "was_failing": false,
+   "news": true
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/google-ads-suspension-ai-generated-ads/",
+   "lastmod": "2026-11-18",
+   "live": true,
+   "title": "Google Ads Suspension Risk: What AI-Generated Ads Can't Show",
+   "published": "2026-11-18",
+   "modified": "",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "9 internal links, none to /agency/, /services/ or the service sitemap"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-18T22:26+00:00",
+   "was_failing": false,
+   "news": true
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/google-tag-gateway/",
+   "lastmod": "2026-11-18",
+   "live": true,
+   "title": "Is Google Tag Gateway Worth It? All About Enhanced Conversions",
+   "published": "2026-11-18",
+   "modified": "",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-18T22:26+00:00",
+   "was_failing": false,
+   "news": true
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/lead-segmentation/",
+   "lastmod": "2026-11-18",
+   "live": true,
+   "title": "Lead Segmentation: Sort Leads Into Buyers, Hires, & Partners",
+   "published": "2026-11-18",
+   "modified": "",
+   "hard": [
+    {
+     "rule": "stale_source",
+     "name": "Pre-2020 source",
+     "evidence": "link https://hbr.org/2011/03/the-short-life-of-online-sales-leads"
+    }
+   ],
+   "warn": [],
+   "suggestions": [
+    {
+     "claim": "link https://hbr.org/2011/03/the-short-life-of-online-sales-leads",
+     "p": 0.09,
+     "sources": []
+    }
+   ],
+   "recheck": false,
+   "checked_at": "2026-11-18T22:26+00:00",
+   "was_failing": false,
+   "news": true
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/loss-leader-pricing/",
+   "lastmod": "2026-11-18",
+   "live": true,
+   "title": "Loss Leader Pricing: What is Loss Leader Strategy + Examples",
+   "published": "2026-11-18",
+   "modified": "",
+   "hard": [
+    {
+     "rule": "stale_source",
+     "name": "Pre-2020 source",
+     "evidence": "1985: Costco’s $1.50 Hot Dog Costco has kept its hot dog and soda combo at $1.50 since 1985."
+    }
+   ],
+   "warn": [],
+   "suggestions": [
+    {
+     "claim": "1985: Costco’s $1.50 Hot Dog Costco has kept its hot dog and soda combo at $1.50 since 1985.",
+     "p": 0.99,
+     "sources": [
+      {
+       "url": "https://www.axios.com/2026/05/02/costco-hot-dog-combo-options-water",
+       "title": "Costco didn't raise the price of its $1.50 hot dog — but it did change something"
+      },
+      {
+       "url": "https://www.goodhousekeeping.com/food-products/a70831344/costco-hot-dog-price-will-remain-the-same",
+       "title": "Costco's $1.50 Hot Dog Price Isn't Going Anywhere, CEO Says"
+      },
+      {
+       "url": "https://www.goodhousekeeping.com/what-to-buy/kitchen-products/a70831344/costco-hot-dog-price-will-remain-the-same",
+       "title": "Costco's $1.50 Hot Dog Price Isn't Going Anywhere, CEO Says"
+      }
+     ]
+    }
+   ],
+   "recheck": false,
+   "checked_at": "2026-11-18T22:26+00:00",
+   "was_failing": false,
+   "news": true
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/query-fan-out/",
+   "lastmod": "2026-11-18",
+   "live": true,
+   "title": "Query Fan Out Just Expanded in Google Search: What Changes?",
+   "published": "2026-11-18",
+   "modified": "",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-18T22:26+00:00",
+   "was_failing": false,
+   "news": true
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/track-chatgpt-mentions/",
+   "lastmod": "2026-11-18",
+   "live": true,
+   "title": "How to Track ChatGPT Mentions With OpenAI's New Business Hub",
+   "published": "2026-11-18",
+   "modified": "",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-18T22:26+00:00",
+   "was_failing": false,
+   "news": true
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/youtube-skippable-ads/",
+   "lastmod": "2026-11-18",
+   "live": true,
+   "title": "YouTube Skippable Ads: What This Means for Your YouTube Ads",
+   "published": "2026-11-18",
+   "modified": "",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "7 internal links, none to /agency/, /services/ or the service sitemap"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-18T22:26+00:00",
+   "was_failing": false,
+   "news": true
+  }
+ ]
+}
