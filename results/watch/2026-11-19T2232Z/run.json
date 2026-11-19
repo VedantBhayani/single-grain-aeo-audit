@@ -1,0 +1,21 @@
+{
+ "summary": {
+  "run_at": "2026-11-19T22:31+00:00",
+  "mode": "new",
+  "since": null,
+  "baseline": "2026-10-14",
+  "checked": 0,
+  "queued_left": 0,
+  "failing_now": 9,
+  "new_failures": 0,
+  "fixed": 0,
+  "not_live": 0,
+  "retry_next_run": 0,
+  "cannot_check": 0,
+  "parallel_calls": 0,
+  "parallel_cost_usd": 0.0,
+  "ai_note": null,
+  "sitemap_errors": []
+ },
+ "posts": []
+}
