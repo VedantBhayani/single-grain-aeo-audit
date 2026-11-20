@@ -1,0 +1,331 @@
+{
+ "summary": {
+  "run_at": "2026-11-20T22:04+00:00",
+  "mode": "new",
+  "since": null,
+  "baseline": "2026-10-14",
+  "checked": 12,
+  "queued_left": 0,
+  "failing_now": 10,
+  "new_failures": 1,
+  "fixed": 0,
+  "not_live": 0,
+  "retry_next_run": 0,
+  "cannot_check": 0,
+  "parallel_calls": 1,
+  "parallel_cost_usd": 0.001,
+  "ai_note": null,
+  "sitemap_errors": []
+ },
+ "posts": [
+  {
+   "url": "https://www.singlegrain.com/blog-posts/best-claude-marketing-skills/",
+   "lastmod": "2026-11-20",
+   "live": true,
+   "title": "Best Claude Marketing Skills: 10 We Use Daily (Free to Steal!)",
+   "published": "2026-11-20",
+   "modified": "",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "10 internal links, none to /agency/, /services/ or the service sitemap"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-20T22:04+00:00",
+   "was_failing": false,
+   "news": true
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/does-parasite-seo-still-work/",
+   "lastmod": "2026-11-20",
+   "live": true,
+   "title": "Does Parasite SEO Work? What a LinkedIn Ranking Test Shows",
+   "published": "2026-11-20",
+   "modified": "2026-11-20",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "broken_internal_link",
+     "name": "Internal link that 404s or redirects",
+     "evidence": "https://www.singlegrain.com/content-marketing-strategy-2/how-to-humanize-ai-content-so-it-sounds-like-you-wrote-it/ -> 200 (redirects to https://www.singlegrain.com/content-marketing-strategy-2/how-to-make-content-not-ai-generated-and-authentically-human/)"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-20T22:04+00:00",
+   "was_failing": false,
+   "news": true
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/hermes-agent-vs-openclaw/",
+   "lastmod": "2026-11-20",
+   "live": true,
+   "title": "Hermes Agent vs OpenClaw: Which Should Run Your Business?",
+   "published": "2026-11-20",
+   "modified": "",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "video_not_embedded",
+     "name": "His video linked, not embedded",
+     "evidence": "1 video(s) linked, 0 players embedded"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=FB-MK_9aa6s"
+    },
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "8 internal links, none to /agency/, /services/ or the service sitemap"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-20T22:04+00:00",
+   "was_failing": false,
+   "news": true
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/how-much-does-aeo-cost/",
+   "lastmod": "2026-11-20",
+   "live": true,
+   "title": "How Much Does AEO Cost? What You Should Pay",
+   "published": "2026-11-20",
+   "modified": "2026-11-20",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "unsourced_claim",
+     "name": "Claimed stat with no link in its paragraph",
+     "evidence": "First Page Sage’s 2026 report puts the median GEO and AEO retainer at $6,850 per month."
+    },
+    {
+     "rule": "unsourced_claim",
+     "name": "Claimed stat with no link in its paragraph",
+     "evidence": "The same report found GEO and AEO retainers cost about 45% more than traditional SEO retainers, which had a median of $4,740 per month."
+    },
+    {
+     "rule": "unsourced_claim",
+     "name": "Claimed stat with no link in its paragraph",
+     "evidence": "Performance-based deals combined a base fee of $1,500 to $4,000 with per-result fees, though buyers in the survey reported trouble agreeing on how results get counted."
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-20T22:04+00:00",
+   "was_failing": false,
+   "news": true
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/how-to-choose-a-marketing-agency-top-10-questions/",
+   "lastmod": "2026-11-20",
+   "live": true,
+   "title": "How to Choose a Marketing Agency: Top 10 Questions to Ask",
+   "published": "2026-11-20",
+   "modified": "2026-11-20",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-20T22:04+00:00",
+   "was_failing": false,
+   "news": true
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/how-to-optimize-brand-mentions-in-ai-ultimate-guide/",
+   "lastmod": "2026-11-20",
+   "live": true,
+   "title": "How to Optimize Brand Mentions in AI & Get Mentioned by Name",
+   "published": "2026-11-20",
+   "modified": "2026-11-20",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-20T22:04+00:00",
+   "was_failing": false,
+   "news": true
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/karpathy-autoresearch-marketing/",
+   "lastmod": "2026-11-20",
+   "live": true,
+   "title": "Karpathy Autoresearch for Marketing: Run Tests While You Sleep",
+   "published": "2026-11-20",
+   "modified": "",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "video_not_embedded",
+     "name": "His video linked, not embedded",
+     "evidence": "1 video(s) linked, 0 players embedded"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=zgHoahKoqBg"
+    },
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "8 internal links, none to /agency/, /services/ or the service sitemap"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-20T22:04+00:00",
+   "was_failing": false,
+   "news": true
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/openclaw-use-cases/",
+   "lastmod": "2026-11-20",
+   "live": true,
+   "title": "OpenClaw Use Cases: 7 Marketing Jobs It Runs & Where It Breaks",
+   "published": "2026-11-20",
+   "modified": "",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "video_not_embedded",
+     "name": "His video linked, not embedded",
+     "evidence": "1 video(s) linked, 0 players embedded"
+    },
+    {
+     "rule": "video_no_timestamp",
+     "name": "Video link has no timestamp",
+     "evidence": "https://www.youtube.com/watch?v=N5L1C1STZkw"
+    },
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "8 internal links, none to /agency/, /services/ or the service sitemap"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-20T22:04+00:00",
+   "was_failing": false,
+   "news": true
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/sales-and-marketing-alignment-how-to-guide/",
+   "lastmod": "2026-11-20",
+   "live": true,
+   "title": "How to Fix Sales and Marketing Alignment in Your Company",
+   "published": "2026-11-20",
+   "modified": "",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-20T22:04+00:00",
+   "was_failing": false,
+   "news": true
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/share-of-search/",
+   "lastmod": "2026-11-20",
+   "live": true,
+   "title": "What is Share of Search & How Do You Track It? Ultimate Guide",
+   "published": "2026-11-20",
+   "modified": "2026-11-20",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "stale_source",
+     "name": "Pre-2020 year, not a cited stat",
+     "evidence": "2004: Google Trends offers free history back to 2004 in many markets."
+    },
+    {
+     "rule": "stale_source",
+     "name": "Pre-2020 year, not a cited stat",
+     "evidence": "2004: Binet noted this data is free, generally goes back to 2004, and can be viewed weekly."
+    },
+    {
+     "rule": "stale_source",
+     "name": "Pre-2020 year, not a cited stat",
+     "evidence": "2004: Google Trends is free and offers history back to 2004 in many markets."
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-20T22:04+00:00",
+   "was_failing": false,
+   "news": true
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/what-is-a-forward-deployed-engineer/",
+   "lastmod": "2026-11-20",
+   "live": true,
+   "title": "What Is a Forward Deployed Engineer? Why AI Firms Hire Them",
+   "published": "2026-11-20",
+   "modified": "",
+   "hard": [
+    {
+     "rule": "stale_source",
+     "name": "Pre-2020 source",
+     "evidence": "2016: Gergely Orosz , author of The Pragmatic Engineer newsletter, reports Palantir had more forward deployed engineers than standard software engineers until around 2016."
+    }
+   ],
+   "warn": [
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "8 internal links, none to /agency/, /services/ or the service sitemap"
+    }
+   ],
+   "suggestions": [
+    {
+     "claim": "2016: Gergely Orosz , author of The Pragmatic Engineer newsletter, reports Palantir had more forward deployed engineers than standard software engineers until around 2016.",
+     "p": 0.68,
+     "sources": [
+      {
+       "url": "https://newsletter.pragmaticengineer.com/p/forward-deployed-engineers?isFreemail=true&post_id=170794709&publication_id=458709&r=w8rj&triedRedirect=true",
+       "title": "What are Forward Deployed Engineers, and why are they so in demand?"
+      },
+      {
+       "url": "https://newsletter.pragmaticengineer.com/p/forward-deployed-engineers?open=false",
+       "title": "What are Forward Deployed Engineers, and why are they so in demand?"
+      },
+      {
+       "url": "https://www.forbes.com/sites/stevebanker/2026/07/10/palantir-and-forward-deployed-engineering-what-should-we-believe",
+       "title": "Palantir And Forward Deployed Engineering: What Should We Believe?"
+      }
+     ]
+    }
+   ],
+   "recheck": false,
+   "checked_at": "2026-11-20T22:04+00:00",
+   "was_failing": false,
+   "news": true
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/what-is-service-as-software/",
+   "lastmod": "2026-11-20",
+   "live": true,
+   "title": "What Is Service as Software? The Model of Selling Outcomes",
+   "published": "2026-11-20",
+   "modified": "",
+   "hard": [],
+   "warn": [
+    {
+     "rule": "no_service_link",
+     "name": "No link to a service page",
+     "evidence": "8 internal links, none to /agency/, /services/ or the service sitemap"
+    }
+   ],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-20T22:04+00:00",
+   "was_failing": false,
+   "news": true
+  }
+ ]
+}
