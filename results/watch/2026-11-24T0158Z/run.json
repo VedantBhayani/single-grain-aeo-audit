@@ -1,0 +1,105 @@
+{
+ "summary": {
+  "run_at": "2026-11-24T01:58+00:00",
+  "mode": "new",
+  "since": null,
+  "baseline": "2026-10-14",
+  "checked": 1,
+  "queued_left": 0,
+  "failing_now": 11,
+  "new_failures": 1,
+  "fixed": 0,
+  "not_live": 0,
+  "retry_next_run": 0,
+  "cannot_check": 0,
+  "parallel_calls": 5,
+  "parallel_cost_usd": 0.005,
+  "ai_note": null,
+  "sitemap_errors": []
+ },
+ "posts": [
+  {
+   "url": "https://www.singlegrain.com/blog-posts/conversions/13-conversion-rate-optimization-case-studies/",
+   "lastmod": "2026-11-23",
+   "live": true,
+   "title": "13 Conversion Rate Optimization Case Studies to Learn From",
+   "published": "2017-01-10",
+   "modified": "2026-11-23",
+   "hard": [
+    {
+     "rule": "stale_source",
+     "name": "Pre-2020 source",
+     "evidence": "link http://highscalability.com/blog/2016/4/28/how-walmart-canadas-responsive-redesign-boosted-conversions.html"
+    },
+    {
+     "rule": "stale_source",
+     "name": "Pre-2020 source",
+     "evidence": "link https://blog.optimizely.com/2013/06/14/ea_simcity_optimizely_casestudy/"
+    },
+    {
+     "rule": "stale_source",
+     "name": "Pre-2020 source",
+     "evidence": "link https://blog.optimizely.com/2014/04/28/ab-tests-that-increase-revenue-per-visitor-for-veggietales-by-38/"
+    },
+    {
+     "rule": "stale_source",
+     "name": "Pre-2020 source",
+     "evidence": "link https://blog.optimizely.com/2013/05/30/pro-tip-use-pro-tips-to-increase-conversions/"
+    },
+    {
+     "rule": "stale_source",
+     "name": "Pre-2020 source",
+     "evidence": "link https://blog.optimizely.com/2014/02/03/case-study-sony-ab-tests-banner-ads/"
+    }
+   ],
+   "warn": [
+    {
+     "rule": "broken_internal_link",
+     "name": "Internal link that 404s or redirects",
+     "evidence": "https://www.singlegrain.com/agency/content-optimization-services/ -> 200 (redirects to https://www.singlegrain.com/)"
+    },
+    {
+     "rule": "broken_internal_link",
+     "name": "Internal link that 404s or redirects",
+     "evidence": "https://www.singlegrain.com/conversions-2/5-important-landing-page-elements-you-should-be-ab-testing/ -> 200 (redirects to https://www.singlegrain.com/blog-posts/conversions/5-important-landing-page-elements-you-should-be-ab-testing/)"
+    },
+    {
+     "rule": "broken_internal_link",
+     "name": "Internal link that 404s or redirects",
+     "evidence": "https://www.singlegrain.com/conversions-2/create-ctas-actually-cause-action/ -> 200 (redirects to https://www.singlegrain.com/blog-posts/conversions/create-ctas-actually-cause-action/)"
+    }
+   ],
+   "suggestions": [
+    {
+     "claim": "link http://highscalability.com/blog/2016/4/28/how-walmart-canadas-responsive-redesign-boosted-conversions.html",
+     "p": 0.03,
+     "sources": []
+    },
+    {
+     "claim": "link https://blog.optimizely.com/2013/06/14/ea_simcity_optimizely_casestudy/",
+     "p": 0.1,
+     "sources": []
+    },
+    {
+     "claim": "link https://blog.optimizely.com/2014/04/28/ab-tests-that-increase-revenue-per-visitor-for-veggietales-by-38/",
+     "p": 0.12,
+     "sources": []
+    },
+    {
+     "claim": "link https://blog.optimizely.com/2013/05/30/pro-tip-use-pro-tips-to-increase-conversions/",
+     "p": 0.07,
+     "sources": []
+    },
+    {
+     "claim": "link https://blog.optimizely.com/2014/02/03/case-study-sony-ab-tests-banner-ads/",
+     "p": 0.05,
+     "sources": []
+    }
+   ],
+   "recheck": false,
+   "checked_at": "2026-11-24T01:58+00:00",
+   "was_failing": false,
+   "news": true
+  }
+ ]
+}
