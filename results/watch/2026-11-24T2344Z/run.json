@@ -1,0 +1,82 @@
+{
+ "summary": {
+  "run_at": "2026-11-24T23:42+00:00",
+  "mode": "new",
+  "since": null,
+  "baseline": "2026-10-14",
+  "checked": 4,
+  "queued_left": 0,
+  "failing_now": 11,
+  "new_failures": 0,
+  "fixed": 0,
+  "not_live": 0,
+  "retry_next_run": 0,
+  "cannot_check": 0,
+  "parallel_calls": 0,
+  "parallel_cost_usd": 0.0,
+  "ai_note": null,
+  "sitemap_errors": []
+ },
+ "posts": [
+  {
+   "url": "https://www.singlegrain.com/blog-posts/chatbot-to-human-handoff-guide/",
+   "lastmod": "2026-11-24",
+   "live": true,
+   "title": "AI Chatbot to Human Handoff: Stop Trapping Angry Customers",
+   "published": "2026-11-24",
+   "modified": "2026-11-24",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-24T23:42+00:00",
+   "was_failing": false,
+   "news": true
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/landing-page-split-test-aeo-copy/",
+   "lastmod": "2026-11-24",
+   "live": true,
+   "title": "Landing Page Split Test: Does AI-Ready Copy Convert Better?",
+   "published": "2026-11-24",
+   "modified": "",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-24T23:42+00:00",
+   "was_failing": false,
+   "news": true
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/manage-ai-agents-from-your-phone/",
+   "lastmod": "2026-11-24",
+   "live": true,
+   "title": "How to Manage AI Agents From Your Phone | Easy Set Up!",
+   "published": "2026-11-24",
+   "modified": "",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-24T23:42+00:00",
+   "was_failing": false,
+   "news": true
+  },
+  {
+   "url": "https://www.singlegrain.com/blog-posts/sales-enablement-content/",
+   "lastmod": "2026-11-24",
+   "live": true,
+   "title": "How to Find Sales Enablement Content from Calls (Super Easy!)",
+   "published": "2026-11-24",
+   "modified": "",
+   "hard": [],
+   "warn": [],
+   "suggestions": [],
+   "recheck": false,
+   "checked_at": "2026-11-24T23:42+00:00",
+   "was_failing": false,
+   "news": true
+  }
+ ]
+}
